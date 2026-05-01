@@ -19,7 +19,7 @@ export interface ProgramDisclosure {
 export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
   {
     id: 'madrasa',
-    name: 'MADRASA E-Learning Platform',
+    name: 'Student Learning Space (SLS)',
     ministry: 'Ministry of Education',
     overallCompleteness: 91,
     dimensions: [
@@ -96,8 +96,8 @@ export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
   },
   {
     id: 'nafis',
-    name: 'NAFIS National Workforce Programme',
-    ministry: 'Ministry of Human Resources & National Workforce',
+    name: 'SkillsFuture National Workforce Programme',
+    ministry: 'Ministry of Manpower',
     overallCompleteness: 72,
     dimensions: [
       { name: 'Objectives', complete: true, score: 90 },
@@ -127,7 +127,7 @@ export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
   {
     id: 'telemedicine',
     name: 'National Telemedicine Hub',
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     overallCompleteness: 65,
     dimensions: [
       { name: 'Objectives', complete: true, score: 85 },
@@ -159,25 +159,25 @@ export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
 ];
 
 // ---------------------------------------------------------------------------
-// 2. Pre-generated Transparency Report (ECCE example)
+// 2. Pre-generated Transparency Report (KidSTART example)
 // ---------------------------------------------------------------------------
 
 export const GENERATED_REPORT = `TRANSPARENCY DISCLOSURE REPORT
-Universal Early Childhood Care & Education (ECCE) Programme
+KidSTART Universal Early Childhood Programme
 Ministry of Education — Federal Government
 Report Period: FY 2025-26
 
 1. PROGRAMME OBJECTIVES
-Provide universal access to quality early childhood education for children aged 4-5 across all seven emirates. Target: 95% enrollment by 2028 aligned with Long-Range Vision human capital pillar.
+Provide universal access to quality early childhood education for children aged 4-5 across all five regions. Target: 95% enrollment by 2028 aligned with Long-Range Vision human capital pillar.
 
 2. BUDGET ALLOCATION
 Total Programme Budget: $2.8B over 5 years (FY 2025-2030).
 FY 2025-26 Allocation: $480M (infrastructure: 55%, staffing: 30%, curriculum: 10%, M&E: 5%).
-Funding Source: Federal general budget with co-financing from emirate-level education authorities.
+Funding Source: Whole-of-Government budget with co-financing from region-level education authorities.
 
 3. TIMELINE & MILESTONES
-Phase 1 (2025-2026): Pilot in 120 centres across Abu Dhabi and Dubai. COMPLETE.
-Phase 2 (2026-2027): Scale to 500 centres across all emirates. IN PROGRESS.
+Phase 1 (2025-2026): Pilot in 120 centres across Singapore and Singapore. COMPLETE.
+Phase 2 (2026-2027): Scale to 500 centres across all regions. IN PROGRESS.
 Phase 3 (2027-2028): Full national coverage with 1,200+ centres. PLANNED.
 
 4. KEY PERFORMANCE INDICATORS
@@ -187,7 +187,7 @@ Phase 3 (2027-2028): Full national coverage with 1,200+ centres. PLANNED.
 - Learning readiness assessment: 71% meeting benchmarks (target: 75%)
 
 5. RESULTS TO DATE
-14,400 children enrolled in Phase 1 pilot. Early developmental assessments show 8.2 percentage point improvement in school readiness compared to non-ECCE peers. Cost per child: $33,200/year.
+14,400 children enrolled in Phase 1 pilot. Early developmental assessments show 8.2 percentage point improvement in school readiness compared to non-KidSTART peers. Cost per child: $33,200/year.
 
 6. METHODOLOGY
 Evaluation design: Cluster-RCT across 25 treatment and 25 control sites. Pre-registered analysis plan. Independent data collection by external research partner.
@@ -224,7 +224,7 @@ export const DEADLINE_TRACKER: DeadlineItem[] = [
     daysRemaining: 17,
     completionPct: 82,
     status: 'on-track',
-    agentAction: 'Auto-populated 12/15 fields from FiscalAI. Awaiting MoF sign-off.',
+    agentAction: 'Auto-populated 12/15 fields from FiscalAI. Awaiting MOF sign-off.',
   },
   {
     ministry: 'Ministry of Education',
@@ -236,17 +236,17 @@ export const DEADLINE_TRACKER: DeadlineItem[] = [
     agentAction: 'Draft generated. Pending methodology section review by evaluation unit.',
   },
   {
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     reportType: 'Quarterly Spending Disclosure',
     dueDate: '2026-05-10',
     daysRemaining: 12,
     completionPct: 45,
     status: 'at-risk',
-    agentAction: 'Escalation sent to MoHP compliance officer. Budget breakdown incomplete.',
+    agentAction: 'Escalation sent to MOH compliance officer. Budget breakdown incomplete.',
   },
   {
-    ministry: 'Ministry of Human Resources & National Workforce',
-    reportType: 'NAFIS Programme Transparency Report',
+    ministry: 'Ministry of Manpower',
+    reportType: 'SkillsFuture Programme Transparency Report',
     dueDate: '2026-05-20',
     daysRemaining: 22,
     completionPct: 38,
@@ -263,7 +263,7 @@ export const DEADLINE_TRACKER: DeadlineItem[] = [
     agentAction: 'OVERDUE: Escalated to Undersecretary. Missing external audit section.',
   },
   {
-    ministry: 'Telecommunications & Digital Government (TDRA)',
+    ministry: 'GovTech Singapore (GovTech)',
     reportType: 'Digital Services Annual Report',
     dueDate: '2026-06-15',
     daysRemaining: 48,
@@ -393,7 +393,7 @@ export const FISCAL_ANOMALY: FiscalAnomalyAlert = {
   source: 'FiscalAI',
   amount: '$850M',
   ministry: 'Ministry of Economy',
-  description: 'FiscalAI detected an $850M variance between approved budget and actual expenditure in the FDI Incentive Programme. This exceeds the 10% materiality threshold and must be disclosed in the quarterly transparency report per Federal Decree-Law No. 26/2019.',
+  description: 'FiscalAI detected an $850M variance between approved budget and actual expenditure in the FDI Incentive Programme. This exceeds the 10% materiality threshold and must be disclosed in the quarterly transparency report per Public Sector (Governance) Act 2018.',
   disclosureRequired: true,
   deadline: '2026-05-15',
   confidence: 94,

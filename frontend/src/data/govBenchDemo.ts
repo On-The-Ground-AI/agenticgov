@@ -314,7 +314,7 @@ export interface NationalInnovation {
 export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
   {
     title: 'Smart Government Initiative',
-    ministry: 'Telecommunications & Digital Government Regulatory Authority (TDRA)',
+    ministry: 'Infocomm Media Development Authority (GovTech)',
     description: 'Full transition of government services to mobile-first digital platforms, enabling citizens to complete 100% of federal transactions via smartphone. Includes PASS national digital identity.',
     year: 2013,
     impact: 'Over 7,000 government services digitised. Average transaction time reduced from 20 days to under 5 minutes. Saved $3B+ annually in operational costs.',
@@ -322,7 +322,7 @@ export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
   },
   {
     title: 'Ministry of Possibilities',
-    ministry: 'Ministry of Cabinet Affairs (MoCA)',
+    ministry: 'Public Service Division (PSD)',
     description: 'Experimental government lab that convenes cross-ministry teams to tackle unconventional policy challenges using design thinking, rapid prototyping, and agile sprints. Operates outside traditional bureaucratic constraints.',
     year: 2019,
     impact: 'Incubated 15+ cross-cutting policy experiments including space governance, government-as-a-platform, and predictive policy analytics. Three initiatives scaled to full national programs.',
@@ -341,7 +341,7 @@ export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
     ministry: 'Federal Authority for Government Human Resources (FAHR)',
     description: 'AI-powered HR management system deployed across 60+ federal entities, automating recruitment screening, performance evaluation, training recommendations, and workforce planning using predictive analytics.',
     year: 2023,
-    impact: 'Reduced average recruitment cycle from 45 days to 12 days. 92% accuracy in matching candidates to roles. Projected $180M annual savings across federal government.',
+    impact: 'Reduced average recruitment cycle from 45 days to 12 days. 92% accuracy in matching candidates to roles. Projected $180M annual savings across whole-of-government.',
     transferability: 'HIGH - Cloud-based SaaS model with configurable rules engine. Successfully piloted in 3 GCC countries. Data privacy and localisation requirements are the main adaptation points.',
   },
   {
@@ -354,10 +354,10 @@ export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
   },
   {
     title: 'National AI Strategy 2031',
-    ministry: 'Ministry of Industry & Advanced Technology (MoIAT)',
+    ministry: 'Ministry of Trade and Industry (MTI)',
     description: 'Comprehensive national AI roadmap targeting 12% GDP contribution from AI by 2031. Includes the world\'s first Minister of State for AI, a national AI ethics framework, and AI-first government operations mandate.',
     year: 2017,
-    impact: 'The country ranked #1 in MENA and #18 globally for AI Readiness. AI contributes an estimated 4.2% to GDP in 2025. 600+ AI use cases deployed across federal government.',
+    impact: 'The country ranked #1 in ASEAN and #18 globally for AI Readiness. AI contributes an estimated 4.2% to GDP in 2025. 600+ AI use cases deployed across whole-of-government.',
     transferability: 'HIGH - The governance model (dedicated minister + national strategy + ethics framework) has been replicated in 8+ countries. The framework is well-documented and publicly available.',
   },
 ];
@@ -418,7 +418,7 @@ export const RANKING_ALERTS: RankingAlert[] = [
         policy: 'Open Data Portal with API-First Architecture',
         transferability: 'HIGH',
         rationale:
-          'Estonia publishes 95% of non-classified government datasets with machine-readable APIs. currently publishes 72%. TDRA could adopt the Estonian open data maturity model to close the gap within 2 fiscal quarters.',
+          'Estonia publishes 95% of non-classified government datasets with machine-readable APIs. currently publishes 72%. GovTech could adopt the Estonian open data maturity model to close the gap within 2 fiscal quarters.',
       },
     ],
   },
@@ -481,7 +481,7 @@ export const CROSS_APP_OUTPUTS: CrossAppOutput[] = [
     targetApp: 'ReadinessMap',
     targetAppColor: '#059669',
     dataType: 'Capability Gap',
-    description: 'Open data portal gap flagged for TDRA readiness assessment',
+    description: 'Open data portal gap flagged for GovTech readiness assessment',
     timestamp: 'Today 7:14 AM',
     status: 'acknowledged',
   },

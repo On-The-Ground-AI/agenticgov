@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MORNING_BRIEFING, getAppColor, getAppName, type BriefingAction } from '../data/hukumaDemo';
+import { MORNING_BRIEFING, getAppColor, getAppName, type BriefingAction } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 const SEVERITY_STYLES = {
@@ -264,7 +264,7 @@ export function MorningBriefing() {
   const attentionCount = b.actions.filter(a => a.severity === 'attention').length;
 
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
+    <div className="glass rounded-xl shadow-sm overflow-hidden">
       <div className="bg-gradient-to-r from-slate-800 to-slate-700 px-5 py-4">
         <div className="flex items-center justify-between">
           <div>

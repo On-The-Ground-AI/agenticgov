@@ -1,4 +1,4 @@
-import { AGENT_HEALTH, getAppName } from '../data/hukumaDemo';
+import { AGENT_HEALTH, getAppName } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 const STATUS_STYLES = {
@@ -9,7 +9,7 @@ const STATUS_STYLES = {
 
 export function AgentHealthPanel() {
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
+    <div className="glass rounded-xl shadow-sm overflow-hidden">
       <div className="px-4 py-3 border-b border-neutral-100">
         <HoverInsight
           title="Agent Health Monitor"

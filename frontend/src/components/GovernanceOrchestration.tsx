@@ -14,7 +14,7 @@ import {
   type CabinetAgendaItem,
   type NationalKPI,
 } from '../data/orchestrationDemo';
-import { getAppColor, getAppName } from '../data/hukumaDemo';
+import { getAppColor, getAppName } from '../data/agenticDemo';
 
 type GovView = 'live-flows' | 'routing-logic' | 'cabinet-intel';
 
@@ -101,9 +101,9 @@ function FlowDetailModal({ flow, onClose }: { flow: AgenticFlow; onClose: () => 
             {flow.confidence && (
               <span className="text-xs font-medium bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded">{Math.round(flow.confidence * 100)}% confidence</span>
             )}
-            {flow.hukumaApp && (
-              <span className="text-xs font-medium px-2 py-0.5 rounded" style={{ backgroundColor: `${getAppColor(flow.hukumaApp)}15`, color: getAppColor(flow.hukumaApp) }}>
-                {getAppName(flow.hukumaApp)}
+            {flow.agenticApp && (
+              <span className="text-xs font-medium px-2 py-0.5 rounded" style={{ backgroundColor: `${getAppColor(flow.agenticApp)}15`, color: getAppColor(flow.agenticApp) }}>
+                {getAppName(flow.agenticApp)}
               </span>
             )}
           </div>
@@ -293,7 +293,7 @@ function CabinetAgendaModal({ item, onClose }: { item: CabinetAgendaItem; onClos
       <div className="mb-4">
         <SectionLabel>Source AgenticGov Apps</SectionLabel>
         <div className="flex gap-2 flex-wrap">
-          {item.hukumaApps.map(app => (
+          {item.agenticApps.map(app => (
             <div key={app} className="flex items-center gap-2 bg-white rounded-lg border border-neutral-200 px-3 py-2">
               <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: getAppColor(app) }} />
               <span className="text-xs font-medium text-slate-700">{getAppName(app)}</span>
@@ -399,7 +399,7 @@ function FlowStatsBar() {
     'Syncs Today': {
       title: 'Syncs Today (Lateral)',
       description: 'Number of peer-to-peer data exchanges between agents at the same tier. Syncs enable cross-ministry coordination — agents sharing relevant data without routing through cabinet.',
-      meta: [{ label: 'Direction', value: '↔ Ministry ↔ Ministry' }, { label: 'Example', value: 'MoE and MoF sync budget data' }],
+      meta: [{ label: 'Direction', value: '↔ Ministry ↔ Ministry' }, { label: 'Example', value: 'MOE and MOF sync budget data' }],
     },
     'Auto-Resolved': {
       title: 'Auto-Resolved',
@@ -472,15 +472,15 @@ function FlowNetworkDiagram({ highlightedFlow }: { highlightedFlow: AgenticFlow 
             const legendInsights: Record<FlowDirection, { title: string; description: string }> = {
               pull: {
                 title: 'PULL — Top-Down Query',
-                description: 'Higher-tier agent requests specific data or analysis from a lower-tier agent. Example: Cabinet Briefing Agent pulls latest education KPI data from MoE Strategy Agent.',
+                description: 'Higher-tier agent requests specific data or analysis from a lower-tier agent. Example: Cabinet Briefing Agent pulls latest education KPI data from MOE Strategy Agent.',
               },
               push: {
                 title: 'PUSH — Bottom-Up Alert',
-                description: 'Lower-tier agent autonomously escalates a finding to a higher tier. Example: FiscalAI Anomaly Detector pushes spending alert to MoF Fiscal Monitor.',
+                description: 'Lower-tier agent autonomously escalates a finding to a higher tier. Example: FiscalAI Anomaly Detector pushes spending alert to MOF Fiscal Monitor.',
               },
               sync: {
                 title: 'SYNC — Lateral Exchange',
-                description: 'Agents at the same tier share data horizontally. Example: MoE Strategy Agent syncs education data with MoIAT AI Strategy Agent for cross-sector analysis.',
+                description: 'Agents at the same tier share data horizontally. Example: MOE Strategy Agent syncs education data with MTI AI Strategy Agent for cross-sector analysis.',
               },
             };
             return (
@@ -573,9 +573,9 @@ function FlowCard({ flow, isExpanded, onToggle, onOpenModal }: { flow: AgenticFl
             <span className="text-[10px] text-slate-500">{status.label}</span>
             <span className="text-[10px] text-slate-400">{flow.timestamp}</span>
             {flow.durationMs > 0 && <span className="text-[10px] text-slate-400">({(flow.durationMs / 1000).toFixed(1)}s)</span>}
-            {flow.hukumaApp && (
-              <span className="text-[9px] font-medium px-1.5 py-0.5 rounded" style={{ backgroundColor: `${getAppColor(flow.hukumaApp)}15`, color: getAppColor(flow.hukumaApp) }}>
-                {getAppName(flow.hukumaApp)}
+            {flow.agenticApp && (
+              <span className="text-[9px] font-medium px-1.5 py-0.5 rounded" style={{ backgroundColor: `${getAppColor(flow.agenticApp)}15`, color: getAppColor(flow.agenticApp) }}>
+                {getAppName(flow.agenticApp)}
               </span>
             )}
           </div>
@@ -631,9 +631,9 @@ function LiveFlowsView() {
     const interval = setInterval(() => {
       counterRef.current += 1;
       const templates: AgenticFlow[] = [
-        { id: `sim-${counterRef.current}`, direction: 'pull', status: 'active', initiator: 'Cabinet Briefing Agent', initiatorTier: 'cabinet', target: 'MoH Health Metrics Agent', targetTier: 'ministry', action: 'Pulling healthcare expenditure efficiency data', reason: 'PM Office flagged health sector for quarterly review — agent pre-fetching relevant KPIs', timestamp: 'Just now', durationMs: 0, hukumaApp: 'fiscal-ai' },
-        { id: `sim-${counterRef.current}`, direction: 'push', status: 'completed', initiator: 'TenderAI Pipeline Monitor', initiatorTier: 'division', target: 'MoF Budget Agent', targetTier: 'ministry', action: 'Pushed new tender cost estimate for budget headroom check', reason: '$340M infrastructure tender entered pipeline — auto-forwarded to fiscal for budget impact', timestamp: 'Just now', durationMs: 1400, hukumaApp: 'tender-ai', confidence: 0.90 },
-        { id: `sim-${counterRef.current}`, direction: 'sync', status: 'completed', initiator: 'GovBench Ranking Agent', initiatorTier: 'ministry', target: 'ReadinessMap Score Agent', targetTier: 'ministry', action: 'Synced latest ITU Cybersecurity Index update', reason: 'New ranking data published — auto-synced to update WEF function readiness scores', timestamp: 'Just now', durationMs: 2200, hukumaApp: 'gov-bench', confidence: 0.95 },
+        { id: `sim-${counterRef.current}`, direction: 'pull', status: 'active', initiator: 'Cabinet Briefing Agent', initiatorTier: 'cabinet', target: 'MOH Health Metrics Agent', targetTier: 'ministry', action: 'Pulling healthcare expenditure efficiency data', reason: 'PM Office flagged health sector for quarterly review — agent pre-fetching relevant KPIs', timestamp: 'Just now', durationMs: 0, agenticApp: 'fiscal-ai' },
+        { id: `sim-${counterRef.current}`, direction: 'push', status: 'completed', initiator: 'TenderAI Pipeline Monitor', initiatorTier: 'division', target: 'MOF Budget Agent', targetTier: 'ministry', action: 'Pushed new tender cost estimate for budget headroom check', reason: '$340M infrastructure tender entered pipeline — auto-forwarded to fiscal for budget impact', timestamp: 'Just now', durationMs: 1400, agenticApp: 'tender-ai', confidence: 0.90 },
+        { id: `sim-${counterRef.current}`, direction: 'sync', status: 'completed', initiator: 'GovBench Ranking Agent', initiatorTier: 'ministry', target: 'ReadinessMap Score Agent', targetTier: 'ministry', action: 'Synced latest ITU Cybersecurity Index update', reason: 'New ranking data published — auto-synced to update WEF function readiness scores', timestamp: 'Just now', durationMs: 2200, agenticApp: 'gov-bench', confidence: 0.95 },
       ];
       const newFlow = templates[counterRef.current % templates.length];
       setSimulatedFlows(prev => [newFlow, ...prev.slice(0, 14)]);
@@ -811,7 +811,7 @@ function CabinetIntelView() {
     <div className="space-y-4">
       {/* National KPIs */}
       <div className="bg-white rounded-lg border border-neutral-200 p-4">
-        <h3 className="text-sm font-semibold text-slate-800 mb-1">National KPIs — National Vision 2031</h3>
+        <h3 className="text-sm font-semibold text-slate-800 mb-1">National KPIs — Smart Nation 2030</h3>
         <p className="text-xs text-slate-500 mb-3">Click any KPI for detailed assessment</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {NATIONAL_KPIS.map(kpi => (
@@ -890,7 +890,7 @@ function CabinetIntelView() {
                     </div>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-[10px] text-slate-500">Source apps:</span>
-                      {item.hukumaApps.map(app => (
+                      {item.agenticApps.map(app => (
                         <span key={app} className="text-[9px] font-medium px-1.5 py-0.5 rounded" style={{ backgroundColor: `${getAppColor(app)}15`, color: getAppColor(app) }}>
                           {getAppName(app)}
                         </span>

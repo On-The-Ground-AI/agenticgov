@@ -34,11 +34,11 @@ export interface WEFFunction {
   ownerMinistry: string;
   timeline: string;
   dependencies: number[];
-  hukumaApp: AppId | null;
+  agenticApp: AppId | null;
   description: string;
 }
 
-export const HUKUMA_APPS = [
+export const AGENTIC_APPS = [
   {
     id: 'policy-ai' as AppId,
     name: 'PolicyAI',
@@ -152,16 +152,16 @@ export const DATA_FLOWS: { from: AppId; to: AppId; label: string }[] = [
 ];
 
 export const GENERIC_MINISTRIES: Ministry[] = [
-  { id: 'moe', name: 'Ministry of Education', shortName: 'MoE', mandate: 'Education policy, schools, universities, ECCE', functionsOwned: [15, 29, 35] },
-  { id: 'moh', name: 'Ministry of Health & Prevention', shortName: 'MoHP', mandate: 'Healthcare policy, hospitals, public health', functionsOwned: [29, 35, 49] },
-  { id: 'moei', name: 'Ministry of Energy & Infrastructure', shortName: 'MoEI', mandate: 'Energy policy, infrastructure, sustainability', functionsOwned: [44, 53] },
-  { id: 'moiai', name: 'Ministry of Industry & Advanced Technology', shortName: 'MoIAT', mandate: 'Industrial policy, AI strategy, technology adoption', functionsOwned: [3, 17, 49] },
-  { id: 'mof', name: 'Ministry of Finance', shortName: 'MoF', mandate: 'Federal budget, procurement, fiscal policy', functionsOwned: [6, 7, 9, 53] },
-  { id: 'moca', name: 'Ministry of Cabinet Affairs', shortName: 'MoCA', mandate: 'Government coordination, strategic planning, KPIs', functionsOwned: [8, 15, 20] },
-  { id: 'mohre', name: 'Ministry of Human Resources & National Workforce', shortName: 'MoHRE', mandate: 'Labour market, National Workforce, workforce', functionsOwned: [22, 23, 24] },
-  { id: 'mocd', name: 'Ministry of Community Development', shortName: 'MoCD', mandate: 'Social welfare, family support, disability', functionsOwned: [29, 55] },
-  { id: 'mofaic', name: 'Ministry of Foreign Affairs', shortName: 'MoFAIC', mandate: 'Diplomacy, international cooperation', functionsOwned: [20, 47] },
-  { id: 'tdra', name: 'Telecommunications & Digital Government', shortName: 'TDRA', mandate: 'Digital infrastructure, e-government, cybersecurity', functionsOwned: [1, 3, 4, 5] },
+  { id: 'moe', name: 'Ministry of Education', shortName: 'MOE', mandate: 'Education policy, schools, universities, KidSTART', functionsOwned: [15, 29, 35] },
+  { id: 'moh', name: 'Ministry of Health', shortName: 'MOH', mandate: 'Healthcare policy, hospitals, public health', functionsOwned: [29, 35, 49] },
+  { id: 'moei', name: 'Ministry of National Development', shortName: 'MND', mandate: 'Energy policy, infrastructure, sustainability', functionsOwned: [44, 53] },
+  { id: 'moiai', name: 'Ministry of Trade and Industry', shortName: 'MTI', mandate: 'Industrial policy, AI strategy, technology adoption', functionsOwned: [3, 17, 49] },
+  { id: 'mof', name: 'Ministry of Finance', shortName: 'MOF', mandate: 'National budget, procurement, fiscal policy', functionsOwned: [6, 7, 9, 53] },
+  { id: 'moca', name: 'Public Service Division', shortName: 'PSD', mandate: 'Government coordination, strategic planning, KPIs', functionsOwned: [8, 15, 20] },
+  { id: 'mohre', name: 'Ministry of Manpower', shortName: 'MOM', mandate: 'Labour market, National Workforce, workforce', functionsOwned: [22, 23, 24] },
+  { id: 'mocd', name: 'Ministry of Social and Family Development', shortName: 'MSF', mandate: 'Social welfare, family support, disability', functionsOwned: [29, 55] },
+  { id: 'mofaic', name: 'Ministry of Foreign Affairs', shortName: 'MFA', mandate: 'Diplomacy, international cooperation', functionsOwned: [20, 47] },
+  { id: 'tdra', name: 'GovTech Singapore', shortName: 'GovTech', mandate: 'Digital infrastructure, e-government, cybersecurity', functionsOwned: [1, 3, 4, 5] },
 ];
 
 export const SECTORS: Sector[] = ['Education', 'Healthcare', 'Energy', 'Technology', 'Economy', 'Defense'];
@@ -175,36 +175,36 @@ function hoursAgo(h: number): string {
 
 export const AGENT_ACTIVITY_LOG: AgentActivity[] = [
   { id: 'a1', timestamp: hoursAgo(0.1), app: 'fiscal-ai', message: 'Detected spending anomaly: Ministry of Finance Q4 consultancy +$850M over budget', status: 'alert', detail: 'Spending 3.4x baseline. Root cause analysis initiated.' },
-  { id: 'a2', timestamp: hoursAgo(0.2), app: 'transparency-ai', message: 'Flagged missing disclosure: MoF Q4 transparency report incomplete', status: 'alert', detail: 'Material variance not yet reflected in quarterly report.' },
+  { id: 'a2', timestamp: hoursAgo(0.2), app: 'transparency-ai', message: 'Flagged missing disclosure: MOF Q4 transparency report incomplete', status: 'alert', detail: 'Material variance not yet reflected in quarterly report.' },
   { id: 'a3', timestamp: hoursAgo(0.3), app: 'readiness-map', message: 'Updated Function #06 readiness: MEDIUM → HIGH after TenderAI deployment', status: 'complete' },
-  { id: 'a4', timestamp: hoursAgo(0.5), app: 'tender-ai', message: 'Generated compliant tender document for MoE tablet procurement ($85M)', status: 'complete' },
+  { id: 'a4', timestamp: hoursAgo(0.5), app: 'tender-ai', message: 'Generated compliant tender document for MOE tablet procurement ($85M)', status: 'complete' },
   { id: 'a5', timestamp: hoursAgo(0.7), app: 'gov-bench', message: 'Monitoring World Bank Governance Indicators — maintained #7 competitiveness rank', status: 'complete' },
   { id: 'a6', timestamp: hoursAgo(1.0), app: 'fiscal-ai', message: 'Budget vs. outcome scan complete for Ministry of Education: 3 programs flagged yellow', status: 'complete' },
   { id: 'a7', timestamp: hoursAgo(1.2), app: 'policy-ai', message: 'Policy analysis generated: Universal Early Childhood Education (6-note framework)', status: 'complete' },
-  { id: 'a8', timestamp: hoursAgo(1.5), app: 'causalis', message: 'Method recommendation: Cluster-RCT for ECCE pilot evaluation across 25 sites', status: 'complete' },
-  { id: 'a9', timestamp: hoursAgo(1.8), app: 'transparency-ai', message: 'Auto-generated disclosure report for MADRASA platform — score: 91/100', status: 'complete' },
+  { id: 'a8', timestamp: hoursAgo(1.5), app: 'causalis', message: 'Method recommendation: Cluster-RCT for KidSTART pilot evaluation across 25 sites', status: 'complete' },
+  { id: 'a9', timestamp: hoursAgo(1.8), app: 'transparency-ai', message: 'Auto-generated disclosure report for Student Learning Space — score: 91/100', status: 'complete' },
   { id: 'a10', timestamp: hoursAgo(2.0), app: 'tender-ai', message: 'Compliance check: Healthcare procurement framework — 8/8 items passed', status: 'complete' },
-  { id: 'a11', timestamp: hoursAgo(2.3), app: 'readiness-map', message: 'Ministerial scorecard updated: MoE progress 72% → 78%', status: 'complete' },
+  { id: 'a11', timestamp: hoursAgo(2.3), app: 'readiness-map', message: 'Ministerial scorecard updated: MOE progress 72% → 78%', status: 'complete' },
   { id: 'a12', timestamp: hoursAgo(2.5), app: 'fiscal-ai', message: 'Cost-effectiveness comparison: National STEM Academy $1,200/student vs OECD avg $1,450', status: 'complete' },
   { id: 'a13', timestamp: hoursAgo(3.0), app: 'gov-bench', message: 'National Cybersecurity Index maintained at 100/100 — top global position confirmed', status: 'complete' },
-  { id: 'a14', timestamp: hoursAgo(3.2), app: 'transparency-ai', message: 'Compliance scan: 7/10 ministries on track for Q1 disclosure deadlines', status: 'complete' },
+  { id: 'a14', timestamp: hoursAgo(3.2), app: 'transparency-ai', message: 'Compliance scan: 7/11 ministries on track for Q1 disclosure deadlines', status: 'complete' },
   { id: 'a15', timestamp: hoursAgo(3.5), app: 'tender-ai', message: 'Historical benchmark: Solar installation tenders average +8% overrun — recommending contingency', status: 'complete' },
   { id: 'a16', timestamp: hoursAgo(4.0), app: 'readiness-map', message: 'Dependency analysis: Function #35 (Service Quality) blocks Function #08 (Transparency)', status: 'complete' },
-  { id: 'a17', timestamp: hoursAgo(4.5), app: 'fiscal-ai', message: 'Fiscal impact forecast: ECCE proposal — $2.8B over 5 years, breakeven Year 3', status: 'complete' },
-  { id: 'a18', timestamp: hoursAgo(5.0), app: 'policy-ai', message: 'Strategic scan: 4 emerging education policy issues aligned with long-range vision', status: 'complete' },
-  { id: 'a19', timestamp: hoursAgo(5.5), app: 'causalis', message: 'Quality score: NAFIS evaluation design — 72/100 (moderate evidence quality)', status: 'complete' },
+  { id: 'a17', timestamp: hoursAgo(4.5), app: 'fiscal-ai', message: 'Fiscal impact forecast: KidSTART proposal — $2.8B over 5 years, breakeven Year 3', status: 'complete' },
+  { id: 'a18', timestamp: hoursAgo(5.0), app: 'policy-ai', message: 'Strategic scan: 4 emerging education policy issues aligned with Forward Singapore vision', status: 'complete' },
+  { id: 'a19', timestamp: hoursAgo(5.5), app: 'causalis', message: 'Quality score: SkillsFuture evaluation design — 72/100 (moderate evidence quality)', status: 'complete' },
   { id: 'a20', timestamp: hoursAgo(6.0), app: 'gov-bench', message: 'Transferability assessment: Singapore teacher evaluation rubrics → HIGH compatibility for this jurisdiction', status: 'complete' },
   { id: 'a21', timestamp: hoursAgo(6.5), app: 'tender-ai', message: 'Contract compliance check: Smart City digital services tender — 2 non-compliant clauses flagged', status: 'alert' },
   { id: 'a22', timestamp: hoursAgo(7.0), app: 'fiscal-ai', message: 'Monthly report generated: Ministry of Health budget utilization at 68%', status: 'complete' },
   { id: 'a23', timestamp: hoursAgo(7.5), app: 'readiness-map', message: 'Wave 1 functions (6 HIGH-readiness) — all on track for 6-month deployment', status: 'complete' },
   { id: 'a24', timestamp: hoursAgo(8.0), app: 'transparency-ai', message: 'Evidence quality audit: 5 programs scored, average 78/100', status: 'complete' },
   { id: 'a25', timestamp: hoursAgo(8.5), app: 'policy-ai', message: 'Comparative note: education spending 3.8% GDP vs OECD avg 4.9%', status: 'complete' },
-  { id: 'a26', timestamp: hoursAgo(9.0), app: 'fiscal-ai', message: 'Anomaly cleared: MoEI infrastructure spending within revised forecast (+2.1%)', status: 'complete' },
-  { id: 'a27', timestamp: hoursAgo(10.0), app: 'gov-bench', message: 'National AI Readiness Index updated: Rank 18 globally, #1 in MENA region', status: 'complete' },
+  { id: 'a26', timestamp: hoursAgo(9.0), app: 'fiscal-ai', message: 'Anomaly cleared: MND infrastructure spending within revised forecast (+2.1%)', status: 'complete' },
+  { id: 'a27', timestamp: hoursAgo(10.0), app: 'gov-bench', message: 'National AI Readiness Index updated: Rank 18 globally, #1 in ASEAN region', status: 'complete' },
   { id: 'a28', timestamp: hoursAgo(11.0), app: 'readiness-map', message: 'Cross-function impact: TenderAI activation improved 3 downstream functions', status: 'complete' },
-  { id: 'a29', timestamp: hoursAgo(12.0), app: 'tender-ai', message: 'Bid evaluation complete: 6 submissions scored for MoH hospital procurement', status: 'complete' },
+  { id: 'a29', timestamp: hoursAgo(12.0), app: 'tender-ai', message: 'Bid evaluation complete: 6 submissions scored for MOH hospital procurement', status: 'complete' },
   { id: 'a30', timestamp: hoursAgo(13.0), app: 'causalis', message: 'Ex-ante CBA: Telemedicine hub — NPV $280M, BCR 2.3, recommended for investment', status: 'complete' },
-  { id: 'a31', timestamp: hoursAgo(14.0), app: 'transparency-ai', message: 'Deadline reminder sent: MoF quarterly report due in 5 business days', status: 'complete' },
+  { id: 'a31', timestamp: hoursAgo(14.0), app: 'transparency-ai', message: 'Deadline reminder sent: MOF quarterly report due in 5 business days', status: 'complete' },
   { id: 'a32', timestamp: hoursAgo(15.0), app: 'fiscal-ai', message: 'Capital investment scan: 12 projects totaling $4.2B reviewed for ROI', status: 'complete' },
   { id: 'a33', timestamp: hoursAgo(16.0), app: 'gov-bench', message: 'Best practice identified: Estonia X-Road data exchange — transferability MEDIUM for this jurisdiction', status: 'complete' },
   { id: 'a34', timestamp: hoursAgo(17.0), app: 'readiness-map', message: 'Quarterly readiness assessment: 12 functions improved, 3 declined, 55 stable', status: 'complete' },
@@ -219,14 +219,14 @@ export const AGENT_ACTIVITY_LOG: AgentActivity[] = [
 export const SIMULATED_NEW_ACTIVITIES: AgentActivity[] = [
   { id: 'sim1', timestamp: '', app: 'fiscal-ai', message: 'Real-time monitoring: Ministry of Education Q1 spending on track ($312M / $525M budget)', status: 'running' },
   { id: 'sim2', timestamp: '', app: 'readiness-map', message: 'Scanning ministerial adoption metrics for weekly scorecard update...', status: 'running' },
-  { id: 'sim3', timestamp: '', app: 'tender-ai', message: 'New tender detected: MoEI renewable energy infrastructure ($1.2B) — initiating compliance pre-check', status: 'running' },
+  { id: 'sim3', timestamp: '', app: 'tender-ai', message: 'New tender detected: MND renewable energy infrastructure ($1.2B) — initiating compliance pre-check', status: 'running' },
   { id: 'sim4', timestamp: '', app: 'gov-bench', message: 'UN E-Government Survey 2026 data available — updating position analysis', status: 'running' },
-  { id: 'sim5', timestamp: '', app: 'transparency-ai', message: 'Automated quality check: MoH telemedicine program disclosure — 84/100', status: 'complete' },
+  { id: 'sim5', timestamp: '', app: 'transparency-ai', message: 'Automated quality check: MOH telemedicine program disclosure — 84/100', status: 'complete' },
   { id: 'sim6', timestamp: '', app: 'fiscal-ai', message: 'Cross-referencing TenderAI procurement data with budget allocation for MoE...', status: 'running' },
-  { id: 'sim7', timestamp: '', app: 'causalis', message: 'Evaluation design review: NAFIS Phase 3 — recommending DiD with staggered rollout', status: 'complete' },
+  { id: 'sim7', timestamp: '', app: 'causalis', message: 'Evaluation design review: SkillsFuture Phase 3 — recommending DiD with staggered rollout', status: 'complete' },
   { id: 'sim8', timestamp: '', app: 'readiness-map', message: 'Function #09 (Financial Monitoring) prerequisite check: FiscalAI integration verified', status: 'complete' },
   { id: 'sim9', timestamp: '', app: 'policy-ai', message: 'Stakeholder mapping update: 3 new entities identified for education reform coalition', status: 'complete' },
-  { id: 'sim10', timestamp: '', app: 'tender-ai', message: 'Bid deadline approaching: MoH medical equipment tender — 4 submissions received, 2 pending', status: 'alert' },
+  { id: 'sim10', timestamp: '', app: 'tender-ai', message: 'Bid deadline approaching: MOH medical equipment tender — 4 submissions received, 2 pending', status: 'alert' },
 ];
 
 export const PORTAL_STATS = {
@@ -362,10 +362,10 @@ export const MORNING_BRIEFING: {
       deadline: '5 business days',
       actions: ['View Details', 'Acknowledge', 'Escalate to CFO'],
       deepDetail: {
-        summary: 'FiscalAI\'s overnight scan at 2:00 AM identified a 3.4× variance in MoF consultancy spending against the 12-month rolling baseline. The anomaly is concentrated in 5 contracts awarded between October 15–28, all under the accelerated procurement pathway. Total affected value: $850M across professional services, IT consulting, and legal advisory categories.',
+        summary: 'FiscalAI\'s overnight scan at 2:00 AM identified a 3.4× variance in MOF consultancy spending against the 12-month rolling baseline. The anomaly is concentrated in 5 contracts awarded between October 15–28, all under the accelerated procurement pathway. Total affected value: $850M across professional services, IT consulting, and legal advisory categories.',
         timeline: [
           { time: '2:00 AM', event: 'FiscalAI daily scan initiated — 47 ministry budgets', agent: 'Fiscal Scanner' },
-          { time: '2:04 AM', event: 'Anomaly detected: MoF consultancy line item 3.4× above baseline', agent: 'Anomaly Detector' },
+          { time: '2:04 AM', event: 'Anomaly detected: MOF consultancy line item 3.4× above baseline', agent: 'Anomaly Detector' },
           { time: '2:06 AM', event: 'Root cause analysis: 5 contracts via accelerated pathway flagged', agent: 'Root Cause Analyzer' },
           { time: '2:08 AM', event: 'Cross-check: OECD benchmark pulled — 2.1× OECD average', agent: 'GovBench Agent' },
           { time: '2:10 AM', event: 'TransparencyAI notified: Q4 disclosure missing consultancy breakdown', agent: 'Transparency Sync' },
@@ -382,11 +382,11 @@ export const MORNING_BRIEFING: {
         affectedPrograms: [
           { name: 'Digital Transformation Advisory', budget: '$320M', impact: 'Largest single contract — awarded Oct 18 via accelerated pathway' },
           { name: 'Legal & Regulatory Consulting', budget: '$210M', impact: 'Scope expanded 3× from original terms without re-tender' },
-          { name: 'IT Infrastructure Assessment', budget: '$185M', impact: 'Duplicate scope overlap with TDRA existing contract detected' },
+          { name: 'IT Infrastructure Assessment', budget: '$185M', impact: 'Duplicate scope overlap with GovTech existing contract detected' },
           { name: 'Strategic Planning Services', budget: '$85M', impact: 'Within normal range — flagged due to association' },
           { name: 'Financial Audit Support', budget: '$50M', impact: 'Within normal range — flagged due to association' },
         ],
-        agentRecommendation: 'Approve invoice-level investigation for the top 3 contracts ($715M combined). The two smaller contracts appear within normal parameters. Require MoF to submit supplementary disclosure within 5 business days. Consider implementing a consultancy spending cap for FY2027 to prevent Q4 acceleration pattern.',
+        agentRecommendation: 'Approve invoice-level investigation for the top 3 contracts ($715M combined). The two smaller contracts appear within normal parameters. Require MOF to submit supplementary disclosure within 5 business days. Consider implementing a consultancy spending cap for FY2027 to prevent Q4 acceleration pattern.',
         relatedFlows: ['FiscalAI → TransparencyAI sync', 'FiscalAI → Cabinet push (anomaly)', 'GovBench → FiscalAI pull (OECD benchmarks)'],
         riskIfIgnored: 'If unresolved: -15 points on WEF Function #09 (Financial Monitoring), potential audit finding, Q4 disclosure deadline breach in 5 days, reputational risk from OECD comparison data.',
       },
@@ -395,13 +395,13 @@ export const MORNING_BRIEFING: {
       id: 'ba2',
       severity: 'attention',
       app: 'transparency-ai',
-      title: 'MoF Q4 transparency report incomplete',
+      title: 'MOF Q4 transparency report incomplete',
       detail: 'Material variance from FiscalAI anomaly not yet reflected in quarterly disclosure. Missing: consultancy breakdown, variance explanation, corrective action plan.',
       ministry: 'Ministry of Finance',
       deadline: '5 business days',
       actions: ['View Report', 'Assign to Team', 'Defer'],
       deepDetail: {
-        summary: 'TransparencyAI auto-generated 80% of the MoF Q4 disclosure report. Three sections require human input due to the consultancy anomaly flagged by FiscalAI. The report currently scores 64/100 on the WEF transparency benchmark — it needs to reach 80+ to maintain the ministry\'s compliance standing.',
+        summary: 'TransparencyAI auto-generated 80% of the MOF Q4 disclosure report. Three sections require human input due to the consultancy anomaly flagged by FiscalAI. The report currently scores 64/100 on the WEF transparency benchmark — it needs to reach 80+ to maintain the ministry\'s compliance standing.',
         timeline: [
           { time: '2:10 AM', event: 'Received anomaly notification from FiscalAI sync', agent: 'Transparency Sync' },
           { time: '2:15 AM', event: 'Auto-generated 80% of Q4 report from available data', agent: 'Report Generator' },
@@ -416,7 +416,7 @@ export const MORNING_BRIEFING: {
           { label: 'Deadline', value: '5 business days', source: 'Deadline Monitor' },
         ],
         affectedPrograms: [
-          { name: 'MoF Q4 Quarterly Disclosure', budget: 'N/A', impact: 'Compliance deadline at risk — must reach 80/100 quality score' },
+          { name: 'MOF Q4 Quarterly Disclosure', budget: 'N/A', impact: 'Compliance deadline at risk — must reach 80/100 quality score' },
           { name: 'Annual Transparency Report', budget: 'N/A', impact: 'Q4 disclosure feeds into annual report — cascading delay risk' },
         ],
         agentRecommendation: 'Assign finance team to complete 3 missing sections. TransparencyAI has pre-drafted templates for each section based on the FiscalAI anomaly data. Estimated human effort: 4-6 hours. If completed within 2 days, quality score should reach 82/100.',
@@ -430,7 +430,7 @@ export const MORNING_BRIEFING: {
       app: 'tender-ai',
       title: 'Smart City contract: 2 non-compliant clauses',
       detail: 'Digital services tender TND-2026-4471 missing environmental sustainability criteria (National Agenda 2030) and local content (ICV) minimum threshold.',
-      ministry: 'TDRA',
+      ministry: 'GovTech',
       actions: ['View Tender', 'Route to Legal', 'Override'],
       deepDetail: {
         summary: 'TenderAI\'s compliance scanner detected 2 missing mandatory clauses in tender TND-2026-4471 (Smart City Digital Services, $340M). This is part of a systemic pattern — 3 of 12 recent large tenders are missing Sustainability Framework criteria, suggesting the standard templates haven\'t been updated.',
@@ -464,7 +464,7 @@ export const MORNING_BRIEFING: {
       app: 'gov-bench',
       title: 'WEF Competitiveness Report 2026 published',
       detail: 'The country maintained #7 overall. ICT Adoption dropped from #4 to #6 (Estonia, South Korea overtook). Transferable policy recommendations generated.',
-      ministry: 'TDRA',
+      ministry: 'GovTech',
       actions: ['View Analysis', 'Share with Minister'],
       deepDetail: {
         summary: 'GovBench\'s overnight monitoring detected the publication of the WEF Global Competitiveness Report 2026. maintained its #7 overall ranking but lost 2 positions in ICT Adoption (from #4 to #6). The agent auto-generated a comparative analysis and identified two high-transferability policies from the overtaking countries.',
@@ -487,7 +487,7 @@ export const MORNING_BRIEFING: {
           { name: 'National Digital Government Strategy 2026', budget: '$1.8B', impact: 'ICT ranking decline signals need for acceleration' },
           { name: 'National AI Strategy 2031', budget: '$3.5B', impact: 'Digital infrastructure gaps may slow AI adoption targets' },
         ],
-        agentRecommendation: 'Share comparative analysis with TDRA Minister. Commission assessment of South Korea MyData model for adaptation. Estimated $120M over 3 years — can be fast-tracked through Digital Government Strategy 2026 budget.',
+        agentRecommendation: 'Share comparative analysis with GovTech Minister. Commission assessment of South Korea MyData model for adaptation. Estimated $120M over 3 years — can be fast-tracked through Digital Government Strategy 2026 budget.',
         relatedFlows: ['GovBench → ReadinessMap sync', 'GovBench → PolicyAI sync', 'GovBench → FiscalAI pull (cost estimates)'],
         riskIfIgnored: 'Further ranking decline in WEF 2027 report, competitive disadvantage vs regional peers, missed digitization opportunities.',
       },
@@ -496,8 +496,8 @@ export const MORNING_BRIEFING: {
   trends: [
     { label: 'Procurement cycle time', value: '47 days', direction: 'down', good: true },
     { label: 'Education sector efficiency', value: '+4.2%', direction: 'up', good: true },
-    { label: 'MoH budget utilization', value: '68%', direction: 'down', good: false },
-    { label: 'Compliance rate (10 ministries)', value: '91%', direction: 'up', good: true },
+    { label: 'MOH budget utilization', value: '68%', direction: 'down', good: false },
+    { label: 'Compliance rate (11 ministries)', value: '91%', direction: 'up', good: true },
     { label: 'Policy proposals in pipeline', value: '23 active', direction: 'stable', good: true },
     { label: 'Average evidence quality score', value: '78/100', direction: 'up', good: true },
   ],
@@ -509,7 +509,7 @@ export const EVENT_CHAINS: EventChain[] = [
     title: 'Fiscal Anomaly → Transparency Alert',
     trigger: 'FiscalAI spending scan detected $850M variance',
     steps: [
-      { app: 'fiscal-ai', message: 'Detected spending anomaly: MoF Q4 consultancy +$850M over budget', delayLabel: '0s', status: 'trigger' },
+      { app: 'fiscal-ai', message: 'Detected spending anomaly: MOF Q4 consultancy +$850M over budget', delayLabel: '0s', status: 'trigger' },
       { app: 'fiscal-ai', message: 'Root cause analysis: Contract acceleration (high confidence), duplicate payments (low)', delayLabel: '+45s', status: 'response' },
       { app: 'transparency-ai', message: 'Flagged: Material variance must be disclosed in quarterly report', delayLabel: '+2min', status: 'response' },
       { app: 'gov-bench', message: 'Benchmark check: consultancy spend vs OECD peers — 2.1× average', delayLabel: '+3min', status: 'response' },
@@ -520,9 +520,9 @@ export const EVENT_CHAINS: EventChain[] = [
   {
     id: 'chain2',
     title: 'Policy Proposal → Full Impact Assessment',
-    trigger: 'New ECCE policy proposal submitted to PolicyAI',
+    trigger: 'New KidSTART policy proposal submitted to PolicyAI',
     steps: [
-      { app: 'policy-ai', message: 'Received: Universal Early Childhood Education (ECCE) policy proposal', delayLabel: '0s', status: 'trigger' },
+      { app: 'policy-ai', message: 'Received: KidSTART Universal Early Childhood policy proposal', delayLabel: '0s', status: 'trigger' },
       { app: 'fiscal-ai', message: '5-year fiscal impact: $2.8B total, breakeven Year 3, BCR 2.1×', delayLabel: '+90s', status: 'response' },
       { app: 'causalis', message: 'Evaluation design: Cluster-RCT across 25 sites, power 0.85', delayLabel: '+2min', status: 'response' },
       { app: 'tender-ai', message: 'Procurement estimate: 12 tender packages, $1.4B infrastructure', delayLabel: '+3min', status: 'response' },
@@ -546,7 +546,7 @@ export const EVENT_CHAINS: EventChain[] = [
 
 export const SCHEDULED_TASKS: ScheduledTask[] = [
   { id: 'st1', agent: 'Fiscal Scanner', app: 'fiscal-ai', schedule: 'Daily 7:00 AM', lastRun: 'Today 7:00 AM', lastStatus: 'warning', nextRun: 'Tomorrow 7:00 AM', findingsCount: 3, summary: 'Scanned 47 ministry budgets. 3 anomalies detected.' },
-  { id: 'st2', agent: 'Compliance Monitor', app: 'transparency-ai', schedule: 'Daily 6:30 AM', lastRun: 'Today 6:30 AM', lastStatus: 'success', nextRun: 'Tomorrow 6:30 AM', findingsCount: 0, summary: '7/10 ministries on track. 2 approaching deadlines. 1 overdue.' },
+  { id: 'st2', agent: 'Compliance Monitor', app: 'transparency-ai', schedule: 'Daily 6:30 AM', lastRun: 'Today 6:30 AM', lastStatus: 'success', nextRun: 'Tomorrow 6:30 AM', findingsCount: 0, summary: '7/11 ministries on track. 2 approaching deadlines. 1 overdue.' },
   { id: 'st3', agent: 'Tender Pipeline', app: 'tender-ai', schedule: 'Every 6 hours', lastRun: 'Today 1:00 PM', lastStatus: 'success', nextRun: 'Today 7:00 PM', findingsCount: 4, summary: '4 new tenders indexed. 1 compliance flag raised.' },
   { id: 'st4', agent: 'KPI Tracker', app: 'fiscal-ai', schedule: 'Daily 8:00 AM', lastRun: 'Today 8:00 AM', lastStatus: 'warning', nextRun: 'Tomorrow 8:00 AM', findingsCount: 2, summary: '2 ministry KPIs at risk. Education on target.' },
   { id: 'st5', agent: 'Benchmark Scanner', app: 'gov-bench', schedule: 'Daily 6:30 AM', lastRun: 'Today 6:30 AM', lastStatus: 'success', nextRun: 'Tomorrow 6:30 AM', findingsCount: 1, summary: 'WEF Competitiveness 2026 data detected and processed.' },
@@ -557,7 +557,7 @@ export const SCHEDULED_TASKS: ScheduledTask[] = [
 export const DECISION_QUEUE: DecisionItem[] = [
   {
     id: 'dq1', app: 'fiscal-ai', severity: 'critical',
-    title: 'Approve investigation: MoF Q4 consultancy overspend',
+    title: 'Approve investigation: MOF Q4 consultancy overspend',
     detail: 'FiscalAI recommends a detailed invoice-level review of 5 contracts totaling $850M. This requires CFO authorization to access detailed procurement records.',
     confidence: 0.92, suggestedAction: 'Approve invoice-level investigation',
     detectedAt: hoursAgo(0.1), deadline: '5 business days',
@@ -567,7 +567,7 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { step: 2, agent: 'Root Cause Analyzer', finding: 'Concentration in 5 contracts awarded Oct 15–28 via accelerated pathway', confidence: 0.94 },
         { step: 3, agent: 'Pattern Detector', finding: 'Q4 spike pattern observed in 3 of last 5 fiscal years — systemic', confidence: 0.89 },
         { step: 4, agent: 'GovBench Agent', finding: 'government consultancy spend 2.1× OECD average for comparable governments', confidence: 0.92 },
-        { step: 5, agent: 'TenderAI Cross-Check', finding: 'IT Infrastructure Assessment overlaps with existing TDRA contract scope', confidence: 0.86 },
+        { step: 5, agent: 'TenderAI Cross-Check', finding: 'IT Infrastructure Assessment overlaps with existing GovTech contract scope', confidence: 0.86 },
       ],
       options: [
         { label: 'Full invoice-level investigation', description: 'Authorize FiscalAI to access line-item procurement data for all 5 contracts. CFO signs off. 10 business days.', risk: 'Low — standard audit procedure', recommendation: true },
@@ -575,7 +575,7 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { label: 'Defer to external auditor', description: 'Engage external audit firm for independent review. Most thorough but 30-day timeline.', risk: 'Low risk, high cost ($2-3M)', recommendation: false },
       ],
       affectedStakeholders: [
-        { role: 'MoF Chief Financial Officer', impact: 'Must authorize access to procurement records' },
+        { role: 'MOF Chief Financial Officer', impact: 'Must authorize access to procurement records' },
         { role: 'Cabinet Affairs Secretary', impact: 'Oversight of investigation findings' },
         { role: 'Contracted vendors (5)', impact: 'May face invoice audit and scope review' },
         { role: 'TransparencyAI', impact: 'Awaiting findings for Q4 disclosure completion' },
@@ -584,11 +584,11 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { source: 'FiscalAI Budget Monitor', dataPoints: 47, lastUpdated: 'Today 2:00 AM' },
         { source: 'TenderAI Contract Database', dataPoints: 12, lastUpdated: 'Today 1:00 PM' },
         { source: 'GovBench OECD Benchmarks', dataPoints: 8, lastUpdated: 'Today 6:30 AM' },
-        { source: 'MoF Historical Spending (5yr)', dataPoints: 60, lastUpdated: 'Monthly refresh' },
+        { source: 'MOF Historical Spending (5yr)', dataPoints: 60, lastUpdated: 'Monthly refresh' },
       ],
       precedents: [
         'FY2024 Q4: Similar pattern detected ($420M) — investigation found 15% duplicate billing, recovered $63M',
-        'FY2022 Q4: MoH consultancy spike ($180M) — root cause was legitimate COVID response acceleration',
+        'FY2022 Q4: MOH consultancy spike ($180M) — root cause was legitimate COVID response acceleration',
       ],
     },
   },
@@ -603,7 +603,7 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { step: 1, agent: 'Compliance Scanner', finding: 'Missing Sustainability Framework 2030 environmental sustainability criteria in Section 4.2', confidence: 0.95 },
         { step: 2, agent: 'Compliance Scanner', finding: 'Missing In-Country Value (ICV) minimum threshold in Section 7.1', confidence: 0.93 },
         { step: 3, agent: 'Pattern Detector', finding: 'Same gaps found in 2 other recent tenders — template not updated', confidence: 0.88 },
-        { step: 4, agent: 'Legal Reference', finding: 'Federal Law No. 12/2023 Article 8 requires environmental criteria for >$100M', confidence: 0.97 },
+        { step: 4, agent: 'Legal Reference', finding: 'Government Procurement Act §8 requires environmental criteria for >$100M', confidence: 0.97 },
       ],
       options: [
         { label: 'Route to legal for clause revision', description: 'Add missing clauses to tender document before bid opening. 2-day turnaround. No bidding delay if fast-tracked.', risk: 'Low — standard procedure', recommendation: true },
@@ -611,13 +611,13 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { label: 'Withdraw and re-tender', description: 'Cancel current tender, update template, re-issue. 30-day delay, higher cost.', risk: 'Low legal risk, high time cost', recommendation: false },
       ],
       affectedStakeholders: [
-        { role: 'TDRA Procurement Director', impact: 'Must approve revised tender document' },
+        { role: 'GovTech Procurement Director', impact: 'Must approve revised tender document' },
         { role: 'Pre-qualified bidders (6)', impact: 'Minor delay if legal revision chosen' },
-        { role: 'MoEI Sustainability Framework Team', impact: 'Systemic gap affects Sustainability Framework compliance metrics' },
+        { role: 'MND Sustainability Framework Team', impact: 'Systemic gap affects Sustainability Framework compliance metrics' },
       ],
       evidenceSources: [
         { source: 'TenderAI Compliance Scanner', dataPoints: 24, lastUpdated: 'Today 1:00 PM' },
-        { source: 'Federal Law No. 12/2023', dataPoints: 1, lastUpdated: 'Statutory' },
+        { source: 'Government Procurement Act', dataPoints: 1, lastUpdated: 'Statutory' },
         { source: 'Sustainability Framework 2030 Framework', dataPoints: 1, lastUpdated: 'Policy document' },
       ],
       precedents: [
@@ -627,7 +627,7 @@ export const DECISION_QUEUE: DecisionItem[] = [
   },
   {
     id: 'dq3', app: 'transparency-ai', severity: 'attention',
-    title: 'Approve auto-generated MoF Q4 disclosure draft',
+    title: 'Approve auto-generated MOF Q4 disclosure draft',
     detail: 'TransparencyAI generated 80% of the required quarterly report. 3 sections need human input: executive summary, policy impact narrative, forward-looking risk assessment.',
     confidence: 0.76, suggestedAction: 'Review and complete 3 remaining sections',
     detectedAt: hoursAgo(0.2),
@@ -644,8 +644,8 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { label: 'Request deadline extension', description: 'Formally request 5-day extension from oversight body. Requires justification.', risk: 'Medium — signals capacity issues', recommendation: false },
       ],
       affectedStakeholders: [
-        { role: 'MoF Reporting Team', impact: 'Must complete 3 remaining sections' },
-        { role: 'MoF Under-Secretary', impact: 'Must approve final report before publication' },
+        { role: 'MOF Reporting Team', impact: 'Must complete 3 remaining sections' },
+        { role: 'MOF Under-Secretary', impact: 'Must approve final report before publication' },
         { role: 'Cabinet Affairs', impact: 'Awaiting disclosure for quarterly governance review' },
       ],
       evidenceSources: [
@@ -654,15 +654,15 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { source: 'WEF Transparency Benchmark', dataPoints: 20, lastUpdated: 'Quarterly refresh' },
       ],
       precedents: [
-        'MoE Q3 2025: TransparencyAI auto-generated 85% of report, human completion took 3 hours, scored 88/100',
+        'MOE Q3 2025: TransparencyAI auto-generated 85% of report, human completion took 3 hours, scored 88/100',
       ],
     },
   },
   {
     id: 'dq4', app: 'gov-bench', severity: 'info',
-    title: 'Share ICT competitiveness analysis with TDRA',
+    title: 'Share ICT competitiveness analysis with GovTech',
     detail: 'GovBench generated comparative analysis of ICT ranking decline (#4→#6). Contains transferable policy recommendations from Estonia and South Korea. Awaiting distribution approval.',
-    confidence: 0.95, suggestedAction: 'Share with TDRA Minister',
+    confidence: 0.95, suggestedAction: 'Share with GovTech Minister',
     detectedAt: hoursAgo(3.0),
     deepDetail: {
       investigationChain: [
@@ -672,13 +672,13 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { step: 4, agent: 'FiscalAI Estimator', finding: 'Estimated adoption cost: $120M over 3 years', confidence: 0.85 },
       ],
       options: [
-        { label: 'Share analysis with TDRA Minister', description: 'Distribute the full comparative report including transferability assessment and cost estimates.', risk: 'Low — information sharing', recommendation: true },
-        { label: 'Commission detailed feasibility study', description: 'Before sharing, commission TDRA to conduct 60-day feasibility study of MyData model.', risk: 'Low risk, but delays response by 2 months', recommendation: false },
+        { label: 'Share analysis with GovTech Minister', description: 'Distribute the full comparative report including transferability assessment and cost estimates.', risk: 'Low — information sharing', recommendation: true },
+        { label: 'Commission detailed feasibility study', description: 'Before sharing, commission GovTech to conduct 60-day feasibility study of MyData model.', risk: 'Low risk, but delays response by 2 months', recommendation: false },
       ],
       affectedStakeholders: [
-        { role: 'TDRA Minister', impact: 'Primary recipient — responsible for ICT competitiveness' },
-        { role: 'MoIAT', impact: 'AI Strategy depends on digital infrastructure' },
-        { role: 'MoE', impact: 'EdTech programs benefit from improved ICT ranking' },
+        { role: 'GovTech Minister', impact: 'Primary recipient — responsible for ICT competitiveness' },
+        { role: 'MTI', impact: 'AI Strategy depends on digital infrastructure' },
+        { role: 'MOE', impact: 'EdTech programs benefit from improved ICT ranking' },
       ],
       evidenceSources: [
         { source: 'WEF Global Competitiveness Report 2026', dataPoints: 23, lastUpdated: 'Today 6:30 AM' },
@@ -686,7 +686,7 @@ export const DECISION_QUEUE: DecisionItem[] = [
         { source: 'FiscalAI Cost Estimator', dataPoints: 12, lastUpdated: 'Today 6:50 AM' },
       ],
       precedents: [
-        'GovBench 2025: Shared Singapore teacher evaluation benchmarks with MoE — led to adoption of phased rollout approach',
+        'GovBench 2025: Shared Singapore teacher evaluation benchmarks with MOE — led to adoption of phased rollout approach',
       ],
     },
   },
@@ -714,8 +714,8 @@ export const IMPACT_METRICS: ImpactMetric[] = [
       ],
       topContributors: [
         { name: 'FiscalAI Daily Budget Scanner', contribution: 'Scans 47 ministry budgets in 4 minutes vs 2 weeks manually' },
-        { name: 'TransparencyAI Report Generator', contribution: 'Auto-generates 80% of quarterly disclosures across 10 ministries' },
-        { name: 'TenderAI Compliance Scanner', contribution: 'Pre-checks every tender against Federal Law No. 12/2023 in under 1 minute' },
+        { name: 'TransparencyAI Report Generator', contribution: 'Auto-generates 80% of quarterly disclosures across 11 ministries' },
+        { name: 'TenderAI Compliance Scanner', contribution: 'Pre-checks every tender against Government Procurement Act in under 1 minute' },
       ],
     },
   },
@@ -736,16 +736,16 @@ export const IMPACT_METRICS: ImpactMetric[] = [
         { label: 'Recovery rate', before: '15% of detected anomalies', after: '68% of detected anomalies' },
       ],
       topContributors: [
-        { name: 'MoF Q4 Consultancy Anomaly', contribution: '$850M variance detected — investigation in progress' },
+        { name: 'MOF Q4 Consultancy Anomaly', contribution: '$850M variance detected — investigation in progress' },
         { name: 'Solar Procurement Overpricing', contribution: '$1.2B tender flagged as 34% above OECD benchmark' },
-        { name: 'TDRA Duplicate Contract', contribution: '$95M IT Infrastructure scope overlap with existing contract' },
+        { name: 'GovTech Duplicate Contract', contribution: '$95M IT Infrastructure scope overlap with existing contract' },
       ],
     },
   },
   {
     label: 'Compliance Rate', value: 91, unit: '%', trend: 24, trendLabel: 'Up from 67% baseline', sparkline: [67, 72, 78, 83, 87, 91],
     breakdown: {
-      description: 'Percentage of government programs meeting transparency and compliance requirements across all 10 monitored federal ministries.',
+      description: 'Percentage of government programs meeting transparency and compliance requirements across all 10 monitored ministries.',
       components: [
         { label: 'Disclosure completeness', value: '93%', percentage: 93 },
         { label: 'Deadline adherence', value: '89%', percentage: 89 },
@@ -754,7 +754,7 @@ export const IMPACT_METRICS: ImpactMetric[] = [
       ],
       methodology: 'Composite score based on 4 sub-dimensions, weighted equally. Measured against WEF transparency benchmarks and federal compliance standards.',
       comparison: [
-        { label: 'On-time disclosure', before: '6/10 ministries', after: '9/10 ministries' },
+        { label: 'On-time disclosure', before: '6/11 ministries', after: '9/11 ministries' },
         { label: 'Report quality score', before: '62/100 average', after: '82/100 average' },
         { label: 'Procurement pre-checks', before: 'Manual spot-checks', after: '100% automated pre-check' },
         { label: 'Evidence documentation', before: '45% of programs', after: '87% of programs' },
@@ -803,11 +803,11 @@ export const AGENT_HEALTH: AgentHealth[] = [
 ];
 
 export function getAppColor(appId: AppId): string {
-  return HUKUMA_APPS.find(a => a.id === appId)?.color ?? '#64748B';
+  return AGENTIC_APPS.find(a => a.id === appId)?.color ?? '#64748B';
 }
 
 export function getAppName(appId: AppId): string {
-  return HUKUMA_APPS.find(a => a.id === appId)?.name ?? appId;
+  return AGENTIC_APPS.find(a => a.id === appId)?.name ?? appId;
 }
 
 export function formatTimestamp(iso: string): string {

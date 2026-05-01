@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 export function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen flex flex-col bg-neutral-100">
-      <header className="bg-white border-b border-neutral-200">
+      <header className="glass-strong border-b border-white/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" className="flex-shrink-0">

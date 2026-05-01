@@ -4,7 +4,8 @@ import { AgenticGovSubNav } from '../components/AgenticGovSubNav';
 import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
-import { AGENT_ACTIVITY_LOG } from '../data/hukumaDemo';
+import { HoverInsight } from '../components/HoverInsight';
+import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   MINISTRY_PROGRAMS,
   SPENDING_ANOMALY,
@@ -93,69 +94,146 @@ export function FiscalAIPage() {
   }));
 
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen">
       <AppNavbar />
       <AgenticGovSubNav />
 
       <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-5">
-          <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
-            <span className="text-blue-600">FiscalAI</span>
-          </h1>
-          <p className="text-sm text-slate-500 mt-1">Budget Monitoring, Anomaly Detection & Fiscal Forecasting</p>
+        <div className="mb-5 flex items-start justify-between gap-3 flex-wrap">
+          <div>
+            <h1 className="text-2xl font-bold text-slate-800 tracking-tight">
+              <span className="text-blue-600">FiscalAI</span>
+            </h1>
+            <p className="text-sm text-slate-500 mt-1">Budget Monitoring, Anomaly Detection & Fiscal Forecasting</p>
+          </div>
+          <HoverInsight
+            title="Run a live agent scan"
+            description="Trigger FiscalAI's morning scan across every ministry programme: pulls latest expenditure, recomputes burn-rate, runs anomaly detection, and refreshes the impact forecast. Watch the right-hand sidebar for the step-by-step trace."
+            wefRef="Section 4 (Operational Functions, p.34)"
+          >
+            <button
+              onClick={() => setAgentRunning(true)}
+              disabled={agentRunning}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-sm font-semibold shadow-sm transition"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-200 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+              </span>
+              {agentRunning ? 'Scanning…' : '▶ Run scan'}
+            </button>
+          </HoverInsight>
         </div>
 
         {/* ================================================================= */}
         {/* Daily Scan Summary Bar                                             */}
         {/* ================================================================= */}
-        <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-3 mb-6">
+        <div className="glass rounded-xl p-3 mb-6">
           <div className="flex items-center gap-2 mb-2">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span className="text-xs font-semibold text-slate-700">Morning Scan Complete</span>
             <span className="text-[10px] text-slate-400 ml-auto">{scan.scanTime}</span>
           </div>
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-            <div className="bg-slate-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-slate-400 uppercase tracking-wide">Ministries</p>
-              <p className="text-sm font-bold text-slate-800">{scan.ministriesScanned}</p>
-            </div>
-            <div className="bg-slate-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-slate-400 uppercase tracking-wide">Programs</p>
-              <p className="text-sm font-bold text-slate-800">{scan.programsReviewed}</p>
-            </div>
-            <div className="bg-green-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-green-600 uppercase tracking-wide">On Track</p>
-              <p className="text-sm font-bold text-green-700">{scan.onTrack}</p>
-            </div>
-            <div className="bg-amber-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-amber-600 uppercase tracking-wide">Elevated</p>
-              <p className="text-sm font-bold text-amber-700">{scan.elevated}</p>
-            </div>
-            <div className="bg-red-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-red-600 uppercase tracking-wide">Anomalies</p>
-              <p className="text-sm font-bold text-red-700">{scan.anomalies}</p>
-            </div>
-            <div className="bg-blue-50 rounded-md px-3 py-2 text-center">
-              <p className="text-[10px] text-blue-600 uppercase tracking-wide">Monitored</p>
-              <p className="text-sm font-bold text-blue-700">{formatAED(scan.totalSpendAED)}</p>
-            </div>
+            <HoverInsight
+              title="Ministries scanned"
+              description="How many ministries the agent ingested fiscal data from this morning. Each ministry exposes its programme registry; the agent walks every programme to refresh burn-rate and anomaly state."
+              wefRef="Functions 9, 44, 53 (Fiscal)"
+            >
+              <div className="bg-slate-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-slate-400 uppercase tracking-wide">Ministries</p>
+                <p className="text-sm font-bold text-slate-800">{scan.ministriesScanned}</p>
+              </div>
+            </HoverInsight>
+            <HoverInsight
+              title="Programs reviewed"
+              description="Total individual programmes (e.g. KidSTART, Eldercare top-ups) inspected in this scan. Each programme gets fresh budget-vs-actual, KPI, and efficiency-ratio computations."
+              wefRef="Functions 9, 44, 53 (Fiscal)"
+            >
+              <div className="bg-slate-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-slate-400 uppercase tracking-wide">Programs</p>
+                <p className="text-sm font-bold text-slate-800">{scan.programsReviewed}</p>
+              </div>
+            </HoverInsight>
+            <HoverInsight
+              title="Programs on track"
+              description="Programmes whose burn-rate, KPI delivery and efficiency ratio are all within tolerance bands set by FiscalAI's policy. No human action required."
+              wefRef="Section 5 (Oversight Layer, p.42)"
+            >
+              <div className="bg-green-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-green-600 uppercase tracking-wide">On Track</p>
+                <p className="text-sm font-bold text-green-700">{scan.onTrack}</p>
+              </div>
+            </HoverInsight>
+            <HoverInsight
+              title="Elevated programs"
+              description="Programmes flagged for elevated risk — typically because spend is running >10% above plan or KPI delivery is lagging. Surfaces in the daily fiscal digest for officer review."
+              wefRef="Section 5 (Oversight Layer, p.42)"
+            >
+              <div className="bg-amber-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-amber-600 uppercase tracking-wide">Elevated</p>
+                <p className="text-sm font-bold text-amber-700">{scan.elevated}</p>
+              </div>
+            </HoverInsight>
+            <HoverInsight
+              title="Anomalies detected"
+              description="Programmes where the agent's variance model flagged a statistically significant deviation. These trigger the Anomaly Detector tab and route to the human-in-the-loop confidence-gated workflow."
+              wefRef="Functions 9, 44, 53 (Fiscal)"
+            >
+              <div className="bg-red-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-red-600 uppercase tracking-wide">Anomalies</p>
+                <p className="text-sm font-bold text-red-700">{scan.anomalies}</p>
+              </div>
+            </HoverInsight>
+            <HoverInsight
+              title="Total fiscal value monitored"
+              description="Sum of all programme allocations under FiscalAI's surveillance for the current fiscal year. Drawn from each ministry's published estimates of expenditure."
+              wefRef="Functions 9, 44, 53 (Fiscal)"
+            >
+              <div className="bg-blue-50 rounded-md px-3 py-2 text-center cursor-help">
+                <p className="text-[10px] text-blue-600 uppercase tracking-wide">Monitored</p>
+                <p className="text-sm font-bold text-blue-700">{formatAED(scan.totalSpendAED)}</p>
+              </div>
+            </HoverInsight>
           </div>
         </div>
 
         {/* Tabs */}
         <div className="flex gap-1 bg-white rounded-lg border border-neutral-200 p-1 mb-6 w-fit">
-          {TABS.map((t) => (
-            <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`px-4 py-1.5 rounded-md text-xs font-medium transition-colors ${
-                tab === t ? 'bg-blue-600 text-white' : 'text-slate-600 hover:bg-slate-50'
-              }`}
-            >
-              {t}
-            </button>
-          ))}
+          {TABS.map((t) => {
+            const tabMeta: Record<Tab, { desc: string; wef: string }> = {
+              'Budget Monitor': {
+                desc: 'Per-ministry programme cards: budget bar, KPI delivery bar, efficiency ratio versus benchmark, and a 6-month burn-rate trend. Shows whether each programme is on track, elevated or red-flagged.',
+                wef: 'Functions 9, 44, 53 (Fiscal)',
+              },
+              'Anomaly Detector': {
+                desc: 'Live anomaly view: a high-variance programme, the agent\'s reasoning chain explaining how it concluded the spend is unusual, the cross-app intel that informed it, and the human-in-the-loop confidence thresholds.',
+                wef: 'Section 5 (Oversight Layer, p.42)',
+              },
+              'Impact Forecaster': {
+                desc: '5-year fiscal impact projection for a candidate programme — total cost, NPV, benefit-cost ratio, breakeven year, and a sensitivity range. Auto-triggered when PolicyAI submits a new policy proposal.',
+                wef: 'Section 4 (Operational Functions, p.34)',
+              },
+            };
+            return (
+              <HoverInsight
+                key={t}
+                title={t}
+                description={tabMeta[t].desc}
+                wefRef={tabMeta[t].wef}
+              >
+                <button
+                  onClick={() => setTab(t)}
+                  className={`px-4 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                    tab === t ? 'bg-blue-600 text-white' : 'text-slate-600 hover:bg-slate-50'
+                  }`}
+                >
+                  {t}
+                </button>
+              </HoverInsight>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -179,17 +257,23 @@ export function FiscalAIPage() {
                 {/* Ministry selector */}
                 <div className="flex gap-2">
                   {MINISTRIES.map((m) => (
-                    <button
+                    <HoverInsight
                       key={m}
-                      onClick={() => setMinistry(m)}
-                      className={`px-4 py-1.5 rounded-md text-xs font-medium border transition-colors ${
-                        ministry === m
-                          ? 'bg-blue-600 text-white border-blue-600'
-                          : 'bg-white text-slate-600 border-neutral-200 hover:bg-slate-50'
-                      }`}
+                      title={`Ministry — ${m}`}
+                      description={`Filter the budget monitor to programmes owned by the Ministry of ${m}. Each ministry exposes its programme registry; FiscalAI walks every programme to refresh burn-rate, KPI and efficiency metrics.`}
+                      wefRef="Functions 9, 44, 53 (Fiscal)"
                     >
-                      {m}
-                    </button>
+                      <button
+                        onClick={() => setMinistry(m)}
+                        className={`px-4 py-1.5 rounded-md text-xs font-medium border transition-colors ${
+                          ministry === m
+                            ? 'bg-blue-600 text-white border-blue-600'
+                            : 'bg-white text-slate-600 border-neutral-200 hover:bg-slate-50'
+                        }`}
+                      >
+                        {m}
+                      </button>
+                    </HoverInsight>
                   ))}
                 </div>
 
@@ -200,7 +284,13 @@ export function FiscalAIPage() {
                     const trend = SPENDING_TRENDS[p.id] || 'steady';
                     const tc = TREND_CONFIG[trend];
                     return (
-                      <div key={p.id} className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4 space-y-3">
+                      <HoverInsight
+                        key={p.id}
+                        title={p.program}
+                        description={`Programme card for ${p.program} (${p.ministryShort}). Shows: budget allocated vs spent (with 6-month trend), KPI actual vs target, and an efficiency ratio benchmarked against ${p.benchmarkRatio}x. Risk flag: ${p.riskFlag.toUpperCase()}. Insight: ${p.insight}`}
+                        wefRef="Functions 9, 44, 53 (Fiscal)"
+                      >
+                      <div className="glass rounded-xl p-4 space-y-3 cursor-help">
                         <div className="flex items-start justify-between gap-2">
                           <h3 className="text-sm font-semibold text-slate-800 leading-tight">{p.program}</h3>
                           <span className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium ${fc.bg} ${fc.text}`}>
@@ -259,6 +349,7 @@ export function FiscalAIPage() {
                         </div>
                         <p className="text-[11px] text-slate-500 italic">{p.insight}</p>
                       </div>
+                      </HoverInsight>
                     );
                   })}
                 </div>
@@ -271,7 +362,12 @@ export function FiscalAIPage() {
             {tab === 'Anomaly Detector' && (
               <>
                 {/* Alert card */}
-                <div className="bg-white rounded-lg border-2 border-red-300 shadow-sm overflow-hidden">
+                <HoverInsight
+                  title="Spending anomaly card"
+                  description={`Live anomaly detected by FiscalAI: ${a.ministry} / ${a.category} is +${a.variancePct}% over budget. The card lists likely causes ranked by probability and the agent's recommended next action.`}
+                  wefRef="Section 5 (Oversight Layer, p.42)"
+                >
+                <div className="bg-white rounded-lg border-2 border-red-300 shadow-sm overflow-hidden cursor-help">
                   <div className="bg-red-50 px-5 py-3 border-b border-red-200 flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse" />
                     <span className="text-sm font-semibold text-red-800">Spending Anomaly Detected</span>
@@ -316,20 +412,19 @@ export function FiscalAIPage() {
                       <p className="text-xs text-blue-700 leading-relaxed">{a.agentRecommendation}</p>
                     </div>
 
-                    <button
-                      onClick={() => setAgentRunning(true)}
-                      disabled={agentRunning}
-                      className="px-4 py-2 rounded-md text-xs font-medium bg-red-600 text-white hover:bg-red-700 disabled:opacity-50 transition-colors"
-                    >
-                      {agentRunning ? 'Investigation Running...' : 'Investigate Anomaly'}
-                    </button>
                   </div>
                 </div>
+                </HoverInsight>
 
                 {/* ========================================================= */}
                 {/* Agent Reasoning Chain                                       */}
                 {/* ========================================================= */}
-                <div className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden">
+                <HoverInsight
+                  title="Agent reasoning chain"
+                  description="Step-by-step trace of how FiscalAI reached its anomaly verdict — every step lists the data source and a confidence score. Click the row to expand. This is the agent's audit trail."
+                  wefRef="Section 5 (Oversight Layer, p.42)"
+                >
+                <div className="glass rounded-xl overflow-hidden cursor-help">
                   <button
                     onClick={() => setReasoningExpanded(!reasoningExpanded)}
                     className="w-full flex items-center justify-between px-5 py-3 hover:bg-slate-50 transition-colors"
@@ -383,11 +478,17 @@ export function FiscalAIPage() {
                     </div>
                   )}
                 </div>
+                </HoverInsight>
 
                 {/* ========================================================= */}
                 {/* Cross-App Intelligence                                      */}
                 {/* ========================================================= */}
-                <div className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden">
+                <HoverInsight
+                  title="Cross-app intelligence (inbound)"
+                  description="Signals other AgenticGov apps have pushed to FiscalAI in the last 24 hours — e.g. TenderAI flagging cost overruns, PolicyAI submitting fiscal-impact requests, GovBench surfacing OECD comparators. This is how FiscalAI stays bi-directionally informed."
+                  wefRef="Annex A (Function index)"
+                >
+                <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
                     <svg className="w-4 h-4 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
@@ -412,11 +513,17 @@ export function FiscalAIPage() {
                     ))}
                   </div>
                 </div>
+                </HoverInsight>
 
                 {/* ========================================================= */}
                 {/* Confidence Threshold Card                                   */}
                 {/* ========================================================= */}
-                <div className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden">
+                <HoverInsight
+                  title="Human-in-the-loop confidence thresholds"
+                  description="FiscalAI's autonomy policy: each anomaly is gated by a confidence score. ≥95% logs automatically; 80–95% surfaces in the daily digest; <80% routes to a human reviewer. Aligns with the WEF framework's oversight layer recommendations."
+                  wefRef="Section 5 (Oversight Layer, p.42)"
+                >
+                <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
                     <svg className="w-4 h-4 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -447,6 +554,7 @@ export function FiscalAIPage() {
                     </p>
                   </div>
                 </div>
+                </HoverInsight>
               </>
             )}
 
@@ -463,13 +571,18 @@ export function FiscalAIPage() {
                   <div>
                     <p className="text-xs font-semibold text-indigo-800">Auto-triggered by PolicyAI</p>
                     <p className="text-[11px] text-indigo-600 mt-0.5">
-                      This forecast was automatically generated when PolicyAI submitted the ECCE policy proposal.
+                      This forecast was automatically generated when PolicyAI submitted the KidSTART policy proposal.
                       FiscalAI ingested the proposal metadata and ran a 5-year fiscal impact projection within 4 seconds.
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden">
+                <HoverInsight
+                  title="Fiscal impact forecast"
+                  description={`5-year projection for ${f.title}. Summary tiles below show total cost, NPV, benefit-cost ratio (BCR), cost per beneficiary, and breakeven year. The chart breaks down annual cost, cumulative cost, and beneficiaries. The sensitivity range shows how the forecast changes under optimistic vs pessimistic assumptions.`}
+                  wefRef="Section 4 (Operational Functions, p.34)"
+                >
+                <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="bg-blue-600 px-5 py-3">
                     <h2 className="text-sm font-semibold text-white">{f.title}</h2>
                     <p className="text-[11px] text-blue-200 mt-0.5">5-Year Fiscal Impact Projection</p>
@@ -478,16 +591,23 @@ export function FiscalAIPage() {
                     {/* Summary stats */}
                     <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
                       {[
-                        { label: 'Total Cost', value: formatM(f.totalCostM) },
-                        { label: 'NPV', value: formatM(f.npvM) },
-                        { label: 'BCR', value: `${f.bcr}x` },
-                        { label: 'Cost/Beneficiary', value: `$${f.costPerBeneficiary.toLocaleString()}` },
-                        { label: 'Breakeven', value: `Year ${f.breakEvenYear}` },
+                        { label: 'Total Cost', value: formatM(f.totalCostM), desc: 'Sum of projected annual cost over the 5-year horizon, in nominal terms.' },
+                        { label: 'NPV', value: formatM(f.npvM), desc: 'Net Present Value: total discounted cash flows over the 5-year horizon, using a standard government discount rate.' },
+                        { label: 'BCR', value: `${f.bcr}x`, desc: 'Benefit-Cost Ratio: estimated benefits divided by costs. Above 1.0 means the programme returns more than it spends.' },
+                        { label: 'Cost/Beneficiary', value: `$${f.costPerBeneficiary.toLocaleString()}`, desc: 'Average lifetime cost per individual beneficiary served by the programme.' },
+                        { label: 'Breakeven', value: `Year ${f.breakEvenYear}`, desc: 'The year cumulative benefits equal cumulative costs. Earlier breakeven = stronger fiscal case.' },
                       ].map((s) => (
-                        <div key={s.label} className="bg-slate-50 rounded-lg p-3 text-center">
-                          <p className="text-[10px] text-slate-400 uppercase tracking-wide">{s.label}</p>
-                          <p className="text-sm font-bold text-slate-800 mt-1">{s.value}</p>
-                        </div>
+                        <HoverInsight
+                          key={s.label}
+                          title={s.label}
+                          description={s.desc}
+                          wefRef="Section 4 (Operational Functions, p.34)"
+                        >
+                          <div className="bg-slate-50 rounded-lg p-3 text-center cursor-help">
+                            <p className="text-[10px] text-slate-400 uppercase tracking-wide">{s.label}</p>
+                            <p className="text-sm font-bold text-slate-800 mt-1">{s.value}</p>
+                          </div>
+                        </HoverInsight>
                       ))}
                     </div>
 
@@ -523,20 +643,28 @@ export function FiscalAIPage() {
                       <p className="text-[10px] font-semibold text-slate-600 uppercase tracking-wide mb-2">Data Sources</p>
                       <div className="flex flex-wrap gap-2">
                         {[
-                          { app: 'PolicyAI', data: 'ECCE policy proposal + enrollment targets' },
+                          { app: 'PolicyAI', data: 'KidSTART policy proposal + enrollment targets' },
                           { app: 'FiscalAI', data: 'Historical cost models + inflation forecasts' },
                           { app: 'GovBench', data: 'OECD early childhood program benchmarks' },
                         ].map((src) => (
-                          <div key={src.app} className="flex items-center gap-1.5 bg-white border border-slate-200 rounded px-2 py-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                            <span className="text-[10px] font-medium text-slate-700">{src.app}</span>
-                            <span className="text-[10px] text-slate-400">{src.data}</span>
-                          </div>
+                          <HoverInsight
+                            key={src.app}
+                            title={`Data source — ${src.app}`}
+                            description={`This forecast pulls from ${src.app}: ${src.data}.`}
+                            wefRef="Annex A (Function index)"
+                          >
+                            <div className="flex items-center gap-1.5 bg-white border border-slate-200 rounded px-2 py-1 cursor-help">
+                              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+                              <span className="text-[10px] font-medium text-slate-700">{src.app}</span>
+                              <span className="text-[10px] text-slate-400">{src.data}</span>
+                            </div>
+                          </HoverInsight>
                         ))}
                       </div>
                     </div>
                   </div>
                 </div>
+                </HoverInsight>
               </>
             )}
           </div>
@@ -544,7 +672,7 @@ export function FiscalAIPage() {
           {/* ---- RIGHT: Sidebar ---- */}
           <div className="space-y-5">
             {/* Agent Status Card */}
-            <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
+            <div className="glass rounded-xl p-4">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                 <span className="text-xs font-semibold text-slate-800">FiscalAI Agent Status</span>

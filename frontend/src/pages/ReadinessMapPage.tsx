@@ -5,8 +5,9 @@ import { AgenticGovSubNav } from '../components/AgenticGovSubNav';
 import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
-import { AGENT_ACTIVITY_LOG, HUKUMA_APPS } from '../data/hukumaDemo';
-import type { WEFFunction } from '../data/hukumaDemo';
+import { HoverInsight } from '../components/HoverInsight';
+import { AGENT_ACTIVITY_LOG, AGENTIC_APPS } from '../data/agenticDemo';
+import type { WEFFunction } from '../data/agenticDemo';
 import {
   WEF_FUNCTIONS,
   TIER_COUNTS,
@@ -29,10 +30,38 @@ const TABS = ['Readiness Map', 'Ministerial Scorecard', 'Deployment Waves'] as c
 type Tab = (typeof TABS)[number];
 
 const STAT_ITEMS = [
-  { label: 'HIGH readiness', count: TIER_COUNTS.HIGH, color: 'text-emerald-600', dot: 'bg-emerald-500' },
-  { label: 'MEDIUM', count: TIER_COUNTS.MEDIUM, color: 'text-amber-600', dot: 'bg-amber-500' },
-  { label: 'EMERGING', count: TIER_COUNTS.EMERGING, color: 'text-blue-600', dot: 'bg-blue-500' },
-  { label: 'CAUTION', count: TIER_COUNTS.CAUTION, color: 'text-red-600', dot: 'bg-red-500' },
+  {
+    label: 'HIGH readiness',
+    count: TIER_COUNTS.HIGH,
+    color: 'text-emerald-600',
+    dot: 'bg-emerald-500',
+    description: 'Functions where AI potential is high, complexity is manageable, and risk is acceptable for autonomous deployment within 6 months. These are the "quick wins" the WEF report recommends prioritising.',
+    wefRef: 'Section 7.2 (Wave 1 — Quick Wins, p.65)',
+  },
+  {
+    label: 'MEDIUM',
+    count: TIER_COUNTS.MEDIUM,
+    color: 'text-amber-600',
+    dot: 'bg-amber-500',
+    description: 'Functions deployable in 6–18 months, typically requiring data quality improvements or stakeholder alignment before agentic AI can run autonomously.',
+    wefRef: 'Section 7.3 (Wave 2, p.66)',
+  },
+  {
+    label: 'EMERGING',
+    count: TIER_COUNTS.EMERGING,
+    color: 'text-blue-600',
+    dot: 'bg-blue-500',
+    description: 'Functions with clear AI potential but blocked on prerequisite capability — taxonomy work, data infrastructure, or upstream automation. 18–36 month horizon.',
+    wefRef: 'Section 7.4 (Wave 3, p.67)',
+  },
+  {
+    label: 'CAUTION',
+    count: TIER_COUNTS.CAUTION,
+    color: 'text-red-600',
+    dot: 'bg-red-500',
+    description: 'Functions where risk (legal, ethical, citizen-trust) currently outweighs potential. Should remain human-led with AI in advisory capacity only.',
+    wefRef: 'Section 8 (Risk Considerations, p.69)',
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -92,7 +121,7 @@ function ReadinessPulseBanner() {
   const declines = pulse.recentChanges.filter(c => c.from !== c.to && tierRank(c.to) < tierRank(c.from));
 
   return (
-    <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4 mb-5">
+    <div className="glass rounded-xl p-4 mb-5">
       <div className="flex items-center justify-between flex-wrap gap-2">
         <div className="flex items-center gap-3">
           <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -147,10 +176,10 @@ function FunctionDetailCard({ selected, onClose }: { selected: WEFFunction; onCl
   const chain = DEPENDENCY_CHAINS.find(d => d.blockingFunction === selected.id);
   const blockedBy = DEPENDENCY_CHAINS.filter(d => d.blockedFunctions.includes(selected.id));
   const nba = NEXT_BEST_ACTIONS.find(a => a.functionId === selected.id);
-  const coveringApps = HUKUMA_APPS.filter(app => app.wefFunctions.includes(selected.id));
+  const coveringApps = AGENTIC_APPS.filter(app => app.wefFunctions.includes(selected.id));
 
   return (
-    <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
+    <div className="glass rounded-xl p-4">
       <div className="flex items-start justify-between">
         <div>
           <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${TIER_BG_CLASSES[selected.readinessTier]}`}>
@@ -183,7 +212,7 @@ function FunctionDetailCard({ selected, onClose }: { selected: WEFFunction; onCl
       <div className="flex flex-wrap gap-4 mt-3 text-xs text-slate-500">
         <span>Owner: <b className="text-slate-700">{selected.ownerMinistry}</b></span>
         <span>Timeline: <b className="text-slate-700">{selected.timeline}</b></span>
-        <span>AgenticGov App: <b className="text-slate-700">{selected.hukumaApp ?? 'Not assigned'}</b></span>
+        <span>AgenticGov App: <b className="text-slate-700">{selected.agenticApp ?? 'Not assigned'}</b></span>
       </div>
 
       {/* Dependency Chain section */}
@@ -266,7 +295,7 @@ function DeploymentWavesTab() {
   return (
     <div className="space-y-4">
       {DEPLOYMENT_WAVES.map(wave => (
-        <div key={wave.wave} className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
+        <div key={wave.wave} className="glass rounded-xl p-4">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-3">
               <span className="text-lg font-bold text-slate-800">Wave {wave.wave}</span>
@@ -331,6 +360,21 @@ function DeploymentWavesTab() {
 // Enhanced Ministerial Scorecard Tab
 // ---------------------------------------------------------------------------
 
+function trendShape(data: number[]): string {
+  if (data.length < 2) return 'flat';
+  const first = data[0];
+  const last = data[data.length - 1];
+  const max = Math.max(...data);
+  const min = Math.min(...data);
+  const delta = last - first;
+  const range = max - min;
+  if (range <= 3) return 'flat';
+  if (delta >= 5) return 'rising';
+  if (delta <= -5) return 'declining';
+  if (Math.abs(delta) < 5 && range > 5) return 'oscillating';
+  return 'recovering';
+}
+
 function MinisterialScorecardTab() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -343,66 +387,121 @@ function MinisterialScorecardTab() {
           m.adoptionProgress >= 50 ? 'bg-violet-400' : 'bg-violet-300';
         const trendData = MINISTERIAL_TRENDS[m.ministryId] || [];
         const nba = NEXT_BEST_ACTIONS.find(a => a.ministryId === m.ministryId);
+        const shape = trendShape(trendData);
+        const trendLabels: Record<string, string> = {
+          rising: '6-month trend: rising steadily',
+          declining: '6-month trend: declining — investigation needed',
+          flat: '6-month trend: plateau',
+          oscillating: '6-month trend: oscillating',
+          recovering: '6-month trend: dipped, now recovering',
+        };
 
         return (
-          <div key={m.ministryId} className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="text-sm font-semibold text-slate-800">{m.name}</h3>
-                <p className="text-[10px] text-slate-400">{m.shortName} &bull; {m.functionsOwned.length} functions</p>
+          <HoverInsight
+            key={m.ministryId}
+            title={m.name}
+            description={`Owns ${m.functionsOwned.length} of the 70 WEF government functions. Currently at ${m.overallReadiness}% overall readiness, ${m.adoptionProgress}% adoption progress. ${trendLabels[shape] ?? ''}`}
+            meta={[
+              { label: 'Functions owned', value: String(m.functionsOwned.length) },
+              { label: 'HIGH-tier', value: String(m.highReadyCount) },
+              { label: 'MEDIUM-tier', value: String(m.mediumReadyCount) },
+              { label: 'EMERGING / CAUTION', value: `${m.emergingCount} / ${m.cautionCount}` },
+              { label: '6-month change', value: trendData.length > 0 ? `${trendData[trendData.length - 1] - trendData[0] > 0 ? '+' : ''}${trendData[trendData.length - 1] - trendData[0]} pts` : 'n/a' },
+            ]}
+            wefRef="Section 7 (Implementation, p.62)"
+          >
+            <div className="glass rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all cursor-help">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-sm font-semibold text-slate-800">{m.name}</h3>
+                  <p className="text-[10px] text-slate-400">{m.shortName} &bull; {m.functionsOwned.length} functions</p>
+                </div>
+                {trendData.length > 0 && (
+                  <HoverInsight
+                    title="6-month readiness trend"
+                    description={`This ministry's overall readiness score over the past 6 months. Pattern: ${trendLabels[shape] ?? shape}. Ministry trajectories vary — not all ministries trend up; some plateau, dip, or oscillate as data quality, staffing, and political priority shift.`}
+                    meta={trendData.map((v, i) => ({ label: `Month ${i + 1}`, value: `${v}%` }))}
+                    wefRef="Section 7.5 (Tracking, p.68)"
+                  >
+                    <div className="flex flex-col items-end cursor-help">
+                      <Sparkline
+                        data={trendData}
+                        color={
+                          shape === 'declining' ? '#ef4444' :
+                          shape === 'rising' ? '#10b981' :
+                          shape === 'oscillating' ? '#f59e0b' :
+                          shape === 'recovering' ? '#8b5cf6' :
+                          '#94a3b8'
+                        }
+                      />
+                      <span className="text-[9px] text-slate-400 mt-0.5 capitalize">6-mo: {shape}</span>
+                    </div>
+                  </HoverInsight>
+                )}
               </div>
-              {trendData.length > 0 && (
-                <div className="flex flex-col items-end">
-                  <Sparkline data={trendData} color={m.overallReadiness >= 70 ? '#10b981' : m.overallReadiness >= 50 ? '#f59e0b' : '#ef4444'} />
-                  <span className="text-[9px] text-slate-400 mt-0.5">6-month trend</span>
+
+              <HoverInsight
+                title="Overall Readiness score"
+                description={`Composite score of how ready this ministry is to deploy agentic AI across the functions it owns. Calculated from per-function tier weights and capability assessments. Currently ${m.overallReadiness}%.`}
+                meta={[
+                  { label: 'Score', value: `${m.overallReadiness}%` },
+                  { label: 'Tier mix', value: `${m.highReadyCount}H / ${m.mediumReadyCount}M / ${m.emergingCount}E / ${m.cautionCount}C` },
+                ]}
+                wefRef="Annex C (Scoring methodology, p.84)"
+              >
+                <div className="mt-3 cursor-help">
+                  <div className="flex items-center justify-between text-[11px] mb-1">
+                    <span className="text-slate-500">Overall Readiness</span>
+                    <span className="font-semibold text-slate-700">{m.overallReadiness}%</span>
+                  </div>
+                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div className={`h-full rounded-full ${readinessColor}`} style={{ width: `${m.overallReadiness}%` }} />
+                  </div>
+                </div>
+              </HoverInsight>
+
+              <HoverInsight
+                title="Adoption Progress"
+                description={`Percentage of this ministry's eligible functions that have agentic AI actually deployed (not just ready to deploy). Currently ${m.adoptionProgress}%. The gap between Readiness and Adoption is where leadership attention pays off.`}
+                meta={[
+                  { label: 'Adoption', value: `${m.adoptionProgress}%` },
+                  { label: 'Readiness', value: `${m.overallReadiness}%` },
+                  { label: 'Gap', value: `${m.overallReadiness - m.adoptionProgress}pp` },
+                ]}
+                wefRef="Section 7.5 (Adoption tracking, p.68)"
+              >
+                <div className="mt-2 cursor-help">
+                  <div className="flex items-center justify-between text-[11px] mb-1">
+                    <span className="text-slate-500">Adoption Progress</span>
+                    <span className="font-semibold text-slate-700">{m.adoptionProgress}%</span>
+                  </div>
+                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div className={`h-full rounded-full ${adoptColor}`} style={{ width: `${m.adoptionProgress}%` }} />
+                  </div>
+                </div>
+              </HoverInsight>
+
+              <div className="flex gap-2 mt-3 flex-wrap">
+                {m.highReadyCount > 0 && <span className="text-[10px] font-medium bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded">{m.highReadyCount} HIGH</span>}
+                {m.mediumReadyCount > 0 && <span className="text-[10px] font-medium bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">{m.mediumReadyCount} MEDIUM</span>}
+                {m.emergingCount > 0 && <span className="text-[10px] font-medium bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded">{m.emergingCount} EMERGING</span>}
+                {m.cautionCount > 0 && <span className="text-[10px] font-medium bg-red-100 text-red-700 px-1.5 py-0.5 rounded">{m.cautionCount} CAUTION</span>}
+              </div>
+
+              {nba && (
+                <div className="mt-3 pt-3 border-t border-neutral-100">
+                  <p className="text-[10px] font-semibold text-violet-700 mb-1">Agent Recommendation</p>
+                  <p className="text-[11px] text-slate-600">{nba.action}</p>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${TIER_BG_CLASSES[nba.currentTier]}`}>{nba.currentTier}</span>
+                    <span className="text-violet-400 text-[10px]">&rarr;</span>
+                    <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${TIER_BG_CLASSES[nba.targetTier]}`}>{nba.targetTier}</span>
+                    <span className="text-[9px] text-slate-400 ml-auto">#{nba.functionId} {nba.functionName}</span>
+                  </div>
                 </div>
               )}
             </div>
-
-            {/* Readiness bar */}
-            <div className="mt-3">
-              <div className="flex items-center justify-between text-[11px] mb-1">
-                <span className="text-slate-500">Overall Readiness</span>
-                <span className="font-semibold text-slate-700">{m.overallReadiness}%</span>
-              </div>
-              <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                <div className={`h-full rounded-full ${readinessColor}`} style={{ width: `${m.overallReadiness}%` }} />
-              </div>
-            </div>
-
-            {/* Adoption bar */}
-            <div className="mt-2">
-              <div className="flex items-center justify-between text-[11px] mb-1">
-                <span className="text-slate-500">Adoption Progress</span>
-                <span className="font-semibold text-slate-700">{m.adoptionProgress}%</span>
-              </div>
-              <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                <div className={`h-full rounded-full ${adoptColor}`} style={{ width: `${m.adoptionProgress}%` }} />
-              </div>
-            </div>
-
-            {/* Tier counts */}
-            <div className="flex gap-2 mt-3 flex-wrap">
-              {m.highReadyCount > 0 && <span className="text-[10px] font-medium bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded">{m.highReadyCount} HIGH</span>}
-              {m.mediumReadyCount > 0 && <span className="text-[10px] font-medium bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">{m.mediumReadyCount} MEDIUM</span>}
-              {m.emergingCount > 0 && <span className="text-[10px] font-medium bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded">{m.emergingCount} EMERGING</span>}
-              {m.cautionCount > 0 && <span className="text-[10px] font-medium bg-red-100 text-red-700 px-1.5 py-0.5 rounded">{m.cautionCount} CAUTION</span>}
-            </div>
-
-            {/* Next-Best-Action */}
-            {nba && (
-              <div className="mt-3 pt-3 border-t border-neutral-100">
-                <p className="text-[10px] font-semibold text-violet-700 mb-1">Agent Recommendation</p>
-                <p className="text-[11px] text-slate-600">{nba.action}</p>
-                <div className="flex items-center gap-2 mt-1">
-                  <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${TIER_BG_CLASSES[nba.currentTier]}`}>{nba.currentTier}</span>
-                  <span className="text-violet-400 text-[10px]">&rarr;</span>
-                  <span className={`text-[9px] font-medium px-1 py-0.5 rounded ${TIER_BG_CLASSES[nba.targetTier]}`}>{nba.targetTier}</span>
-                  <span className="text-[9px] text-slate-400 ml-auto">#{nba.functionId} {nba.functionName}</span>
-                </div>
-              </div>
-            )}
-          </div>
+          </HoverInsight>
         );
       })}
     </div>
@@ -423,7 +522,7 @@ export function ReadinessMapPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-neutral-100">
+    <div className="min-h-screen">
       <AppNavbar />
       <AgenticGovSubNav />
 
@@ -442,30 +541,86 @@ export function ReadinessMapPage() {
         {/* Stats bar */}
         <div className="flex items-center gap-4 mb-5 flex-wrap">
           {STAT_ITEMS.map(s => (
-            <div key={s.label} className="flex items-center gap-1.5">
-              <span className={`w-2.5 h-2.5 rounded-full ${s.dot}`} />
-              <span className={`text-sm font-semibold ${s.color}`}>{s.count}</span>
-              <span className="text-xs text-slate-500">{s.label}</span>
-            </div>
+            <HoverInsight
+              key={s.label}
+              title={`${s.count} functions at ${s.label} tier`}
+              description={s.description}
+              meta={[
+                { label: 'Total this tier', value: String(s.count) },
+                { label: 'Of 70 functions', value: `${Math.round((s.count / 70) * 100)}%` },
+              ]}
+              wefRef={s.wefRef}
+            >
+              <div className="flex items-center gap-1.5 cursor-help">
+                <span className={`w-2.5 h-2.5 rounded-full ${s.dot}`} />
+                <span className={`text-sm font-semibold ${s.color}`}>{s.count}</span>
+                <span className="text-xs text-slate-500">{s.label}</span>
+              </div>
+            </HoverInsight>
           ))}
-          <span className="text-xs text-slate-400 ml-auto">70 functions total</span>
+          <HoverInsight
+            title="70 functions, total"
+            description="The WEF Readiness Framework enumerates 70 specific government functions that are technically feasible for agentic AI today. They cluster across 5 lifecycle stages. Open the WEF report Annex A for the full index."
+            wefRef="Annex A (Function index, p.71)"
+          >
+            <span className="text-xs text-slate-400 ml-auto cursor-help">70 functions total</span>
+          </HoverInsight>
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-1 mb-5">
-          {TABS.map(t => (
+        <div className="flex gap-1 mb-5 flex-wrap items-center">
+          {TABS.map(t => {
+            const tabMeta: Record<typeof t, { description: string; wefRef: string }> = {
+              'Readiness Map': {
+                description: 'Scatter plot of all 70 functions on the WEF\'s potential vs. complexity axes, sized by jurisdiction-adjusted score and coloured by readiness tier. Click any dot for detail.',
+                wefRef: 'Section 2 (Functional Map, p.18)',
+              },
+              'Ministerial Scorecard': {
+                description: 'Per-ministry view: how many HIGH/MEDIUM/EMERGING/CAUTION functions each one owns, current adoption progress, 6-month trend, and the agent\'s top recommended next action.',
+                wefRef: 'Section 7 (Implementation, p.62)',
+              },
+              'Deployment Waves': {
+                description: 'The WEF\'s recommended phased rollout: Wave 1 (Quick Wins), Wave 2 (Capability Build), Wave 3 (Strategic Bets). Live progress for the in-progress wave.',
+                wefRef: 'Section 7.2–7.4 (Deployment Waves, p.65)',
+              },
+            };
+            return (
+              <HoverInsight
+                key={t}
+                title={t}
+                description={tabMeta[t].description}
+                wefRef={tabMeta[t].wefRef}
+              >
+                <button
+                  onClick={() => setTab(t)}
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                    tab === t
+                      ? 'bg-violet-600 text-white'
+                      : 'bg-white text-slate-600 border border-neutral-200 hover:bg-slate-50'
+                  }`}
+                >
+                  {t}
+                </button>
+              </HoverInsight>
+            );
+          })}
+          <HoverInsight
+            title="Run a fresh readiness assessment"
+            description="Triggers the ReadinessMap agent. It re-scans all 70 functions against current capability, recomputes tier assignments, updates the scorecard, and pushes any changes to the Mission Control morning briefing."
+            wefRef="Section 7.1 (Continuous Assessment, p.63)"
+          >
             <button
-              key={t}
-              onClick={() => setTab(t)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
-                tab === t
-                  ? 'bg-violet-600 text-white'
-                  : 'bg-white text-slate-600 border border-neutral-200 hover:bg-slate-50'
-              }`}
+              onClick={() => setAgentRunning(true)}
+              disabled={agentRunning}
+              className="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-md bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white text-sm font-semibold shadow-sm transition"
             >
-              {t}
+              <span className="relative flex h-2 w-2">
+                <span className={`absolute inline-flex h-full w-full rounded-full bg-white ${agentRunning ? 'opacity-75 animate-ping' : 'opacity-0'}`} />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
+              </span>
+              {agentRunning ? 'Scanning…' : 'Run readiness scan'}
             </button>
-          ))}
+          </HoverInsight>
         </div>
 
         {/* Two-column layout */}
@@ -475,7 +630,7 @@ export function ReadinessMapPage() {
             {tab === 'Readiness Map' && (
               <>
                 {/* Scatter chart */}
-                <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
+                <div className="glass rounded-xl p-4">
                   <div className="flex items-center justify-between mb-3">
                     <div>
                       <h2 className="text-sm font-semibold text-slate-800">AI Readiness by Function</h2>
@@ -541,7 +696,7 @@ export function ReadinessMapPage() {
           {/* Right sidebar: 1 col */}
           <div className="space-y-4">
             {/* Agent Status Card */}
-            <div className="bg-white rounded-lg border border-neutral-200 shadow-sm p-4">
+            <div className="glass rounded-xl p-4">
               <div className="flex items-center gap-2 mb-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <h3 className="text-xs font-semibold text-slate-700">ReadinessMap Agent Status</h3>
@@ -572,19 +727,20 @@ export function ReadinessMapPage() {
               </div>
             </div>
 
-            <AgentStepSimulator
-              steps={READINESS_AGENT_STEPS}
-              running={agentRunning}
-              title="Readiness Assessment"
-              onComplete={() => setAgentRunning(false)}
-            />
-            <button
-              onClick={() => setAgentRunning(true)}
-              disabled={agentRunning}
-              className="w-full text-xs font-medium text-violet-600 border border-violet-200 bg-violet-50 hover:bg-violet-100 disabled:opacity-50 rounded-md px-3 py-1.5 transition-colors"
+            <HoverInsight
+              title="Live agent stream"
+              description="When you trigger 'Run readiness scan' (top right), you'll see each step of the assessment flow through here in real time — the same agent topology described in WEF Annex C."
+              wefRef="Annex C (Agent topology, p.84)"
             >
-              {agentRunning ? 'Running assessment...' : 'Run Readiness Assessment'}
-            </button>
+              <div>
+                <AgentStepSimulator
+                  steps={READINESS_AGENT_STEPS}
+                  running={agentRunning}
+                  title="Readiness Assessment"
+                  onComplete={() => setAgentRunning(false)}
+                />
+              </div>
+            </HoverInsight>
 
             <AgentActivityFeed
               entries={AGENT_ACTIVITY_LOG}

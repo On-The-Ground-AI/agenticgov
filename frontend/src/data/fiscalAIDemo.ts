@@ -135,10 +135,10 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
     insight: 'On track — 97% of scholarship target achieved with proportional spend.',
   },
 
-  // Ministry of Health & Prevention — 4 programs
+  // Ministry of Health — 4 programs
   {
     id: 'moh-telehealth',
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     ministryShort: 'Health',
     program: 'Telemedicine Hub',
     allocatedBudgetM: 310,
@@ -155,7 +155,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
   },
   {
     id: 'moh-genomics',
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     ministryShort: 'Health',
     program: 'National Genomics Programme',
     allocatedBudgetM: 750,
@@ -172,7 +172,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
   },
   {
     id: 'moh-prevention',
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     ministryShort: 'Health',
     program: 'Preventive Health Screening',
     allocatedBudgetM: 220,
@@ -189,7 +189,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
   },
   {
     id: 'moh-pharma',
-    ministry: 'Ministry of Health & Prevention',
+    ministry: 'Ministry of Health',
     ministryShort: 'Health',
     program: 'Pharmaceutical Supply Chain',
     allocatedBudgetM: 480,
@@ -227,7 +227,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
     id: 'mof-procurement',
     ministry: 'Ministry of Finance',
     ministryShort: 'Finance',
-    program: 'Federal Procurement Digitisation',
+    program: 'Government Procurement Digitisation',
     allocatedBudgetM: 260,
     spentToDateM: 221,
     spentPct: 85,
@@ -261,7 +261,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
     id: 'mof-audit',
     ministry: 'Ministry of Finance',
     ministryShort: 'Finance',
-    program: 'Federal Audit & Assurance',
+    program: 'Auditor-General Office',
     allocatedBudgetM: 130,
     spentToDateM: 136.5,
     spentPct: 105,
@@ -295,7 +295,7 @@ export const SPENDING_ANOMALY: SpendingAnomaly = {
     { cause: 'Emergency cybersecurity consulting post-incident response', likelihood: 'low' },
   ],
   agentRecommendation:
-    'Immediate actions: (1) Freeze remaining Q4 consultancy commitments pending review. (2) Request itemised breakdown of top-10 contracts by value. (3) Cross-reference with TenderAI procurement records for compliance verification. (4) Escalate to Federal Audit Authority if duplicate invoicing confirmed. Estimated recovery potential: $120-280M.',
+    'Immediate actions: (1) Freeze remaining Q4 consultancy commitments pending review. (2) Request itemised breakdown of top-10 contracts by value. (3) Cross-reference with TenderAI procurement records for compliance verification. (4) Escalate to Auditor-General Office if duplicate invoicing confirmed. Estimated recovery potential: $120-280M.',
 };
 
 // ---------------------------------------------------------------------------
@@ -303,7 +303,7 @@ export const SPENDING_ANOMALY: SpendingAnomaly = {
 // ---------------------------------------------------------------------------
 
 export const IMPACT_FORECAST: FiscalForecast = {
-  title: 'Universal Early Childhood Education (ECCE) Programme',
+  title: 'KidSTART Universal Early Childhood Programme',
   years: [
     { year: 2026, costM: 380, beneficiaries: 42000, cumulativeCostM: 380 },
     { year: 2027, costM: 520, beneficiaries: 78000, cumulativeCostM: 900 },
@@ -355,9 +355,9 @@ export interface AnomalyReasoningStep {
 }
 
 export const ANOMALY_REASONING: AnomalyReasoningStep[] = [
-  { step: 1, action: 'Identified variance', finding: 'MoF Q4 consultancy spending $850M over budget', dataSource: 'eMunazamah fiscal system', confidence: 0.99 },
+  { step: 1, action: 'Identified variance', finding: 'MOF Q4 consultancy spending $850M over budget', dataSource: 'eMunazamah fiscal system', confidence: 0.99 },
   { step: 2, action: 'Retrieved historical baseline', finding: 'Average Q4 consultancy: $420M (5-year rolling)', dataSource: 'Historical spending database', confidence: 0.95 },
-  { step: 3, action: 'Checked budget amendments', finding: 'No approved supplementary allocation found', dataSource: 'Federal budget portal', confidence: 0.92 },
+  { step: 3, action: 'Checked budget amendments', finding: 'No approved supplementary allocation found', dataSource: 'National budget portal', confidence: 0.92 },
   { step: 4, action: 'Cross-referenced procurement', finding: '5 new contracts awarded in Q4, totaling $780M', dataSource: 'TenderAI contract database', confidence: 0.88 },
   { step: 5, action: 'Peer benchmarking', finding: 'government consultancy spend 2.1x OECD average for comparable scope', dataSource: 'GovBench international data', confidence: 0.85 },
   { step: 6, action: 'Root cause assessment', finding: 'Most likely: end-of-fiscal-year contract acceleration', dataSource: 'Pattern matching + historical analysis', confidence: 0.82 },
@@ -376,7 +376,7 @@ export interface FiscalCrossAppIntel {
 
 export const CROSS_APP_INTEL: FiscalCrossAppIntel[] = [
   { sourceApp: 'TenderAI', dataReceived: 'Q4 procurement costs for 5 contracts', impact: 'Confirmed $780M in new contract commitments', timestamp: '2h ago' },
-  { sourceApp: 'PolicyAI', dataReceived: 'ECCE policy proposal metadata', impact: 'Auto-generated 5-year fiscal impact forecast', timestamp: '4h ago' },
+  { sourceApp: 'PolicyAI', dataReceived: 'KidSTART policy proposal metadata', impact: 'Auto-generated 5-year fiscal impact forecast', timestamp: '4h ago' },
   { sourceApp: 'TransparencyAI', dataReceived: 'Disclosure deadline alerts for 3 ministries', impact: 'Flagged spending data gaps in 2 quarterly reports', timestamp: '6h ago' },
 ];
 
@@ -427,11 +427,11 @@ export const FISCAL_AGENT_STEPS: AgentStep[] = [
     icon: 'search',
     message: 'Scanning federal budget ledger for Q4 transactions...',
     duration: 1800,
-    detail: 'Querying 14,200 line items across 10 ministries',
+    detail: 'Querying 14,200 line items across 11 ministries',
   },
   {
     icon: 'alert',
-    message: 'Anomaly detected: MoF Consultancy spending +243% over budget',
+    message: 'Anomaly detected: MOF Consultancy spending +243% over budget',
     duration: 1200,
     detail: '$1,200M actual vs $350M budgeted — flagging for investigation',
   },
@@ -461,7 +461,7 @@ export const FISCAL_AGENT_STEPS: AgentStep[] = [
   },
   {
     icon: 'send',
-    message: 'Routing alert to Federal Audit Authority and TransparencyAI',
+    message: 'Routing alert to Auditor-General Office and TransparencyAI',
     duration: 1000,
     detail: 'Alert dispatched with priority: HIGH — response expected within 48h',
   },

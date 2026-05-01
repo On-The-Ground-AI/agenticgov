@@ -1,4 +1,4 @@
-import { SCHEDULED_TASKS, getAppColor, getAppName } from '../data/hukumaDemo';
+import { SCHEDULED_TASKS, getAppColor, getAppName } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 const STATUS_INDICATOR = {
@@ -9,7 +9,7 @@ const STATUS_INDICATOR = {
 
 export function ScheduledIntelligence() {
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
+    <div className="glass rounded-xl shadow-sm overflow-hidden">
       <div className="px-4 py-3 border-b border-neutral-100">
         <HoverInsight
           title="Scheduled Intelligence Tasks"

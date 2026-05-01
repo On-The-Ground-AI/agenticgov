@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { IMPACT_METRICS, type ImpactMetric } from '../data/hukumaDemo';
+import { IMPACT_METRICS, type ImpactMetric } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 function useCountUp(target: number, duration: number, start: boolean) {
@@ -88,7 +88,7 @@ function BreakdownModal({
     >
       <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-neutral-200 p-5 rounded-t-xl z-10">
+        <div className="sticky top-0 glass-strong border-b border-white/40 p-5 rounded-t-xl z-10">
           <div className="flex items-start justify-between">
             <div className="flex-1">
               <p className="text-[10px] text-slate-500 uppercase tracking-wider font-medium">
@@ -279,7 +279,7 @@ function MetricCard({
           onClick();
         }
       }}
-      className={`bg-white rounded-lg border border-neutral-200 shadow-sm p-4 cursor-pointer hover:shadow-lg hover:border-[#B8860B]/30 transition-all duration-500 ${
+      className={`glass rounded-xl p-4 cursor-pointer hover:shadow-lg hover:border-[#B8860B]/30 transition-all duration-500 ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
     >

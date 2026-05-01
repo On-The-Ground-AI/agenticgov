@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { DECISION_QUEUE, getAppColor, getAppName, formatTimestamp, type DecisionItem } from '../data/hukumaDemo';
+import { DECISION_QUEUE, getAppColor, getAppName, formatTimestamp, type DecisionItem } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 const SEVERITY_DOT = {
@@ -267,7 +267,7 @@ function DecisionCard({ item }: { item: DecisionItem }) {
 
   return (
     <>
-      <div className="bg-white rounded-lg border border-neutral-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+      <div className="glass rounded-xl overflow-hidden hover:shadow-md transition-shadow">
         {/* Clickable card body */}
         <div
           className="p-3 cursor-pointer"

@@ -11,7 +11,7 @@ export function AppNavbar() {
   ];
 
   return (
-    <nav className="bg-white border-b border-slate-200 shadow-sm">
+    <nav className="glass-strong border-b border-white/40 shadow-sm sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex justify-between h-14 sm:h-16">
           <div className="flex items-center gap-2 sm:gap-6">

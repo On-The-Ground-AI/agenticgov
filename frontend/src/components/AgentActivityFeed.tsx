@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { type AgentActivity, type AppId, getAppColor, getAppName, formatTimestamp, SIMULATED_NEW_ACTIVITIES } from '../data/hukumaDemo';
+import { type AgentActivity, type AppId, getAppColor, getAppName, formatTimestamp, SIMULATED_NEW_ACTIVITIES } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 interface AgentActivityFeedProps {

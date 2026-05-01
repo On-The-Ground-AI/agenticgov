@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { HoverInsight } from './HoverInsight';
-import { HUKUMA_APPS, DATA_FLOWS, getAppName, type AppId } from '../data/hukumaDemo';
+import { AGENTIC_APPS, DATA_FLOWS, getAppName, type AppId } from '../data/agenticDemo';
 
 interface CrossAppFlowDiagramProps {
   activeApp?: AppId;
@@ -89,7 +89,7 @@ export function CrossAppFlowDiagram({ activeApp, highlightedFlows = [], compact 
           );
         })}
 
-        {HUKUMA_APPS.map((app) => {
+        {AGENTIC_APPS.map((app) => {
           const pos = APP_POSITIONS[app.id];
           if (!pos) return null;
           const isActive = activeApp === app.id;

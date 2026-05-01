@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-import { type EventChain as EventChainType, EVENT_CHAINS, getAppColor, getAppName } from '../data/hukumaDemo';
+import { type EventChain as EventChainType, EVENT_CHAINS, getAppColor, getAppName } from '../data/agenticDemo';
 import { HoverInsight } from './HoverInsight';
 
 const STATUS_STYLES = {
@@ -91,7 +91,7 @@ export function EventChainPanel() {
   };
 
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 shadow-sm overflow-hidden">
+    <div className="glass rounded-xl shadow-sm overflow-hidden">
       <div className="px-4 py-3 border-b border-neutral-100 flex items-center justify-between">
         <div>
           <HoverInsight

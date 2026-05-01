@@ -1,4 +1,4 @@
-import type { AppId } from './hukumaDemo';
+import type { AppId } from './agenticDemo';
 
 // ---------------------------------------------------------------------------
 // Core Concept: Agentic flows are the primary object, not org tiers.
@@ -31,7 +31,7 @@ export interface AgenticFlow {
   triggeredBy?: string;
   timestamp: string;
   durationMs: number;
-  hukumaApp?: AppId;
+  agenticApp?: AppId;
   confidence?: number;
 }
 
@@ -48,15 +48,15 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     status: 'completed',
     initiator: 'Cabinet Briefing Agent',
     initiatorTier: 'cabinet',
-    target: 'MoF Fiscal Monitor',
+    target: 'MOF Fiscal Monitor',
     targetTier: 'ministry',
     action: 'Pulled Q4 spending variance',
     reason: 'PM requested fiscal update for tomorrow\'s cabinet — agent auto-queried all ministries with >10% variance',
     dataRequested: 'Q4 budget vs actuals for programs with >10% variance',
-    dataDelivered: 'MoF Q4 consultancy overspend $850M (3.4× baseline). Root cause: year-end contract acceleration.',
+    dataDelivered: 'MOF Q4 consultancy overspend $850M (3.4× baseline). Root cause: year-end contract acceleration.',
     timestamp: '2 min ago',
     durationMs: 3200,
-    hukumaApp: 'fiscal-ai',
+    agenticApp: 'fiscal-ai',
     confidence: 0.94,
   },
   {
@@ -65,20 +65,20 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     status: 'active',
     initiator: 'Cabinet Briefing Agent',
     initiatorTier: 'cabinet',
-    target: 'MoE Division Agents',
+    target: 'MOE Division Agents',
     targetTier: 'division',
-    action: 'Pulling ECCE enrollment data',
+    action: 'Pulling KidSTART enrollment data',
     reason: 'Cabinet agenda item on Year 2 budget — agent skipped ministry layer to get live enrollment numbers directly from division',
-    dataRequested: 'ECCE pilot: current enrollment, center operational status, teacher certification rate',
+    dataRequested: 'KidSTART pilot: current enrollment, center operational status, teacher certification rate',
     timestamp: '45 sec ago',
     durationMs: 0,
-    hukumaApp: 'policy-ai',
+    agenticApp: 'policy-ai',
   },
   {
     id: 'f-03',
     direction: 'pull',
     status: 'completed',
-    initiator: 'MoE Strategy Agent',
+    initiator: 'MOE Strategy Agent',
     initiatorTier: 'ministry',
     target: 'GovBench Ranking Monitor',
     targetTier: 'ministry',
@@ -88,24 +88,24 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     dataDelivered: 'Singapore phased rollout model: Year 1 pilot 50 schools, Year 2 expand to 200, Year 3 national. Union consultation built into timeline.',
     timestamp: '15 min ago',
     durationMs: 4800,
-    hukumaApp: 'gov-bench',
+    agenticApp: 'gov-bench',
     confidence: 0.88,
   },
   {
     id: 'f-04',
     direction: 'pull',
     status: 'completed',
-    initiator: 'Cross-Ministry NAFIS Agent',
+    initiator: 'Cross-Ministry SkillsFuture Agent',
     initiatorTier: 'cabinet',
-    target: 'MoE + MoHRE + MoIAT Agents',
+    target: 'MOE + MOM + MTI Agents',
     targetTier: 'ministry',
     action: 'Pulled employment + training data from 3 ministries simultaneously',
-    reason: 'NAFIS post-graduation employment declining — agent correlated education outputs with labor market data to identify skills gap',
-    dataRequested: 'MoE: graduate field distribution. MoHRE: private sector vacancy types. MoIAT: AI skills demand forecast.',
-    dataDelivered: 'Skills mismatch confirmed: 40% of graduates in business/admin, but 65% of vacancies in tech/engineering. MoIAT AI demand growing 23% YoY.',
+    reason: 'SkillsFuture post-graduation employment declining — agent correlated education outputs with labor market data to identify skills gap',
+    dataRequested: 'MoE: graduate field distribution. MOM: private sector vacancy types. MTI: AI skills demand forecast.',
+    dataDelivered: 'Skills mismatch confirmed: 40% of graduates in business/admin, but 65% of vacancies in tech/engineering. MTI AI demand growing 23% YoY.',
     timestamp: '28 min ago',
     durationMs: 8200,
-    hukumaApp: 'readiness-map',
+    agenticApp: 'readiness-map',
     confidence: 0.91,
   },
 
@@ -119,12 +119,12 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     target: 'Cabinet Decision Queue',
     targetTier: 'cabinet',
     action: 'Pushed spending anomaly alert',
-    reason: 'Detected 3.4× baseline variance in MoF consultancy — exceeded auto-escalation threshold (>2× baseline)',
+    reason: 'Detected 3.4× baseline variance in MOF consultancy — exceeded auto-escalation threshold (>2× baseline)',
     dataDelivered: '$850M overspend flagged. Confidence 92%. Recommended: invoice-level investigation + 5-day supplementary disclosure deadline.',
     triggeredBy: 'Automated threshold breach (>2× baseline variance)',
     timestamp: '1 hour ago',
     durationMs: 1200,
-    hukumaApp: 'fiscal-ai',
+    agenticApp: 'fiscal-ai',
     confidence: 0.92,
   },
   {
@@ -133,7 +133,7 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     status: 'completed',
     initiator: 'TenderAI Compliance Scanner',
     initiatorTier: 'division',
-    target: 'MoEI Ministry Agent',
+    target: 'MND Ministry Agent',
     targetTier: 'ministry',
     action: 'Pushed compliance gap alert',
     reason: 'Detected 3/12 large tenders missing Sustainability Framework environmental criteria — systemic gap, not one-off',
@@ -141,7 +141,7 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     triggeredBy: 'Automated compliance scan (daily 2:00 AM)',
     timestamp: '4 hours ago',
     durationMs: 6400,
-    hukumaApp: 'tender-ai',
+    agenticApp: 'tender-ai',
     confidence: 0.91,
   },
   {
@@ -150,15 +150,15 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     status: 'completed',
     initiator: 'TransparencyAI Deadline Monitor',
     initiatorTier: 'division',
-    target: 'MoF Ministry Agent + Cabinet Alert',
+    target: 'MOF Ministry Agent + Cabinet Alert',
     targetTier: 'ministry',
     action: 'Pushed disclosure deadline warning',
-    reason: 'MoF Q4 report due in 5 days, only 64% complete — auto-escalated because completion rate too low for deadline',
+    reason: 'MOF Q4 report due in 5 days, only 64% complete — auto-escalated because completion rate too low for deadline',
     dataDelivered: 'Missing: consultancy breakdown, sub-program allocations, variance explanations. Current completion 64%, need 100% in 5 days.',
     triggeredBy: 'Deadline proximity + low completion rate',
     timestamp: '6 hours ago',
     durationMs: 800,
-    hukumaApp: 'transparency-ai',
+    agenticApp: 'transparency-ai',
     confidence: 0.95,
   },
   {
@@ -175,7 +175,7 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     triggeredBy: 'Score threshold crossed (MEDIUM → HIGH)',
     timestamp: '1 day ago',
     durationMs: 2100,
-    hukumaApp: 'readiness-map',
+    agenticApp: 'readiness-map',
     confidence: 0.87,
   },
 
@@ -193,7 +193,7 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     dataDelivered: 'Anomaly details, root cause analysis, and remediation timeline shared. TransparencyAI auto-drafted supplementary disclosure.',
     timestamp: '55 min ago',
     durationMs: 1800,
-    hukumaApp: 'transparency-ai',
+    agenticApp: 'transparency-ai',
     confidence: 0.89,
   },
   {
@@ -206,10 +206,10 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     targetTier: 'ministry',
     action: 'Syncing tender cost data with budget forecaster',
     reason: 'New $1.2B solar tender submitted — fiscal impact needs to be computed before approval',
-    dataRequested: 'Budget headroom check for MoEI energy procurement FY2026-2027',
+    dataRequested: 'Budget headroom check for MND energy procurement FY2026-2027',
     timestamp: '3 min ago',
     durationMs: 0,
-    hukumaApp: 'fiscal-ai',
+    agenticApp: 'fiscal-ai',
   },
   {
     id: 'f-11',
@@ -219,29 +219,29 @@ export const LIVE_FLOWS: AgenticFlow[] = [
     initiatorTier: 'ministry',
     target: 'Causalis Evaluation Agent',
     targetTier: 'ministry',
-    action: 'Synced ECCE policy data for evaluation design',
-    reason: 'ECCE pilot Year 2 budget needs cabinet approval — Causalis auto-generated evaluation design to strengthen the case',
+    action: 'Synced KidSTART policy data for evaluation design',
+    reason: 'KidSTART pilot Year 2 budget needs cabinet approval — Causalis auto-generated evaluation design to strengthen the case',
     dataDelivered: 'Cluster-RCT design with 50 treatment + 50 control centers, 3-year measurement plan, estimated BCR 2.1×.',
     timestamp: '2 hours ago',
     durationMs: 12000,
-    hukumaApp: 'causalis',
+    agenticApp: 'causalis',
     confidence: 0.88,
   },
   {
     id: 'f-12',
     direction: 'pull',
     status: 'completed',
-    initiator: 'MoE Budget Agent',
+    initiator: 'MOE Budget Agent',
     initiatorTier: 'ministry',
     target: 'FiscalAI National Benchmarks',
     targetTier: 'cabinet',
     action: 'Pulled OECD education spending benchmarks',
-    reason: 'Year 2 ECCE budget request needs justification — agent pulled comparable country spending to strengthen cabinet submission',
-    dataRequested: 'OECD average ECCE spend per child, top-5 country benchmarks',
-    dataDelivered: 'National ECCE spend: $18K/child. OECD avg: $22K. Finland: $31K. Agent recommendation: budget request is conservative vs peers.',
+    reason: 'Year 2 KidSTART budget request needs justification — agent pulled comparable country spending to strengthen cabinet submission',
+    dataRequested: 'OECD average KidSTART spend per child, top-5 country benchmarks',
+    dataDelivered: 'National KidSTART spend: $18K/child. OECD avg: $22K. Finland: $31K. Agent recommendation: budget request is conservative vs peers.',
     timestamp: '3 hours ago',
     durationMs: 3600,
-    hukumaApp: 'fiscal-ai',
+    agenticApp: 'fiscal-ai',
     confidence: 0.93,
   },
 ];
@@ -274,7 +274,7 @@ export const ROUTING_RULES: RoutingRule[] = [
     fromTier: 'division',
     toTier: 'cabinet',
     condition: 'Bypass ministry layer when variance exceeds 2× and amount > $100M',
-    exampleFired: 'MoF Q4 consultancy $850M overspend → pushed directly to Cabinet Decision Queue',
+    exampleFired: 'MOF Q4 consultancy $850M overspend → pushed directly to Cabinet Decision Queue',
     frequency: '~3 per quarter',
   },
   {
@@ -286,7 +286,7 @@ export const ROUTING_RULES: RoutingRule[] = [
     fromTier: 'cabinet',
     toTier: 'division',
     condition: 'For each agenda item, identify source divisions and pull live data — skip cached ministry reports',
-    exampleFired: 'ECCE Year 2 budget item → pulled enrollment data directly from Early Childhood division',
+    exampleFired: 'KidSTART Year 2 budget item → pulled enrollment data directly from Early Childhood division',
     frequency: 'Weekly (pre-cabinet)',
   },
   {
@@ -298,7 +298,7 @@ export const ROUTING_RULES: RoutingRule[] = [
     fromTier: 'ministry',
     toTier: 'ministry',
     condition: 'Overlap detected via semantic similarity > 0.8 or budget line collision',
-    exampleFired: 'MoE AI Curriculum + MoIAT AI Training → duplicate $45M budget lines identified',
+    exampleFired: 'MOE AI Curriculum + MTI AI Training → duplicate $45M budget lines identified',
     frequency: '~5 per quarter',
   },
   {
@@ -334,7 +334,7 @@ export const ROUTING_RULES: RoutingRule[] = [
     fromTier: 'division',
     toTier: 'cabinet',
     condition: 'When a division metric moves >5%, agent recalculates its impact on the national KPI chain',
-    exampleFired: 'ECCE enrollment +8% above target → Education Quality Index projection improved → cabinet KPI tracker updated',
+    exampleFired: 'KidSTART enrollment +8% above target → Education Quality Index projection improved → cabinet KPI tracker updated',
     frequency: '~8 per quarter',
   },
   {
@@ -346,7 +346,7 @@ export const ROUTING_RULES: RoutingRule[] = [
     fromTier: 'cabinet',
     toTier: 'ministry',
     condition: 'Before any budget request reaches cabinet vote, agents auto-attach evidence strength rating and comparable benchmarks',
-    exampleFired: 'ECCE Year 2 $520M request → Causalis attached Cluster-RCT design + BCR 2.1× + OECD spend comparison',
+    exampleFired: 'KidSTART Year 2 $520M request → Causalis attached Cluster-RCT design + BCR 2.1× + OECD spend comparison',
     frequency: 'Every cabinet budget item',
   },
   {
@@ -408,18 +408,18 @@ export const NETWORK_NODES: NetworkNode[] = [
   { id: 'cab-directive', label: 'Directive Monitor', tier: 'cabinet', type: 'agent', activeFlows: 2 },
   { id: 'pm-office', label: 'PM Office', tier: 'cabinet', type: 'human', activeFlows: 1 },
 
-  { id: 'moe-strategy', label: 'MoE Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
-  { id: 'mof-fiscal', label: 'MoF Fiscal Monitor', tier: 'ministry', type: 'agent', activeFlows: 5 },
-  { id: 'moiat-ai', label: 'MoIAT AI Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
-  { id: 'moei-green', label: 'MoEI Sustainability Framework Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
-  { id: 'tdra-digital', label: 'TDRA Digital Gov Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
+  { id: 'moe-strategy', label: 'MOE Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
+  { id: 'mof-fiscal', label: 'MOF Fiscal Monitor', tier: 'ministry', type: 'agent', activeFlows: 5 },
+  { id: 'moiat-ai', label: 'MTI AI Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
+  { id: 'moei-green', label: 'MND Sustainability Framework Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
+  { id: 'tdra-digital', label: 'GovTech Digital Gov Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
 
   { id: 'fiscal-anomaly', label: 'FiscalAI Anomaly Detector', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'tender-compliance', label: 'TenderAI Compliance Scanner', tier: 'division', type: 'agent', activeFlows: 3 },
   { id: 'transparency-deadline', label: 'TransparencyAI Deadline Monitor', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'readiness-score', label: 'ReadinessMap Score Agent', tier: 'division', type: 'agent', activeFlows: 1 },
   { id: 'govbench-ranking', label: 'GovBench Ranking Monitor', tier: 'division', type: 'agent', activeFlows: 1 },
-  { id: 'moe-ecce', label: 'MoE ECCE Division Agent', tier: 'division', type: 'agent', activeFlows: 2 },
+  { id: 'moe-ecce', label: 'MOE KidSTART Division Agent', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'policy-impact', label: 'PolicyAI Impact Agent', tier: 'division', type: 'agent', activeFlows: 2 },
 ];
 
@@ -486,7 +486,7 @@ export interface CabinetAgendaItem {
   relatedMinistries: string[];
   aiSummary: string;
   recommendation: string;
-  hukumaApps: AppId[];
+  agenticApps: AppId[];
   dataPoints: number;
   confidenceScore: number;
 }
@@ -528,7 +528,7 @@ export const MOE_DIVISIONS: Division[] = [
 
 export const WORK_STREAMS: WorkStream[] = [
   {
-    id: 'ws-ecce-pilot', name: 'Universal ECCE Pilot Programme', division: 'moe-ecce', ministry: 'MoE',
+    id: 'ws-ecce-pilot', name: 'KidSTART Pilot Programme', division: 'moe-ecce', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 45, budgetAEDM: 380, spentAEDM: 168,
     kpis: [
       { name: 'Centers Operational', target: 50, actual: 23, unit: 'centers', trend: 'improving' },
@@ -538,7 +538,7 @@ export const WORK_STREAMS: WorkStream[] = [
     lastUpdate: '2 hours ago', aiSummary: 'Enrollment ahead of projections by 8%. Construction delays in Al Ain cluster may impact Q3 target. Recommend contractor acceleration or scope adjustment.',
   },
   {
-    id: 'ws-ecce-standards', name: 'ECCE Quality Standards Framework', division: 'moe-ecce', ministry: 'MoE',
+    id: 'ws-ecce-standards', name: 'KidSTART Quality Standards Framework', division: 'moe-ecce', ministry: 'MOE',
     type: 'reform', status: 'at-risk', progress: 35, budgetAEDM: 12, spentAEDM: 7,
     kpis: [
       { name: 'Standards Drafted', target: 45, actual: 28, unit: 'standards', trend: 'stable' },
@@ -548,7 +548,7 @@ export const WORK_STREAMS: WorkStream[] = [
     riskFlag: 'Consultation pace 60% below plan — may delay standards approval by 2 months',
   },
   {
-    id: 'ws-madrasa', name: 'Madrasa E-Learning Platform', division: 'moe-k12', ministry: 'MoE',
+    id: 'ws-madrasa', name: 'Madrasa E-Learning Platform', division: 'moe-k12', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 78, budgetAEDM: 220, spentAEDM: 175,
     kpis: [
       { name: 'Active Students', target: 500000, actual: 462000, unit: 'students', trend: 'improving' },
@@ -558,29 +558,29 @@ export const WORK_STREAMS: WorkStream[] = [
     lastUpdate: '3 hours ago', aiSummary: 'Platform usage exceeding targets. Completion rate 6pts above plan. Recommend reallocating surplus to content expansion for vocational tracks.',
   },
   {
-    id: 'ws-stem-academy', name: 'National STEM Academy Network', division: 'moe-k12', ministry: 'MoE',
+    id: 'ws-stem-academy', name: 'National STEM Academy Network', division: 'moe-k12', ministry: 'MOE',
     type: 'project', status: 'on-track', progress: 62, budgetAEDM: 340, spentAEDM: 198,
     kpis: [
       { name: 'Teachers Trained', target: 500, actual: 520, unit: 'teachers', trend: 'improving' },
       { name: 'Student Enrollment', target: 12000, actual: 8400, unit: 'students', trend: 'improving' },
       { name: 'Lab Facilities Operational', target: 30, actual: 19, unit: 'labs', trend: 'stable' },
     ],
-    crossMinistry: ['MoIAT', 'TDRA'],
-    lastUpdate: '5 hours ago', aiSummary: 'Teacher training ahead of schedule (+4%). Lab construction on track. Cross-ministry partnership with MoIAT for AI curriculum content progressing well.',
+    crossMinistry: ['MTI', 'GovTech'],
+    lastUpdate: '5 hours ago', aiSummary: 'Teacher training ahead of schedule (+4%). Lab construction on track. Cross-ministry partnership with MTI for AI curriculum content progressing well.',
   },
   {
-    id: 'ws-scholarship', name: 'National Scholarship Programme', division: 'moe-higher', ministry: 'MoE',
+    id: 'ws-scholarship', name: 'National Scholarship Programme', division: 'moe-higher', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 55, budgetAEDM: 890, spentAEDM: 512,
     kpis: [
       { name: 'Scholars Abroad', target: 3000, actual: 2650, unit: 'scholars', trend: 'stable' },
       { name: 'Completion Rate', target: 85, actual: 88, unit: '%', trend: 'improving' },
       { name: 'Post-Graduation Employment', target: 90, actual: 82, unit: '%', trend: 'declining' },
     ],
-    lastUpdate: '1 day ago', aiSummary: 'Completion rate above target. Post-graduation employment declined 3pts — recommend labor market alignment review with MoHRE.',
-    riskFlag: 'Post-graduation employment trending down — requires inter-ministry coordination with MoHRE',
+    lastUpdate: '1 day ago', aiSummary: 'Completion rate above target. Post-graduation employment declined 3pts — recommend labor market alignment review with MOM.',
+    riskFlag: 'Post-graduation employment trending down — requires inter-ministry coordination with MOM',
   },
   {
-    id: 'ws-uni-reform', name: 'Higher Education Governance Reform', division: 'moe-higher', ministry: 'MoE',
+    id: 'ws-uni-reform', name: 'Higher Education Governance Reform', division: 'moe-higher', ministry: 'MOE',
     type: 'reform', status: 'delayed', progress: 28, budgetAEDM: 45, spentAEDM: 18,
     kpis: [
       { name: 'Universities Assessed', target: 12, actual: 5, unit: 'universities', trend: 'stable' },
@@ -590,7 +590,7 @@ export const WORK_STREAMS: WorkStream[] = [
     riskFlag: 'Reform stalled — only 2/8 frameworks approved after 6 months',
   },
   {
-    id: 'ws-teacher-train', name: 'Teacher Professional Development', division: 'moe-teacher', ministry: 'MoE',
+    id: 'ws-teacher-train', name: 'Teacher Professional Development', division: 'moe-teacher', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 70, budgetAEDM: 85, spentAEDM: 61,
     kpis: [
       { name: 'Teachers Certified', target: 8000, actual: 5800, unit: 'teachers', trend: 'improving' },
@@ -599,135 +599,135 @@ export const WORK_STREAMS: WorkStream[] = [
     lastUpdate: '6 hours ago', aiSummary: 'Program performing above expectations. High satisfaction scores suggest effective curriculum design. On track for full year target.',
   },
   {
-    id: 'ws-teacher-eval', name: 'Performance-Based Teacher Evaluation', division: 'moe-teacher', ministry: 'MoE',
+    id: 'ws-teacher-eval', name: 'Performance-Based Teacher Evaluation', division: 'moe-teacher', ministry: 'MOE',
     type: 'reform', status: 'at-risk', progress: 40, budgetAEDM: 25, spentAEDM: 14,
     kpis: [
       { name: 'Schools Piloting', target: 200, actual: 120, unit: 'schools', trend: 'stable' },
       { name: 'Teacher Union Approval', target: 1, actual: 0, unit: 'approval', trend: 'stable' },
     ],
-    crossMinistry: ['MoHRE'],
+    crossMinistry: ['MOM'],
     lastUpdate: '2 days ago', aiSummary: 'Pilot rollout slower than planned. Teacher union consultation ongoing — no formal approval yet. Singapore benchmarks (via GovBench) suggest phased rollout approach.',
     riskFlag: 'Union consultation required before national rollout',
   },
   {
-    id: 'ws-edtech', name: 'National EdTech Integration Programme', division: 'moe-digital', ministry: 'MoE',
+    id: 'ws-edtech', name: 'National EdTech Integration Programme', division: 'moe-digital', ministry: 'MOE',
     type: 'project', status: 'on-track', progress: 58, budgetAEDM: 150, spentAEDM: 92,
     kpis: [
       { name: 'Schools Equipped', target: 800, actual: 480, unit: 'schools', trend: 'improving' },
       { name: 'Digital Literacy Score', target: 80, actual: 74, unit: '/100', trend: 'improving' },
     ],
-    crossMinistry: ['TDRA'],
-    lastUpdate: '4 hours ago', aiSummary: 'Rollout on schedule. TDRA bandwidth upgrades enabling faster deployment. Digital literacy improving steadily across pilot schools.',
+    crossMinistry: ['GovTech'],
+    lastUpdate: '4 hours ago', aiSummary: 'Rollout on schedule. GovTech bandwidth upgrades enabling faster deployment. Digital literacy improving steadily across pilot schools.',
   },
   {
-    id: 'ws-ai-curriculum', name: 'AI & Future Skills Curriculum', division: 'moe-digital', ministry: 'MoE',
+    id: 'ws-ai-curriculum', name: 'AI & Future Skills Curriculum', division: 'moe-digital', ministry: 'MOE',
     type: 'initiative', status: 'on-track', progress: 35, budgetAEDM: 45, spentAEDM: 18,
     kpis: [
       { name: 'Curriculum Modules Developed', target: 24, actual: 12, unit: 'modules', trend: 'improving' },
       { name: 'Pilot Schools', target: 50, actual: 15, unit: 'schools', trend: 'improving' },
     ],
-    crossMinistry: ['MoIAT', 'TDRA'],
-    lastUpdate: '1 day ago', aiSummary: 'Module development on track. Partnership with MoIAT for industry-aligned content. AI ethics module receiving strong feedback from pilot teachers.',
+    crossMinistry: ['MTI', 'GovTech'],
+    lastUpdate: '1 day ago', aiSummary: 'Module development on track. Partnership with MTI for industry-aligned content. AI ethics module receiving strong feedback from pilot teachers.',
   },
 ];
 
 export const MOE_INTEL: MinistryIntel = {
-  id: 'moe', name: 'Ministry of Education', shortName: 'MoE', minister: 'H.E. Ahmad Al Falasi',
+  id: 'moe', name: 'Ministry of Education', shortName: 'MOE', minister: 'H.E. Ahmad Al Falasi',
   divisions: ['moe-ecce', 'moe-k12', 'moe-higher', 'moe-teacher', 'moe-digital'],
   overallProgress: 56,
   totalBudgetAEDM: 2192,
   totalSpentAEDM: 1263,
   riskCount: 4,
-  aiSummary: 'Ministry performing at 56% overall progress against annual targets. 6/10 work streams on track, 2 at risk, 1 delayed, 1 completed. Key risks: HE Governance Reform stalled (requires ministerial intervention), ECCE Standards consultation pace below target. Strengths: Madrasa platform exceeding engagement targets, STEM Academy teacher training ahead of schedule. Cross-ministry dependencies with MoHRE (scholarship employment, teacher evaluation) and TDRA (EdTech, AI Curriculum) require coordination.',
+  aiSummary: 'Ministry performing at 56% overall progress against annual targets. 6/10 work streams on track, 2 at risk, 1 delayed, 1 completed. Key risks: HE Governance Reform stalled (requires ministerial intervention), KidSTART Standards consultation pace below target. Strengths: Student Learning Space exceeding engagement targets, STEM Academy teacher training ahead of schedule. Cross-ministry dependencies with MOM (scholarship employment, teacher evaluation) and GovTech (EdTech, AI Curriculum) require coordination.',
   cabinetItems: ['cab-1', 'cab-3'],
 };
 
 export const CROSS_MINISTRY_PROGRAMS: CrossMinistryProgram[] = [
   {
-    id: 'cmp-1', name: 'NAFIS — National Workforce Programme',
-    leadMinistry: 'MoHRE', participatingMinistries: ['MoE', 'MoF', 'MoIAT', 'MoCD'],
+    id: 'cmp-1', name: 'SkillsFuture — National Workforce Programme',
+    leadMinistry: 'MOM', participatingMinistries: ['MOE', 'MOF', 'MTI', 'MSF'],
     overallProgress: 64, totalBudgetAEDM: 4200, status: 'on-track',
-    aiCoordinationNote: 'MoE scholarship employment data shows declining placement rates (82% vs 90% target). MoHRE reports private sector absorption at capacity. Recommend: expand government placement pathway and align MoIAT skills training with demand gaps.',
+    aiCoordinationNote: 'MOE scholarship employment data shows declining placement rates (82% vs 90% target). MOM reports private sector absorption at capacity. Recommend: expand government placement pathway and align MTI skills training with demand gaps.',
     conflictsDetected: 1, synergyOpportunities: 2,
   },
   {
     id: 'cmp-2', name: 'National Digital Government Strategy 2026',
-    leadMinistry: 'TDRA', participatingMinistries: ['MoF', 'MoE', 'MoH', 'MoCA'],
+    leadMinistry: 'GovTech', participatingMinistries: ['MOF', 'MOE', 'MOH', 'PSD'],
     overallProgress: 72, totalBudgetAEDM: 1800, status: 'on-track',
-    aiCoordinationNote: 'Strong progress on service digitization. MoE EdTech programme and TDRA bandwidth upgrades creating positive synergy. MoF fiscal monitoring integration ahead of schedule. Potential conflict: data sovereignty requirements differ between MoH health records and TDRA interoperability standards.',
+    aiCoordinationNote: 'Strong progress on service digitization. MOE EdTech programme and GovTech bandwidth upgrades creating positive synergy. MOF fiscal monitoring integration ahead of schedule. Potential conflict: data sovereignty requirements differ between MOH health records and GovTech interoperability standards.',
     conflictsDetected: 1, synergyOpportunities: 3,
   },
   {
     id: 'cmp-3', name: 'National AI Strategy 2031',
-    leadMinistry: 'MoIAT', participatingMinistries: ['TDRA', 'MoE', 'MoF', 'MoCA'],
+    leadMinistry: 'MTI', participatingMinistries: ['GovTech', 'MOE', 'MOF', 'PSD'],
     overallProgress: 48, totalBudgetAEDM: 3500, status: 'at-risk',
-    aiCoordinationNote: 'Overall progress below 50% with 2 years remaining. Talent pipeline (via MoE AI Curriculum) is early-stage. Government adoption (via AgenticGov platform) accelerating faster than private sector. Recommend: cabinet discussion on acceleration strategy.',
+    aiCoordinationNote: 'Overall progress below 50% with 2 years remaining. Talent pipeline (via MOE AI Curriculum) is early-stage. Government adoption (via AgenticGov platform) accelerating faster than private sector. Recommend: cabinet discussion on acceleration strategy.',
     conflictsDetected: 0, synergyOpportunities: 4,
   },
   {
     id: 'cmp-4', name: 'Sustainability Framework 2030 — Sustainability Transition',
-    leadMinistry: 'MoEI', participatingMinistries: ['MoF', 'MoIAT', 'MoCA'],
+    leadMinistry: 'MND', participatingMinistries: ['MOF', 'MTI', 'PSD'],
     overallProgress: 38, totalBudgetAEDM: 8500, status: 'at-risk',
-    aiCoordinationNote: 'Infrastructure investment pace behind schedule. MoF flagged $1.2B solar procurement tender as significantly above OECD benchmarks. TenderAI compliance check detected missing environmental sustainability criteria in 3 recent tenders — systemic gap.',
+    aiCoordinationNote: 'Infrastructure investment pace behind schedule. MOF flagged $1.2B solar procurement tender as significantly above OECD benchmarks. TenderAI compliance check detected missing environmental sustainability criteria in 3 recent tenders — systemic gap.',
     conflictsDetected: 2, synergyOpportunities: 1,
   },
 ];
 
 export const CABINET_AGENDA: CabinetAgendaItem[] = [
   {
-    id: 'cab-1', title: 'MoF Q4 Consultancy Overspend — $850M Variance',
-    sourceMinistry: 'MoF', type: 'decision', priority: 'urgent',
-    relatedMinistries: ['MoCA'],
+    id: 'cab-1', title: 'MOF Q4 Consultancy Overspend — $850M Variance',
+    sourceMinistry: 'MOF', type: 'decision', priority: 'urgent',
+    relatedMinistries: ['PSD'],
     aiSummary: 'FiscalAI detected 3.4× baseline spending on Q4 consultancy contracts. Root cause: end-of-fiscal-year contract acceleration. TransparencyAI flagged incomplete quarterly disclosure. GovBench shows consultancy spend 2.1× OECD average.',
     recommendation: 'Approve invoice-level investigation. Require supplementary disclosure within 5 business days. Consider consultancy spending cap for FY2027.',
-    hukumaApps: ['fiscal-ai', 'transparency-ai', 'gov-bench'],
+    agenticApps: ['fiscal-ai', 'transparency-ai', 'gov-bench'],
     dataPoints: 47, confidenceScore: 0.92,
   },
   {
     id: 'cab-2', title: 'National ICT Competitiveness — Ranking Decline #4 → #6',
-    sourceMinistry: 'TDRA', type: 'discussion', priority: 'high',
-    relatedMinistries: ['MoE', 'MoIAT'],
+    sourceMinistry: 'GovTech', type: 'discussion', priority: 'high',
+    relatedMinistries: ['MOE', 'MTI'],
     aiSummary: 'WEF Global Competitiveness 2026 shows ICT Adoption dropped 2 positions. Estonia (X-Road platform) and South Korea (MyData initiative) overtook this country. GovBench transferability analysis: South Korea MyData approach is HIGH transferability for this jurisdiction.',
-    recommendation: 'Commission TDRA to assess South Korea MyData model for adaptation. Estimated budget $120M over 3 years. Fast-track via Digital Government Strategy 2026.',
-    hukumaApps: ['gov-bench', 'policy-ai', 'readiness-map'],
+    recommendation: 'Commission GovTech to assess South Korea MyData model for adaptation. Estimated budget $120M over 3 years. Fast-track via Digital Government Strategy 2026.',
+    agenticApps: ['gov-bench', 'policy-ai', 'readiness-map'],
     dataPoints: 23, confidenceScore: 0.87,
   },
   {
-    id: 'cab-3', title: 'ECCE Pilot Programme — Year 2 Progress & Year 2 Budget',
-    sourceMinistry: 'MoE', type: 'information', priority: 'standard',
-    relatedMinistries: ['MoF', 'MoCD'],
-    aiSummary: 'Universal ECCE pilot at 45% progress, enrollment 8% ahead of projections. FiscalAI 5-year forecast: $2.8B total cost, BCR 2.1×, breakeven Year 3. Causalis recommends Cluster-RCT evaluation design for rigorous impact measurement. Year 2 budget approval ($520M) required by June.',
+    id: 'cab-3', title: 'KidSTART Pilot Programme — Year 2 Progress & Year 2 Budget',
+    sourceMinistry: 'MOE', type: 'information', priority: 'standard',
+    relatedMinistries: ['MOF', 'MSF'],
+    aiSummary: 'Universal KidSTART pilot at 45% progress, enrollment 8% ahead of projections. FiscalAI 5-year forecast: $2.8B total cost, BCR 2.1×, breakeven Year 3. Causalis recommends Cluster-RCT evaluation design for rigorous impact measurement. Year 2 budget approval ($520M) required by June.',
     recommendation: 'Note progress. Approve Year 2 budget allocation. Endorse Cluster-RCT evaluation design for evidence-based scaling decision.',
-    hukumaApps: ['fiscal-ai', 'causalis', 'transparency-ai'],
+    agenticApps: ['fiscal-ai', 'causalis', 'transparency-ai'],
     dataPoints: 156, confidenceScore: 0.88,
   },
   {
     id: 'cab-4', title: 'National AI Strategy 2031 — Mid-Term Review',
-    sourceMinistry: 'MoIAT', type: 'discussion', priority: 'high',
-    relatedMinistries: ['TDRA', 'MoE', 'MoF', 'MoCA'],
-    aiSummary: 'Strategy at 48% progress with 2 years remaining. Government AI adoption (via AgenticGov) accelerating well. Private sector adoption lagging. Talent pipeline (MoE AI Curriculum) still in pilot phase with 15 schools. ReadinessMap shows 12 WEF functions improved since strategy launch.',
+    sourceMinistry: 'MTI', type: 'discussion', priority: 'high',
+    relatedMinistries: ['GovTech', 'MOE', 'MOF', 'PSD'],
+    aiSummary: 'Strategy at 48% progress with 2 years remaining. Government AI adoption (via AgenticGov) accelerating well. Private sector adoption lagging. Talent pipeline (MOE AI Curriculum) still in pilot phase with 15 schools. ReadinessMap shows 12 WEF functions improved since strategy launch.',
     recommendation: 'Establish AI Acceleration Task Force. Triple AI curriculum pilot to 50 schools. Consider public-private AI adoption incentive framework.',
-    hukumaApps: ['readiness-map', 'policy-ai', 'fiscal-ai'],
+    agenticApps: ['readiness-map', 'policy-ai', 'fiscal-ai'],
     dataPoints: 89, confidenceScore: 0.82,
   },
   {
     id: 'cab-5', title: 'Sustainability Framework 2030 — Procurement Compliance Gaps',
-    sourceMinistry: 'MoEI', type: 'decision', priority: 'high',
-    relatedMinistries: ['MoF', 'MoCA'],
+    sourceMinistry: 'MND', type: 'decision', priority: 'high',
+    relatedMinistries: ['MOF', 'PSD'],
     aiSummary: 'TenderAI detected environmental sustainability criteria missing from 3 of 12 recent large tenders. This is a systemic gap — Sustainability Framework 2030 requirements not yet embedded in standard procurement templates. Solar procurement tender $1.2B is 34% above OECD benchmarks.',
     recommendation: 'Mandate updated procurement templates with Sustainability Framework criteria. Require TenderAI compliance pre-check for all tenders > $100M.',
-    hukumaApps: ['tender-ai', 'fiscal-ai', 'transparency-ai'],
+    agenticApps: ['tender-ai', 'fiscal-ai', 'transparency-ai'],
     dataPoints: 34, confidenceScore: 0.91,
   },
 ];
 
 export const NATIONAL_KPIS: NationalKPI[] = [
-  { id: 'nk1', name: 'AI Adoption in Government Services', category: 'Digital', target2031: 50, current: 22, unit: '%', trend: 'improving', ownerMinistry: 'MoIAT', contributingMinistries: ['TDRA', 'MoCA'], aiAssessment: 'AgenticGov platform deployment accelerating adoption. Current trajectory reaches 38% by 2031 — need acceleration for 50% target.', onTrack: false },
-  { id: 'nk2', name: 'E-Government Services Digitized', category: 'Digital', target2031: 100, current: 89, unit: '%', trend: 'improving', ownerMinistry: 'TDRA', contributingMinistries: ['All'], aiAssessment: 'Strong progress. 11% remaining services are complex multi-agency processes. On track for 2029 completion.', onTrack: true },
-  { id: 'nk3', name: 'Education Quality Index', category: 'Human Capital', target2031: 85, current: 74, unit: '/100', trend: 'improving', ownerMinistry: 'MoE', contributingMinistries: ['MoHRE'], aiAssessment: 'Madrasa platform and STEM Academy contributing positively. ECCE pilot expected to accelerate improvement from 2027.', onTrack: true },
-  { id: 'nk4', name: 'National Workforce Rate (Private Sector)', category: 'Economy', target2031: 10, current: 5.8, unit: '%', trend: 'stable', ownerMinistry: 'MoHRE', contributingMinistries: ['MoE', 'MoIAT'], aiAssessment: 'NAFIS programme achieving targets in banking/insurance. Other sectors lagging. Post-graduation employment decline signals skills mismatch.', onTrack: false },
-  { id: 'nk5', name: 'Carbon Intensity Reduction', category: 'Sustainability', target2031: 30, current: 12, unit: '% reduction', trend: 'improving', ownerMinistry: 'MoEI', contributingMinistries: ['MoF', 'MoIAT'], aiAssessment: 'Sustainability Framework procurement gaps may slow progress. Solar procurement overpricing detected by TenderAI. On current trajectory: 22% by 2031.', onTrack: false },
-  { id: 'nk6', name: 'Government Transparency Score', category: 'Governance', target2031: 90, current: 78, unit: '/100', trend: 'improving', ownerMinistry: 'MoCA', contributingMinistries: ['MoF', 'All'], aiAssessment: 'TransparencyAI driving improvement — auto-generated disclosures raising quality. MoF Q4 gap and 3 ministry deadline risks could stall progress.', onTrack: true },
+  { id: 'nk1', name: 'AI Adoption in Government Services', category: 'Digital', target2031: 50, current: 22, unit: '%', trend: 'improving', ownerMinistry: 'MTI', contributingMinistries: ['GovTech', 'PSD'], aiAssessment: 'AgenticGov platform deployment accelerating adoption. Current trajectory reaches 38% by 2031 — need acceleration for 50% target.', onTrack: false },
+  { id: 'nk2', name: 'E-Government Services Digitized', category: 'Digital', target2031: 100, current: 89, unit: '%', trend: 'improving', ownerMinistry: 'GovTech', contributingMinistries: ['All'], aiAssessment: 'Strong progress. 11% remaining services are complex multi-agency processes. On track for 2029 completion.', onTrack: true },
+  { id: 'nk3', name: 'Education Quality Index', category: 'Human Capital', target2031: 85, current: 74, unit: '/100', trend: 'improving', ownerMinistry: 'MOE', contributingMinistries: ['MOM'], aiAssessment: 'Student Learning Space and STEM Academy contributing positively. KidSTART pilot expected to accelerate improvement from 2027.', onTrack: true },
+  { id: 'nk4', name: 'National Workforce Rate (Private Sector)', category: 'Economy', target2031: 10, current: 5.8, unit: '%', trend: 'stable', ownerMinistry: 'MOM', contributingMinistries: ['MOE', 'MTI'], aiAssessment: 'SkillsFuture programme achieving targets in banking/insurance. Other sectors lagging. Post-graduation employment decline signals skills mismatch.', onTrack: false },
+  { id: 'nk5', name: 'Carbon Intensity Reduction', category: 'Sustainability', target2031: 30, current: 12, unit: '% reduction', trend: 'improving', ownerMinistry: 'MND', contributingMinistries: ['MOF', 'MTI'], aiAssessment: 'Sustainability Framework procurement gaps may slow progress. Solar procurement overpricing detected by TenderAI. On current trajectory: 22% by 2031.', onTrack: false },
+  { id: 'nk6', name: 'Government Transparency Score', category: 'Governance', target2031: 90, current: 78, unit: '/100', trend: 'improving', ownerMinistry: 'PSD', contributingMinistries: ['MOF', 'All'], aiAssessment: 'TransparencyAI driving improvement — auto-generated disclosures raising quality. MOF Q4 gap and 3 ministry deadline risks could stall progress.', onTrack: true },
 ];
 
 // ---------------------------------------------------------------------------
