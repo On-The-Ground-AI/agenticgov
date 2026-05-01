@@ -1,3 +1,0 @@
-Hi [FirstName] — built a working visualisation of the WEF Agentic AI readiness framework (Apr 2026). Six interconnected apps, 70 gov functions, live cross-app flows. You're already deep in this work, so figured you'd be the right person to gut-check whether the architecture rings true.
-
-https://agenticgov.vercel.app

@@ -18,6 +18,7 @@ import {
   type TenderType,
 } from '../data/tenderAIDemo';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
+import { jurisdictionsForApp } from '../data/jurisdictions';
 
 type Sector = (typeof SECTORS)[number];
 
@@ -113,6 +114,7 @@ export function TenderAIPage() {
                     title={`WEF Function ${b.id} — ${b.label}`}
                     description={`TenderAI maps to WEF agentic-government function ${b.id} (${b.label}). Hover any badge to see how it appears in the framework's function index.`}
                     wefRef="Annex A (Function index)"
+                    jurisdiction={jurisdictionsForApp('tender')}
                   >
                     <span className="px-2 py-0.5 text-[10px] font-medium rounded-full bg-amber-100 text-amber-800 border border-amber-200 cursor-help">
                       {b.id} {b.label}
@@ -125,6 +127,7 @@ export function TenderAIPage() {
               title="Run a live agent scan"
               description="Kick off TenderAI's procurement intelligence agent across the selected tender. The agent ingests the brief, runs compliance checks, benchmarks budget against OECD priors, and surfaces anomalies in real time. Watch the right-hand sidebar for the step-by-step trace."
               wefRef="Section 4 (Operational Functions, p.34)"
+              jurisdiction={jurisdictionsForApp('tender')}
             >
               <button
                 onClick={() => { setAgentComplete(false); setAgentRunning(true); }}
@@ -178,6 +181,7 @@ export function TenderAIPage() {
                 title={s.hoverTitle}
                 description={s.hoverDesc}
                 wefRef="Functions 6, 7, 41 (Procurement)"
+                jurisdiction={jurisdictionsForApp('tender')}
               >
                 <div className="glass rounded-xl p-3 cursor-help">
                   <p className="text-[10px] font-semibold text-slate-400 uppercase tracking-wider">{s.label}</p>
@@ -212,6 +216,7 @@ export function TenderAIPage() {
                 title={t}
                 description={tabMeta[t].desc}
                 wefRef={tabMeta[t].wef}
+                jurisdiction={jurisdictionsForApp('tender')}
               >
                 <button
                   onClick={() => setTab(t)}
@@ -248,6 +253,7 @@ export function TenderAIPage() {
                         title={`Sector — ${s}`}
                         description={`Filter the demo to tenders within the ${s} sector. Selecting a sector + tender type combination loads a representative tender for the agent to analyse.`}
                         wefRef="Functions 6, 7, 41 (Procurement)"
+                        jurisdiction={jurisdictionsForApp('tender')}
                       >
                         <button
                           onClick={() => handleSectorChange(s)}
@@ -275,6 +281,7 @@ export function TenderAIPage() {
                         title={`Tender type — ${t.label}`}
                         description={`Narrow the demo to ${t.label} tenders. Combine with a sector to load a representative tender brief; only some sector × type combinations have demo data.`}
                         wefRef="Functions 6, 7, 41 (Procurement)"
+                        jurisdiction={jurisdictionsForApp('tender')}
                       >
                         <button
                           onClick={() => handleTypeChange(t.value)}
@@ -307,6 +314,7 @@ export function TenderAIPage() {
                       title="Selected tender — brief"
                       description="The tender currently under analysis: title, sponsoring ministry, indicative timeline, and budget. All downstream cards (budget vs OECD, compliance, similar tenders) are scoped to this one tender."
                       wefRef="Functions 6, 7, 41 (Procurement)"
+                      jurisdiction={jurisdictionsForApp('tender')}
                     >
                       <div className="glass rounded-xl p-4 cursor-help">
                         <h2 className="text-sm font-bold text-slate-800 leading-snug">{tender.title}</h2>
@@ -321,6 +329,7 @@ export function TenderAIPage() {
                         title="Budget vs OECD benchmark"
                         description="Compares this tender's budget against the OECD median for comparable scope. The agent flags any tender that exceeds the benchmark by >10% as a budget-anomaly candidate."
                         wefRef="Functions 6, 7, 41 (Procurement)"
+                        jurisdiction={jurisdictionsForApp('tender')}
                       >
                         <div className="glass rounded-xl p-4 cursor-help">
                           <p className="text-xs font-semibold text-slate-600 mb-3">Budget vs OECD Benchmark</p>
@@ -348,6 +357,7 @@ export function TenderAIPage() {
                         title="Risk assessment"
                         description="Composite risk rating combining compliance pass-rate, historical overrun on similar tenders, and timeline pressure. Low / Medium / High thresholds follow the WEF readiness framework's procurement-risk taxonomy."
                         wefRef="Section 4 (Operational Functions, p.34)"
+                        jurisdiction={jurisdictionsForApp('tender')}
                       >
                         <div className={`rounded-lg border shadow-sm p-4 cursor-help ${RISK_CONFIG[tender.riskLevel].bg}`}>
                           <p className="text-xs font-semibold text-slate-600 mb-2">Risk Assessment</p>
@@ -379,6 +389,7 @@ export function TenderAIPage() {
                       title="Compliance checklist"
                       description="The agent runs each tender through 8 OECD-aligned procurement-integrity checks (open competition, market sounding, conflict-of-interest declarations, etc.). Any failure routes the tender to a procurement officer for review."
                       wefRef="Functions 6, 7, 41 (Procurement)"
+                      jurisdiction={jurisdictionsForApp('tender')}
                     >
                       <div className="glass rounded-xl p-4 cursor-help">
                         <div className="flex items-center justify-between mb-3">
@@ -411,6 +422,7 @@ export function TenderAIPage() {
                       title="Similar historical tenders"
                       description="Past tenders with comparable scope and ministry. The agent uses these as priors to predict likely overrun and timeline risk for the current tender."
                       wefRef="Section 4 (Operational Functions, p.34)"
+                      jurisdiction={jurisdictionsForApp('tender')}
                     >
                       <div className="glass rounded-xl p-4 overflow-x-auto cursor-help">
                         <p className="text-xs font-semibold text-slate-600 mb-3">Similar Historical Tenders</p>
@@ -515,6 +527,7 @@ export function TenderAIPage() {
                   title="Pipeline summary"
                   description="At-a-glance counters for the procurement pipeline today: tenders processed, tenders flagged for review, and total contract value under live agent surveillance."
                   wefRef="Section 4 (Operational Functions, p.34)"
+                  jurisdiction={jurisdictionsForApp('tender')}
                 >
                   <div className="glass rounded-xl p-4 cursor-help">
                     <div className="flex flex-wrap items-center gap-4 text-xs">
@@ -567,6 +580,7 @@ export function TenderAIPage() {
                   title="Pipeline detail table"
                   description="Row-by-row view of every tender in the pipeline, with ministry, value, compliance score, risk band, and the agent's most recent note for each. Use this to triage which tenders need a human reviewer."
                   wefRef="Section 4 (Operational Functions, p.34)"
+                  jurisdiction={jurisdictionsForApp('tender')}
                 >
                 <div className="glass rounded-xl p-4 overflow-x-auto cursor-help">
                   <p className="text-xs font-semibold text-slate-600 mb-3">Pipeline Detail</p>
@@ -634,6 +648,7 @@ export function TenderAIPage() {
                   title="Cross-application intelligence sharing"
                   description="TenderAI doesn't operate in isolation — it pushes structured signals (anomalies, risks, vendor concentration, etc.) to FiscalAI, TransparencyAI, GovBench and PolicyAI. This card is the index for the audit log below."
                   wefRef="Annex A (Function index)"
+                  jurisdiction={jurisdictionsForApp('tender')}
                 >
                   <div className="glass rounded-xl p-4 cursor-help">
                     <p className="text-xs font-semibold text-slate-600 mb-1">Cross-Application Intelligence Sharing</p>
@@ -667,6 +682,7 @@ export function TenderAIPage() {
                         title={`Outbound signal → ${appNames[output.targetApp] || output.targetApp}`}
                         description={`A piece of intelligence TenderAI pushed to ${appNames[output.targetApp] || output.targetApp}. Data type: ${output.dataType}. Status: ${status.label}. Summary: ${output.summary}`}
                         wefRef="Annex A (Function index)"
+                        jurisdiction={jurisdictionsForApp('tender')}
                       >
                         <div className="glass rounded-xl p-4 cursor-help">
                           <div className="flex items-start justify-between gap-3">
@@ -762,6 +778,7 @@ function PipelineCard({ item }: { item: (typeof TENDER_PIPELINE)[number] }) {
       title={item.title}
       description={`Pipeline tender from ${item.ministry}. Current stage: ${item.stage}. Risk: ${item.riskLevel}. Compliance: ${item.complianceScore}/8. Agent note: ${item.agentNote}`}
       wefRef="Functions 6, 7, 41 (Procurement)"
+      jurisdiction={jurisdictionsForApp('tender')}
     >
       <div className={`bg-white rounded-lg border shadow-sm p-2.5 cursor-help ${
         item.stage === 'flagged' ? 'border-red-200' : 'border-neutral-200'

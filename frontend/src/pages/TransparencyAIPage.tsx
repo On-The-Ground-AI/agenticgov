@@ -6,6 +6,7 @@ import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
+import { jurisdictionsForApp } from '../data/jurisdictions';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   PROGRAMS_DISCLOSURE,
@@ -97,6 +98,7 @@ export function TransparencyAIPage() {
             title="Run a live agent scan"
             description="Trigger TransparencyAI's compliance scan: re-evaluates every ministry's disclosure deadlines, recomputes the 8-dimension completeness score for each programme, and refreshes the auto-populated report draft. Watch the right-hand sidebar for the step-by-step trace."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('transparency')}
           >
             <button
               onClick={() => setAgentRunning(true)}
@@ -118,6 +120,7 @@ export function TransparencyAIPage() {
             title="Ministries monitored"
             description="Total number of ministries currently under TransparencyAI's automated disclosure-deadline surveillance. Each ministry exposes its reporting calendar; the agent checks completion daily."
             wefRef="Functions 8, 20, 47 (Transparency)"
+            jurisdiction={jurisdictionsForApp('transparency')}
           >
             <div className="flex items-center gap-2 cursor-help">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -129,6 +132,7 @@ export function TransparencyAIPage() {
             title="Reports on track"
             description="Disclosure reports whose progress matches their deadline pace. The agent expects no escalation needed; daily digests will continue."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('transparency')}
           >
             <span className="text-xs font-medium text-green-600 cursor-help">{onTrackCount} on track</span>
           </HoverInsight>
@@ -137,6 +141,7 @@ export function TransparencyAIPage() {
             title="Reports at risk"
             description="Reports whose completion percentage is below pace for the days remaining. Surfaces in the daily digest and routes to a compliance officer for nudge."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('transparency')}
           >
             <span className="text-xs font-medium text-amber-600 cursor-help">{atRiskCount} approaching deadline</span>
           </HoverInsight>
@@ -147,6 +152,7 @@ export function TransparencyAIPage() {
                 title="Overdue reports"
                 description="Reports whose statutory deadline has passed without submission. Triggers an immediate alert to the ministry compliance officer and is logged in the public transparency record."
                 wefRef="Section 5.3 (Disclosure quality, p.46)"
+                jurisdiction={jurisdictionsForApp('transparency')}
               >
                 <span className="text-xs font-bold text-red-600 cursor-help">{overdueCount} overdue</span>
               </HoverInsight>
@@ -157,6 +163,7 @@ export function TransparencyAIPage() {
             title="Next upcoming deadline"
             description="The earliest disclosure deadline still ahead of us — sets the priority for the next agent run."
             wefRef="Functions 8, 20, 47 (Transparency)"
+            jurisdiction={jurisdictionsForApp('transparency')}
           >
             <span className="text-xs text-slate-500 cursor-help">Next deadline: {DEADLINE_TRACKER.filter(d => d.daysRemaining > 0).sort((a, b) => a.daysRemaining - b.daysRemaining)[0]?.dueDate ?? 'N/A'}</span>
           </HoverInsight>
@@ -167,6 +174,7 @@ export function TransparencyAIPage() {
           title="Inbound fiscal anomaly alert"
           description={`A live signal pushed to TransparencyAI by ${FISCAL_ANOMALY.source} (confidence ${FISCAL_ANOMALY.confidence}%). The card lets the user route the anomaly into the next quarterly report, escalate to legal review, or request more detail from FiscalAI.`}
           wefRef="Section 5 (Oversight Layer, p.42)"
+          jurisdiction={jurisdictionsForApp('transparency')}
         >
         <div className="mb-6 bg-red-50 border-2 border-red-300 rounded-lg px-5 py-3 cursor-help">
           <div className="flex items-start gap-3">
@@ -206,6 +214,7 @@ export function TransparencyAIPage() {
               title={TAB_META[t].label}
               description={TAB_META[t].desc}
               wefRef={TAB_META[t].wef}
+              jurisdiction={jurisdictionsForApp('transparency')}
             >
               <button
                 onClick={() => setTab(t)}
@@ -232,6 +241,7 @@ export function TransparencyAIPage() {
                   title="Upcoming disclosure deadlines"
                   description="Live table of every ministry's pending disclosure obligations — due date, days remaining, completion percentage, and the agent action in flight. Use this to triage which ministries need a human nudge."
                   wefRef="Functions 8, 20, 47 (Transparency)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100 flex items-center justify-between">
@@ -301,6 +311,7 @@ export function TransparencyAIPage() {
                     title={`${p.name} — disclosure card`}
                     description={`Disclosure-completeness card for ${p.name} (${p.ministry}). Shows the overall completeness score, evidence-quality rating (${p.evidenceQuality}) and the 8-dimension WEF disclosure checklist with per-dimension scores. Open gaps: ${p.evidenceGaps.length}.`}
                     wefRef="Section 5.3 (Disclosure quality, p.46)"
+                    jurisdiction={jurisdictionsForApp('transparency')}
                   >
                   <div className="glass rounded-xl shadow-sm p-5 cursor-help">
                     <div className="flex items-start justify-between gap-3 mb-3">
@@ -352,6 +363,7 @@ export function TransparencyAIPage() {
                   title="Programme selector"
                   description="Pick the programme TransparencyAI should auto-draft a transparency report for. Selection scopes the data-sources panel, the recommendation list, and the generated-report preview below."
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm p-4 cursor-help">
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Select Programme</label>
@@ -372,6 +384,7 @@ export function TransparencyAIPage() {
                   title="Auto-population data sources"
                   description={`Breakdown of which sibling AgenticGov apps populated which fields of the auto-generated report. ${autoPopulatedPct}% of fields came from existing platform data; the remainder requires manual ministry input.`}
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100">
@@ -422,6 +435,7 @@ export function TransparencyAIPage() {
                   title={`Programme summary — ${selectedProg.name}`}
                   description={`Headline metrics for the chosen programme: completeness ${selectedProg.overallCompleteness}% vs WEF benchmark ${WEF_BENCHMARK}%, evidence quality ${selectedProg.evidenceQuality}, and the agent's prioritised list of recommendations to lift the score.`}
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm p-5 cursor-help">
                   <div className="flex items-center gap-2 mb-2">
@@ -452,6 +466,7 @@ export function TransparencyAIPage() {
                   title="Auto-generated transparency report"
                   description="Editable preview of the disclosure report TransparencyAI drafted for the selected programme. Reviewers can approve the draft, request edits or route it on for ministerial sign-off — the agent handles the heavy lifting of pulling fields from sibling apps."
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                   <div className="px-5 py-3 bg-red-600 flex items-center justify-between">
@@ -486,6 +501,7 @@ export function TransparencyAIPage() {
                   title="Quality improvement recommendations"
                   description="Per-dimension uplift suggestions for the weakest-scoring programme. Each row shows current score, target score and whether the supporting data is already available in the platform (auto-populate) or requires manual ministry input."
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100">
@@ -532,6 +548,7 @@ export function TransparencyAIPage() {
                   title="Programme disclosure vs WEF benchmark"
                   description={`Bar chart of every programme's disclosure-completeness score against the WEF transparency benchmark (${WEF_BENCHMARK}%). Bars are coloured by traffic-light: green ≥${WEF_BENCHMARK}%, amber ≥70%, red below 70%.`}
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm p-5 cursor-help">
                   <h3 className="text-sm font-bold text-slate-800 mb-1">Programme Disclosure vs WEF Benchmark</h3>
@@ -562,6 +579,7 @@ export function TransparencyAIPage() {
                   title="Programme ranking table"
                   description="Sortable view of every programme: disclosure score, delta vs WEF benchmark, evidence-quality rating and number of open gaps. The single best place to triage which disclosures to invest reviewer time in."
                   wefRef="Section 5.3 (Disclosure quality, p.46)"
+                  jurisdiction={jurisdictionsForApp('transparency')}
                 >
                 <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                   <table className="min-w-full text-sm">

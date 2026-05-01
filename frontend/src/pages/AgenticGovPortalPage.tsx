@@ -13,6 +13,20 @@ import { ScheduledIntelligence } from '../components/ScheduledIntelligence';
 import { AgentHealthPanel } from '../components/AgentHealthPanel';
 import { GovernanceOrchestration } from '../components/GovernanceOrchestration';
 import { AGENTIC_APPS, AGENT_ACTIVITY_LOG, PORTAL_STATS } from '../data/agenticDemo';
+import { jurisdictionsForApp } from '../data/jurisdictions';
+
+// Map demo-data app ids to the keys exposed by jurisdictionsForApp().
+// policy-ai and causalis don't have direct app equivalents, so they share the
+// readiness lens (foresight / horizon-scanning is the closest fit).
+const APP_ID_TO_JURISDICTION_KEY: Record<string, 'tender' | 'fiscal' | 'readiness' | 'bench' | 'transparency'> = {
+  'tender-ai': 'tender',
+  'fiscal-ai': 'fiscal',
+  'readiness-map': 'readiness',
+  'gov-bench': 'bench',
+  'transparency-ai': 'transparency',
+  'policy-ai': 'readiness',
+  'causalis': 'readiness',
+};
 
 type PortalTab = 'briefing' | 'operations' | 'intelligence' | 'governance';
 
@@ -67,6 +81,7 @@ export function AgenticGovPortalPage() {
               description="The single orchestration cockpit for every AgenticGov agent domain. Mission Control unifies the morning briefing, real-time operations, cross-app intelligence chains, and bi-directional governance flows in one always-on portal."
               meta={[{ label: 'WEF Framework', value: 'April 2026' }, { label: 'Domains', value: '7' }, { label: 'Coverage', value: '70/70 functions' }]}
               wefRef="Section 6 (Orchestration portal, p.51)"
+              jurisdiction={jurisdictionsForApp('missionControl')}
             >
               <h1 className="text-2xl font-bold text-slate-800 tracking-tight cursor-help">
                 <span className="text-[#B8860B]">AGENTICGOV</span>
@@ -90,6 +105,7 @@ export function AgenticGovPortalPage() {
               description="Total agent tasks across all 7 AgenticGov domains since midnight time. Includes automated scans, report generations, anomaly detections, and compliance checks."
               meta={[{ label: 'Avg/Day', value: '812' }, { label: 'Peak Hour', value: '10:00-11:00 AM' }, { label: 'Auto-resolved', value: '94%' }]}
               wefRef="Section 4 (Operational Functions, p.34)"
+              jurisdiction={jurisdictionsForApp('missionControl')}
             >
               <div className="cursor-help">
                 <p className="text-2xl font-bold text-slate-800">{PORTAL_STATS.tasksToday.toLocaleString()}</p>
@@ -102,6 +118,7 @@ export function AgenticGovPortalPage() {
               description="AI agents currently monitoring, analyzing, or generating outputs across all connected government systems. Agents run 24/7 with human escalation for critical decisions."
               meta={[{ label: 'Total Deployed', value: '23' }, { label: 'Domains', value: '7' }, { label: 'Uptime', value: '99.97%' }]}
               wefRef="Section 4 (Operational Functions, p.34)"
+              jurisdiction={jurisdictionsForApp('missionControl')}
             >
               <div className="cursor-help">
                 <p className="text-2xl font-bold text-slate-800">{PORTAL_STATS.activeAgents}</p>
@@ -120,6 +137,7 @@ export function AgenticGovPortalPage() {
               description={TAB_INSIGHTS[tab.id].description}
               meta={TAB_INSIGHTS[tab.id].meta}
               wefRef={TAB_INSIGHTS[tab.id].wefRef}
+              jurisdiction={jurisdictionsForApp('missionControl')}
             >
               <button
                 onClick={() => setActiveTab(tab.id)}
@@ -255,6 +273,7 @@ export function AgenticGovPortalPage() {
                     description={`${app.description} This domain connects to other AgenticGov agents via automated data flows.`}
                     meta={[{ label: 'Agents', value: `${app.agentCount}` }, { label: 'Type', value: app.isExternal ? 'External Integration' : 'Native AgenticGov App' }]}
                     wefRef="Annex A (Function index)"
+                    jurisdiction={jurisdictionsForApp(APP_ID_TO_JURISDICTION_KEY[app.id] ?? 'missionControl')}
                   >
                     <Link
                       to={app.route}

@@ -5,6 +5,7 @@ import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
+import { jurisdictionsForApp } from '../data/jurisdictions';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   MINISTRY_PROGRAMS,
@@ -111,6 +112,7 @@ export function FiscalAIPage() {
             title="Run a live agent scan"
             description="Trigger FiscalAI's morning scan across every ministry programme: pulls latest expenditure, recomputes burn-rate, runs anomaly detection, and refreshes the impact forecast. Watch the right-hand sidebar for the step-by-step trace."
             wefRef="Section 4 (Operational Functions, p.34)"
+            jurisdiction={jurisdictionsForApp('fiscal')}
           >
             <button
               onClick={() => setAgentRunning(true)}
@@ -140,6 +142,7 @@ export function FiscalAIPage() {
               title="Ministries scanned"
               description="How many ministries the agent ingested fiscal data from this morning. Each ministry exposes its programme registry; the agent walks every programme to refresh burn-rate and anomaly state."
               wefRef="Functions 9, 44, 53 (Fiscal)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-slate-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-slate-400 uppercase tracking-wide">Ministries</p>
@@ -150,6 +153,7 @@ export function FiscalAIPage() {
               title="Programs reviewed"
               description="Total individual programmes (e.g. KidSTART, Eldercare top-ups) inspected in this scan. Each programme gets fresh budget-vs-actual, KPI, and efficiency-ratio computations."
               wefRef="Functions 9, 44, 53 (Fiscal)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-slate-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-slate-400 uppercase tracking-wide">Programs</p>
@@ -160,6 +164,7 @@ export function FiscalAIPage() {
               title="Programs on track"
               description="Programmes whose burn-rate, KPI delivery and efficiency ratio are all within tolerance bands set by FiscalAI's policy. No human action required."
               wefRef="Section 5 (Oversight Layer, p.42)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-green-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-green-600 uppercase tracking-wide">On Track</p>
@@ -170,6 +175,7 @@ export function FiscalAIPage() {
               title="Elevated programs"
               description="Programmes flagged for elevated risk — typically because spend is running >10% above plan or KPI delivery is lagging. Surfaces in the daily fiscal digest for officer review."
               wefRef="Section 5 (Oversight Layer, p.42)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-amber-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-amber-600 uppercase tracking-wide">Elevated</p>
@@ -180,6 +186,7 @@ export function FiscalAIPage() {
               title="Anomalies detected"
               description="Programmes where the agent's variance model flagged a statistically significant deviation. These trigger the Anomaly Detector tab and route to the human-in-the-loop confidence-gated workflow."
               wefRef="Functions 9, 44, 53 (Fiscal)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-red-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-red-600 uppercase tracking-wide">Anomalies</p>
@@ -190,6 +197,7 @@ export function FiscalAIPage() {
               title="Total fiscal value monitored"
               description="Sum of all programme allocations under FiscalAI's surveillance for the current fiscal year. Drawn from each ministry's published estimates of expenditure."
               wefRef="Functions 9, 44, 53 (Fiscal)"
+              jurisdiction={jurisdictionsForApp('fiscal')}
             >
               <div className="bg-blue-50 rounded-md px-3 py-2 text-center cursor-help">
                 <p className="text-[10px] text-blue-600 uppercase tracking-wide">Monitored</p>
@@ -222,6 +230,7 @@ export function FiscalAIPage() {
                 title={t}
                 description={tabMeta[t].desc}
                 wefRef={tabMeta[t].wef}
+                jurisdiction={jurisdictionsForApp('fiscal')}
               >
                 <button
                   onClick={() => setTab(t)}
@@ -262,6 +271,7 @@ export function FiscalAIPage() {
                       title={`Ministry — ${m}`}
                       description={`Filter the budget monitor to programmes owned by the Ministry of ${m}. Each ministry exposes its programme registry; FiscalAI walks every programme to refresh burn-rate, KPI and efficiency metrics.`}
                       wefRef="Functions 9, 44, 53 (Fiscal)"
+                      jurisdiction={jurisdictionsForApp('fiscal')}
                     >
                       <button
                         onClick={() => setMinistry(m)}
@@ -289,6 +299,7 @@ export function FiscalAIPage() {
                         title={p.program}
                         description={`Programme card for ${p.program} (${p.ministryShort}). Shows: budget allocated vs spent (with 6-month trend), KPI actual vs target, and an efficiency ratio benchmarked against ${p.benchmarkRatio}x. Risk flag: ${p.riskFlag.toUpperCase()}. Insight: ${p.insight}`}
                         wefRef="Functions 9, 44, 53 (Fiscal)"
+                        jurisdiction={jurisdictionsForApp('fiscal')}
                       >
                       <div className="glass rounded-xl p-4 space-y-3 cursor-help">
                         <div className="flex items-start justify-between gap-2">
@@ -366,6 +377,7 @@ export function FiscalAIPage() {
                   title="Spending anomaly card"
                   description={`Live anomaly detected by FiscalAI: ${a.ministry} / ${a.category} is +${a.variancePct}% over budget. The card lists likely causes ranked by probability and the agent's recommended next action.`}
                   wefRef="Section 5 (Oversight Layer, p.42)"
+                  jurisdiction={jurisdictionsForApp('fiscal')}
                 >
                 <div className="bg-white rounded-lg border-2 border-red-300 shadow-sm overflow-hidden cursor-help">
                   <div className="bg-red-50 px-5 py-3 border-b border-red-200 flex items-center gap-2">
@@ -423,6 +435,7 @@ export function FiscalAIPage() {
                   title="Agent reasoning chain"
                   description="Step-by-step trace of how FiscalAI reached its anomaly verdict — every step lists the data source and a confidence score. Click the row to expand. This is the agent's audit trail."
                   wefRef="Section 5 (Oversight Layer, p.42)"
+                  jurisdiction={jurisdictionsForApp('fiscal')}
                 >
                 <div className="glass rounded-xl overflow-hidden cursor-help">
                   <button
@@ -487,6 +500,7 @@ export function FiscalAIPage() {
                   title="Cross-app intelligence (inbound)"
                   description="Signals other AgenticGov apps have pushed to FiscalAI in the last 24 hours — e.g. TenderAI flagging cost overruns, PolicyAI submitting fiscal-impact requests, GovBench surfacing OECD comparators. This is how FiscalAI stays bi-directionally informed."
                   wefRef="Annex A (Function index)"
+                  jurisdiction={jurisdictionsForApp('fiscal')}
                 >
                 <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
@@ -522,6 +536,7 @@ export function FiscalAIPage() {
                   title="Human-in-the-loop confidence thresholds"
                   description="FiscalAI's autonomy policy: each anomaly is gated by a confidence score. ≥95% logs automatically; 80–95% surfaces in the daily digest; <80% routes to a human reviewer. Aligns with the WEF framework's oversight layer recommendations."
                   wefRef="Section 5 (Oversight Layer, p.42)"
+                  jurisdiction={jurisdictionsForApp('fiscal')}
                 >
                 <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="px-5 py-3 border-b border-neutral-100 flex items-center gap-2">
@@ -581,6 +596,7 @@ export function FiscalAIPage() {
                   title="Fiscal impact forecast"
                   description={`5-year projection for ${f.title}. Summary tiles below show total cost, NPV, benefit-cost ratio (BCR), cost per beneficiary, and breakeven year. The chart breaks down annual cost, cumulative cost, and beneficiaries. The sensitivity range shows how the forecast changes under optimistic vs pessimistic assumptions.`}
                   wefRef="Section 4 (Operational Functions, p.34)"
+                  jurisdiction={jurisdictionsForApp('fiscal')}
                 >
                 <div className="glass rounded-xl overflow-hidden cursor-help">
                   <div className="bg-blue-600 px-5 py-3">
@@ -602,6 +618,7 @@ export function FiscalAIPage() {
                           title={s.label}
                           description={s.desc}
                           wefRef="Section 4 (Operational Functions, p.34)"
+                          jurisdiction={jurisdictionsForApp('fiscal')}
                         >
                           <div className="bg-slate-50 rounded-lg p-3 text-center cursor-help">
                             <p className="text-[10px] text-slate-400 uppercase tracking-wide">{s.label}</p>
@@ -652,6 +669,7 @@ export function FiscalAIPage() {
                             title={`Data source — ${src.app}`}
                             description={`This forecast pulls from ${src.app}: ${src.data}.`}
                             wefRef="Annex A (Function index)"
+                            jurisdiction={jurisdictionsForApp('fiscal')}
                           >
                             <div className="flex items-center gap-1.5 bg-white border border-slate-200 rounded px-2 py-1 cursor-help">
                               <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />

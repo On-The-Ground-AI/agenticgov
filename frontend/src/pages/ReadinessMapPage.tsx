@@ -8,6 +8,7 @@ import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
 import { AGENT_ACTIVITY_LOG, AGENTIC_APPS } from '../data/agenticDemo';
 import type { WEFFunction } from '../data/agenticDemo';
+import { jurisdictionsForApp, jurisdictionsForPillar } from '../data/jurisdictions';
 import {
   WEF_FUNCTIONS,
   TIER_COUNTS,
@@ -178,6 +179,13 @@ function FunctionDetailCard({ selected, onClose }: { selected: WEFFunction; onCl
   const nba = NEXT_BEST_ACTIONS.find(a => a.functionId === selected.id);
   const coveringApps = AGENTIC_APPS.filter(app => app.wefFunctions.includes(selected.id));
 
+  // Map function category to the appropriate pillar jurisdictions; fall back to the readiness app context.
+  const categoryJurisdiction =
+    selected.category === 'Service Delivery' ? jurisdictionsForPillar('serviceDelivery') :
+    selected.category === 'Policy & Planning' ? jurisdictionsForPillar('policyDesign') :
+    selected.category === 'Regulatory & Legal' ? jurisdictionsForPillar('oversight') :
+    jurisdictionsForApp('readiness');
+
   return (
     <div className="glass rounded-xl p-4">
       <div className="flex items-start justify-between">
@@ -197,15 +205,28 @@ function FunctionDetailCard({ selected, onClose }: { selected: WEFFunction; onCl
       {/* Score cards */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3">
         {[
-          { label: 'Potential', value: selected.potentialScore },
-          { label: 'Complexity', value: selected.complexityScore },
-          { label: 'Risk', value: selected.riskScore },
-          { label: 'National Score', value: selected.jurisdictionAdjustedScore },
+          { label: 'Potential', value: selected.potentialScore, description: `WEF AI-Potential score for #${selected.id} ${selected.name}. Higher means agentic AI can absorb more of the function with current technology. Currently ${selected.potentialScore}/4.` },
+          { label: 'Complexity', value: selected.complexityScore, description: `Implementation Complexity for #${selected.id} — data integration, stakeholder alignment, regulatory work needed. Currently ${selected.complexityScore}/4. Lower is easier to deploy.` },
+          { label: 'Risk', value: selected.riskScore, description: `Deployment Risk score: legal, ethical, citizen-trust exposure if agentic AI runs this function autonomously. Currently ${selected.riskScore}/4. Lower is safer.` },
+          { label: 'National Score', value: selected.jurisdictionAdjustedScore, description: `Jurisdiction-adjusted composite that combines Potential, Complexity, and Risk against national capability. Currently ${selected.jurisdictionAdjustedScore}/100.` },
         ].map(s => (
-          <div key={s.label} className="bg-slate-50 rounded px-3 py-2">
-            <p className="text-[10px] text-slate-500">{s.label}</p>
-            <p className="text-lg font-bold text-slate-800">{s.value}</p>
-          </div>
+          <HoverInsight
+            key={s.label}
+            title={`${s.label} — #${selected.id} ${selected.name}`}
+            description={s.description}
+            meta={[
+              { label: s.label, value: String(s.value) },
+              { label: 'Tier', value: selected.readinessTier },
+              { label: 'Owner', value: selected.ownerMinistry },
+            ]}
+            jurisdiction={categoryJurisdiction}
+            wefRef="Annex C (Scoring methodology, p.84)"
+          >
+            <div className="bg-slate-50 rounded px-3 py-2 cursor-help">
+              <p className="text-[10px] text-slate-500">{s.label}</p>
+              <p className="text-lg font-bold text-slate-800">{s.value}</p>
+            </div>
+          </HoverInsight>
         ))}
       </div>
 
@@ -408,6 +429,7 @@ function MinisterialScorecardTab() {
               { label: 'EMERGING / CAUTION', value: `${m.emergingCount} / ${m.cautionCount}` },
               { label: '6-month change', value: trendData.length > 0 ? `${trendData[trendData.length - 1] - trendData[0] > 0 ? '+' : ''}${trendData[trendData.length - 1] - trendData[0]} pts` : 'n/a' },
             ]}
+            jurisdiction={jurisdictionsForApp('readiness')}
             wefRef="Section 7 (Implementation, p.62)"
           >
             <div className="glass rounded-xl p-4 hover:shadow-md hover:-translate-y-0.5 transition-all cursor-help">
@@ -421,6 +443,7 @@ function MinisterialScorecardTab() {
                     title="6-month readiness trend"
                     description={`This ministry's overall readiness score over the past 6 months. Pattern: ${trendLabels[shape] ?? shape}. Ministry trajectories vary — not all ministries trend up; some plateau, dip, or oscillate as data quality, staffing, and political priority shift.`}
                     meta={trendData.map((v, i) => ({ label: `Month ${i + 1}`, value: `${v}%` }))}
+                    jurisdiction={jurisdictionsForApp('readiness')}
                     wefRef="Section 7.5 (Tracking, p.68)"
                   >
                     <div className="flex flex-col items-end cursor-help">
@@ -447,6 +470,7 @@ function MinisterialScorecardTab() {
                   { label: 'Score', value: `${m.overallReadiness}%` },
                   { label: 'Tier mix', value: `${m.highReadyCount}H / ${m.mediumReadyCount}M / ${m.emergingCount}E / ${m.cautionCount}C` },
                 ]}
+                jurisdiction={jurisdictionsForApp('readiness')}
                 wefRef="Annex C (Scoring methodology, p.84)"
               >
                 <div className="mt-3 cursor-help">
@@ -468,6 +492,7 @@ function MinisterialScorecardTab() {
                   { label: 'Readiness', value: `${m.overallReadiness}%` },
                   { label: 'Gap', value: `${m.overallReadiness - m.adoptionProgress}pp` },
                 ]}
+                jurisdiction={jurisdictionsForApp('readiness')}
                 wefRef="Section 7.5 (Adoption tracking, p.68)"
               >
                 <div className="mt-2 cursor-help">
@@ -549,6 +574,7 @@ export function ReadinessMapPage() {
                 { label: 'Total this tier', value: String(s.count) },
                 { label: 'Of 70 functions', value: `${Math.round((s.count / 70) * 100)}%` },
               ]}
+              jurisdiction={jurisdictionsForApp('readiness')}
               wefRef={s.wefRef}
             >
               <div className="flex items-center gap-1.5 cursor-help">
@@ -561,6 +587,7 @@ export function ReadinessMapPage() {
           <HoverInsight
             title="70 functions, total"
             description="The WEF Readiness Framework enumerates 70 specific government functions that are technically feasible for agentic AI today. They cluster across 5 lifecycle stages. Open the WEF report Annex A for the full index."
+            jurisdiction={jurisdictionsForApp('readiness')}
             wefRef="Annex A (Function index, p.71)"
           >
             <span className="text-xs text-slate-400 ml-auto cursor-help">70 functions total</span>
@@ -589,6 +616,7 @@ export function ReadinessMapPage() {
                 key={t}
                 title={t}
                 description={tabMeta[t].description}
+                jurisdiction={jurisdictionsForApp('readiness')}
                 wefRef={tabMeta[t].wefRef}
               >
                 <button
@@ -607,6 +635,7 @@ export function ReadinessMapPage() {
           <HoverInsight
             title="Run a fresh readiness assessment"
             description="Triggers the ReadinessMap agent. It re-scans all 70 functions against current capability, recomputes tier assignments, updates the scorecard, and pushes any changes to the Mission Control morning briefing."
+            jurisdiction={jurisdictionsForApp('readiness')}
             wefRef="Section 7.1 (Continuous Assessment, p.63)"
           >
             <button
@@ -730,6 +759,7 @@ export function ReadinessMapPage() {
             <HoverInsight
               title="Live agent stream"
               description="When you trigger 'Run readiness scan' (top right), you'll see each step of the assessment flow through here in real time — the same agent topology described in WEF Annex C."
+              jurisdiction={jurisdictionsForApp('readiness')}
               wefRef="Annex C (Agent topology, p.84)"
             >
               <div>

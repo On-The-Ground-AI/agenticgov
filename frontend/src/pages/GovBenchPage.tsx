@@ -6,6 +6,7 @@ import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
+import { jurisdictionsForApp } from '../data/jurisdictions';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   GLOBAL_RANKINGS,
@@ -65,6 +66,7 @@ export function GovBenchPage() {
             title="Run a live agent scan"
             description="Kick off GovBench's benchmarking agent: re-pulls every governance index, recomputes rank deltas vs peers, scans for new transferable practices, and refreshes the cross-app intelligence feed. Watch the right-hand sidebar for the step-by-step trace."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <button
               onClick={() => setAgentRunning(true)}
@@ -86,6 +88,7 @@ export function GovBenchPage() {
             title="Indices tracked"
             description="Total number of distinct governance indices GovBench is currently monitoring on behalf of the jurisdiction (e.g. WGI, GovTech Maturity, e-Participation). Each index is re-scraped on its publication cadence."
             wefRef="Functions 8, 21, 35 (Benchmarking)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <div className="flex items-center gap-2 cursor-help">
               <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -97,6 +100,7 @@ export function GovBenchPage() {
             title="Last full scan"
             description="Timestamp of the most recent end-to-end scrape across every tracked index. Older than 24h means at least one source publisher has not yet refreshed."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <span className="text-xs text-slate-500 cursor-help">Last scan: {GOVBENCH_MONITORING.lastFullScan}</span>
           </HoverInsight>
@@ -105,6 +109,7 @@ export function GovBenchPage() {
             title="New data releases detected"
             description="Number of indices that published fresh data in the last scan. Triggers automatic re-ranking and surfaces a ranking-change alert if the jurisdiction's position moved."
             wefRef="Functions 8, 21, 35 (Benchmarking)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <span className="text-xs font-medium text-blue-600 cursor-help">{GOVBENCH_MONITORING.newDataDetected} new data release</span>
           </HoverInsight>
@@ -113,6 +118,7 @@ export function GovBenchPage() {
             title="Ranking changes detected"
             description="Number of indices on which the jurisdiction's rank changed since the previous scan. Each change generates a ranking-change card with overtaking countries and transferable policy recommendations."
             wefRef="Section 5 (Oversight Layer, p.42)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <span className="text-xs font-medium text-red-600 cursor-help">{GOVBENCH_MONITORING.rankingChanges} ranking change detected</span>
           </HoverInsight>
@@ -121,6 +127,7 @@ export function GovBenchPage() {
             title="Transferable practices identified"
             description="Total number of peer-jurisdiction practices the agent has tagged as candidates for local adoption, scored on transferability (HIGH / MEDIUM / LOW)."
             wefRef="Annex B (Reference jurisdictions, p.79)"
+            jurisdiction={jurisdictionsForApp('bench')}
           >
             <span className="text-xs text-slate-500 cursor-help">{GOVBENCH_MONITORING.practicesIdentified} practices identified</span>
           </HoverInsight>
@@ -134,6 +141,7 @@ export function GovBenchPage() {
               title={TAB_META[t].label}
               description={TAB_META[t].desc}
               wefRef={TAB_META[t].wef}
+              jurisdiction={jurisdictionsForApp('bench')}
             >
               <button
                 onClick={() => setTab(t)}
@@ -258,6 +266,7 @@ export function GovBenchPage() {
                         title={r.index}
                         description={`Ranking card for the ${r.index} (published by ${r.organization}, ${r.yearUpdated}). The jurisdiction is currently #${r.jurisdictionRank} of ${r.totalCountries} with a score of ${r.maxScore <= 1 ? (r.jurisdictionScore * 100).toFixed(1) + '%' : r.jurisdictionScore} out of ${r.maxScore <= 1 ? '100%' : r.maxScore}. Trend: ${r.trend}.`}
                         wefRef="Functions 8, 21, 35 (Benchmarking)"
+                        jurisdiction={jurisdictionsForApp('bench')}
                       >
                       <div
                         className={`bg-white rounded-xl border shadow-sm p-5 cursor-help ${
