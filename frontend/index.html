@@ -10,19 +10,130 @@
     <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agenticgov.vercel.app" />
     <meta property="og:title" content="AgenticGov — Making Agentic AI Work for Government" />
     <meta property="og:description" content="Visual companion to the WEF Readiness Framework. Six agentic apps, 70 government functions, one orchestration portal." />
     <meta property="og:site_name" content="AgenticGov" />
     <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AgenticGov — Making Agentic AI Work for Government. A visual companion to the WEF Readiness Framework." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AgenticGov" />
-    <meta name="twitter:description" content="What the WEF Readiness Framework looks like when you stop talking and put it on a screen." />
+    <meta name="twitter:title" content="AgenticGov — Making Agentic AI Work for Government" />
+    <meta name="twitter:description" content="Visual companion to the WEF Readiness Framework. Six agentic apps, 70 government functions, one orchestration portal." />
+    <meta name="twitter:image" content="/og-image.svg" />
 
     <meta name="theme-color" content="#0F172A" />
+
+    <link rel="canonical" href="https://agenticgov.vercel.app/" />
+
+    <!-- JSON-LD: structured data for search and answer engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://agenticgov.vercel.app/#org",
+          "name": "On The Ground",
+          "url": "https://www.ontheground.agency",
+          "description": "Singapore civic-tech and AI studio building agentic systems for governments and public-sector teams.",
+          "address": { "@type": "PostalAddress", "addressCountry": "SG" },
+          "sameAs": [
+            "https://github.com/On-The-Ground-AI",
+            "https://github.com/On-The-Ground-SG"
+          ]
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://agenticgov.vercel.app/#app",
+          "name": "AgenticGov",
+          "url": "https://agenticgov.vercel.app/",
+          "description": "A live, no-login visualisation of the World Economic Forum's 'Making Agentic AI Work for Government — A Readiness Framework'. Six interconnected agentic apps across 70 government functions, with one orchestration portal.",
+          "applicationCategory": "GovernmentApplication",
+          "operatingSystem": "Web",
+          "browserRequirements": "Requires JavaScript",
+          "publisher": { "@id": "https://agenticgov.vercel.app/#org" },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "audience": [
+            { "@type": "Audience", "audienceType": "Singapore Public Service" },
+            { "@type": "Audience", "audienceType": "India Government (NITI Aayog, Cabinet Secretariat, IndiaStack)" },
+            { "@type": "Audience", "audienceType": "United Arab Emirates Federal Government" },
+            { "@type": "Audience", "audienceType": "Pakistan Federal Government (Planning Commission, NCAI)" }
+          ],
+          "isBasedOn": {
+            "@type": "Report",
+            "name": "Making Agentic AI Work for Government — A Readiness Framework",
+            "publisher": { "@type": "Organization", "name": "World Economic Forum" },
+            "datePublished": "2026-04",
+            "url": "https://www.weforum.org/publications/making-agentic-ai-work-for-government-a-readiness-framework/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is AgenticGov?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AgenticGov is a live, no-login web visualisation of the World Economic Forum's 'Making Agentic AI Work for Government — A Readiness Framework' (April 2026). It shows six interconnected agentic AI apps — Mission Control, TenderAI, FiscalAI, ReadinessMap, GovBench, TransparencyAI — running across 70 distinct government functions, exactly as the framework recommends."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who is AgenticGov for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Forward-looking government teams. The primary reference jurisdiction is Singapore (real Singapore agencies and programmes are used: GovTech, IMDA, MAS, MOH, MOE, MTI, MND, MOM, MSF, PSD; SkillsFuture, KidSTART, Smart Nation 2030, Singpass, MyInfo). Secondary audiences are India (NITI Aayog, IndiaStack, Cabinet Secretariat), UAE (Federal ministries), and Pakistan (Planning Commission, NCAI, Cabinet Division)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the six agentic apps in AgenticGov?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mission Control (orchestration portal: morning briefing, decision queue, agent health, cross-app event chains). TenderAI (procurement compliance scanning, vendor analysis, automated bid evaluation). FiscalAI (budget anomaly detection, fiscal forecasting, KPI tracking). ReadinessMap (live readiness scoring across all 70 WEF functions, ministerial scorecards, dependency mapping). GovBench (continuous monitoring of OECD, World Bank, and WEF indices with peer-country policy transferability scoring). TransparencyAI (auto-drafted disclosure reports, deadline monitoring, evidence-quality scoring)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How is this different from a chatbot for government?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The WEF Readiness Framework's central insight is that most government value from AI does not come from a chatbot per ministry. It comes from bi-directional intelligence flows between agencies: a fiscal anomaly auto-triggers a transparency disclosure; a new WEF Global Competitiveness reading recalibrates ministerial readiness scores within minutes; an awarded tender pushes its actual cost into the budget feed for variance tracking. AgenticGov visualises these cross-app event chains."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is AgenticGov a real product?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "AgenticGov is a non-commercial visual demonstration. The data shown is illustrative. The architecture, agent topology, and bi-directional intelligence flows are real reference implementations of the framework's recommended deployment patterns. It is built by On The Ground, a Singapore civic-tech studio."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Crawler-readable fallback content. The React app hydrates over this. -->
+      <noscript>
+        <div style="max-width:800px;margin:48px auto;padding:0 24px;font:16px/1.6 system-ui,-apple-system,sans-serif;color:#1f2937">
+          <h1 style="font-size:32px;margin:0 0 12px"><span style="color:#B8860B">AgenticGov</span> — Making Agentic AI Work for Government</h1>
+          <p>A live visualisation of the World Economic Forum's <em>Making Agentic AI Work for Government — A Readiness Framework</em> (April 2026). Six interconnected agentic apps across 70 government functions, with one orchestration portal.</p>
+          <p>Built for forward-looking government teams in Singapore (primary), India, UAE, and Pakistan.</p>
+          <p>This site requires JavaScript to run the interactive demo. Static report:
+            <a href="https://www.weforum.org/publications/making-agentic-ai-work-for-government-a-readiness-framework/">WEF source ↗</a>
+          </p>
+        </div>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

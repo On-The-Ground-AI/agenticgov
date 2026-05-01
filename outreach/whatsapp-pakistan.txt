@@ -1,0 +1,3 @@
+Hi [FirstName] — working on a credible AI-in-government story for Pakistan's medium-term plan. Built a visual demo of the WEF Apr 2026 readiness framework end-to-end (six apps, 70 functions). Might be a useful reference. Would value 20 mins of your reaction.
+
+https://agenticgov.vercel.app

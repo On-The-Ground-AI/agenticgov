@@ -1,0 +1,23 @@
+Subject: WEF agentic AI framework — built it for Singapore
+
+Hi [FirstName],
+
+The WEF released "Making Agentic AI Work for Government — A Readiness Framework" last month. Strong report, but mostly conceptual. I wanted to see what it would actually look like running in Singapore, so I built it.
+
+agenticgov.vercel.app
+
+It's a working visualisation of six interconnected agentic apps — Mission Control, TenderAI, FiscalAI, ReadinessMap, GovBench, TransparencyAI — covering 70 government functions. Real SG agencies are wired in: GovTech, IMDA, MAS, MOH, MOE, MTI, MND, MOM, MSF, PSD. Real programmes too: SkillsFuture, KidSTART, Smart Nation 2030, Singpass, MyInfo. You'll recognise everything.
+
+The interesting part isn't any single app. It's the cross-app flows — how a tender anomaly in TenderAI propagates to FiscalAI, surfaces in Mission Control, and ends up scored on GovBench. That's where the readiness framework actually gets operationalised.
+
+If you have 5 mins, here's what to look at first: hit the homepage, run the live scan demo, then click into Mission Control to see one flow end-to-end. About 3 minutes of clicking gives you the architecture.
+
+I built this as a thinking artefact, not a pitch. But I'd genuinely value your reaction — whether it rings true against what you're seeing inside government, where it underweights reality, what's missing.
+
+Reply with thoughts, or grab 20 mins on a call if easier.
+
+Best,
+Hao Jun
+
+WhatsApp: +65 9841 9481
+Email: haojun@ontheground.agency

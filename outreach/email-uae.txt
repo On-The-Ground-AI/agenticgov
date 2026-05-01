@@ -1,0 +1,23 @@
+Subject: Gut-check on a WEF agentic-AI readiness visualisation
+
+Hi [FirstName],
+
+The UAE is already further along on agentic AI in government than most jurisdictions I talk to, which is why I'm writing.
+
+The WEF released "Making Agentic AI Work for Government — A Readiness Framework" last month. Clean conceptual model, but it stops at the PDF. I built a working visualisation of what it looks like running end-to-end:
+
+agenticgov.vercel.app
+
+Six interconnected agentic apps — Mission Control, TenderAI, FiscalAI, ReadinessMap, GovBench, TransparencyAI — covering 70 government functions, with live cross-app flows. Singapore is the primary reference jurisdiction in the demo, but the architecture is the point, not the labels.
+
+If you have 5 mins, run the live scan demo on the homepage, then open Mission Control. The cross-app trace (TenderAI -> FiscalAI -> GovBench) is the part that's load-bearing — it's where the architecture either holds together or falls apart under operational weight.
+
+The reason I'm sending this to you specifically: you'd know whether the architecture rings true against what's actually being built inside MoCA / Mohammed Bin Rashid School of Government / federal AI work. Where does it underweight reality? What would the UAE version of this prioritise differently?
+
+I'd genuinely value 20 mins of your gut reaction — whatever's most useful. Reply with thoughts, or grab a call.
+
+Best,
+Hao Jun
+
+WhatsApp: +65 9841 9481
+Email: haojun@ontheground.agency

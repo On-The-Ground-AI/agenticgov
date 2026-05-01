@@ -1,0 +1,13 @@
+The WEF's "Making Agentic AI Work for Government — A Readiness Framework" came out in April. Strong on principles, light on what it actually looks like in production.
+
+So I built a working visualisation: agenticgov.vercel.app 🇮🇳
+
+Six interconnected agentic apps (Mission Control, TenderAI, FiscalAI, ReadinessMap, GovBench, TransparencyAI) covering 70 government functions, with cross-app flows between them. Singapore is the primary reference jurisdiction in the demo, but the architecture is jurisdiction-agnostic.
+
+I think this is the closest visual to what the report's recommendations would look like in an IndiaStack context — the same data-rails-plus-agentic-orchestration logic that already underpins DigiLocker, Aadhaar, and UPI, applied across NITI Aayog priority sectors.
+
+There's a live scan demo on the homepage that walks through one cross-app flow end-to-end.
+
+Would value reactions from anyone working at the intersection of IndiaStack and the AI-in-government conversation. Happy to talk it through.
+
+#AgenticAI #IndiaStack

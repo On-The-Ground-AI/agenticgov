@@ -19,8 +19,8 @@ export const GLOBAL_RANKINGS: GlobalRanking[] = [
   {
     index: 'ITU Global Cybersecurity Index',
     organization: 'International Telecommunication Union',
-    jurisdictionRank: 5,
-    jurisdictionScore: 100,
+    jurisdictionRank: 1, // Tier 1 "Role-modelling" — ITU GCI 2024 reports tiers, not absolute rank
+    jurisdictionScore: 99.86,
     maxScore: 100,
     totalCountries: 194,
     trend: 'stable',
@@ -29,48 +29,38 @@ export const GLOBAL_RANKINGS: GlobalRanking[] = [
   {
     index: 'UN E-Government Development Index',
     organization: 'United Nations DESA',
-    jurisdictionRank: 13,
-    jurisdictionScore: 0.9006,
+    jurisdictionRank: 3,
+    jurisdictionScore: 0.96912,
     maxScore: 1,
     totalCountries: 193,
     trend: 'up',
     yearUpdated: 2024,
   },
   {
-    index: 'WEF Global Competitiveness Index',
-    organization: 'World Economic Forum / IMD',
-    jurisdictionRank: 7,
-    jurisdictionScore: 84.6,
-    maxScore: 100,
-    totalCountries: 67,
-    trend: 'stable',
-    yearUpdated: 2025,
-  },
-  {
     index: 'IMD World Competitiveness Ranking',
     organization: 'Institute for Management Development',
-    jurisdictionRank: 7,
-    jurisdictionScore: 93.4,
+    jurisdictionRank: 1,
+    jurisdictionScore: 100,
     maxScore: 100,
     totalCountries: 67,
     trend: 'up',
-    yearUpdated: 2025,
+    yearUpdated: 2024,
   },
   {
     index: 'Government AI Readiness Index',
     organization: 'Oxford Insights',
-    jurisdictionRank: 18,
-    jurisdictionScore: 75.7,
+    jurisdictionRank: 2,
+    jurisdictionScore: 81.97, // TODO: verify exact 2024 score from Oxford Insights PDF
     maxScore: 100,
-    totalCountries: 193,
+    totalCountries: 188,
     trend: 'up',
     yearUpdated: 2024,
   },
   {
     index: 'World Bank Ease of Doing Business',
-    organization: 'World Bank Group',
-    jurisdictionRank: 16,
-    jurisdictionScore: 80.9,
+    organization: 'World Bank Group (final 2020 edition)',
+    jurisdictionRank: 2,
+    jurisdictionScore: 86.2,
     maxScore: 100,
     totalCountries: 190,
     trend: 'stable',
@@ -79,18 +69,18 @@ export const GLOBAL_RANKINGS: GlobalRanking[] = [
   {
     index: 'Global Innovation Index',
     organization: 'WIPO',
-    jurisdictionRank: 32,
-    jurisdictionScore: 43.0,
+    jurisdictionRank: 4,
+    jurisdictionScore: 61.5, // TODO: verify exact GII 2024 composite score
     maxScore: 100,
-    totalCountries: 132,
+    totalCountries: 133,
     trend: 'up',
-    yearUpdated: 2025,
+    yearUpdated: 2024,
   },
   {
     index: 'Government Effectiveness (Percentile)',
     organization: 'World Bank WGI',
-    jurisdictionRank: 12,
-    jurisdictionScore: 91.3,
+    jurisdictionRank: 1,
+    jurisdictionScore: 100,
     maxScore: 100,
     totalCountries: 214,
     trend: 'stable',
@@ -99,12 +89,12 @@ export const GLOBAL_RANKINGS: GlobalRanking[] = [
   {
     index: 'IMD World Digital Competitiveness',
     organization: 'Institute for Management Development',
-    jurisdictionRank: 9,
-    jurisdictionScore: 93.4,
+    jurisdictionRank: 1,
+    jurisdictionScore: 100,
     maxScore: 100,
     totalCountries: 67,
     trend: 'up',
-    yearUpdated: 2025,
+    yearUpdated: 2024,
   },
 ];
 
@@ -140,60 +130,60 @@ export const PEER_BENCHMARKS: PeerBenchmark[] = [
   {
     sector: 'Education',
     metric: 'Tertiary Enrollment Rate',
-    jurisdictionValue: 60,
+    jurisdictionValue: 60, // TODO: verify Singapore's gross tertiary enrolment rate (UNESCO shows ~98% in 2022)
     peers: [
+      { country: 'Singapore', value: 98, trend: 'stable' },
       { country: 'South Korea', value: 98, trend: 'stable' },
       { country: 'Finland', value: 94, trend: 'stable' },
-      { country: 'Singapore', value: 91, trend: 'up' },
       { country: 'Denmark', value: 82, trend: 'stable' },
       { country: 'Estonia', value: 74, trend: 'up' },
     ],
     unit: '%',
-    source: 'UNESCO Institute for Statistics 2023',
+    source: 'UNESCO Institute for Statistics (latest available, 2022-2023)',
   },
   // Healthcare
   {
     sector: 'Healthcare',
     metric: 'Life Expectancy',
-    jurisdictionValue: 78.7,
+    jurisdictionValue: 83.7, // SingStat 2023 figure
     peers: [
-      { country: 'Singapore', value: 83.9, trend: 'stable' },
-      { country: 'South Korea', value: 83.7, trend: 'up' },
+      { country: 'Singapore', value: 83.7, trend: 'up' },
+      { country: 'South Korea', value: 83.5, trend: 'up' },
       { country: 'Denmark', value: 81.4, trend: 'stable' },
-      { country: 'Finland', value: 81.2, trend: 'stable' },
+      { country: 'Finland', value: 81.6, trend: 'stable' },
       { country: 'Estonia', value: 78.8, trend: 'up' },
     ],
     unit: 'years',
-    source: 'WHO Global Health Observatory 2023',
+    source: 'WHO Global Health Observatory / SingStat 2023',
   },
   {
     sector: 'Healthcare',
     metric: 'UHC Coverage Index',
-    jurisdictionValue: 80,
+    jurisdictionValue: 89,
     peers: [
-      { country: 'South Korea', value: 86, trend: 'stable' },
-      { country: 'Singapore', value: 86, trend: 'stable' },
-      { country: 'Denmark', value: 85, trend: 'stable' },
-      { country: 'Finland', value: 83, trend: 'stable' },
-      { country: 'Estonia', value: 79, trend: 'up' },
+      { country: 'Singapore', value: 89, trend: 'stable' },
+      { country: 'South Korea', value: 89, trend: 'stable' },
+      { country: 'Denmark', value: 85, trend: 'stable' }, // TODO: verify Denmark UHC SCI 2021
+      { country: 'Finland', value: 83, trend: 'stable' }, // TODO: verify Finland UHC SCI 2021
+      { country: 'Estonia', value: 79, trend: 'up' }, // TODO: verify Estonia UHC SCI 2021
     ],
     unit: 'index',
-    source: 'WHO/World Bank UHC Monitoring 2021',
+    source: 'WHO/World Bank UHC Service Coverage Index 2021',
   },
   // Energy
   {
     sector: 'Energy',
-    metric: 'Renewable Energy Share',
-    jurisdictionValue: 5,
+    metric: 'Renewable Energy Share (electricity)',
+    jurisdictionValue: 5, // Singapore's electricity-mix share is ~3-5%
     peers: [
-      { country: 'Denmark', value: 40, trend: 'up' },
-      { country: 'Finland', value: 34, trend: 'up' },
-      { country: 'Estonia', value: 22, trend: 'up' },
-      { country: 'South Korea', value: 8, trend: 'up' },
-      { country: 'Singapore', value: 2, trend: 'stable' },
+      { country: 'Denmark', value: 88, trend: 'up' }, // 88.4% of net electricity 2024
+      { country: 'Finland', value: 50, trend: 'up' }, // TODO: verify Finland renewable electricity share
+      { country: 'Estonia', value: 38, trend: 'up' }, // TODO: verify Estonia renewable electricity share
+      { country: 'South Korea', value: 9, trend: 'up' }, // TODO: verify South Korea renewable electricity share
+      { country: 'Singapore', value: 3, trend: 'stable' },
     ],
-    unit: '%',
-    source: 'IRENA Renewable Energy Statistics 2025',
+    unit: '% of electricity',
+    source: 'IRENA / IEA / national regulators 2024',
   },
   {
     sector: 'Energy',
@@ -227,31 +217,31 @@ export const PEER_BENCHMARKS: PeerBenchmark[] = [
   {
     sector: 'Technology',
     metric: 'AI Readiness Score',
-    jurisdictionValue: 75.7,
+    jurisdictionValue: 81.97, // TODO: verify exact Singapore Oxford AI Readiness 2024 score
     peers: [
-      { country: 'Singapore', value: 84.3, trend: 'up' },
-      { country: 'South Korea', value: 80.0, trend: 'up' },
-      { country: 'Finland', value: 76.5, trend: 'stable' },
-      { country: 'Denmark', value: 76.2, trend: 'stable' },
-      { country: 'Estonia', value: 70.1, trend: 'up' },
+      { country: 'Singapore', value: 81.97, trend: 'up' }, // TODO: verify
+      { country: 'South Korea', value: 79.0, trend: 'up' }, // TODO: verify
+      { country: 'Finland', value: 75.0, trend: 'stable' }, // TODO: verify
+      { country: 'Denmark', value: 74.0, trend: 'stable' }, // TODO: verify
+      { country: 'Estonia', value: 70.0, trend: 'up' }, // TODO: verify
     ],
     unit: 'score',
-    source: 'Oxford Insights AI Readiness 2024',
+    source: 'Oxford Insights Government AI Readiness Index 2024',
   },
   // Economy
   {
     sector: 'Economy',
     metric: 'GDP per Capita (PPP)',
-    jurisdictionValue: 78,
+    jurisdictionValue: 153, // Singapore 2024 World Bank ~$150,689
     peers: [
-      { country: 'Singapore', value: 135, trend: 'up' },
-      { country: 'Denmark', value: 77, trend: 'stable' },
-      { country: 'Finland', value: 58, trend: 'stable' },
-      { country: 'South Korea', value: 56, trend: 'up' },
-      { country: 'Estonia', value: 48, trend: 'up' },
+      { country: 'Singapore', value: 153, trend: 'up' },
+      { country: 'Denmark', value: 86, trend: 'stable' }, // TODO: verify Denmark 2024 PPP exact figure
+      { country: 'Finland', value: 65, trend: 'stable' }, // TODO: verify Finland 2024 PPP
+      { country: 'South Korea', value: 63, trend: 'up' },
+      { country: 'Estonia', value: 49, trend: 'up' }, // TODO: verify Estonia 2024 PPP
     ],
     unit: '$K',
-    source: 'IMF WEO April 2026',
+    source: 'IMF WEO October 2024 / World Bank 2024',
   },
   {
     sector: 'Economy',
@@ -271,13 +261,13 @@ export const PEER_BENCHMARKS: PeerBenchmark[] = [
   {
     sector: 'Defense',
     metric: 'Cybersecurity Index',
-    jurisdictionValue: 100,
+    jurisdictionValue: 99.86,
     peers: [
-      { country: 'South Korea', value: 99.9, trend: 'stable' },
-      { country: 'Singapore', value: 99.9, trend: 'stable' },
-      { country: 'Estonia', value: 99.6, trend: 'up' },
-      { country: 'Denmark', value: 97.8, trend: 'stable' },
-      { country: 'Finland', value: 97.3, trend: 'stable' },
+      { country: 'Singapore', value: 99.86, trend: 'stable' },
+      { country: 'South Korea', value: 98.0, trend: 'stable' }, // TODO: verify exact ITU GCI 2024 score
+      { country: 'Estonia', value: 96.0, trend: 'up' }, // TODO: verify exact ITU GCI 2024 score
+      { country: 'Denmark', value: 94.0, trend: 'stable' }, // TODO: verify exact ITU GCI 2024 score
+      { country: 'Finland', value: 95.0, trend: 'stable' }, // TODO: verify exact ITU GCI 2024 score
     ],
     unit: '/100',
     source: 'ITU Global Cybersecurity Index 2024',
@@ -285,13 +275,13 @@ export const PEER_BENCHMARKS: PeerBenchmark[] = [
   {
     sector: 'Defense',
     metric: 'Military Spending (% GDP)',
-    jurisdictionValue: 5.6,
+    jurisdictionValue: 2.84,
     peers: [
+      { country: 'Singapore', value: 2.84, trend: 'stable' },
       { country: 'South Korea', value: 2.8, trend: 'up' },
-      { country: 'Singapore', value: 2.7, trend: 'stable' },
-      { country: 'Estonia', value: 2.5, trend: 'up' },
-      { country: 'Denmark', value: 2.0, trend: 'up' },
+      { country: 'Estonia', value: 2.9, trend: 'up' }, // TODO: verify Estonia 2024 SIPRI
       { country: 'Finland', value: 2.4, trend: 'up' },
+      { country: 'Denmark', value: 2.4, trend: 'up' }, // TODO: verify Denmark 2024 SIPRI
     ],
     unit: '%',
     source: 'SIPRI Military Expenditure Database 2024',

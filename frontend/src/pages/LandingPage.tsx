@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { AppNavbar } from '../components/AppNavbar';
 import { HoverInsight } from '../components/HoverInsight';
 import { LiveScanDemo } from '../components/LiveScanDemo';
 import { VisitorCounter } from '../components/VisitorCounter';
+import { GuidedTour } from '../components/GuidedTour';
 
 const READINESS_PILLARS = [
   {
@@ -183,7 +184,16 @@ const FLOW_HIGHLIGHTS = [
 
 export function LandingPage() {
   const [count, setCount] = useState<number | null>(null);
+  const [, setSearchParams] = useSearchParams();
   const scanRef = useRef<HTMLElement>(null);
+
+  const startTour = () => {
+    setSearchParams((p) => {
+      const np = new URLSearchParams(p);
+      np.set('tour', '1');
+      return np;
+    });
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -206,6 +216,7 @@ export function LandingPage() {
   return (
     <div className="min-h-screen">
       <AppNavbar />
+      <GuidedTour />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -235,7 +246,7 @@ export function LandingPage() {
           </p>
 
           {/* Audience strip */}
-          <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/60">
+          <div data-tour="audience" className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/60">
             <span>Built for forward-looking government teams in</span>
             <HoverInsight
               title="Singapore"
@@ -275,6 +286,7 @@ export function LandingPage() {
               </svg>
             </Link>
             <button
+              data-tour="run-scan"
               onClick={() => scanRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition"
             >
@@ -283,6 +295,15 @@ export function LandingPage() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
               </span>
               Watch a Live Agent Run
+            </button>
+            <button
+              onClick={startTour}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-white/10 hover:bg-white/20 border border-white/20 text-white text-sm font-medium transition"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.5M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.5h.01" />
+              </svg>
+              Take a guided tour
             </button>
             <a
               href="/wef-readiness-framework.pdf"
@@ -357,7 +378,7 @@ export function LandingPage() {
       </section>
 
       {/* Five Readiness Pillars */}
-      <section className="glass border-y border-white/40 py-16">
+      <section data-tour="pillars" className="glass border-y border-white/40 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
             <div>
@@ -420,7 +441,7 @@ export function LandingPage() {
       </section>
 
       {/* Six demo apps */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section data-tour="apps" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
           <div>
             <p className="text-xs font-semibold text-[#B8860B] uppercase tracking-widest">The Demo Suite</p>
@@ -480,7 +501,7 @@ export function LandingPage() {
       </section>
 
       {/* Cross-app intelligence flow */}
-      <section className="bg-slate-900 text-white py-16">
+      <section data-tour="flows" className="bg-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold text-[#B8860B] uppercase tracking-widest">Cross-app intelligence</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight">

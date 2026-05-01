@@ -1,0 +1,3 @@
+Hi [FirstName] — sharing something you might find useful. I built a working visual of what the WEF Apr 2026 Agentic AI in Government framework would look like running end-to-end. Six connected apps across 70 functions. I think the architecture maps cleanly onto IndiaStack / NITI — would value your gut reaction.
+
+https://agenticgov.vercel.app
