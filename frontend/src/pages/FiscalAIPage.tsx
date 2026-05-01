@@ -151,7 +151,7 @@ export function FiscalAIPage() {
             </HoverInsight>
             <HoverInsight
               title="Programs reviewed"
-              description="Total individual programmes (e.g. KidSTART, Eldercare top-ups) inspected in this scan. Each programme gets fresh budget-vs-actual, KPI, and efficiency-ratio computations."
+              description="Total individual programmes inspected in this scan. Each programme gets fresh budget-vs-actual, KPI, and efficiency-ratio computations against rolling baselines."
               wefRef="Functions 9, 44, 53 (Fiscal)"
               jurisdiction={jurisdictionsForApp('fiscal')}
             >
