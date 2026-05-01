@@ -5,6 +5,7 @@ import { HoverInsight } from '../components/HoverInsight';
 import { LiveScanDemo } from '../components/LiveScanDemo';
 import { VisitorCounter } from '../components/VisitorCounter';
 import { GuidedTour } from '../components/GuidedTour';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import {
   JURISDICTIONS,
   JURISDICTION_ORDER,
@@ -163,6 +164,12 @@ const FLOW_HIGHLIGHTS = [
 ];
 
 export function LandingPage() {
+  useDocumentMeta({
+    title: 'AgenticGov — Making Agentic AI Work for Government',
+    description: "A live, no-login visualisation of the WEF's Making Agentic AI Work for Government — A Readiness Framework. Six interconnected agentic apps, 70 government functions, one orchestration portal. Built for government teams across seven jurisdictions.",
+    canonicalPath: '/',
+  });
+
   const [count, setCount] = useState<number | null>(null);
   const [, setSearchParams] = useSearchParams();
   const scanRef = useRef<HTMLElement>(null);

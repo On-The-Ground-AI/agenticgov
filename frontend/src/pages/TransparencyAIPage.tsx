@@ -7,6 +7,7 @@ import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
 import { jurisdictionsForApp } from '../data/jurisdictions';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   PROGRAMS_DISCLOSURE,
@@ -59,6 +60,12 @@ function deadlineStatusBadge(status: 'on-track' | 'at-risk' | 'overdue') {
 }
 
 export function TransparencyAIPage() {
+  useDocumentMeta({
+    title: 'TransparencyAI — Disclosure & Evidence Quality · AgenticGov',
+    description: 'Auto-drafted disclosure reports, deadline monitoring, and evidence-quality scoring against international transparency benchmarks. Maps to WEF Functions 8, 20, 47.',
+    canonicalPath: '/portal/transparency',
+  });
+
   const [tab, setTab] = useState<Tab>('tracker');
   const [selectedProgram, setSelectedProgram] = useState(PROGRAMS_DISCLOSURE[0].id);
   const [agentRunning, setAgentRunning] = useState(false);

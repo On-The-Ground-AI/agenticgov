@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
 import { AppNavbar } from '../components/AppNavbar';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export function TermsOfServicePage() {
+  useDocumentMeta({
+    title: 'Terms of Use · AgenticGov',
+    description: 'Terms of use for the AgenticGov visual demonstration. Non-commercial, illustrative data, governed by Singapore law.',
+    canonicalPath: '/terms',
+  });
+
   return (
     <div className="min-h-screen">
       <AppNavbar />

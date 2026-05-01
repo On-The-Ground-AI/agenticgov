@@ -5,6 +5,7 @@ import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { AGENT_ACTIVITY_LOG, SECTORS } from '../data/agenticDemo';
 import {
   TENDERS,
@@ -52,6 +53,12 @@ const pipelineFlagged = TENDER_PIPELINE.filter(t => t.stage === 'flagged').lengt
 const pipelineProcessedToday = TENDER_PIPELINE.filter(t => t.detectedAt.startsWith('2026-04-28')).length;
 
 export function TenderAIPage() {
+  useDocumentMeta({
+    title: 'TenderAI — Procurement Compliance · AgenticGov',
+    description: 'Live procurement compliance scanning, vendor analysis, and automated bid evaluation against statutory frameworks. Maps to WEF Functions 6, 7, 41.',
+    canonicalPath: '/portal/tender',
+  });
+
   const [tab, setTab] = useState<Tab>('Workspace');
   const [selectedSector, setSelectedSector] = useState<Sector | null>(null);
   const [selectedType, setSelectedType] = useState<TenderType | null>(null);

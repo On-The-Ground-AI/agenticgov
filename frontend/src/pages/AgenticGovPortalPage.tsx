@@ -14,6 +14,7 @@ import { AgentHealthPanel } from '../components/AgentHealthPanel';
 import { GovernanceOrchestration } from '../components/GovernanceOrchestration';
 import { AGENTIC_APPS, AGENT_ACTIVITY_LOG, PORTAL_STATS } from '../data/agenticDemo';
 import { jurisdictionsForApp } from '../data/jurisdictions';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 // Map demo-data app ids to the keys exposed by jurisdictionsForApp().
 // policy-ai and causalis don't have direct app equivalents, so they share the
@@ -65,6 +66,12 @@ const TAB_INSIGHTS: Record<PortalTab, { title: string; description: string; meta
 };
 
 export function AgenticGovPortalPage() {
+  useDocumentMeta({
+    title: 'Mission Control — AgenticGov',
+    description: 'Orchestration portal for the AgenticGov demo: morning briefing, decision queue, agent health, cross-app event chains, and governance flows. The cabinet- or PS-level surface for everything happening across the suite.',
+    canonicalPath: '/portal',
+  });
+
   const [activeTab, setActiveTab] = useState<PortalTab>('briefing');
 
   return (

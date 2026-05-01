@@ -7,6 +7,7 @@ import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
 import { jurisdictionsForApp } from '../data/jurisdictions';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
   GLOBAL_RANKINGS,
@@ -43,6 +44,12 @@ const TAB_META: Record<Tab, { label: string; desc: string; wef: string }> = {
 };
 
 export function GovBenchPage() {
+  useDocumentMeta({
+    title: 'GovBench — Global Indices & Peer Benchmarking · AgenticGov',
+    description: 'Continuous monitoring of OECD, World Bank, ITU, IMD, UN EGDI, WIPO indices with peer-country policy transferability scoring. Maps to WEF Functions 8, 21, 35.',
+    canonicalPath: '/portal/bench',
+  });
+
   const [tab, setTab] = useState<Tab>('dashboard');
   const [sector, setSector] = useState<string>('Education');
   const [agentRunning, setAgentRunning] = useState(false);

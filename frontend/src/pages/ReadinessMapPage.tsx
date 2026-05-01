@@ -9,6 +9,7 @@ import { HoverInsight } from '../components/HoverInsight';
 import { AGENT_ACTIVITY_LOG, AGENTIC_APPS } from '../data/agenticDemo';
 import type { WEFFunction } from '../data/agenticDemo';
 import { jurisdictionsForApp, jurisdictionsForPillar } from '../data/jurisdictions';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import {
   WEF_FUNCTIONS,
   TIER_COUNTS,
@@ -538,6 +539,12 @@ function MinisterialScorecardTab() {
 // ---------------------------------------------------------------------------
 
 export function ReadinessMapPage() {
+  useDocumentMeta({
+    title: 'ReadinessMap — 70 WEF Functions Live Tracker · AgenticGov',
+    description: 'Live readiness scoring across all 70 WEF government functions, ministerial scorecards, dependency mapping, and deployment-wave tracking. Maps to WEF Section 7 (Implementation).',
+    canonicalPath: '/portal/readiness',
+  });
+
   const [tab, setTab] = useState<Tab>('Readiness Map');
   const [selected, setSelected] = useState<WEFFunction | null>(null);
   const [agentRunning, setAgentRunning] = useState(false);

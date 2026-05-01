@@ -1,7 +1,14 @@
 import { Link } from 'react-router-dom';
 import { AppNavbar } from '../components/AppNavbar';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 
 export function PrivacyPolicyPage() {
+  useDocumentMeta({
+    title: 'Privacy Policy · AgenticGov',
+    description: 'AgenticGov collects no personal data, sets no tracking cookies, and runs no analytics. The full privacy posture for the demo.',
+    canonicalPath: '/privacy',
+  });
+
   return (
     <div className="min-h-screen">
       <AppNavbar />

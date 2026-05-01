@@ -5,6 +5,7 @@ import { AgentActivityFeed } from '../components/AgentActivityFeed';
 import { AgentStepSimulator } from '../components/AgentStepSimulator';
 import { CrossAppFlowDiagram } from '../components/CrossAppFlowDiagram';
 import { HoverInsight } from '../components/HoverInsight';
+import { useDocumentMeta } from '../hooks/useDocumentMeta';
 import { jurisdictionsForApp } from '../data/jurisdictions';
 import { AGENT_ACTIVITY_LOG } from '../data/agenticDemo';
 import {
@@ -77,6 +78,12 @@ function formatAED(n: number) {
 // ---------------------------------------------------------------------------
 
 export function FiscalAIPage() {
+  useDocumentMeta({
+    title: 'FiscalAI — Budget Monitoring & Anomaly Detection · AgenticGov',
+    description: 'Real-time ministry-level spend monitoring, anomaly detection, fiscal forecasting, and KPI tracking. Maps to WEF Functions 9, 44, 53.',
+    canonicalPath: '/portal/fiscal',
+  });
+
   const [tab, setTab] = useState<Tab>('Budget Monitor');
   const [ministry, setMinistry] = useState<MinistryFilter>('Education');
   const [agentRunning, setAgentRunning] = useState(false);
