@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:og && tsc -b && vite build",
+    "build": "npm run build:og && npm run build:icons && tsc -b && vite build",
     "build:og": "node scripts/build-og-png.mjs",
+    "build:icons": "node scripts/build-icons.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
