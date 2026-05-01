@@ -1,0 +1,196 @@
+# AgenticGov — Full Reference
+
+A live, no-login web visualisation of the World Economic Forum's *Making Agentic AI Work for Government — A Readiness Framework* (April 2026). This file is the long-form reference for LLMs that want comprehensive context. The short curated version is at [/llms.txt](https://agenticgov.vercel.app/llms.txt).
+
+## What it is
+
+The WEF Readiness Framework identifies 70 distinct government functions where agentic AI can shift from advisory to autonomous action — scored across potential, complexity, risk, and jurisdictional readiness. The report is rigorous, but it is a document.
+
+AgenticGov is what those 70 functions look like when they are running. Each of the six apps is a live, clickable surface that an officer in a ministry would actually use — anomaly alerts, tender compliance scans, readiness scorecards, decision queues, morning briefings — wired into a single orchestration portal with cross-app event chains.
+
+All data shown is illustrative. The architecture, agent topology, and bi-directional intelligence flows are real reference implementations of the framework's recommended deployment patterns.
+
+AgenticGov is built by [On The Ground](https://github.com/On-The-Ground-AI), a Singapore civic-tech and AI studio. It is a non-commercial visual demonstration.
+
+## Audience
+
+AgenticGov is built for government teams across **seven jurisdictions, all at the same level** — there is no primary or secondary reference. They are listed alphabetically:
+
+- 🇨🇳 China
+- 🇮🇳 India
+- 🇯🇵 Japan
+- 🇵🇰 Pakistan
+- 🇸🇬 Singapore
+- 🇦🇪 United Arab Emirates
+- 🇺🇸 United States
+
+The demo data files use Singapore agencies in places because the demo needs one worked example concrete enough to click through. The architecture itself is jurisdiction-neutral, and every popup names equivalents in the other six.
+
+## The five readiness pillars
+
+The 70 WEF government functions cluster across five lifecycle stages:
+
+| # | Pillar | Functions | Tier | Description |
+|---|--------|-----------|------|-------------|
+| 01 | Strategic Foresight & Agenda Setting | 11 | HIGH | Horizon scanning, stakeholder mapping, prioritisation. The upstream functions that decide what governments should pay attention to. |
+| 02 | Policy Design & Analysis | 18 | HIGH | Comparative benchmarking, options appraisal, fiscal impact modelling, ex-ante evaluation of proposed interventions. |
+| 03 | Service Delivery & Operations | 16 | MEDIUM | Procurement, citizen services, regulatory compliance. Day-to-day machinery of public administration. |
+| 04 | Monitoring, Evaluation & Transparency | 15 | HIGH | Real-time KPI tracking, anomaly detection, impact evaluation, disclosure to legislators and citizens. |
+| 05 | Cross-Government Coordination | 10 | EMERGING | Inter-ministerial workflows, cabinet briefings, escalation governance, bi-directional intelligence flows. |
+
+## The six demo apps
+
+### Mission Control (orchestration portal)
+The cabinet- or PS-level "front page" for everything happening across the suite. Every agent in every other app reports its activity here, ranked by severity. Tabs: Briefing (executive summary), Operations (live agent monitoring), Intelligence (cross-app event chains), Governance (bi-directional flows). Maps to: 🇨🇳 State Council General Office · 🇮🇳 PMO + Cabinet Secretariat + NITI Aayog · 🇯🇵 PMO 官邸 + Cabinet Secretariat + Cabinet Office · 🇵🇰 PMO + Cabinet Division + SIFC · 🇸🇬 PMO + Cabinet Office + Smart Nation Group · 🇦🇪 UAE Cabinet + UAE PMO + MoCA · 🇺🇸 White House Office + OMB + NSC. WEF: Section 6.
+
+### TenderAI
+Scans every tender against statutory procurement frameworks and sustainability criteria before bid opening. Flags systemic template gaps. Pipeline monitor for in-flight tenders. Maps to: 🇨🇳 China Government Procurement Network 中国政府采购网 · 🇮🇳 GeM + CPP Portal · 🇯🇵 Cabinet Office Public Procurement + MOF Procurement · 🇵🇰 PPRA + e-PADS · 🇸🇬 GeBIZ + MOF · 🇦🇪 ADGS + Federal procurement portals · 🇺🇸 GSA + SAM.gov + FAR Council. WEF: Functions 6, 7, 41.
+
+### FiscalAI
+Continuously monitors ministry-level spend against rolling baselines using Z-score thresholds. Detects variance anomalies in real time, runs root-cause attribution, pushes alerts. Includes ex-ante fiscal forecasting (NPV, BCR, cost-per-beneficiary, breakeven). Maps to: 🇨🇳 Ministry of Finance + State Taxation Administration · 🇮🇳 Ministry of Finance + CGA + PFMS · 🇯🇵 MOF 財務省 + Board of Audit · 🇵🇰 MOF + FBR + Auditor General · 🇸🇬 MOF + AGD + IRAS · 🇦🇪 MOF + Federal Tax Authority · 🇺🇸 OMB + Treasury + CBO + GAO. WEF: Functions 9, 44, 53.
+
+### ReadinessMap
+The WEF report becomes a live dashboard. Three views: Readiness Map (scatter plot on potential vs. complexity), Ministerial Scorecard (HIGH/MEDIUM/EMERGING/CAUTION counts, 6-month trends, agent recommendations), Deployment Waves (Wave 1 Quick Wins / Wave 2 Capability Build / Wave 3 Strategic Bets). Maps to: 🇨🇳 CAC + MIIT + National Data Bureau · 🇮🇳 IndiaAI Mission + MeitY · 🇯🇵 Digital Agency + CSTI + AI Strategic Council · 🇵🇰 NCAI + MoIT + Digital Pakistan · 🇸🇬 Smart Nation Group + GovTech + IMDA · 🇦🇪 AI Office + TDRA + Smart Dubai · 🇺🇸 OSTP + OMB M-24-10 + CDO Council + GSA AI CoE. WEF: Section 7.
+
+### GovBench
+Watches global indices and pushes ranking changes into ReadinessMap automatically. Indices monitored: ITU Global Cybersecurity Index, UN E-Government Development Index (EGDI), IMD WCY, IMD WDCR, Oxford Insights GARI, World Bank Worldwide Governance Indicators, WIPO Global Innovation Index. Maps to: 🇨🇳 NBS 国家统计局 + CAICT · 🇮🇳 NITI Aayog dashboards + MoSPI · 🇯🇵 Statistics Bureau 総務省統計局 + Cabinet Office Statistics · 🇵🇰 Pakistan Bureau of Statistics + State Bank · 🇸🇬 SingStat + MTI Economic Survey · 🇦🇪 Federal Competitiveness & Statistics Centre · 🇺🇸 Census + BEA + BLS. WEF: Functions 8, 21, 35.
+
+### TransparencyAI
+Auto-generates ~80% of quarterly disclosure reports from existing data. Scores evidence quality against the WEF transparency benchmark and routes the remaining gaps to ministry teams with templates. Maps to: 🇨🇳 NAO 审计署 + NSC 国家监委 · 🇮🇳 CAG + CVC + CIC · 🇯🇵 Board of Audit 会計検査院 · 🇵🇰 AGP + NAB · 🇸🇬 AGO + PAC · 🇦🇪 State Audit Institution · 🇺🇸 GAO + USAspending.gov + IGs. WEF: Functions 8, 20, 47.
+
+## Cross-app intelligence flows
+
+The framework's central insight: most government value from AI does not come from a chatbot per ministry. It comes from bi-directional intelligence flows between agencies. Five such flows run live in the demo:
+
+1. **FiscalAI → TransparencyAI**: When FiscalAI detects a material variance, TransparencyAI is automatically required to surface it in the next quarterly report — no manual handoff.
+2. **GovBench → ReadinessMap**: The moment the ITU GCI 2025 or UN EGDI 2026 publishes, GovBench ingests it and ReadinessMap recomputes every affected function score within 5 minutes.
+3. **TenderAI → FiscalAI**: Every awarded tender pushes its actual cost into FiscalAI for budget vs. outcome tracking. Overrun patterns surface as anomalies.
+4. **ReadinessMap → TenderAI**: When a function changes ownership, ReadinessMap re-routes related tenders to the new responsible ministry without human re-tagging.
+5. **TransparencyAI → PMO**: If a draft disclosure scores below the WEF benchmark (typically 80/100), it auto-escalates to the PMO with a list of specific gaps and template suggestions.
+
+## Seven-jurisdiction agency mapping
+
+The demo's HoverInsight popups pull from a comprehensive reference table covering all five WEF pillars and AgenticGov's six apps for each of the seven jurisdictions. Below is the high-level matrix; the live demo surfaces this contextually based on what you click.
+
+### 01 — Strategic Foresight & Agenda Setting
+
+| Jurisdiction | Lead bodies |
+|---|---|
+| 🇨🇳 China | Development Research Center of the State Council (DRC); CASS; CICIR; NDRC Strategy Bureau |
+| 🇮🇳 India | NITI Aayog; PMO; Office of the Principal Scientific Adviser; NCAER; Centre for Policy Research |
+| 🇯🇵 Japan | Cabinet Office (内閣府); Council for Science Technology and Innovation (CSTI); NIRA; MEXT; METI Future Strategy Office |
+| 🇵🇰 Pakistan | Planning Commission; PIDE; Strategic Plans Division; NIPS |
+| 🇸🇬 Singapore | PMO Strategy Group; Centre for Strategic Futures (CSF); MTI Foresight; Civil Service College; IPS |
+| 🇦🇪 UAE | UAE PMO; Mohammed Bin Rashid Centre for Government Innovation; MBR School of Government; UAE Government Foresight Network |
+| 🇺🇸 USA | NSC; OMB Strategic Planning; GAO Strategic Foresight; OSTP; National Intelligence Council |
+
+### 02 — Policy Design & Analysis
+
+| Jurisdiction | Lead bodies |
+|---|---|
+| 🇨🇳 China | State Council; NDRC; Central Committee Policy Research Office; Central Financial and Economic Affairs Commission |
+| 🇮🇳 India | NITI Aayog; ministry policy units; IIPA; CSDS; ORF; Takshashila |
+| 🇯🇵 Japan | Cabinet Secretariat (内閣官房); MIC; Council on Economic and Fiscal Policy (CEFP); Industrial Structure Council |
+| 🇵🇰 Pakistan | Cabinet Division; Planning Commission; SDPI; Tabadlab |
+| 🇸🇬 Singapore | Public Service Division; ministry policy offices; LKYSPP; NCSS |
+| 🇦🇪 UAE | Cabinet; MoCA; UAE PMO; Federal Strategy Office |
+| 🇺🇸 USA | OMB; OSTP; Domestic Policy Council; GSA TTS; CRS; Brookings/RAND |
+
+### 03 — Service Delivery & Operations
+
+| Jurisdiction | Flagship platforms |
+|---|---|
+| 🇨🇳 China | National Government Service Platform 国务院客户端; provincial super-apps (浙里办, 粤省事, 随申办); 12345 hotlines |
+| 🇮🇳 India | India Stack (Aadhaar, UPI, DigiLocker, eSign, AA); MeitY; Digital India Corporation; CSC; UMANG; MyGov |
+| 🇯🇵 Japan | Digital Agency (デジタル庁, 2021→); e-Gov; Mynaportal; J-LIS; municipal one-stop offices |
+| 🇵🇰 Pakistan | NADRA; Pakistan Citizen Portal; Pak Identity; EHSAAS dashboards; Punjab IT Board; Sindh/KP/Balochistan IT |
+| 🇸🇬 Singapore | GovTech; IMDA; statutory boards; OneService; LifeSG; ServiceSG centres |
+| 🇦🇪 UAE | TAMM (Abu Dhabi); DubaiNow; U.AE federal portal; UAE Pass; Smart Dubai; ICA |
+| 🇺🇸 USA | GSA; USDS; 18F; Login.gov; USA.gov; agency portals (IRS Direct File, SSA mySSA, VA.gov, USCIS myAccount) |
+
+### 04 — Monitoring, Evaluation & Transparency
+
+| Jurisdiction | Lead bodies |
+|---|---|
+| 🇨🇳 China | National Audit Office (NAO 审计署); National Supervisory Commission (NSC); CCDI |
+| 🇮🇳 India | CAG of India; Public Accounts Committee; CVC; CIC; Lokpal |
+| 🇯🇵 Japan | Board of Audit (会計検査院); Diet Public Accounts Committee; Cabinet Personnel Bureau |
+| 🇵🇰 Pakistan | Auditor General of Pakistan (AGP); Public Accounts Committee; NAB; Federal Tax Ombudsman |
+| 🇸🇬 Singapore | Auditor-General's Office (AGO); Public Accounts Committee; Estimates Committee; CPIB |
+| 🇦🇪 UAE | State Audit Institution; Federal Tax Authority audit; Anti-Corruption Authority |
+| 🇺🇸 USA | GAO; agency Inspectors General (75+); OMB; CBO; OSC |
+
+### 05 — Cross-Government Coordination
+
+| Jurisdiction | Lead bodies |
+|---|---|
+| 🇨🇳 China | General Office of the State Council; CAC 网信办; MIIT 工信部; National Data Bureau (2023→) |
+| 🇮🇳 India | PMO; Cabinet Secretariat; e-Office; NIC; DARPG; Capacity Building Commission |
+| 🇯🇵 Japan | Cabinet Secretariat; Cabinet Office; Digital Agency; Council for the Promotion of Regulatory Reform |
+| 🇵🇰 Pakistan | Cabinet Division; PMO; NCAI; SIFC; Council of Common Interests |
+| 🇸🇬 Singapore | PMO; Whole-of-Government; ServiceSG; Smart Nation Group |
+| 🇦🇪 UAE | Cabinet; UAE PMO; MoCA; Council of Ministers |
+| 🇺🇸 USA | White House Office; OMB; OPM; Federal CIO Council; CDO Council; Federal Data Strategy team |
+
+## Flagship digital identity & citizen platforms (one-line summary per jurisdiction)
+
+- 🇨🇳 China — Resident ID + Alipay/WeChat unified credentials; National Government Service Platform; 12345 hotlines.
+- 🇮🇳 India — Aadhaar + DigiLocker + eSign + UPI; UMANG; MyGov; CSC; ABHA (health); APAAR (academic).
+- 🇯🇵 Japan — My Number Card (マイナンバーカード) + Mynaportal; e-Gov; gBizID for businesses.
+- 🇵🇰 Pakistan — NADRA CNIC + Pak Identity + Smart NIC; Pakistan Citizen Portal; EHSAAS.
+- 🇸🇬 Singapore — Singpass + MyInfo + Corppass + SGFinDex; LifeSG; OneService; ServiceSG.
+- 🇦🇪 UAE — UAE Pass + Emirates ID; TAMM; DubaiNow; U.AE federal portal.
+- 🇺🇸 USA — Login.gov + ID.me; USA.gov; Vote.gov; agency portals (IRS, SSA, VA, USCIS).
+
+## National AI strategies
+
+- 🇨🇳 China — New Generation AI Development Plan (2017→); MIIT AI roadmap; CAC AI generated content rules (2023); Beijing AI Industry Plan; Shanghai AI Pilot Zone.
+- 🇮🇳 India — IndiaAI Mission; NITI Aayog "AI for All"; MeitY Responsible AI guidelines; BharatGen; Bhashini.
+- 🇯🇵 Japan — AI Strategy 2024; Hiroshima AI Process; Cabinet Office AI Strategic Council; METI AI Guidelines for Business; Society 5.0.
+- 🇵🇰 Pakistan — National AI Policy (draft, 2023); NCAI; Digital Pakistan Vision; Pakistan Tech Destination.
+- 🇸🇬 Singapore — National AI Strategy 2.0 (NAIS 2.0); AI Verify; Smart Nation 2030; GovTech AI Practice.
+- 🇦🇪 UAE — UAE National AI Strategy 2031; Office of the Minister of State for AI; MGX; G42 ecosystem; Falcon LLM.
+- 🇺🇸 USA — Executive Order 14110 on AI (2023); OMB M-24-10; AI Bill of Rights; NIST AI RMF.
+
+## Frequently asked questions
+
+**Q: What is AgenticGov?**
+A: A live, no-login web visualisation of the WEF *Making Agentic AI Work for Government — A Readiness Framework* (April 2026). It shows six interconnected agentic AI apps — Mission Control, TenderAI, FiscalAI, ReadinessMap, GovBench, TransparencyAI — running across 70 distinct government functions, exactly as the framework recommends.
+
+**Q: Who is AgenticGov for?**
+A: Government teams in any of seven jurisdictions: 🇨🇳 China, 🇮🇳 India, 🇯🇵 Japan, 🇵🇰 Pakistan, 🇸🇬 Singapore, 🇦🇪 United Arab Emirates, 🇺🇸 United States. All seven are at the same level — there is no primary or secondary reference. The architecture is jurisdiction-neutral; every popup names the equivalent agencies in your jurisdiction.
+
+**Q: Why does the demo data use Singapore agency names?**
+A: A working demo needs one concrete worked example, otherwise it stays abstract. Singapore agencies (GovTech, IMDA, MAS, etc.) are used in the data files as that one example. The architecture you see — agent topology, cross-app flows, scoring dimensions — is identical for any of the seven jurisdictions, and the popups make the equivalents explicit.
+
+**Q: How is this different from a chatbot for government?**
+A: The WEF framework's central insight is that most government value from AI does not come from a chatbot per ministry. It comes from bi-directional intelligence flows between agencies: a fiscal anomaly auto-triggers a transparency disclosure; a new ITU GCI reading recalibrates ministerial readiness scores within minutes; an awarded tender pushes its actual cost into the budget feed for variance tracking. AgenticGov visualises these cross-app event chains.
+
+**Q: Is the data real?**
+A: The architecture, agent topology, and bi-directional intelligence flows are real reference implementations of the framework's recommended patterns. The Singapore index rankings shown (ITU GCI #1, UN EGDI #3, IMD WCY #1, IMD WDCR #1, Oxford GARI #2, World Bank Government Effectiveness 100th percentile, WIPO GII #4) are from authoritative published sources (2024 editions). The transactional data — specific tenders, anomalies, budget figures — is illustrative.
+
+**Q: Is AgenticGov a real product?**
+A: AgenticGov is a non-commercial visual demonstration. It is built by On The Ground, a Singapore civic-tech and AI studio. The studio operates ~40 active products across the Singapore civic, legal, education, and public-sector AI landscape, including production deployments for ministries, statutory boards, and international policy teams.
+
+**Q: How can I run a similar deployment in my jurisdiction?**
+A: Contact haojun@ontheground.agency or WhatsApp +65 9841 9481. The architecture in this demo is taken directly from production patterns; the same agent topology can be re-skinned for any of the seven target jurisdictions or others.
+
+**Q: How do I take a guided tour of the demo?**
+A: Click "Take a guided tour" on the landing page, or visit https://agenticgov.vercel.app/?tour=1 . A 7-step walkthrough overlays the page with floating tooltips at the hero, audience strip, run-scan demo, readiness pillars, six apps, cross-app flows, and a finish state.
+
+## Source report
+
+World Economic Forum, *Making Agentic AI Work for Government — A Readiness Framework*, April 2026.
+- Web: https://www.weforum.org/publications/making-agentic-ai-work-for-government-a-readiness-framework/
+- Mirrored PDF: https://agenticgov.vercel.app/wef-readiness-framework.pdf
+
+## Built by
+
+On The Ground — Singapore civic-tech and AI studio.
+- GitHub: https://github.com/On-The-Ground-AI
+- Email: haojun@ontheground.agency
+- WhatsApp: +65 9841 9481
+
+## Licence and reuse
+
+AgenticGov is a non-commercial visual demonstration. The WEF report is © World Economic Forum and is referenced under fair-use educational visualisation principles. Demo source code is available at https://github.com/On-The-Ground-AI/agenticgov .

@@ -1,0 +1,39 @@
+# AgenticGov
+
+> A live, no-login web visualisation of the World Economic Forum's *Making Agentic AI Work for Government — A Readiness Framework* (April 2026). Six interconnected agentic AI apps across 70 government functions, with one orchestration portal. Built for government teams across seven jurisdictions: China, India, Japan, Pakistan, Singapore, United Arab Emirates, and the United States — all sitting at the same level.
+
+AgenticGov takes the WEF report — which is rigorous but a *document* — and shows what it looks like *running*. Each of the six demo apps is a clickable, interactive surface that an officer in a ministry would actually use: anomaly alerts, tender compliance scans, readiness scorecards, decision queues, morning briefings, all wired into a single orchestration portal with cross-app event chains.
+
+The demo data uses Singapore agencies (GovTech, IMDA, MAS, MOH, MOE, MTI, MND, MOM, MSF, PSD; SkillsFuture, KidSTART, Smart Nation 2030, Singpass, MyInfo) only because the demo needs ONE worked example concrete enough to click through. The architecture itself is jurisdiction-neutral, and every popup pulls from a comprehensive seven-jurisdiction reference table (`/llms-full.txt` has the full mapping).
+
+AgenticGov is a non-commercial visual demonstration. The data is illustrative; the architecture, agent topology, and bi-directional intelligence flows are real reference implementations of the framework's recommended deployment patterns. It is built by [On The Ground](https://github.com/On-The-Ground-AI), a Singapore civic-tech and AI studio.
+
+## Source report
+
+- [WEF — Making Agentic AI Work for Government: A Readiness Framework (web)](https://www.weforum.org/publications/making-agentic-ai-work-for-government-a-readiness-framework/): The April 2026 framework that this demo visualises. 70 government functions, 5 readiness pillars, recommended deployment waves.
+- [WEF Readiness Framework (PDF, mirrored on this site)](https://agenticgov.vercel.app/wef-readiness-framework.pdf): Full report PDF.
+
+## Demo surfaces
+
+- [AgenticGov landing page](https://agenticgov.vercel.app/): Hero, 5-pillar framework visualisation, 6-app launchpad, cross-app intelligence flows, live agent scan demo, visitor counter.
+- [Mission Control portal](https://agenticgov.vercel.app/portal): Orchestration layer. Morning briefing, decision queue, agent health panel, scheduled intelligence, governance flows. The "front page" a Permanent Secretary, Cabinet Secretariat, or Office of Management and Budget would open at 7 AM.
+- [TenderAI](https://agenticgov.vercel.app/portal/tender): Procurement compliance scanning, vendor analysis, automated bid evaluation. WEF Functions 6, 7, 41.
+- [FiscalAI](https://agenticgov.vercel.app/portal/fiscal): Real-time budget anomaly detection, fiscal forecasting, KPI tracking, cost-effectiveness benchmarking. WEF Functions 9, 44, 53.
+- [ReadinessMap](https://agenticgov.vercel.app/portal/readiness): Live readiness scoring across all 70 WEF government functions, ministerial scorecards, dependency mapping, deployment-wave tracking. WEF Section 7.
+- [GovBench](https://agenticgov.vercel.app/portal/bench): Continuous monitoring of OECD, World Bank, ITU, IMD, UN EGDI, WIPO indices with peer-country policy transferability scoring. WEF Functions 8, 21, 35.
+- [TransparencyAI](https://agenticgov.vercel.app/portal/transparency): Auto-drafted disclosure reports, deadline monitoring, evidence-quality scoring against international transparency benchmarks. WEF Functions 8, 20, 47.
+
+## Audience reference
+
+- [Guided tour mode](https://agenticgov.vercel.app/?tour=1): A 7-step walkthrough of the framework and the demo for first-time visitors.
+- [llms-full.txt — full long-form description](https://agenticgov.vercel.app/llms-full.txt): Comprehensive details — full FAQ, the seven-jurisdiction agency-equivalence table (China, India, Japan, Pakistan, Singapore, UAE, USA), architecture, agent topology.
+
+## About the maker
+
+- [On The Ground (GitHub org)](https://github.com/On-The-Ground-AI): Singapore civic-tech and AI studio. Builds production agentic systems for ministries, statutory boards, and policy teams.
+- Contact: haojun@ontheground.agency · WhatsApp +65 9841 9481
+
+## Optional
+
+- [Privacy policy](https://agenticgov.vercel.app/privacy)
+- [Terms of service](https://agenticgov.vercel.app/terms)

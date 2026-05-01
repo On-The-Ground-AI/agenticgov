@@ -5,6 +5,11 @@ import { HoverInsight } from '../components/HoverInsight';
 import { LiveScanDemo } from '../components/LiveScanDemo';
 import { VisitorCounter } from '../components/VisitorCounter';
 import { GuidedTour } from '../components/GuidedTour';
+import {
+  JURISDICTIONS,
+  JURISDICTION_ORDER,
+  jurisdictionsForPillar,
+} from '../data/jurisdictions';
 
 const READINESS_PILLARS = [
   {
@@ -15,12 +20,7 @@ const READINESS_PILLARS = [
     tier: 'HIGH',
     color: '#B8860B',
     wefRef: 'Section 2 (Functional Map, p.18)',
-    jurisdiction: [
-      { label: 'SG', value: 'PMO Strategy Group, MTI Foresight' },
-      { label: 'IN', value: 'NITI Aayog, PMO' },
-      { label: 'AE', value: 'UAE PMO, Mohammed Bin Rashid Centre' },
-      { label: 'PK', value: 'Ministry of Planning, NCAI' },
-    ],
+    jurisdiction: jurisdictionsForPillar('foresight'),
   },
   {
     n: '02',
@@ -30,12 +30,7 @@ const READINESS_PILLARS = [
     tier: 'HIGH',
     color: '#0E7490',
     wefRef: 'Section 3 (Policy Cycle, p.24)',
-    jurisdiction: [
-      { label: 'SG', value: 'Public Service Division, ministry policy offices' },
-      { label: 'IN', value: 'NITI Aayog, ministry-level think tanks' },
-      { label: 'AE', value: 'Mohammed Bin Rashid School of Government' },
-      { label: 'PK', value: 'Planning Commission, ministry policy units' },
-    ],
+    jurisdiction: jurisdictionsForPillar('policyDesign'),
   },
   {
     n: '03',
@@ -45,12 +40,7 @@ const READINESS_PILLARS = [
     tier: 'MEDIUM',
     color: '#7C3AED',
     wefRef: 'Section 4 (Operational Functions, p.34)',
-    jurisdiction: [
-      { label: 'SG', value: 'GovTech, IMDA, statutory boards, OneService' },
-      { label: 'IN', value: 'IndiaStack, DigiLocker, UMANG' },
-      { label: 'AE', value: 'TAMM, U.AE platforms' },
-      { label: 'PK', value: 'NADRA, Pakistan Citizen Portal' },
-    ],
+    jurisdiction: jurisdictionsForPillar('serviceDelivery'),
   },
   {
     n: '04',
@@ -60,12 +50,7 @@ const READINESS_PILLARS = [
     tier: 'HIGH',
     color: '#059669',
     wefRef: 'Section 5 (Oversight Layer, p.42)',
-    jurisdiction: [
-      { label: 'SG', value: 'Auditor-General Office, Public Accounts Committee' },
-      { label: 'IN', value: 'CAG of India, NITI Aayog dashboards' },
-      { label: 'AE', value: 'State Audit Institution' },
-      { label: 'PK', value: 'Auditor General of Pakistan' },
-    ],
+    jurisdiction: jurisdictionsForPillar('oversight'),
   },
   {
     n: '05',
@@ -75,12 +60,7 @@ const READINESS_PILLARS = [
     tier: 'EMERGING',
     color: '#DC2626',
     wefRef: 'Section 6 (Whole-of-Government, p.51)',
-    jurisdiction: [
-      { label: 'SG', value: 'PMO, Whole-of-Government, ServiceSG' },
-      { label: 'IN', value: 'PMO, Cabinet Secretariat, e-Office' },
-      { label: 'AE', value: 'Cabinet, MoCA equivalents' },
-      { label: 'PK', value: 'Cabinet Division, PMO' },
-    ],
+    jurisdiction: jurisdictionsForPillar('coordination'),
   },
 ];
 
@@ -245,35 +225,35 @@ export function LandingPage() {
             in production. Six interconnected agentic apps, 70 government functions, one orchestration portal.
           </p>
 
-          {/* Audience strip */}
+          {/* Audience strip — seven jurisdictions, equal billing */}
           <div data-tour="audience" className="mt-6 flex flex-wrap items-center gap-2 text-xs text-white/60">
-            <span>Built for forward-looking government teams in</span>
-            <HoverInsight
-              title="Singapore"
-              description="Primary reference jurisdiction. Real Singapore agencies (MOH, MOE, MTI, GovTech, IMDA, EMA, MAS, EDB, ECDA) and programmes (SkillsFuture, KidSTART, Smart Nation, Singpass, MyInfo) are used throughout the demo data."
-              wefRef="Annex B (Reference jurisdictions, p.79)"
-            >
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/10 border border-white/20 cursor-help">🇸🇬 Singapore</span>
-            </HoverInsight>
-            <HoverInsight
-              title="India"
-              description="Secondary audience. The architecture maps cleanly onto NITI Aayog, IndiaStack, DigiLocker, UMANG, and the Cabinet Secretariat. Click any tile in the suite — popups include Indian-equivalent agency hints."
-            >
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/10 border border-white/20 cursor-help">🇮🇳 India</span>
-            </HoverInsight>
-            <HoverInsight
-              title="United Arab Emirates"
-              description="The original WEF report includes the UAE as a reference deployment. Federal architecture (MoF, MoE, MoCA, TAMM) maps naturally to the same six-app pattern."
-            >
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/10 border border-white/20 cursor-help">🇦🇪 UAE</span>
-            </HoverInsight>
-            <HoverInsight
-              title="Pakistan"
-              description="The same six-app pattern maps to NADRA, Pakistan Citizen Portal, NCAI, the Planning Commission, and the Cabinet Division."
-            >
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/10 border border-white/20 cursor-help">🇵🇰 Pakistan</span>
-            </HoverInsight>
+            <span>Built for government teams across</span>
+            {JURISDICTION_ORDER.map((code) => {
+              const j = JURISDICTIONS[code];
+              return (
+                <HoverInsight
+                  key={code}
+                  title={j.name}
+                  description={`The architecture maps onto ${j.name}'s government structure across all five WEF readiness pillars. Foresight: ${j.pillars.foresight}. Service delivery: ${j.pillars.serviceDelivery}. Click any pillar tile or app card below — every popup names the equivalents in your jurisdiction.`}
+                  meta={[
+                    { label: 'Digital identity', value: j.platforms.digitalIdentity },
+                    { label: 'Citizen portal', value: j.platforms.citizenPortal },
+                    { label: 'AI strategy', value: j.platforms.aiStrategy },
+                  ]}
+                  wefRef="Annex B (Reference jurisdictions, p.79)"
+                >
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/10 border border-white/20 cursor-help">
+                    {j.flag} {j.name}
+                  </span>
+                </HoverInsight>
+              );
+            })}
           </div>
+          <p className="mt-3 text-[11px] text-white/40 max-w-3xl">
+            All seven jurisdictions sit at the same level. The demo data uses Singapore agencies as one
+            worked example — the architecture itself is jurisdiction-neutral, and every popup names the
+            equivalents for the other six.
+          </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link
