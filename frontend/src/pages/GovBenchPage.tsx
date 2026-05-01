@@ -177,6 +177,7 @@ export function GovBenchPage() {
                     title={`Ranking change alert — ${alert.index}`}
                     description={`The jurisdiction's rank on ${alert.index} moved from #${alert.previousRank} to #${alert.currentRank}. The card shows the countries that overtook us, the agent's analysis of why, and a list of transferable policy recommendations the agent extracted from the leading nations.`}
                     wefRef="Section 5 (Oversight Layer, p.42)"
+                    jurisdiction={jurisdictionsForApp('bench')}
                   >
                   <div className="bg-white rounded-xl border-2 border-red-200 shadow-sm overflow-hidden cursor-help">
                     {/* Alert header */}
@@ -332,6 +333,7 @@ export function GovBenchPage() {
                   title="Sector selector"
                   description="Pick a sector to scope the peer benchmarking. The agent loads comparable metrics from five reference jurisdictions for the chosen sector and re-runs the lead/lag analysis."
                   wefRef="Annex B (Reference jurisdictions, p.79)"
+                  jurisdiction={jurisdictionsForApp('bench')}
                 >
                 <div className="glass rounded-xl shadow-sm p-4 cursor-help">
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Select Sector</label>
@@ -350,6 +352,7 @@ export function GovBenchPage() {
                   title={`Agent analysis — ${sector} sector`}
                   description="Summary the GovBench agent produced for the chosen sector: how many comparable metrics it found, where the jurisdiction leads vs lags peers, and the agent's confidence level based on data recency and source reliability."
                   wefRef="Annex B (Reference jurisdictions, p.79)"
+                  jurisdiction={jurisdictionsForApp('bench')}
                 >
                 <div className="bg-cyan-50 rounded-xl border border-cyan-200 shadow-sm p-5 cursor-help">
                   <div className="flex items-center gap-2 mb-2">
@@ -405,6 +408,7 @@ export function GovBenchPage() {
                       title={`${b.metric} — peer comparison`}
                       description={`Peer-benchmark card for ${b.metric}. Compares the jurisdiction's value (${b.jurisdictionValue} ${b.unit}) against five reference nations on the same metric. Source: ${b.source}.`}
                       wefRef="Annex B (Reference jurisdictions, p.79)"
+                      jurisdiction={jurisdictionsForApp('bench')}
                     >
                     <div className="glass rounded-xl shadow-sm p-5 cursor-help">
                       <div className="flex items-center justify-between mb-1">
@@ -440,6 +444,7 @@ export function GovBenchPage() {
                     title={inn.title}
                     description={`National innovation card from ${inn.ministry} (${inn.year}). Describes the practice, its measurable impact, and a transferability rating that estimates how readily other jurisdictions can adopt it.`}
                     wefRef="Annex B (Reference jurisdictions, p.79)"
+                    jurisdiction={jurisdictionsForApp('bench')}
                   >
                   <div className="glass rounded-xl shadow-sm overflow-hidden cursor-help">
                     <div className="px-5 py-3" style={{ backgroundColor: '#0891B2' }}>
@@ -480,6 +485,7 @@ export function GovBenchPage() {
               title="GovBench agent status"
               description="Live status of the GovBench benchmarking agents — how many are active and how many tasks they have completed today. Mirrors the agent telemetry across the AgenticGov portal."
               wefRef="Section 5 (Oversight Layer, p.42)"
+              jurisdiction={jurisdictionsForApp('bench')}
             >
             <div className="glass rounded-xl p-4 cursor-help">
               <div className="flex items-center justify-between mb-3">
@@ -507,6 +513,7 @@ export function GovBenchPage() {
               title="Cross-app intelligence sent"
               description="Audit log of structured intelligence GovBench has pushed to sibling AgenticGov apps in the last 24 hours — e.g. peer benchmarks to FiscalAI, transferable practices to PolicyAI."
               wefRef="Section 5 (Oversight Layer, p.42)"
+              jurisdiction={jurisdictionsForApp('bench')}
             >
             <div className="glass rounded-xl overflow-hidden cursor-help">
               <div className="px-4 py-3 border-b border-neutral-100">

@@ -100,6 +100,7 @@ export function AgenticGovPortalPage() {
               description="AgenticGov covers 7 specialized agent domains mapping to 70 functions from the WEF's 'Making Agentic AI Work for Government' framework, deployed across 11 ministries."
               meta={[{ label: 'WEF Framework', value: 'April 2026' }, { label: 'Coverage', value: '70/70 functions' }, { label: 'Ministries', value: '11' }]}
               wefRef="Annex A (Function index)"
+              jurisdiction={jurisdictionsForApp('missionControl')}
             >
               <p className="text-xs text-slate-500 mt-1 cursor-help">
                 7 Agent Domains &bull; 70 WEF Functions &bull; 10 Ministries &bull; Always-On Intelligence
@@ -172,6 +173,7 @@ export function AgenticGovPortalPage() {
                 description="Overnight executive digest synthesised across all 7 agent domains. Surfaces top-priority anomalies, decisions needing sign-off, and trend shifts your principals should see before 10:00 AM."
                 meta={[{ label: 'Refreshed', value: '6:00 AM daily' }, { label: 'Reading time', value: '~3 minutes' }]}
                 wefRef="Section 6.1 (Executive Briefing, p.52)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <MorningBriefing />
@@ -182,6 +184,7 @@ export function AgenticGovPortalPage() {
                 description="Quantified outcomes attributable to AgenticGov agents — flagged compliance issues averted, fiscal leakage recovered, citizen-service hours saved, and policy briefs delivered. Updated as agents close cases."
                 meta={[{ label: 'Window', value: 'Rolling 90 days' }, { label: 'Tracked metrics', value: '12' }]}
                 wefRef="Section 6.1 (Executive Briefing, p.52)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <ImpactTracker />
@@ -194,6 +197,7 @@ export function AgenticGovPortalPage() {
                 description="Items routed to a human decision-maker because they exceed an agent's autonomy threshold. Each card shows the agent's recommendation, supporting evidence, and an audit-trail-backed approve/reject action."
                 meta={[{ label: 'Pending', value: '7 items' }, { label: 'Median age', value: '42 minutes' }]}
                 wefRef="Section 6.1 (Executive Briefing, p.52)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <DecisionQueue />
@@ -204,6 +208,7 @@ export function AgenticGovPortalPage() {
                 description="Live operational health for every deployed agent: heartbeat, error rate, queue depth, and last-successful-run timestamp. Red/amber/green status mirrors the WEF readiness telemetry pattern."
                 meta={[{ label: 'Agents monitored', value: '23' }, { label: 'Uptime', value: '99.97%' }]}
                 wefRef="Section 4 (Operational Functions, p.34)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <AgentHealthPanel />
@@ -222,6 +227,7 @@ export function AgenticGovPortalPage() {
                 description="Animated topology of the data pipes connecting every AgenticGov domain. Shows live message flow between TenderAI, FiscalAI, TransparencyAI, GovBench, ReadinessMap, and the orchestration portal."
                 meta={[{ label: 'Active flows', value: '14' }, { label: 'Latency', value: '~120ms p95' }]}
                 wefRef="Section 6.2 (Cross-app intel, p.54)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <CrossAppFlowDiagram />
@@ -232,6 +238,7 @@ export function AgenticGovPortalPage() {
                 description="Recurring agent jobs that run on cron-style schedules — daily fiscal scans, weekly tender audits, monthly readiness reports. Visualises what's queued, running, and recently completed."
                 meta={[{ label: 'Scheduled jobs', value: '38' }, { label: 'Next run', value: '~14 minutes' }]}
                 wefRef="Section 4 (Operational Functions, p.34)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <ScheduledIntelligence />
@@ -242,6 +249,7 @@ export function AgenticGovPortalPage() {
                 description="Live operational health for every deployed agent: heartbeat, error rate, queue depth, and last-successful-run timestamp. Red/amber/green status mirrors the WEF readiness telemetry pattern."
                 meta={[{ label: 'Agents monitored', value: '23' }, { label: 'Uptime', value: '99.97%' }]}
                 wefRef="Section 4 (Operational Functions, p.34)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <AgentHealthPanel />
@@ -254,6 +262,7 @@ export function AgenticGovPortalPage() {
                 description="Live tail of every agent action across the platform — decisions, escalations, and completions stream in as they happen. Each entry links back to the originating agent and ministry."
                 meta={[{ label: 'Stream rate', value: 'Live (5-8s)' }, { label: 'Retention', value: '30 days' }]}
                 wefRef="Section 4 (Operational Functions, p.34)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <AgentActivityFeed
@@ -270,6 +279,7 @@ export function AgenticGovPortalPage() {
                   description="The 7 specialized agent domains that make up AgenticGov. Each domain is a standalone app with its own agents, but all share intelligence via the orchestration portal."
                   meta={[{ label: 'Total domains', value: '7' }, { label: 'Total agents', value: '23' }]}
                   wefRef="Annex A (Function index)"
+                  jurisdiction={jurisdictionsForApp('missionControl')}
                 >
                   <h3 className="text-sm font-semibold text-slate-800 cursor-help">Agent Domains</h3>
                 </HoverInsight>
@@ -314,6 +324,7 @@ export function AgenticGovPortalPage() {
                 description="Trace a single trigger as it cascades across the platform — anomaly detection in TenderAI escalates to FiscalAI verification, generates a TransparencyAI public-disclosure draft, and ends with a cabinet briefing memo. Demonstrates the end-to-end agent chain pattern."
                 meta={[{ label: 'Active chains', value: '3' }, { label: 'Median resolution', value: '4.2 hours' }]}
                 wefRef="Section 6.2 (Cross-app intel, p.54)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <EventChainPanel />
@@ -324,6 +335,7 @@ export function AgenticGovPortalPage() {
                 description="Animated topology of the data pipes connecting every AgenticGov domain. Shows live message flow between TenderAI, FiscalAI, TransparencyAI, GovBench, ReadinessMap, and the orchestration portal."
                 meta={[{ label: 'Active flows', value: '14' }, { label: 'Latency', value: '~120ms p95' }]}
                 wefRef="Section 6.2 (Cross-app intel, p.54)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <CrossAppFlowDiagram />
@@ -336,6 +348,7 @@ export function AgenticGovPortalPage() {
                 description="Live tail of every agent action across the platform — decisions, escalations, and completions stream in as they happen. Each entry links back to the originating agent and ministry."
                 meta={[{ label: 'Stream rate', value: 'Live (5-8s)' }, { label: 'Retention', value: '30 days' }]}
                 wefRef="Section 4 (Operational Functions, p.34)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <AgentActivityFeed
@@ -350,6 +363,7 @@ export function AgenticGovPortalPage() {
                 description="Quantified outcomes attributable to AgenticGov agents — flagged compliance issues averted, fiscal leakage recovered, citizen-service hours saved, and policy briefs delivered. Updated as agents close cases."
                 meta={[{ label: 'Window', value: 'Rolling 90 days' }, { label: 'Tracked metrics', value: '12' }]}
                 wefRef="Section 6.1 (Executive Briefing, p.52)"
+                jurisdiction={jurisdictionsForApp('missionControl')}
               >
                 <div className="cursor-help">
                   <ImpactTracker />
@@ -366,6 +380,7 @@ export function AgenticGovPortalPage() {
             description="Bi-directional intelligence routing between division, ministry, and cabinet tiers. Shows how agents pull data top-down, push alerts bottom-up, and sync laterally — the framework's recommended governance pattern."
             meta={[{ label: 'Pull / Push / Sync', value: '34 / 12 / 28 today' }, { label: 'Auto-resolved', value: '71' }]}
             wefRef="Section 6.3 (Governance flows, p.57)"
+            jurisdiction={jurisdictionsForApp('missionControl')}
           >
             <div className="cursor-help">
               <GovernanceOrchestration />
