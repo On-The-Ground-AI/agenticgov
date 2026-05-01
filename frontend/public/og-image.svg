@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="lightning-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="50%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+
+  <!-- Lightning bolt icon -->
+  <path
+    transform="translate(100, 165) scale(9.375)"
+    fill="url(#lightning-grad)"
+    d="M18.5 2L6 18h8l-2 12 12.5-16H16.5l2-12z"
+  />
+
+  <!-- Title -->
+  <text x="350" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="600" fill="#1e293b">Causalis</text>
+
+  <!-- Subtitle -->
+  <text x="350" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="400" fill="#0072BC" letter-spacing="3">IMPACT EVALUATION PLATFORM</text>
+
+  <!-- Description -->
+  <text x="350" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#64748b">Make every evaluation decision</text>
+  <text x="350" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#64748b">defensible, transparent, and fast.</text>
+</svg>

@@ -1,0 +1,53 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh api *)",
+      "Bash(git fetch *)",
+      "Bash(git show *)",
+      "Bash(weasyprint *)",
+      "Bash(pandoc --version)",
+      "Bash(pandoc --list-output-formats)",
+      "Bash(openssl rand *)",
+      "Bash(mdfind \"kMDItemCFBundleIdentifier == 'com.google.Chrome'\")",
+      "Bash(npm list *)",
+      "Bash(npx puppeteer *)",
+      "Bash(vercel --version)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(npx *)",
+      "Bash(open *)",
+      "Bash(psql \"postgresql://neondb_owner:npg_7woJgrST8hkF@ep-lingering-leaf-aohvhagw-pooler.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require\" -f supabase/migrations/013_neon_consolidated.sql)",
+      "Bash(psql *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(vercel env *)",
+      "Bash(vercel link *)",
+      "Bash(git add *)",
+      "Bash(VERCEL_PLUGIN_ENABLED=false vercel env add BETTER_AUTH_SECRET preview)",
+      "Bash(git rm *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git status *)",
+      "Bash(curl *)",
+      "Bash(vercel ls *)",
+      "Bash(vercel logs *)",
+      "Bash(vercel inspect *)",
+      "Bash(git pull *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d.get\\('deploymentId','?'\\), d.get\\('message',''\\)[:200]\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({'type':d.get\\('type'\\), 'exports':d.get\\('exports',{}\\).get\\('.','?'\\), 'main':d.get\\('main','?'\\), 'module':d.get\\('module','?'\\)}, indent=2\\)\\)\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); exports=d.get\\('exports',{}\\); print\\(json.dumps\\({k:v for k,v in exports.items\\(\\) if 'node' in k.lower\\(\\)}, indent=2\\)\\)\")",
+      "Bash(pkill -f \"vite.*5176\")",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(d.get\\('version','?'\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.loads\\(sys.stdin.readline\\(\\)\\); print\\(d.get\\('message',''\\)[:500]\\)\")",
+      "Bash(git rebase *)",
+      "Bash(grep -E \"\\\\.\\(html|pptx|pdf\\)$\")",
+      "Bash(grep -E \"\\\\.tsx$\")",
+      "Bash(/Applications/Google Chrome.app/Contents/MacOS/Google Chrome *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --print-to-pdf=\"/Users/seehaojun/Desktop/OTG/Apps/uae-policy-ai-advisor/presentation-slides.pdf\" --no-margins --landscape --print-to-pdf-no-header \"/Users/seehaojun/Desktop/OTG/Apps/uae-policy-ai-advisor/presentation-slides.html\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "claude-flow"
+  ]
+}

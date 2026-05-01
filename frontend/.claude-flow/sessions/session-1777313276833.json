@@ -1,0 +1,14 @@
+{
+  "id": "session-1777313276833",
+  "startedAt": "2026-04-27T18:07:56.833Z",
+  "cwd": "/Users/seehaojun/Desktop/OTG/Apps/uae-policy-ai-advisor/frontend",
+  "context": {},
+  "metrics": {
+    "edits": 10,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-04-27T18:38:13.041Z",
+  "duration": 1816213
+}

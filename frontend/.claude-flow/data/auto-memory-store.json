@@ -1,0 +1,2980 @@
+[
+  {
+    "id": "mem-MEMORY----user-profile--user-role-md-",
+    "key": "-user-profile-user-role-md-otg-founder-4-github-or",
+    "content": "- [Mission Control plan](project_mission_control.md) — Notion + GitHub Actions ops hub for repos, API spend, marketing, project management\n- [GitHub reorg (2026-03-27)](project_github_reorg.md) — Completed reorg: org-by-purpose, renames, transfers, archives\n- [FastJobs CV Pipeline](project_fastjobs_cv.md) — CV parsing pipeline, 1821/1920 complete, parallel Claude Code agents",
+    "summary": "- [User profile](user_role.md) — OTG founder, 4 GitHub orgs, working style preferences",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276837
+  },
+  {
+    "id": "mem-project_fastjobs_cv----",
+    "key": "-",
+    "content": "name: FastJobs CV Pipeline\ndescription: CV parsing pipeline at ~/Downloads/fastjobs CVs/ — 1821/1920 parsed, uses Claude Code parallel task agents\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_fastjobs_cv",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_fastjobs_cv.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-project_fastjobs_cv-fastjobs-cv-pipeline",
+    "key": "fastjobs-cv-pipeline",
+    "content": "**Location:** `/Users/seehaojun/Downloads/fastjobs CVs/`\n**Status:** ~Complete (1,821/1,920 CVs parsed, 94.8%)\n\nProcesses CVs from FastJobs (Singapore hourly/blue-collar job platform). Pipeline in `_pipeline/`: extract_text.py → parse_cvs_claude.py (parallel Claude Code Task agents) → export_excel.py → organize_cvs.py.\n\nKey: uses Claude Max subscription Task agents (haiku model) for parallel parsing instead of API keys. Batches of 10 CVs per agent.",
+    "summary": "FastJobs CV Pipeline",
+    "namespace": "project_fastjobs_cv",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_fastjobs_cv.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-project_github_reorg----",
+    "key": "-",
+    "content": "name: GitHub Reorg Completed\ndescription: Record of the 2026-03-27 GitHub reorg — what was deleted, renamed, archived, transferred across 4 orgs\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_github_reorg",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_github_reorg.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-project_github_reorg-github-reorg---2026-03-27",
+    "key": "github-reorg-2026-03-27",
+    "content": "### Org structure (post-reorg)\n- **On-The-Ground-SG** — Client & civic projects (12 active, 8 archived)\n- **On-The-Ground-AI** — AI products & internal tools (21 active, 3 archived)\n- **seehaojun** — Personal / experimental (6 active, 3 archived)\n- **sg-assist** — SG Assist ecosystem (7 active, 0 archived) — not touched\n\n### Actions taken\n\n**Deleted (GitHub):** fishcake-potato, scaling-garbanzo, ubiquitous-chilli-crab, demo-repository, legally-first (seehaojun copy)\n\n**Renamed:** fluffy-winner→c",
+    "summary": "GitHub Reorg — 2026-03-27",
+    "namespace": "project_github_reorg",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_github_reorg.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-project_mission_control----",
+    "key": "-",
+    "content": "name: Mission Control Project Plan\ndescription: Plan to build an operations hub in Notion + GitHub Actions for managing OTG repos, API spend, marketing budgets, and project status across 4 GitHub orgs\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_mission_control",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_mission_control.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-project_mission_control-mission-control---operations-h",
+    "key": "mission-control-operations-hub-for-otg",
+    "content": "**Decision date:** 2026-03-27\n**Repo:** To be created at `On-The-Ground-AI/mission-control`\n**Frontend:** Notion (workspace to be created)\n\n### What it does\n1. **Repo monitoring** — nightly sync of all repos across 4 orgs (seehaojun, On-The-Ground-SG, On-The-Ground-AI, sg-assist). Tracks last commit, open PRs, docs presence, sync state.\n2. **Project management** — status, milestones, owners, tasks per project.\n3. **API spend tracking** — monthly costs per live/consumer-facing project. Manual ent",
+    "summary": "Mission Control — Operations Hub for OTG",
+    "namespace": "project_mission_control",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/project_mission_control.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-user_role----",
+    "key": "-",
+    "content": "name: User profile\ndescription: Haojun's role, orgs, and working style — founder managing multiple projects across 4 GitHub orgs\ntype: user\n---\n\n- Founder/operator of On The Ground (OTG) — runs multiple projects spanning legal tech, education, civic tech, AI products, and recruitment\n- Manages 4 GitHub orgs: seehaojun (personal), On-The-Ground-SG (client & civic), On-The-Ground-AI (AI products & internal tools), sg-assist (SG Assist ecosystem)\n- Also a member of the sg-assist org (not owner — ow",
+    "summary": "---",
+    "namespace": "user_role",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun/memory/user_role.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-MEMORY-project-structure",
+    "key": "project-structure",
+    "content": "- Working dir: `/Users/seehaojun/Desktop/OTG/`\n- Master registry: `/Users/seehaojun/Desktop/OTG/Apps/CLAUDE.md` — lists all projects, orgs, statuses\n- ~46 repos across 4 GitHub orgs: seehaojun, On-The-Ground-SG, On-The-Ground-AI, sg-assist",
+    "summary": "Project Structure",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-MEMORY-fishcakepotato--connector-app-",
+    "key": "fishcakepotato-connector-app-",
+    "content": "- **Path:** `/Users/seehaojun/Desktop/OTG/FishcakePotato/`\n- **Remote:** https://github.com/seehaojun/fishcake-potato (main branch)\n- **Purpose:** Local-first CLI to coordinate cross-repo updates (deps, LLM models, infra)\n- **Tech:** Node.js / TypeScript (planned)\n- **Status:** Design phase complete. Registry, DESIGN.md, CONNECTOR_TEMPLATE.md committed and pushed.\n- **Next steps:** Each repo needs a CONNECTOR.md file. Then scaffold the TypeScript CLI.\n- See [fishcake-potato.md](fishcake-potato.m",
+    "summary": "FishcakePotato (Connector App)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-MEMORY-key-repos--with-remotes-",
+    "key": "key-repos-with-remotes-",
+    "content": "| App | Org | Repo Name |\n|-----|-----|-----------|\n| Aperture | On-The-Ground-SG | aperture-intelligence |\n| BetterWiser KYC | On-The-Ground-AI | betterwiser-kyc-agents |\n| RF Enterprise | On-The-Ground-AI | rf-enterprise-app |\n| ECE IE Tool | On-The-Ground-AI | special-guacamole-nz |\n| Health App | On-The-Ground-SG | singapore-health-intelligence |\n| FinControl | On-The-Ground-AI | fincontrol |\n| Genetic Health | On-The-Ground-AI | dna-checker |\n| SLL Portal | On-The-Ground-AI | cautious-winne",
+    "summary": "Key Repos (with remotes)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-MEMORY-tech-stacks-observed",
+    "key": "tech-stacks-observed",
+    "content": "- Aperture: Next.js 16, Prisma 6.19, Claude API, Neon Postgres, Vercel\n- BetterWiser: Python 3.12, FastAPI, Next.js 15, React 19, Claude API, Docker\n- Health App: FastAPI, pre-build stage\n- Most apps: TypeScript, React, Tailwind CSS",
+    "summary": "Tech Stacks Observed",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-fishcake-potato-architecture-decision",
+    "key": "architecture-decision",
+    "content": "- **Local-first CLI** — runs on laptop, not GitHub Actions\n- User wanted hybrid initially but confirmed local-first with ability to push updates to remotes\n- Node.js / TypeScript chosen (matches most existing repos)",
+    "summary": "Architecture Decision",
+    "namespace": "fishcake-potato",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/fishcake-potato.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-fishcake-potato-how-it-works",
+    "key": "how-it-works",
+    "content": "1. `registry.yaml` — master list of all repos with org, local path, display name\n2. Each repo has `CONNECTOR.md` declaring: dependencies, LLM models, infrastructure\n3. CLI commands: scan → check → plan → execute\n4. Execute: creates branches, updates code, pushes, opens PRs (never auto-merges)",
+    "summary": "How It Works",
+    "namespace": "fishcake-potato",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/fishcake-potato.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-fishcake-potato-files-created--2026-03-06-",
+    "key": "files-created-2026-03-06-",
+    "content": "- `README.md` — project overview\n- `DESIGN.md` — full architecture spec with CLI commands, update flow, repo table\n- `registry.yaml` — 14 repos registered (2 local-only, 12 with remotes)\n- `CONNECTOR_TEMPLATE.md` — template for each repo to copy\n- `CLAUDE.md` — Claude context file",
+    "summary": "Files Created (2026-03-06)",
+    "namespace": "fishcake-potato",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/fishcake-potato.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-fishcake-potato-outstanding-work",
+    "key": "outstanding-work",
+    "content": "- CONNECTOR.md files not yet created in any of the connected repos\n- TypeScript CLI not yet scaffolded\n- sg-assist org repos (7) not yet individually registered in registry.yaml\n- Need to decide on update strategies for different dep types (npm vs pip vs config)",
+    "summary": "Outstanding Work",
+    "namespace": "fishcake-potato",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/fishcake-potato.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-fishcake-potato-key-design-decisions",
+    "key": "key-design-decisions",
+    "content": "- FishcakePotato updates actual code (package.json, source files), not just CONNECTOR.md\n- Always opens PRs, never merges automatically\n- Works with both local clones and GitHub API for remote-only repos",
+    "summary": "Key Design Decisions",
+    "namespace": "fishcake-potato",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG/memory/fishcake-potato.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276838
+  },
+  {
+    "id": "mem-MEMORY-gmail-mcp-setup--completed-",
+    "key": "gmail-mcp-setup-completed-",
+    "content": "- Gmail MCP server configured via `claude mcp add gmail -- npx @gongrzhe/server-gmail-autoauth-mcp`\n- Stored in local config at `~/.claude.json` (project-scoped to this directory)\n- Google OAuth credentials located at:\n  - `~/.gmail-mcp/gcp-oauth.keys.json` (used by MCP server)\n  - `~/.gmail-mcp/credentials.json` (stored auth token)\n  - `./gcp-oauth.keys.json` (copy in project root)\n- MCP package: `@gongrzhe/server-gmail-autoauth-mcp`\n- After session restart, Gmail tools should be available (rea",
+    "summary": "Gmail MCP Setup (Completed)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-00/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-project-files",
+    "key": "project-files",
+    "content": "- `.claude/settings.local.json` - permissions config (WebSearch, WebFetch, Bash npx, etc.)\n- `.env.local` - local environment variables (do not commit)\n- `gcp-oauth.keys.json` - OAuth credentials (do not commit)",
+    "summary": "Project Files",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-00/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-project-overview",
+    "key": "project-overview",
+    "content": "- Enterprise recruitment platform (RecruitFast) built for Joshua Woo\n- 4-portal architecture: Recruiter, Admin/Management, Client, Public Intake\n- GitHub: `On-The-Ground-AI/rf-enterprise-app`",
+    "summary": "Project Overview",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-tech-stack",
+    "key": "tech-stack",
+    "content": "- Next.js 14 (App Router), TypeScript, Tailwind CSS, Shadcn UI\n- PostgreSQL + Prisma 5.x, NextAuth 4.x (JWT, dual credentials)\n- Resend (email), bcryptjs, React Hook Form + Zod, Lucide React, date-fns",
+    "summary": "Tech Stack",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-key-architecture-decisions",
+    "key": "key-architecture-decisions",
+    "content": "- **CRM/SecretContact = SUPER_ADMIN ONLY** (Joshua only, not even ADMIN)\n  - User explicitly requested stricter than arch doc (which says Admin/Super_Admin)\n  - All CRM data is highly sensitive client outreach information\n  - ~7,716 contacts from consolidated Excel databases\n- 6 user roles: SUPER_ADMIN, ADMIN, MANAGEMENT, RECRUITER, CLIENT, FINANCE\n- Dual login: EA Number + Password (internal), Email + Password (clients)\n- SecretContact model expanded with CRM fields: rcbNumber, staffStrength, f",
+    "summary": "Key Architecture Decisions",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-key-files",
+    "key": "key-files",
+    "content": "- `prisma/schema.prisma` — Full schema with all models\n- `src/lib/permissions.ts` — Role-based access control (canAccessCRM = SUPER_ADMIN only)\n- `src/lib/auth.ts` — NextAuth config with dual credentials\n- `src/lib/audit.ts` — Audit logging with CRM-specific actions\n- `outputs/` — CRM data files (CSV, XLSX, Python scripts) — DO NOT commit these",
+    "summary": "Key Files",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-current-state--feb-2026-",
+    "key": "current-state-feb-2026-",
+    "content": "- **Scaffold COMPLETE** — pushed to `origin/main` (commit d515fc8)\n- 113 files, 18,994 lines, 43+ routes across 4 portals\n- Build passes, Prisma generates, ESLint clean\n- **Test infrastructure COMPLETE** — 229 Jest tests passing across 8 suites:\n  - Unit: permissions (36), audit (11), schema-validation (55)\n  - Security: access-control (57), route-protection (36), env-safety (12), headers (7)\n  - Performance: bundle-size (8)\n- Playwright E2E specs written (need `npx playwright install chromium` ",
+    "summary": "Current State (Feb 2026)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-next-steps--for-future-session",
+    "key": "next-steps-for-future-sessions-",
+    "content": "1. Set up PostgreSQL + `DATABASE_URL` in .env\n2. `npx prisma db push` + `npm run db:seed`\n3. Build feature API routes and page content (CRUD operations)\n4. Install Playwright browsers and run E2E tests\n5. No AI integration, file upload, or PDF generation yet",
+    "summary": "Next Steps (for future sessions)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY-user-preferences",
+    "key": "user-preferences",
+    "content": "- Wants comprehensive testing (build, security, performance, vulnerabilities)\n- Wants onboarding screens, guidebooks, audit logs included\n- Prefers committing and pushing to remote when work is done",
+    "summary": "User Preferences",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-1--Apps-rf-enterprise-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-MEMORY----nats-quiz-upgrade--project-",
+    "key": "-nats-quiz-upgrade-project-natsquiz-upgrade-md-p4-",
+    "content": "- [User Profile](user_haojun.md) — Haojun, OTG founder. Prefers numbered lists, fast parallel execution.\n- [Aperture Strategic Plan](project_aperture_strategic_plan.md) — Full 8-agent audit: bugs, UX, pricing, marketing, MCP, mobile. Docs in repo.\n- [Use Neon not Supabase](feedback_neon_not_supabase.md) — Default to Neon (@neondatabase/serverless) for all projects, not Supabase.\n- [Sourcing & Fact-Checking](feedback_sourcing_factcheck.md) — All claims in presentations/apps must have clear, verif",
+    "summary": "- [Nats Quiz Upgrade](project_natsquiz_upgrade.md) — P4 quiz app: 4 subjects, 1750 questions, motivation system. Phases 3-5 remaining.",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-feedback_neon_not_supabase----",
+    "key": "-",
+    "content": "name: Use Neon not Supabase\ndescription: Haojun prefers Neon for the database, not Supabase\ntype: feedback\noriginSessionId: 180f5426-2b62-4829-90fc-80a1af688543\n---\nUse **Neon** (`@neondatabase/serverless`) as the Postgres database for all projects, not Supabase.\n\n**Why:** Explicit preference stated while building rainy-skies. Did not give a reason, but Neon is better suited for edge/serverless (Cloudflare Workers) environments via its HTTP driver.\n\n**How to apply:** Any time a database is chose",
+    "summary": "---",
+    "namespace": "feedback_neon_not_supabase",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/feedback_neon_not_supabase.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-feedback_sourcing_factcheck----",
+    "key": "-",
+    "content": "name: Sourcing and Fact-Checking Requirements\ndescription: All claims in presentations and apps must have clear, verifiable sources. Fact-check everything.\ntype: feedback\noriginSessionId: b0db97bf-c5c0-4edd-b509-796f914edf75\n---\nEvery claim, statistic, or narrative used in presentations or client-facing apps must have very clear sources and referencing.\n\n**Why:** Content is shown to senior government officials (UAE context). Unverified or inaccurate claims damage credibility. Haojun caught a pot",
+    "summary": "---",
+    "namespace": "feedback_sourcing_factcheck",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/feedback_sourcing_factcheck.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276839
+  },
+  {
+    "id": "mem-project_aperture_strategic_plan----",
+    "key": "-",
+    "content": "name: Aperture Intelligence Strategic Redesign\ndescription: Comprehensive strategic plan for Aperture Intelligence — 8-agent audit covering bugs, UX, pricing, marketing, MCP, mobile. Documents saved to repo.\ntype: project\n---\n\nAperture Intelligence underwent a full 8-agent strategic audit on 2026-04-05.\n\n**Key documents in `/aperture-intelligence/`:**\n- `STRATEGIC_PLAN.md` / `.pdf` — Full 15-section strategic redesign plan\n- `AUTONOMOUS_MARKETING_ARCHITECTURE.md` / `.pdf` — Self-marketing agent ",
+    "summary": "---",
+    "namespace": "project_aperture_strategic_plan",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/project_aperture_strategic_plan.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-project_natsquiz_upgrade----",
+    "key": "-",
+    "content": "name: Nats Quiz Major Upgrade Progress\ndescription: P4 quiz app upgrade — current state, what's done, what remains\ntype: project\n---\n\nNat's Quiz (seehaojun/nats-quiz) — major upgrade in progress.\n\n**Completed (2026-03-27):**\n- Phase 1: Architecture refactor — monolith → modular files (HTML/CSS/JS/data)\n- Subject selection UI — Science, English, Math, Chinese\n- Dashboard — XP, streak, daily target (20 questions), badges, level system\n- Storage system — localStorage persistence (js/storage.js)\n- S",
+    "summary": "---",
+    "namespace": "project_natsquiz_upgrade",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/project_natsquiz_upgrade.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-user_haojun----",
+    "key": "-",
+    "content": "name: User Profile — Haojun\ndescription: OTG founder, manages 4 GitHub orgs, builds civic and AI tools, has a P4 child named Nat\ntype: user\n---\n\n- Founder of On The Ground (OTG) — civic tech and AI consultancy in Singapore\n- Manages 4 GitHub orgs: seehaojun, On-The-Ground-SG, On-The-Ground-AI, sg-assist\n- Has a child named Nat in Primary 4 — the quiz app (nats-quiz) is for Nat\n- Prefers S/N numbered lists for batch decisions\n- Likes parallel execution and agent swarms for speed\n- Uses Claude Max",
+    "summary": "---",
+    "namespace": "user_haojun",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps/memory/user_haojun.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-identity",
+    "key": "identity",
+    "content": "- **Repo:** `On-The-Ground-AI/moe-edtech-aperture`\n- **Local path:** `/Users/seehaojun/Desktop/OTG/Apps/AIEd Tech/moe-edtech-aperture`\n- **Next.js app:** `next-app/` subdirectory (Vercel root directory = `next-app`)\n- **What it is:** Forked from Aperture Intelligence. Stripped to AI + Education AI verticals for MOE EdTech context. Executive AI news briefing platform with knowledge corpus chat.",
+    "summary": "Identity",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-stack",
+    "key": "stack",
+    "content": "- Next.js 16 (App Router, Turbopack) · TypeScript · Tailwind CSS\n- PostgreSQL on Neon (ap-southeast-1) + Prisma ORM + pgvector\n- NextAuth.js v5 (JWT sessions, email/password + optional Google OAuth)\n- Claude API (direct fetch, not SDK — see `src/services/newsletter/anthropicClient.ts`)\n- Perplexity (news search) · Firecrawl (article extraction) · OpenAI (embeddings only)\n- Resend (email) · Stripe (payments) · Vercel (sin1 region)",
+    "summary": "Stack",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-verticals",
+    "key": "verticals",
+    "content": "- **AI** — 41 docs in `docs/deep-research/ai/` (AI-00 to AI-40)\n- **EDUCATION_AI** — 35 docs in `docs/deep-research/education-ai/markdown/` (ED-01 to ED-35)\n- Legacy verticals (LEGAL, TECHNOLOGY, FINANCE, GENERAL) removed from onboarding but kept for DB compat",
+    "summary": "Verticals",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-repo-structure",
+    "key": "repo-structure",
+    "content": "```\n/\n├── next-app/          # Main Next.js app — ALL commands run from here\n├── docs/              # Deep research markdown + PDFs\n├── Corpus/            # Raw corpus source docs\n├── _archive/          # Historical planning docs\n├── CLAUDE.md          # Full codebase architecture reference\n└── connector.md       # Machine-readable project manifest\n```",
+    "summary": "Repo Structure",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-key-files",
+    "key": "key-files",
+    "content": "| File | Purpose |\n|------|---------|\n| `next-app/src/config/verticals.ts` | Vertical definitions (AI, EDUCATION_AI) |\n| `next-app/src/config/admin.ts` | Admin whitelist — haojun@ontheground.agency |\n| `next-app/src/config/tiers.ts` | Subscription tiers + credit costs |\n| `next-app/src/lib/auth.ts` | NextAuth config (JWT, credentials, Google) |\n| `next-app/src/services/knowledgeDocumentService.ts` | Corpus ingestion + semantic search |\n| `next-app/src/services/corpusQuery.ts` | Central corpus qu",
+    "summary": "Key Files",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-features-built",
+    "key": "features-built",
+    "content": "- Daily intelligence briefs (L1 Quick Scan / L2 Standard / L3 Executive) — complete\n- Pre-meeting intelligence read-aheads (L4) — complete\n- Knowledge corpus infrastructure (Phase 1A code) — complete, **deployment pending**\n- Ask AI chat (`/chat`) — added 2026-03-09, grounded in knowledge corpus\n  - API: `next-app/src/app/api/chat/route.ts`\n  - Component: `next-app/src/components/knowledge-chat.tsx`\n  - Page: `next-app/src/app/(dashboard)/chat/page.tsx`\n  - Nav: \"Ask AI\" link added to `dashboard",
+    "summary": "Features Built",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-phase-1a-corpus-deployment---t",
+    "key": "phase-1a-corpus-deployment-todo-infra-no-code-need",
+    "content": "This is the most impactful next step. Chat + briefs will be corpus-grounded once done.\n\n1. **Neon SQL console:** `CREATE EXTENSION IF NOT EXISTS vector;`\n2. **Local:** `cd next-app && DATABASE_URL=\"...\" npx prisma db push`\n3. **Neon SQL console:** Run `next-app/scripts/setup-pgvector.sql` (IVFFlat index)\n4. **Vercel env vars:** `OPENAI_API_KEY`, `EMBEDDING_PROVIDER=openai`, `EMBEDDING_MODEL=text-embedding-3-small`, `EMBEDDING_DIMENSIONS=1536`, `CORPUS_BRIEF_ENABLED=false`\n5. **Local ingestion:**",
+    "summary": "Phase 1A Corpus Deployment — TODO (infra, no code needed)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-full-deployment-checklist--fre",
+    "key": "full-deployment-checklist-fresh-vercel-neon-projec",
+    "content": "This is a fork — needs its own Vercel project and Neon database (not shared with original Aperture).\n\n**Vercel setup:**\n- New project → import `On-The-Ground-AI/moe-edtech-aperture` → Root Directory: `next-app`\n\n**Required env vars on Vercel:**\n| Key | Notes |\n|-----|-------|\n| `DATABASE_URL` | Neon connection string |\n| `AUTH_SECRET` | `openssl rand -base64 32` |\n| `NEXTAUTH_URL` | Production URL e.g. `https://moe-edtech-aperture.vercel.app` |\n| `NEXT_PUBLIC_APP_URL` | Same as NEXTAUTH_URL |\n| ",
+    "summary": "Full Deployment Checklist (fresh Vercel + Neon project)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-coding-conventions",
+    "key": "coding-conventions",
+    "content": "- Claude API: use direct `fetch` to `https://api.anthropic.com/v1/messages` — NOT `@anthropic-ai/sdk`\n- Auth: always `const session = await auth()` from `@/lib/auth`, check `session?.user?.id`\n- Next.js 16: route params are `Promise<{ id: string }>` — must `await params`\n- Styling: stone color palette (`stone-900` primary, `stone-500` muted), serif font for headings\n- No `@anthropic-ai/sdk` in package.json — project uses raw fetch",
+    "summary": "Coding Conventions",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-roadmap--post-corpus-deploymen",
+    "key": "roadmap-post-corpus-deployment-",
+    "content": "| Phase | Description |\n|-------|-------------|\n| 1B | Article corpus + daily ingestion |\n| 1C | Two-pass corpus-aware brief generation |\n| 1D | Simplified onboarding |\n| 1E | Enhanced meeting read-aheads with corpus |",
+    "summary": "Roadmap (post corpus deployment)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-AIEd-Tech-moe-edtech-aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-project-state--2026-03-09-",
+    "key": "project-state-2026-03-09-",
+    "content": "### Corpus System — FULLY DEPLOYED\n- 137 docs ingested across 4 verticals (31 Legal Tech, 41 AI, 30 Healthcare AI, 35 Education AI)\n- pgvector enabled on Neon, schema pushed, indexes created\n- `CORPUS_BRIEF_ENABLED=true` set on Vercel\n- `ADMIN_EMAILS=haojun@ontheground.agency` set on Vercel\n- Historical Corpus Reference toggle added to dashboard UI (default: include corpus)\n\n### Admin Access — HARDENED\n- Owner email `haojun@ontheground.agency` hardcoded as permanent admin fallback in `config/adm",
+    "summary": "Project State (2026-03-09)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Aperture/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276840
+  },
+  {
+    "id": "mem-MEMORY-project-status",
+    "key": "project-status",
+    "content": "**PROJECT COMPLETE** — BetterWiser website fully built (5 phases, 12 plans).\n**Code:** `/Users/seehaojun/Desktop/OTG/Apps/BWJC/bwjc/` (git root at `/Users/seehaojun/Desktop/OTG/Apps/BWJC/`)\n**Remote:** https://github.com/On-The-Ground-AI/betterwiser-website\n**Deployed:** https://bwjc.vercel.app",
+    "summary": "Project Status",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-BWJC/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-tech-stack",
+    "key": "tech-stack",
+    "content": "- Next.js 16.1.6, React 19, TypeScript 5.9.3\n- Tailwind v4 CSS-first (`@import \"tailwindcss\"` in globals.css, no tailwind.config.ts)\n- Framer Motion v12 (`motion/react`, `LazyMotion + domAnimation`, `m.*` not `motion.*`)\n- Sanity v5 + next-sanity v12 (Studio at `/studio`, offline typegen workaround)\n- React Hook Form + Zod v4 + @hookform/resolvers v5\n- Resend (contact form), react-calendly + next/dynamic ssr:false (booking)\n- Plausible analytics (lazyOnload, conditional on NEXT_PUBLIC_PLAUSIBLE_",
+    "summary": "Tech Stack",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-BWJC/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-key-patterns",
+    "key": "key-patterns",
+    "content": "- `variantMap`: static Record<Variant, string> — no template literals in class names\n- `sections/`: pure Server Components; `animations/`: \"use client\" leaf components\n- `iconSlot: ReactNode` to pass pre-rendered JSX across server/client boundary\n- `sanityFetch` is server-only (`import 'server-only'`)\n- Offline typegen via `scripts/extract-schema.cjs` until real Sanity projectId set\n- `revalidateTag(tag, 'max')` required in Next.js 16 (not single-arg like v15)",
+    "summary": "Key Patterns",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-BWJC/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-launch-blockers--user-actions-",
+    "key": "launch-blockers-user-actions-needed-",
+    "content": "1. Create real Sanity project → update `NEXT_PUBLIC_SANITY_PROJECT_ID`\n2. Seed 9 Sanity documents via Studio (4 Testimonials, 3 ServicePageContent, 1 TeamMember, 1 SiteSettings)\n3. Add `RESEND_API_KEY` to Vercel\n4. Set `NEXT_PUBLIC_CALENDLY_URL` (Lynette's Calendly event)\n5. Confirm Lynette's LinkedIn handle (placeholder: lynettelim)\n6. Set `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` for analytics\n7. Sanity webhook: point `/api/revalidate` with `SANITY_WEBHOOK_SECRET`\n\nSee: `.planning/phases/05-performance-l",
+    "summary": "Launch Blockers (user actions needed)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-BWJC/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [project_launch_status.md](project_launch_status.md) — Pre-launch checklist: domain, env vars, email setup, DB verification needed before capybara.law go-live",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Capybara/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-project_launch_status----",
+    "key": "-",
+    "content": "name: Launch status and remaining tasks\ndescription: Pre-launch checklist for capybara.law — domain, env vars, email setup, DB verification needed before go-live\ntype: project\n---\n\nCapybara Connector is code-complete and pushed to main as of 2026-03-16. Launch target is ~1 month before ICCA 2026 Madrid (21-24 April 2026).\n\n**Remaining tasks (user's responsibility):**\n1. Buy `capybara.law` domain and point DNS to Vercel\n2. Set up email addresses: `legal@capybara.law`, `privacy@capybara.law`, `hel",
+    "summary": "---",
+    "namespace": "project_launch_status",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Capybara/memory/project_launch_status.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-project",
+    "key": "project",
+    "content": "- Repo: On-The-Ground-SG/fluffy-winner\n- Stack: React 19 + TypeScript + Tailwind v4 + Vite (frontend), Vercel Serverless (api), Supabase PostgreSQL\n- Main branch: `Main`\n- Supabase env vars: `/Users/seehaojun/Desktop/OTG/Apps/Eduardo Araral/causalis-app/.env` (not frontend/.env)",
+    "summary": "Project",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-vercel-build---typescript-pitf",
+    "key": "vercel-build-typescript-pitfalls",
+    "content": "Always run `npm run build` locally before pushing. Common failures:\n- Nested component import paths: `src/components/DataAnalysis/` needs `../../lib/` not `../../../lib/`\n- `verbatimModuleSyntax` requires type-only imports: `import { type RefObject }` not `import { RefObject }`\n- html2pdf.js types need `as const` on string literals: `'jpeg' as const`, `'portrait' as const`\n- Array literals need tuple casts: `[15,15,15,15] as [number, number, number, number]`",
+    "summary": "Vercel Build — TypeScript Pitfalls",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-completed-work--post-meeting-c",
+    "key": "completed-work-post-meeting-changes-pr-92-merged-m",
+    "content": "- **Phase 1**: 3-module dashboard (Policy Analysis / Impact Evaluation / Tools) + new `/tools` ToolsPage\n- **Phase 2**: `exportUtils.ts`, `sseUtils.ts`, `ExportMenu.tsx` — real PDF/DOCX/PNG export replacing window.print()\n- **Phase 3**: SSE streaming for `api/analyze.ts` (matches evaluate.ts pattern)\n- **Phase 4**: Benchmark Explorer financing chips, cost-of-problem card; migration 012 adds `financing_amount_usd`",
+    "summary": "Completed Work (Post-Meeting Changes — PR #92, merged Main)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-financing-extraction-pipeline",
+    "key": "financing-extraction-pipeline",
+    "content": "- Script: `mdb_reports/_pipeline/10_extract_financing.py`\n- Commands: `prepare [--size 5]` / `merge` / `status`\n- Final DB coverage: **205/266 = 77%** project evaluations have `financing_amount_usd` in Supabase\n- 61 reports are unresolvable (management responses, redacted files, methodology papers)\n- Text window: 16,000 chars (widened from 8,000 for retry pass)\n- Migration 012: `ALTER TABLE report_benchmarks ADD COLUMN IF NOT EXISTS financing_amount_usd numeric`\n- **Warning**: retry `prepare` ov",
+    "summary": "Financing Extraction Pipeline",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-paper-scoring-pipeline",
+    "key": "paper-scoring-pipeline",
+    "content": "- [project_paper_scoring_pipeline.md](project_paper_scoring_pipeline.md) — Pipeline state, blockers, next steps for MDB evaluation quality paper",
+    "summary": "Paper Scoring Pipeline",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-key-file-locations",
+    "key": "key-file-locations",
+    "content": "- Export utilities: `frontend/src/lib/exportUtils.ts`, `frontend/src/lib/sseUtils.ts`\n- Export menu component: `frontend/src/components/ExportMenu.tsx`\n- Tools page: `frontend/src/pages/ToolsPage.tsx`\n- MDB context module: `api/lib/mdb-context.ts`\n- Financing pipeline: `mdb_reports/_pipeline/10_extract_financing.py`\n- Migration 012: `supabase/migrations/012_financing_amount.sql`",
+    "summary": "Key File Locations",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-project_paper_scoring_pipeline----",
+    "key": "-",
+    "content": "name: Paper Scoring Pipeline — Current State\ndescription: Status of the paper_pipeline PDF scoring system for the MDB evaluation quality paper. Tracks what's done, what's blocked, and next steps.\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_paper_scoring_pipeline",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/project_paper_scoring_pipeline.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-project_paper_scoring_pipeline-paper-scoring-pipeline",
+    "key": "paper-scoring-pipeline",
+    "content": "**Pipeline location:** `mdb_reports/_pipeline/paper_pipeline/`\n**Instructions file:** `mdb_reports/_pipeline/paper_pipeline/CLAUDE_CODE_INSTRUCTIONS.md`\n**Main script:** `mdb_reports/_pipeline/paper_pipeline/score_all.py`\n**Config:** `mdb_reports/_pipeline/paper_pipeline/config.py`\n\n### What It Does\nScores MDB evaluation report PDFs using Claude Haiku against a 6-dimension quality rubric (max 18 points). Outputs tier classifications (Gold/Strong/Adequate/Weak) and summary statistics for the pape",
+    "summary": "Paper Scoring Pipeline",
+    "namespace": "project_paper_scoring_pipeline",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Eduardo-Araral-causalis-app/memory/project_paper_scoring_pipeline.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276841
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [FinControl upload system state](project_fincontrol_state.md) — atomic upload flow, sample file entity codes, entities-first enforcement, budget entity resolution fix\n- [Test before pushing](feedback_testing.md) — always run Python pipeline tests against sample files before pushing; user was burned by untested sample file failures",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Financial-Controller-fincontrol/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-feedback_testing----",
+    "key": "-",
+    "content": "name: Test before pushing\ndescription: Run actual Python tests against the processing pipeline before pushing — don't assume sample files work\ntype: feedback\noriginSessionId: 832bcbaa-a930-4c06-8d3f-421a88a3900c\n---\nAlways run the normalization + validation pipeline locally against sample files before pushing. The user was rightfully frustrated when sample files themselves were failing.\n\n**Why:** Sample files had wrong entity codes, missing entity_code columns, and code bugs — none of which were",
+    "summary": "---",
+    "namespace": "feedback_testing",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Financial-Controller-fincontrol/memory/feedback_testing.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-feedback_testing-test-each-sample-file---check-",
+    "key": "test-each-sample-file-check-columns-entity-codes-e",
+    "content": "\"\n```\nDon't push until all 6 sample files pass.",
+    "summary": "test each sample file — check columns, entity codes, enum values, numeric fields",
+    "namespace": "feedback_testing",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Financial-Controller-fincontrol/memory/feedback_testing.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-project_fincontrol_state----",
+    "key": "-",
+    "content": "name: FinControl upload system state\ndescription: Current state of the upload pipeline, sample files, and key design decisions\ntype: project\noriginSessionId: 832bcbaa-a930-4c06-8d3f-421a88a3900c\n---\nUpload system is working end-to-end as of 2026-04-14.\n\n**Upload order enforced**: Entities must exist before GL Journal, COA, Budget, IC Transactions. UI enforces this with a hard block (auto-switches type, disabled drop zone, dimmed samples).\n\n**Sample file entity codes**: All sample files use `ABC ",
+    "summary": "---",
+    "namespace": "project_fincontrol_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Financial-Controller-fincontrol/memory/project_fincontrol_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-project-status",
+    "key": "project-status",
+    "content": "- **Stage:** Building — Phase 1 MVP backend complete\n- **Last session:** Feb 23 2026 — API transport service built, tested, committed, pushed to GitHub\n- **Research corpus:** 30 documents (HC-01 to HC-30) in `outputs/` — complete\n- **Strategic plan:** `STRATEGIC-PLAN.md` + `STRATEGIC-PLAN.pdf` — complete",
+    "summary": "Project Status",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-what-s-been-built",
+    "key": "what-s-been-built",
+    "content": "### API Transport Service — `services/api-transport/` (DONE)\n**Stack:** FastAPI + SQLAlchemy ORM + SQLite (dev) / PostgreSQL (prod-ready)\n**Committed:** `feat(api-transport)` — commit `00e961d` on main\n\n#### Setup (from scratch on new machine)\n```bash\ncd services/api-transport\npython3.12 -m venv venv && source venv/bin/activate\npip install -r requirements.txt\npython migrations/init_db.py   # creates transport_api.db\npython migrations/seed_data.py # seeds 34 providers\nuvicorn app.main:app --host ",
+    "summary": "What's Been Built",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-api-at-http---localhost-8000--",
+    "key": "api-at-http-localhost-8000-docs-at-http-localhost-",
+    "content": "```\n\n#### Endpoints\n| Method | Path | Description |\n|--------|------|-------------|\n| GET | `/v1/transport/search` | Search providers — params: `origin`, `destination`, `requested_date`, `wheelchair_type`, `accept_subsidies[]` |\n| GET | `/v1/transport/providers` | List all — params: `provider_type`, `verified_only` |\n| GET | `/v1/transport/providers/{id}` | Single provider detail |\n| GET | `/health` | Health check |\n| GET | `/docs` | Swagger UI |\n\n#### Database — 34 providers seeded\n- 6 public N",
+    "summary": "API at http://localhost:8000 | Docs at http://localhost:8000/docs",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-what-to-build-next--logical-ne",
+    "key": "what-to-build-next-logical-next-steps-",
+    "content": "### Option A — Frontend (App 1 web UI)\nNext.js frontend that calls the transport search API. Simple search form → results cards. This closes the loop from API → user-facing product for App 1 (Care Transport & Mobility Navigator).\n\n### Option B — Expand Knowledge Graph data\n- Add wheelchair/mobility equipment suppliers (currently 0 in DB)\n- Add AIC Medical Escort & Transportation (MET) program details\n- Phone-verify existing providers and flip `is_verified=True`\n- Add more NEAT services: SGH rest",
+    "summary": "What to Build Next (logical next steps)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-the-concept",
+    "key": "the-concept",
+    "content": "**NOT** a healthcare app. **The infrastructure layer that healthcare apps are built on.**\n- \"Google Maps API for Singapore's healthcare services\"\n- Core: Knowledge Graph of every SG healthcare SERVICE (no patient data = no liability)\n- Revenue: B2B API subs S$99–499+/month + App Builder S$300–1,500/month + Marketplace 5–10%",
+    "summary": "The Concept",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-platform-architecture--4-layer",
+    "key": "platform-architecture-4-layers-",
+    "content": "1. **Knowledge Graph** — facilities, transport, equipment, subsidies, care pathways\n2. **Developer API** — REST APIs exposing Knowledge Graph\n3. **App Builder** — white-label low-code for GP clinics, nursing homes\n4. **Marketplace** — interoperability layer + transaction fees",
+    "summary": "Platform Architecture (4 Layers)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276842
+  },
+  {
+    "id": "mem-MEMORY-three-apps-being-built",
+    "key": "three-apps-being-built",
+    "content": "### App 1: Care Transport & Mobility Navigator (MVP backend DONE)\n- Find + book wheelchair-accessible transport (NEAT + private vans)\n- AI core: \"get my mum to NHH Tuesday 10am\" → finds options → books → reminds\n- API backend complete. Next: frontend + Claude AI booking agent layer.\n\n### App 2: Care Logistics Network (B2B — future)\n- Connects transport providers, equipment suppliers, care facilities, GP referrers\n- B2B SaaS S$200–800/month + coordination fees\n\n### App 3: Benefits & Subsidy Conci",
+    "summary": "Three Apps Being Built",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-key-market-context",
+    "key": "key-market-context",
+    "content": "- Health Information Bill passed Jan 2026, effective 2027 — mandates private clinic digitization → middleware demand\n- Government unified app target: 2027 (private sector stays fragmented permanently)\n- 1,800 Healthier SG GP clinics, 1,800+ AIC care providers — all manual\n- Zero direct competitors for healthcare service intelligence API",
+    "summary": "Key Market Context",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-key-partners--not-competitors-",
+    "key": "key-partners-not-competitors-",
+    "content": "- AIC — 1,800+ providers, manual workflows, potential API customer\n- Doctor Anywhere (2.8M users) — telehealth, potential API customer\n- NHIC — funding + institutional access",
+    "summary": "Key Partners (not competitors)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-funding-pathways",
+    "key": "funding-pathways",
+    "content": "- Enterprise Development Grant (EDG) — up to 70% project costs\n- Startup SG Tech — up to S$400–800K\n- AI Singapore 100 Experiments — AI PoC co-funding\n- NHIC grants",
+    "summary": "Funding Pathways",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-user-preferences",
+    "key": "user-preferences",
+    "content": "- No patient data (liability concern)\n- Full autonomous permission during sessions — no need for check-ins\n- Singapore first, APAC expansion later\n- Plans as PDF: use pandoc→HTML then weasyprint (NOT pandoc --pdf-engine=weasyprint directly)",
+    "summary": "User Preferences",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-pdf-generation--what-works-",
+    "key": "pdf-generation-what-works-",
+    "content": "```bash\npandoc input.md -o output.html --standalone --embed-resources --css=styles.css\npython3 -c \"import weasyprint; weasyprint.HTML(filename='output.html').write_pdf('output.pdf')\"\n```",
+    "summary": "PDF Generation (what works)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-files-in-this-project",
+    "key": "files-in-this-project",
+    "content": "- `services/api-transport/` — FastAPI transport search API (complete)\n- `STRATEGIC-PLAN.md` + `.pdf` — comprehensive strategic plan\n- `outputs/HC-01 to HC-30` — 30 research documents (60 files total: .md + .pdf)\n- `PROMPTS-healthcare-ai-corpus.md` — master prompts for the research corpus\n- `README.md` — repo overview\n- `TECHNICAL-ROADMAP-API-MVP.md` — MVP spec (now implemented)\n- `PHASE-0-DATA-COLLECTION-GUIDE.md` — phone verification checklist for providers\n- `DATA-COLLECTION-AUTOMATION-SOLO.md",
+    "summary": "Files in This Project",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-github",
+    "key": "github",
+    "content": "`https://github.com/On-The-Ground-SG/singapore-health-intelligence`",
+    "summary": "GitHub",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Health-App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY-show-this-summary-at-the-start",
+    "key": "show-this-summary-at-the-start-of-every-new-sessio",
+    "content": "---\n\n### What was built (session: 2026-02-24)\n\n**Two things were completed:**\n\n**1. Workspace CLAUDE.md restructured**\n`/Users/seehaojun/Desktop/OTG/Apps/CLAUDE.md` is now a master project registry:\n- All 46 GitHub repos across 4 orgs documented (seehaojun, On-The-Ground-SG, On-The-Ground-AI, sg-assist)\n- Every active + archived project has a subsection: local path, GitHub URL, stack, status, description\n- Sync issues table: causalis_backup has wrong remote (points to text-to-video), BD/Lawyers ",
+    "summary": "SHOW THIS SUMMARY AT THE START OF EVERY NEW SESSION",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Legal-Box/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276843
+  },
+  {
+    "id": "mem-MEMORY----rulehaus-vision--project-ru",
+    "key": "-rulehaus-vision-project-rulehaus-vision-md-b2b-sa",
+    "content": "- [Data State](project_data_state.md) — 2021-2026 PDFs complete (211K files, 122GB), 2006-2020 pending\n- [Session Apr 8](session_progress_apr8.md) — Two-machine pipeline built; Phase 1 paused mid-2026; company search fixed\n- [Proposal Tone](feedback_proposal_tone.md) — Client docs should use proposal framing, non-technical first\n- [Admin Plan](project_admin_plan.md) — Planned admin dashboard: auth, usage tracking, analytics (not yet built)\n- [SeeK Machine](project_seek_machine.md) — Windows 11 d",
+    "summary": "- [Rulehaus Vision](project_rulehaus_vision.md) — B2B SaaS for AI-powered SGX announcement writing + company intelligence",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276844
+  },
+  {
+    "id": "mem-cleanup_progress_apr18----",
+    "key": "-",
+    "content": "name: Rulehaus Disk Cleanup Progress\ndescription: Cleanup status from Apr 18 — 13GB cleared, 147GB PDFs pending deletion\ntype: project\noriginSessionId: a15b3d1c-e6c4-4c54-b8c3-9448b247584a\n---",
+    "summary": "---",
+    "namespace": "cleanup_progress_apr18",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/cleanup_progress_apr18.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276844
+  },
+  {
+    "id": "mem-cleanup_progress_apr18-current-status--apr-18--2026-",
+    "key": "current-status-apr-18-2026-",
+    "content": "**DB State:**\n- Total announcements: 818,718\n- With markdown: 30,814 (3.8%)\n- Missing markdown: 787,904 (96.2%)\n\n**Cleanup Completed:**\n- ✓ Deleted `pipeline_output/extracted_text/` (12 GB)\n- ✓ Deleted `pipeline_output/company_profiles/` (115 MB)\n- ✓ Deleted old pipeline JSON files (~51 MB)\n- ✓ Deleted `pipeline_output/.progress/`\n- ✓ Deleted `data/sgx/company/` (757 MB)\n- ✓ Deleted `data/sgx/rulebooks/` (160 MB)\n- ✓ Deleted `data/sgx/rules_html/` (63 MB)\n\n**Freed: 13 GB**\n\n**Remaining (pending ",
+    "summary": "Current Status (Apr 18, 2026)",
+    "namespace": "cleanup_progress_apr18",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/cleanup_progress_apr18.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276844
+  },
+  {
+    "id": "mem-feedback_proposal_tone----",
+    "key": "-",
+    "content": "name: Proposal documents should use proposal tone\ndescription: When creating client-facing documents, frame as proposals not as existing capabilities. Non-technical content first, technical at end.\ntype: feedback\n---\n\nClient-facing product plans should be framed as **proposals** (\"would do\", \"aims to\"), not as if the product already exists.\n\n**Why:** User caught that the initial plan read as if the product was already built. It's being sent to a non-technical reviewer for feedback.\n\n**How to app",
+    "summary": "---",
+    "namespace": "feedback_proposal_tone",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/feedback_proposal_tone.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276844
+  },
+  {
+    "id": "mem-project_admin_plan----",
+    "key": "-",
+    "content": "name: Admin & Analytics Plan\ndescription: Planned admin dashboard features — auth, usage tracking, analytics. Not yet implemented.\ntype: project\n---\n\nAdmin dashboard planned for future implementation (discussed 2026-04-05). Features requested:\n\n**Authentication:**\n- Login/signup flow (Neon Auth is already connected via Vercel)\n- Account creation for B2B customers\n- Role-based access (admin vs user)\n\n**Admin Dashboard (/admin):**\n- Download new announcements (trigger daily scraper manually)\n- Tra",
+    "summary": "---",
+    "namespace": "project_admin_plan",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_admin_plan.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276844
+  },
+  {
+    "id": "mem-project_data_state----",
+    "key": "-",
+    "content": "name: Rulehaus data state as of 2026-04-03\ndescription: Download status — 2021-2026 PDF attachments complete (211K files, 122GB local), 2006-2020 not yet downloaded\ntype: project\n---\n\nAs of 2026-04-03:\n- **announcements.json**: 816,922 records (2006–2026), 106 categories, 4,377 companies\n- **2021–2026 attachments COMPLETE**: 194,555 announcements processed, 211,806 PDF/DOC files, 122GB stored locally at `data/sgx/announcements/{year}/{id}/{filename}`\n- **2006–2020 NOT YET DOWNLOADED**: ~622K ann",
+    "summary": "---",
+    "namespace": "project_data_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_data_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_diligence_feature----",
+    "key": "-",
+    "content": "name: Due Diligence Research App — Planned Upgrade\ndescription: Fourth major Rulehaus feature — /diligence page for cross-company corporate action precedent research. Proposal written Apr 18, 2026.\ntype: project\noriginSessionId: a15b3d1c-e6c4-4c54-b8c3-9448b247584a\n---",
+    "summary": "---",
+    "namespace": "project_diligence_feature",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_diligence_feature.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_diligence_feature-feature----diligence----due-di",
+    "key": "feature-diligence-due-diligence-research-app",
+    "content": "**Status:** Planned — proposal approved in principle, not yet built.\n\n**Why:** The 816K-announcement corpus is a research moat. The existing Announcement Writer only drafts text for one announcement. The Due Diligence app lets users discover what the full sequence of announcements looks like for a given corporate action, and what comparable companies have done — without naming their own company.\n\n**Core flow:**\n1. User selects corporate action type (dropdown — 15 types: asset disposal, rights is",
+    "summary": "Feature: `/diligence` — Due Diligence Research App",
+    "namespace": "project_diligence_feature",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_diligence_feature.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_rulehaus_vision----",
+    "key": "-",
+    "content": "name: Rulehaus product vision\ndescription: Rulehaus is a B2B SaaS for AI-powered SGX announcement writing and company intelligence, targeting law firms and company secretaries\ntype: project\n---\n\nRulehaus is a B2B SaaS product (not civic/public interest — purely business).\n\n**Two pillars:**\n1. **Announcement Writer** — AI generates draft SGX announcements using 816K+ real filings as reference corpus via RAG\n2. **Company Intelligence** — Generate insights about companies across configurable time w",
+    "summary": "---",
+    "namespace": "project_rulehaus_vision",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_rulehaus_vision.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_seek_machine----",
+    "key": "-",
+    "content": "name: SeeK Remote Machine\ndescription: Specs and role of the secondary Windows desktop used for heavy Rulehaus ingestion work\ntype: project\n---\n\n**SeeK** is the user's secondary machine — used for heavy/long-running Rulehaus ingestion work that would crash or tie up the MacBook.\n\n**Hardware:**\n- AMD Ryzen 7 7800X3D, 8 cores, 4.20 GHz (excellent single-thread performance — ideal for `pymupdf4llm` which is single-threaded per process)\n- 32 GB DDR5-6400 RAM\n- 3.73 TB total storage, ~3.5 TB free\n- 1",
+    "summary": "---",
+    "namespace": "project_seek_machine",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/project_seek_machine.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8----",
+    "key": "-",
+    "content": "name: April 8 Session Progress\ndescription: State of Phase 1 cleanup and Phase 2 prep before pausing\ntype: project\n---",
+    "summary": "---",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca",
+    "key": "phase-1-cleanup-disk-py-local-macbook-",
+    "content": "- **Status**: Paused mid-2026 cleanup\n- **Disk state**: 189K dirs remaining (146 GB total)\n  - 2026: 945 dirs left (was 7,137, ~87% done)\n  - 2025–2019: ~188K dirs untouched\n- **DB progress**: 6,361 / 817,458 announcements have markdown (0.8%)\n- **Approach**: Re-run `.venv/bin/python scripts/cleanup_disk.py 2>&1 | tee -a /tmp/cleanup.log` to resume",
+    "summary": "Phase 1: cleanup_disk.py (local MacBook)",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-phase-2--remote-ingest-py--see",
+    "key": "phase-2-remote-ingest-py-seek-windows-pc-",
+    "content": "- **Status**: Code written, committed, pushed to main\n- **Files created**:\n  - `scripts/remote_ingest.py` — autonomous download→convert→upload→delete loop\n  - `scripts/REMOTE_SETUP.md` — PowerShell setup guide for SeeK\n  - Refactored `scripts/download_parallel.py` with exportable `fetch_announcement()` function\n- **Setup**: SeeK clones repo, follows REMOTE_SETUP.md, runs `scripts/remote_ingest.py`",
+    "summary": "Phase 2: remote_ingest.py (SeeK Windows PC)",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-company-intelligence-fix--comm",
+    "key": "company-intelligence-fix-commit-3da61f9-",
+    "content": "- **Problem**: Search returned DBS 72NB (16 filings, 2017-2020) instead of D05 (939 filings)\n- **Root cause**: \n  - company-index.json had count=0 for all 18,945 entries (stale)\n  - Search route didn't sort results by filing count\n- **Fixed**:\n  - Rebuilt company-index.json with real counts from announcements.json (817K records)\n  - Added `.sort((a, b) => b.count - a.count)` to search route\n- **Result**: D05 now ranks 1st with 939 filings; 72NB ranks 15th with 16",
+    "summary": "Company Intelligence Fix (Commit 3da61f9)",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-daily-update-status",
+    "key": "daily-update-status",
+    "content": "- Launched in background (job id bpikpcym5) at time of session end\n- Fetches latest SGX announcements, downloads PDFs, converts recent NULLs\n- Max 1 worker (safe mode per user preference)",
+    "summary": "Daily Update Status",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-next-steps-when-resuming",
+    "key": "next-steps-when-resuming",
+    "content": "1. Resume Phase 1: `cleanup_disk.py` finishes 2025→2019 (days-long)\n2. Parallel Phase 2: Clone on SeeK, smoke test, run full autonomous ingest\n3. Monitor daily_update.py completion\n4. Optional: automate daily_update.py with cron/scheduled task",
+    "summary": "Next Steps When Resuming",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-session_progress_apr8-key-commits-this-session",
+    "key": "key-commits-this-session",
+    "content": "- b11900a: Add two-machine PDF→markdown pipeline (cleanup_disk, remote_ingest, REMOTE_SETUP)\n- 3da61f9: Fix company search ranking (populate counts, sort by filings desc)",
+    "summary": "Key Commits This Session",
+    "namespace": "session_progress_apr8",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-Rulehaus/memory/session_progress_apr8.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [project_think_block.md](project_think_block.md) — New SG-H-THINK sub-block for detailed intellectual profiles of Singapore's public thinkers\n- [project_factcheck_audit.md](project_factcheck_audit.md) — Full biography audit completed 2026-04-23/24; key errors found, audit files at docs/factcheck/",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_factcheck_audit----",
+    "key": "-",
+    "content": "name: Fact-Check Audit System\ndescription: Systematic biography audit completed 2026-04-23/24 across all 265 Block H files; audit infrastructure in docs/factcheck/\ntype: project\noriginSessionId: aaa55b1b-cd58-43b7-bfc3-02c63d05276a\n---\nA full fact-check audit of all 265 Block H biography files was completed on 2026-04-23/24. The audit infrastructure lives at `docs/factcheck/{SUBBLOCK}/{CODE}-audit.md`.\n\n**Why:** Many biography documents contained fabricated or erroneous facts — wrong dates, wron",
+    "summary": "---",
+    "namespace": "project_factcheck_audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SG-governance-corpus/memory/project_factcheck_audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276845
+  },
+  {
+    "id": "mem-project_think_block----",
+    "key": "-",
+    "content": "name: SG-H-THINK block — public intellectuals enrichment\ndescription: New sub-block SG-H-THINK for detailed intellectual profiles of Singapore's public thinkers, capturing arguments, quotations, and positions in maximum detail\ntype: project\n---\n\nNew sub-block SG-H-THINK being created to capture the detailed intellectual output of Singapore's public thinkers — their books, arguments, public quotations, debates, and policy influence. Separate from existing biographical L3 profiles (H-CS, H-INT, H-",
+    "summary": "---",
+    "namespace": "project_think_block",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SG-governance-corpus/memory/project_think_block.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276846
+  },
+  {
+    "id": "mem-MEMORY----use-neon--not-supabase--fee",
+    "key": "-use-neon-not-supabase-feedback-neon-not-supabase-",
+    "content": "- [Production cutover](project_production_cutover.md) — Moved to email/password auth, 34 employees seeded, default pw SLL2026!",
+    "summary": "- [Use Neon, not Supabase](feedback_neon_not_supabase.md) — Strong preference for Neon DB; supabase/ dir is just file organization",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SLL-HR/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276846
+  },
+  {
+    "id": "mem-feedback_neon_not_supabase----",
+    "key": "-",
+    "content": "name: Use Neon, not Supabase\ndescription: User strongly prefers Neon database over Supabase for SLL-HR and all DB work\ntype: feedback\noriginSessionId: 2f7839ce-57c9-4c13-bab4-2176113f8515\n---\nAlways use Neon for database operations — never Supabase. The `supabase/` directory naming is legacy; the actual DB is Neon (via `@neondatabase/serverless`).\n\n**Why:** User's explicit strong preference. The project already uses Neon (`neon()` from `@neondatabase/serverless` in all scripts and `drizzle-orm` ",
+    "summary": "---",
+    "namespace": "feedback_neon_not_supabase",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SLL-HR/memory/feedback_neon_not_supabase.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276846
+  },
+  {
+    "id": "mem-project_production_cutover----",
+    "key": "-",
+    "content": "name: Production cutover Apr 2025\ndescription: SLL-HR moved from DEMO_MODE to production auth with email/password login and 34 employees seeded\ntype: project\noriginSessionId: 2f7839ce-57c9-4c13-bab4-2176113f8515\n---\nSLL-HR moved from DEMO_MODE to production with email/password auth (NextAuth Credentials + bcryptjs) on 2026-04-25.\n\n**Why:** Client requested email/password instead of magic links. Needed real users to test before firm-wide rollout.\n\n**How to apply:**\n- Auth is Credentials provider,",
+    "summary": "---",
+    "namespace": "project_production_cutover",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-SLL-HR/memory/project_production_cutover.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276846
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [OTG Command Centre — v2 Phases 1-4 merged to main](project_command_centre_pivot.md) — brain-dump engine + recruiting CRM + strategy chat + calendar + review inbox all in main (af5219c). Kenneth + Boon Keat emails still pending.\n- [Persist progress continuously](feedback_persist_progress.md) — save state to plan file + memory as work happens, not just at pause points (sessions have crashed twice)\n- [Obsidian vault session](project_obsidian_connection.md) — HJ runs a parallel Claude Code sessio",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-mission-control/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276847
+  },
+  {
+    "id": "mem-feedback_persist_progress----",
+    "key": "-",
+    "content": "name: Persist progress continuously\ndescription: User wants work state saved to the plan file + memory as it happens, not just at pause points, because sessions have crashed mid-work before\ntype: feedback\n---\n\nOn the mission-control Command Centre work, persist progress incrementally — update the plan file and project memory as decisions are made and steps complete, not only when the user explicitly asks to pause.\n\n**Why:** The session has already crashed twice mid-work on this project (once in ",
+    "summary": "---",
+    "namespace": "feedback_persist_progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-mission-control/memory/feedback_persist_progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276847
+  },
+  {
+    "id": "mem-project_command_centre_pivot----",
+    "key": "-",
+    "content": "name: OTG Command Centre — v2 Phases 1-4 + session 2 work merged to main\ndescription: mission-control repo; all v2 phases + session 2 improvements in main (HEAD 78640d1), deployed. ANTHROPIC_API_KEY already in Vercel env.\ntype: project\noriginSessionId: b0b4e9d6-4ea6-4d5b-80d2-0d515002b614\n---\n`mission-control` repo at `/Users/seehaojun/Desktop/OTG/Apps/mission-control` (`On-The-Ground-AI/mission-control`). Deployed at `otg-control.vercel.app`. Internal ops tool for ~3-7 OTG people.\n\n**v2 + sessi",
+    "summary": "---",
+    "namespace": "project_command_centre_pivot",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-mission-control/memory/project_command_centre_pivot.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276847
+  },
+  {
+    "id": "mem-project_obsidian_connection----",
+    "key": "-",
+    "content": "name: Obsidian vault connection\ndescription: HJ runs a parallel Claude Code session in the Obsidian vault that also works on mission-control and other OTG repos\ntype: project\n---\n\nHJ has a second Claude Code session running inside `/Users/seehaojun/Documents/Obsidian Vault/`. That session uses symlinks (`90-External/OTG/...`) to access the OTG workspace including mission-control.\n\n**Why:** The vault is HJ's \"second brain\" (PARA system). The vault session handles note-taking, project stubs, daily",
+    "summary": "---",
+    "namespace": "project_obsidian_connection",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-mission-control/memory/project_obsidian_connection.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-project_product_urls----",
+    "key": "-",
+    "content": "name: Product URLs — GitHub-fetched live URLs for all products\ndescription: Live URLs and GitHub repos fetched from GitHub API, ready to patch into DB. Not yet applied.\ntype: project\noriginSessionId: b0b4e9d6-4ea6-4d5b-80d2-0d515002b614\n---\nGathered 2026-04-10 from `gh api`. Ready to patch into DB via updated `patch-products.ts`.\n\n**Why:** Home page product tiles need live URLs populated so favicons can load. User also wants GitHub + live links on product detail pages.\n\n**How to apply:** Update ",
+    "summary": "---",
+    "namespace": "project_product_urls",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-mission-control/memory/project_product_urls.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-current-state--2026-02-10-",
+    "key": "current-state-2026-02-10-",
+    "content": "- All 3 phases complete, pipeline ends at local video generation\n- Per-section footage matching implemented but **video quality is poor** - needs significant improvement\n- No subtitles (removed intentionally, user uses Descript for captions)",
+    "summary": "Current State (2026-02-10)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-text-to-video/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-known-issues",
+    "key": "known-issues",
+    "content": "- **Video quality is crap** - user's words. Likely issues:\n  - Footage doesn't match well enough despite per-section queries\n  - Audio is ~62s for a \"Shorts\" script (way too long, target is 15-45s)\n  - FFmpeg encoding progress shows weird percentages (4756%+), may indicate clip duration mismatch\n  - Generic stock footage from Pexels may not be compelling enough\n- YouTube API returns no results without `--query` flag (may be quota/region)",
+    "summary": "Known Issues",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-text-to-video/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-api-keys",
+    "key": "api-keys",
+    "content": "- All keys configured in `.env.local`: Supabase, YouTube, Anthropic, ElevenLabs, Pexels\n- Old Anthropic key was invalid, replaced with working one",
+    "summary": "API Keys",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-text-to-video/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-dev-environment",
+    "key": "dev-environment",
+    "content": "- `tsx` not on PATH globally, use `npx tsx` to run scripts\n- `dotenv` was missing, now installed\n- `.claude/settings.local.json` is uncommitted (local settings)",
+    "summary": "Dev Environment",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-text-to-video/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-architecture-notes",
+    "key": "architecture-notes",
+    "content": "- Scripts store `*_visuals` fields in JSONB `sections` column (no migration needed)\n- `searchVideosPerSection()` deduplicates clips across sections\n- `calculateSectionDurations()` uses word count ratio for proportional timing\n- Fallback to generic `searchVideos()` when visuals not available (--topic/--text mode)",
+    "summary": "Architecture Notes",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-text-to-video/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [TrainerSG Project](project_trainersg.md) — Singapore trainer directory app; PRD/FRS/tech stack at Apps/trainer/; ready for Claude Design handoff\n- [Neon Database Preference](feedback_neon_preference.md) — Always use Neon + Drizzle, never Supabase; use NextAuth v5 for auth",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-trainer/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-feedback_neon_preference----",
+    "key": "-",
+    "content": "name: Database preference — Neon over Supabase\ndescription: User strongly prefers Neon for PostgreSQL database. Never use Supabase.\ntype: feedback\noriginSessionId: 92ea1d3a-90a1-4b4b-a438-c6c072e5cc0a\n---\nAlways use Neon for PostgreSQL database on all projects. Never suggest or use Supabase.\n\n**Why:** Absolute preference stated explicitly. User said \"that is my absolute preference.\"\n\n**How to apply:** On any new project needing a database, default to Neon (`@neondatabase/serverless` + Drizzle OR",
+    "summary": "---",
+    "namespace": "feedback_neon_preference",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-trainer/memory/feedback_neon_preference.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276848
+  },
+  {
+    "id": "mem-project_trainersg----",
+    "key": "-",
+    "content": "name: TrainerSG Project\ndescription: Singapore adult educator directory app — PRD, FRS, and tech stack documented. Being built for Claude Design handoff.\ntype: project\noriginSessionId: 92ea1d3a-90a1-4b4b-a438-c6c072e5cc0a\n---\nTrainerSG is a paid trainer directory for Singapore adult educators, sitting on top of the TAEPP registry as a discovery layer.\n\n**Why:** TAEPP (mandatory from April 2026) is compliance-only — no public search, no way for companies/ATOs to find trainers. No equivalent direc",
+    "summary": "---",
+    "namespace": "project_trainersg",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Apps-trainer/memory/project_trainersg.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-project-type",
+    "key": "project-type",
+    "content": "Knowledge database / reference library for NZ ECE Internal Evaluation tool. NOT a code repository. Contains ~25 source documents (PDFs, DOCX, HTML) plus structured knowledge base files.",
+    "summary": "Project Type",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-ECE-IE-Tool/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-key-files-created",
+    "key": "key-files-created",
+    "content": "- `CLAUDE.md` — Project guidance for Claude Code\n- `knowledge_base.md` — Full content extraction from all source docs\n- `00_source_register.md` — Document + link inventory with extraction status\n- `01_workflow_spine.md` — 8-stage IE workflow normalised from all anchors\n- `02_taxonomy_glossary.md` — 13-topic taxonomy + comprehensive glossary\n- `02_modules_library.md` — 6 app-ready modules (form fields, prompts, rubrics)\n- `03_report_schema.md` — Evidence schema, report blueprint, requirement matr",
+    "summary": "Key Files Created",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-ECE-IE-Tool/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-technical-notes",
+    "key": "technical-notes",
+    "content": "- PDFs need `poppler` (`brew install poppler`) for `pdftotext` extraction\n- `ENSURING-QUALITY-EARLY-CHILDHOOD-CARE-EDUCATION.pdf` is image-only (no extractable text)\n- Tahurangi platform (L5) requires login — use local `Internal Evaluation WEBSITE.pdf` as substitute\n- OECE (L3) is members-only\n- NEL Research Bites (L6) returns 403 on direct fetch",
+    "summary": "Technical Notes",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-ECE-IE-Tool/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-domain-essentials",
+    "key": "domain-essentials",
+    "content": "- NZ-first design; Singapore SPARK 2.0 is comparative only\n- GMA6 licensing criterion is the regulatory mandate for IE\n- Five IE stages: Noticing → Investigating → Collaborative Sense Making → Prioritising → Monitoring\n- Four quality levels: Improvement Required → Working Towards → Embedded → Excelling\n- Te Whāriki has 4 principles and 5 strands (mana atua/whenua/tangata/reo/aotūroa)\n- Priority learners: Māori, Pacific, additional needs, low socio-economic\n- SPARK 2.0 reduced from 8 to 5 criteri",
+    "summary": "Domain Essentials",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-ECE-IE-Tool/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-phase-status",
+    "key": "phase-status",
+    "content": "- Phase 1 (Corpus Consolidation): COMPLETE\n- Phase 2 (Web Link Extraction): COMPLETE (3 of 8 inaccessible)\n- Phase 3 (Knowledge Database Synthesis): COMPLETE\n- Phase 4 (App Requirements/PRD): COMPLETE — `05_PRD.md` created with full end-to-end spec",
+    "summary": "Phase Status",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-ECE-IE-Tool/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-project-status",
+    "key": "project-status",
+    "content": "Building a browser-based genetic health analysis app at `genetic-health-app/` inside the Genetic Health workspace.\n- **Stack**: Next.js 14 + Tailwind + shadcn/ui + Zustand\n- **Architecture**: 100% client-side analysis, static export for Vercel\n- **Plan file**: `.claude/plans/sparkling-waddling-gosling.md`",
+    "summary": "Project Status",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Genetic-Health/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-what-s-complete",
+    "key": "what-s-complete",
+    "content": "1. **Data preprocessing** - 4 Python scripts in `scripts/preprocess/`, output in `genetic-health-app/public/data/` (7.8MB total)\n2. **Core analysis modules** - `src/lib/analysis/` (types, genome-parser, lifestyle-analyzer, pharmgkb-analyzer, clinvar-analyzer)\n3. **Data loader** - `src/lib/data/data-loader.ts` (uses native DecompressionStream for gzip)\n4. **Zustand store** - `src/lib/store/analysis-store.ts` (full pipeline orchestration)\n5. **Hooks** - `src/hooks/useAnalysis.ts`, `src/hooks/useRe",
+    "summary": "What's Complete",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Genetic-Health/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-what-s-left--task--6-",
+    "key": "what-s-left-task-6-",
+    "content": "1. Run `npm run build` and fix TypeScript errors\n2. Add `vercel.json` with CDN headers for `.json.gz` files\n3. Update `next.config.ts` for static export (`output: 'export'`)\n4. Test with dev server + real genome file\n5. Minor polish: error states, responsive tweaks",
+    "summary": "What's Left (Task #6)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Genetic-Health/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-key-technical-notes",
+    "key": "key-technical-notes",
+    "content": "- Use `python3` not `python` on this machine\n- ClinVar pre-filtered from 289MB to 3.5MB (25 chromosome gzipped JSON files)\n- PharmGKB is 4.4MB JSON (pre-joined annotations + alleles)\n- SNP database is 39KB (79 curated SNPs)\n- Genome parser handles ~600K lines, builds byRsid + byPosition maps\n- ClinVar SNP filter: ref.length===1 && alt.length===1 (critical for avoiding false positives)\n- Genotype matching checks both forward and reverse (AG/GA)",
+    "summary": "Key Technical Notes",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-Genetic-Health/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276849
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [Project: OTG Legal Box](project_legalbox.md) — Full-stack local AI app for Singapore law firms; Electron + FastAPI + React; current state and major completed work\n- [User: Owner/Developer](user_profile.md) — Role and context\n- [Feedback: Gemma 4 requirement](feedback_gemma4.md) — Must use Gemma 4, not Gemma 3",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-LegalBox/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276850
+  },
+  {
+    "id": "mem-feedback_gemma4----",
+    "key": "-",
+    "content": "name: Gemma 4 — not aspirational, required\ndescription: User rejected Gemma 3 usage and any framing of Gemma 4 as \"aspirational\" — it is the only model family to use\ntype: feedback\n---\n\nAlways use Gemma 4 (`gemma4:e4b`, `gemma4:26b`, `gemma4:31b`) — never Gemma 3.\n\n**Why:** User explicitly rejected first plan that called Gemma 4 \"aspirational\". Quote: \"We need this to be Gemma 4. Not aspirational. Redo to include that.\" Gemma 4 is confirmed available on Ollama from official Google docs and Huggi",
+    "summary": "---",
+    "namespace": "feedback_gemma4",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-LegalBox/memory/feedback_gemma4.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276850
+  },
+  {
+    "id": "mem-project_legalbox----",
+    "key": "-",
+    "content": "name: OTG Legal Box — Project State\ndescription: Full-stack local AI assistant for Singapore law firms; current implementation state after major upgrade session\ntype: project\n---\n\nOTG Legal Box is a fully offline AI assistant for Singapore law firms. Electron desktop app (Mac/Windows) + FastAPI backend + React frontend. All AI runs locally via Ollama + Gemma 4.\n\n**Current model**: `gemma4:e4b` (default), `gemma4:26b` (recommended), `gemma4:31b` (professional)\n\n**10 tools**: Legal Chat, Summarize",
+    "summary": "---",
+    "namespace": "project_legalbox",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-LegalBox/memory/project_legalbox.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276850
+  },
+  {
+    "id": "mem-user_profile----",
+    "key": "-",
+    "content": "name: User — OTG Legal Box builder\ndescription: Building a local AI app for Singapore law firms; cares deeply about UI quality, compliance, and Gemma 4\ntype: user\n---\n\nBuilding OTG Legal Box for distribution to Singapore law firms. Acts as product owner and developer.\n\nKey preferences observed:\n- Cares about UI/UX quality — \"I don't want it to be very clunky. I don't want it to be very ugly.\"\n- Wants professional, modern, law-firm calibre design\n- Compliance is important — full audit logging for",
+    "summary": "---",
+    "namespace": "user_profile",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-OTG-LegalBox/memory/user_profile.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276850
+  },
+  {
+    "id": "mem-MEMORY-project-goal",
+    "key": "project-goal",
+    "content": "Unify three websites (sgassist.com, careconnect.sg, caregivers.sg) into one big website with custom-built forms — replacing all JotForms and external sign-up links.",
+    "summary": "Project Goal",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-MEMORY-owner",
+    "key": "owner",
+    "content": "Hao Jun See (haojun.see@sgassist.com) — owns all three domains.",
+    "summary": "Owner",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-MEMORY-key-files",
+    "key": "key-files",
+    "content": "- `website-audit.md` — Full audit of all three current websites\n- `open-questions.md` — Unresolved questions before scoping can begin",
+    "summary": "Key Files",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-MEMORY-status",
+    "key": "status",
+    "content": "Phase: Discovery / Requirements gathering. No tech decisions made yet.\nNext step: Owner to answer open questions (see open-questions.md), then scope unified site.",
+    "summary": "Status",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-open-questions---pending-owner",
+    "key": "open-questions-pending-owner-answers",
+    "content": "These questions need to be answered before tech scoping and planning can begin.",
+    "summary": "Open Questions — Pending Owner Answers",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-domain---brand",
+    "key": "domain-brand",
+    "content": "1. What will the unified website's domain be? (sgassist.com, caregivers.sg, or new domain?)\n2. Will careconnect.sg redirect to the unified site, or remain separate?\n3. Will caregivers.sg be the new unified domain?",
+    "summary": "Domain & Brand",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-living-lab-tours",
+    "key": "living-lab-tours",
+    "content": "4. How many distinct tour types are there currently?\n5. What information needs to be collected from each tour type (public, NSS residents, orgs)?\n6. Should org bookings (15+ people) go through an online form or remain email-based?\n7. Are tours free or paid? If paid, is online payment needed?",
+    "summary": "Living Lab Tours",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-caretraining---workshops",
+    "key": "caretraining-workshops",
+    "content": "8. Are training programs fixed/recurring or do they change each quarter?\n9. Who are the training partners and does sign-up need to go to them, or can it be centralised?\n10. Is online payment needed for workshops, or is it free/invoice-based?\n11. Should workshop sign-up confirmations be automated (email confirmation, calendar invite)?",
+    "summary": "CareTraining / Workshops",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-events",
+    "key": "events",
+    "content": "12. Beyond training workshops and Living Lab tours, what other events need sign-up forms?\n13. How frequently are new events added?",
+    "summary": "Events",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-careconnect-b2b",
+    "key": "careconnect-b2b",
+    "content": "14. Should the SSA and Employer consultation booking stay on careconnect.sg or move to unified site?\n15. Is there a desire to add more B2B content/features?",
+    "summary": "CareConnect B2B",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-careresources-membership",
+    "key": "careresources-membership",
+    "content": "16. What fields does the current JotForm collect? (to replicate in custom form)\n17. Should membership sign-up trigger any automated emails or workflows?",
+    "summary": "CareResources Membership",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-carebell",
+    "key": "carebell",
+    "content": "18. What fields does the CareBell JotForm collect?\n19. Does CareBell registration need to connect to any backend system?",
+    "summary": "CareBell",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-tech-preferences",
+    "key": "tech-preferences",
+    "content": "20. Preferred tech stack? (WordPress continuation, Webflow, Next.js, other?)\n21. Is there a preferred CMS for managing blog/articles?\n22. Any existing hosting/infrastructure to keep or migrate from?\n23. Budget/timeline constraints?",
+    "summary": "Tech Preferences",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-open-questions-admin---operations",
+    "key": "admin-operations",
+    "content": "24. Who will manage the site day-to-day? (technical capability level?)\n25. Should form submissions send email notifications? To whom?\n26. Is there a CRM or database where sign-ups should flow into?",
+    "summary": "Admin & Operations",
+    "namespace": "open-questions",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/open-questions.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-website-audit-1--sgassist-com---main-nonprof",
+    "key": "1-sgassist-com-main-nonprofit-hub",
+    "content": "**Stack:** WordPress\n**Brand:** SG Assist Pte Ltd — community-driven caregiving support, nonprofit\n**Address:** Blk 839 Yishun Street 81, 01-298 Singapore 760839\n**Phone:** +65 81261570\n**Hours:** Mon–Fri, 9:30am–5:30pm\n\n### Leadership\n- Adrian Tan — Chief Empathy Officer (communication)\n- Greg Tan — Chief Everything Officer (operations)\n- Ramil — Chief Money Officer (finances)\n\n### Services / Pages\n\n#### CareCommunity\n- Volunteer matching platform — find help or volunteer\n- Star/voucher rewards",
+    "summary": "1. sgassist.com — Main Nonprofit Hub",
+    "namespace": "website-audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/website-audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-website-audit-2--careconnect-sg---b2b---inst",
+    "key": "2-careconnect-sg-b2b-institutional-arm",
+    "content": "**Stack:** WordPress\n**Brand:** CareConnect by SG Assist\n**Same founders:** Greg Tan and Adrian Tan\n**Same contact info as sgassist.com**\n\n### Navigation\nHome, Our Story, Social Service Agencies, Employers, Blog, Events\n\n### Pages\n\n#### Home\n- \"Empowering and supporting you in every stage of your caregiving journey\"\n- Problem: 1.8M sandwich-generation caregivers in Singapore\n- 8 services: Information, Emergency response, Admin assistance, Notifications, Referrals, Daily tasks, Tele-concierge, Sm",
+    "summary": "2. careconnect.sg — B2B / Institutional Arm",
+    "namespace": "website-audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/website-audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-website-audit-3--caregivers-sg---unused---un",
+    "key": "3-caregivers-sg-unused-undeveloped",
+    "content": "- Consistently times out on fetch\n- Zero Google index (site:caregivers.sg returns nothing)\n- Likely a parked domain or holding page owned by Hao Jun\n- Prime domain — not yet built out\n\n---",
+    "summary": "3. caregivers.sg — Unused / Undeveloped",
+    "namespace": "website-audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/website-audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-website-audit-summary-of-all-sign-up-mechani",
+    "key": "summary-of-all-sign-up-mechanisms-current-state-",
+    "content": "| Activity | Current mechanism | Platform |\n|---|---|---|\n| CareResources membership | JotForm 232833986928474 | JotForm |\n| CareBell subscription | JotForm 241491327766059 | JotForm |\n| SSA consultation | JotForm 221431900773046 | JotForm |\n| Employer consultation | JotForm 221598623847064 | JotForm |\n| CareTraining workshops | Per-workshop links | Microsoft Forms / C3A / SGAssist |\n| Living Lab tours (public) | Separate sign-up link | Unknown |\n| Living Lab tours (NSS residents) | Separate sig",
+    "summary": "Summary of All Sign-Up Mechanisms (Current State)",
+    "namespace": "website-audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/website-audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276852
+  },
+  {
+    "id": "mem-website-audit-pain-points-identified",
+    "key": "pain-points-identified",
+    "content": "1. Sign-ups are fragmented across 4+ JotForms, Microsoft Forms, C3A, email, app stores, and Telegram\n2. No unified events/workshop calendar with integrated registration\n3. careconnect.sg Events page is effectively dead (one 2023 entry)\n4. caregivers.sg domain is unused\n5. Living Lab tours have no clear centralized booking flow\n6. B2B (careconnect.sg) and B2C (sgassist.com) are completely separate despite same org/founders\n7. No ability to manage registrations in-house — dependent on third-party ",
+    "summary": "Pain Points Identified",
+    "namespace": "website-audit",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Desktop-SG-Assist/memory/website-audit.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276853
+  },
+  {
+    "id": "mem-MEMORY----pipeline-state--pipeline-st",
+    "key": "-pipeline-state-pipeline-state-md-current-scoring-",
+    "content": "- [Impact Evaluation Scoring Pipeline](project_scoring_pipeline.md) — 22,640 PDF scoring project, progress, source assignments\n- [Scoring Agent Prompt Rules](feedback_scoring_agents.md) — short prompts for Haiku, fresh-session SOP, filename fix",
+    "summary": "- [Pipeline State](pipeline_state.md) — Current scoring progress, known bugs (prep bug), rate limits, session handoff guide, scoring rubric, screening rules",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276853
+  },
+  {
+    "id": "mem-feedback_scoring_agents----",
+    "key": "-",
+    "content": "name: Scoring agent prompt rules\ndescription: Rules for spawning scoring subagents — prevents \"Prompt is too long\" errors and filename bugs\ntype: feedback\noriginSessionId: 18a646d4-a348-4daa-bcaa-1d5731093464\n---\nKeep Haiku agent prompts ultra-short — no inline rubric, just point to SCORING_INSTRUCTIONS.md. Max 9 files per agent.\n\n**Why:** Accumulated parent-session context (task notifications, results) gets passed to subagents. Haiku's effective prompt budget shrinks as the session grows, causi",
+    "summary": "---",
+    "namespace": "feedback_scoring_agents",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/feedback_scoring_agents.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state----",
+    "key": "-",
+    "content": "name: Impact Evaluation Pipeline State\ndescription: Current scoring pipeline progress, known bugs, and session handoff guide\ntype: project\noriginSessionId: 4d250bbe-4544-4a58-af89-9969a45eab23\n---",
+    "summary": "---",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-progress-summary--end-of-sessi",
+    "key": "progress-summary-end-of-session-with-aa-batch-",
+    "content": "**Scored:** 2,132 evaluations + 355 non-evaluations = **2,487 total** across 2,496 JSON files\n\n| Source  | Scored | Total  | %     | Status                    |\n|---------|--------|--------|-------|---------------------------|\n| 3ie     | 742    | 2,779  | 26.7% | Active; 2,037 remain      |\n| wb_ieg  | 88     | 88     | 100%  | Complete                  |\n| wb_wds  | 1,514  | 19,432 | 7.8%  | 17,918 remain            |\n| adb     | 355*   | 341    | done  | All marked non-evaluation |\n\n*adb coun",
+    "summary": "Progress Summary (end of session with AA batch)",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-current-state-files",
+    "key": "current-state-files",
+    "content": "- **txt_queue/**: 130 files awaiting scoring (batch AA leftovers)\n- **score_results/**: 2,496 JSON files (one per scored document)\n- **scoring_results.csv**: 2,132 rows (evaluations only, sorted by score desc)\n- **screening_results.csv**: 2,487 rows (all screened records)",
+    "summary": "Current State Files",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-known-issue--scoring-queue-py-",
+    "key": "known-issue-scoring-queue-py-prep-bug",
+    "content": "**Problem:** The `prep` command re-queues already-scored files because it checks the `\"filename\"` JSON field, which many agents omit. Without this field, `prep` assumes the stem is unscored.\n\n**Solution:** Bypass `prep` and extract directly from manifest using a set difference:\n```python\nimport csv\nfrom pathlib import Path\n\nmanifest = [r for r in csv.DictReader(open('scoring_manifest.csv')) if r['source']=='3ie']\nscored = {f.stem for f in Path('score_results').glob('*.json')}\nunscored = [m for m",
+    "summary": "Known Issue: scoring_queue.py prep Bug",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-critical--agent-prompts-must-u",
+    "key": "critical-agent-prompts-must-use-explicit-stem-list",
+    "content": "Vague prompts like \"score all files in txt_queue/\" cause \"prompt too long\" errors. Instead:\n- **DO:** Pass explicit stem lists: \"Score these 25 files: <file1> <file2> ... <file25>\"\n- **DON'T:** Use generic instructions without file lists\n\nThis prevents the Agent tool from bloating the prompt context trying to discover files.",
+    "summary": "Critical: Agent Prompts Must Use Explicit Stem Lists",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-rate-limit-pattern",
+    "key": "rate-limit-pattern",
+    "content": "- **Hits:** ~8:00am SGT\n- **Resets:** 12:00pm SGT (noon)\n- **Solution:** If agents fail mid-batch, schedule a wakeup for 12:05pm SGT to resume",
+    "summary": "Rate Limit Pattern",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-session-handoff-checklist",
+    "key": "session-handoff-checklist",
+    "content": "When ending a session:\n1. ✓ Run `python3 scoring_queue.py merge` to update CSVs\n2. ✓ Update `SCORING_COORD.md` with current counts\n3. ✓ Note any txt_queue files still in-flight\n4. ✓ Write this pipeline_state.md memory file\n\nWhen starting a new session:\n1. Run `python3 scoring_queue.py status` to verify counts\n2. Check `ls txt_queue/ | wc -l` to see in-flight batch size\n3. Use manifest diff workaround to extract next unscored files\n4. Spawn 4 agents with explicit stem lists (25 files each)\n5. Use",
+    "summary": "Session Handoff Checklist",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-scoring-rubric--6-dimensions--",
+    "key": "scoring-rubric-6-dimensions-0-3-each-",
+    "content": "- **Methodological Rigor**: experimental design quality, control group presence, confound management\n- **Causal Claim Quality**: strength of evidence for causal inference, counterfactual framing\n- **Data Quality**: primary data collection, sample size, response rates, measurement instruments\n- **Economic Analysis**: EIRR/cost-benefit analysis, sensitivity analysis, cost-effectiveness assessment\n- **Results Framework**: logic model clarity, outcome documentation, baseline-endline comparisons\n- **",
+    "summary": "Scoring Rubric (6 Dimensions, 0–3 each)",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-screening-rules",
+    "key": "screening-rules",
+    "content": "**PASS (evaluations):**\n- Project Completion Reports (PCRs)\n- Project Valuation Reports (PVRs)\n- Project Performance Assessment Reports (PPARs)\n- Randomized Controlled Trials (RCTs)\n- Quasi-experimental designs (DID, RDD, IV, propensity matching)\n- Impact Completion Reports (ICRs)\n- Sector/country/synthesis evaluation reports\n\n**FAIL (non-evaluations):**\n- Working papers\n- Policy briefs, Position papers\n- Project Appraisal Documents (PADs)\n- Strategy documents\n- Annual reports\n- Grant proposals/",
+    "summary": "Screening Rules",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-pipeline_state-why--this-coordination-structu",
+    "key": "why-this-coordination-structure",
+    "content": "The project has no \"DCP\" or automated context-handoff tool. Instead it uses:\n1. **SCORING_COORD.md** — the human-readable coordination log (updated between sessions)\n2. **scoring_queue.py status** — the filesystem-based ground truth (always accurate)\n3. **score_results/*.json** — the authoritative result store (never collision across sources)\n4. **This memory file** — session-to-session learning (new for this handoff)\n\nThis design allows multiple humans (or future AI sessions) to work on differe",
+    "summary": "Why: This Coordination Structure",
+    "namespace": "pipeline_state",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/pipeline_state.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-project_scoring_pipeline----",
+    "key": "-",
+    "content": "name: Impact Evaluation Scoring Pipeline\ndescription: Active PDF scoring project — 22,640 PDFs across 4 sources, using 6-dimension rubric, writing JSON to score_results/\ntype: project\noriginSessionId: 18a646d4-a348-4daa-bcaa-1d5731093464\n---\nScoring ~22,640 PDFs (wb_ieg, adb, wb_wds, 3ie) with a 6-dimension rubric (0-3 each, max 18). Results go to score_results/*.json, merged to scoring_results.csv.\n\n**Current progress (2026-04-18):**\n- wb_ieg: 88/88 ✓ complete\n- wb_wds: 1,520/19,432 (7.8%) — ac",
+    "summary": "---",
+    "namespace": "project_scoring_pipeline",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Impact-Evaluation-catalogs/memory/project_scoring_pipeline.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-MEMORY----electrify-build-progress--p",
+    "key": "-electrify-build-progress-project-electrify-build-",
+    "content": "- [User Profile](user_kenneth_project.md) — Kenneth building SG contractor marketplace, first-time founder",
+    "summary": "- [ElectriFy Build Progress](project_electrify_build_progress.md) — Backend+API 100% done, frontend pages 0%, resume from page building",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-project_electrify_build_progress----",
+    "key": "-",
+    "content": "name: ElectriFy Build Progress\ndescription: Current build state of the ElectriFy contractor marketplace app — what's done, what's remaining\ntype: project\n---\n\nElectriFy MVP build is functionally complete. Last verified 2026-03-30.\n\n**Why:** Kenneth is building a Singapore contractor marketplace (electricians first) called ElectriFy. PRD covers homeowner/contractor/admin flows, escrow payments, LEW license verification, point-based quoting, anti-disintermediation.\n\n**How to apply:** App builds an",
+    "summary": "---",
+    "namespace": "project_electrify_build_progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/project_electrify_build_progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-project_electrify_build_progress-completed--100--",
+    "key": "completed-100-",
+    "content": "### Backend + Libs\n- Prisma schema (9 models), Prisma v7 with PG adapter\n- 5 lib files: db.ts, auth.ts, validation.ts, phone-detection.ts, pricing.ts, constants.ts, types.ts\n- 17 API route files covering auth, jobs, quotes, contractors, payments, admin\n\n### Frontend (21 pages)\n- Landing, auth (login/signup/contractor signup), dashboard layouts\n- Homeowner: dashboard, post job, job detail, messages\n- Contractor: dashboard, browse jobs, my quotes, profile edit, create quote (4-step wizard)\n- Admin",
+    "summary": "Completed (100%)",
+    "namespace": "project_electrify_build_progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/project_electrify_build_progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-project_electrify_build_progress-fixes-applied--2026-03-30-",
+    "key": "fixes-applied-2026-03-30-",
+    "content": "- Prisma import: `@/generated/prisma` → `@/generated/prisma/client` (no index.ts barrel)\n- Prisma v7: Added `@prisma/adapter-pg` for required adapter pattern\n- Prisma v7: Removed `url` from schema.prisma datasource (now in prisma.config.ts)\n- Zod v4: `.error.errors[0]` → `.error.issues[0]` in 7 API files\n- Zod v4: `z.record(valueSchema)` → `z.record(z.string(), valueSchema)` in validation.ts\n- Auth: JWT_SECRET from eager IIFE to lazy function (prevents build-time throw)\n- TypeScript: `as Record`",
+    "summary": "Fixes Applied (2026-03-30)",
+    "namespace": "project_electrify_build_progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/project_electrify_build_progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-project_electrify_build_progress-next-steps",
+    "key": "next-steps",
+    "content": "- Deploy to Vercel with Neon PostgreSQL\n- Update DATABASE_URL to Neon connection string\n- Run prisma db push against Neon\n- Seed production/staging data",
+    "summary": "Next Steps",
+    "namespace": "project_electrify_build_progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/project_electrify_build_progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-user_kenneth_project----",
+    "key": "-",
+    "content": "name: Kenneth Project Context\ndescription: Kenneth is building ElectriFy, a Singapore electrician marketplace — first-time founder with a partner\ntype: user\n---\n\nKenneth is building \"ElectriFy\" — a Singapore-based marketplace connecting homeowners with licensed electricians (LEW-verified). He has a co-founder partner. The app starts with electricians and plans to expand to plumbers in Year 2. Kenneth has done extensive research (30,000+ words of research docs in /Research folder). He prefers fas",
+    "summary": "---",
+    "namespace": "user_kenneth_project",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Claude-Projects-Kenneth---Contractors--App/memory/user_kenneth_project.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276854
+  },
+  {
+    "id": "mem-MEMORY----second-brain-setup-progress",
+    "key": "-second-brain-setup-progress-second-brain-setup-pr",
+    "content": "- [User Profile](user-profile.md) — Hao Jun, founder On The Ground SG, vibe-coding + AI consultancy, Singapore\n- [Vault Structure](vault-structure.md) — PARA layout, symlinks to OTG/Desktop/Downloads, slash commands and templates in place",
+    "summary": "- [Second Brain Setup Progress](second-brain-setup-progress.md) — Phase A + C complete as of 2026-04-08; D1 (project stubs) and D4 (MOCs) + Phase B (plugins/MCP) still pending",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-second-brain-setup-progress----",
+    "key": "-",
+    "content": "name: Second Brain Setup Progress\ndescription: Tracks which phases of the Obsidian second brain build are complete vs pending\ntype: project\n---",
+    "summary": "---",
+    "namespace": "second-brain-setup-progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/second-brain-setup-progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-second-brain-setup-progress-completed--2026-04-08-",
+    "key": "completed-2026-04-08-",
+    "content": "**Phase A — Structural foundation**\n- PARA skeleton: 00-Inbox, 10-Projects, 20-Areas, 30-Resources, 40-Archive, 50-MOCs, 60-Daily, 70-Meetings, 80-Attachments, 90-External, _templates, .claude/commands\n- Existing folders moved into PARA slots\n- 5 symlinks in 90-External/: Desktop, Downloads, OTG, Claude-Projects, Claude-History\n- CLAUDE.md, .claude/settings.json (deny rules), README.md written at vault root\n\n**Phase C — Slash commands + templates**\n- 7 slash commands: capture, daily, ingest, pro",
+    "summary": "Completed (2026-04-08)",
+    "namespace": "second-brain-setup-progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/second-brain-setup-progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-second-brain-setup-progress-pending---manual--hao-jun-must",
+    "key": "pending-manual-hao-jun-must-do-",
+    "content": "- Archive sg-assist repos at github.com/sg-assist: mobile-app, api, SGAssistNew (no CLI owner permission)\n- Install 6 Obsidian plugins: Templater, Dataview, Local REST API, Smart Connections, Obsidian Git, Obsidian Tasks → then share Local REST API key for MCP setup",
+    "summary": "Pending — manual (Hao Jun must do)",
+    "namespace": "second-brain-setup-progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/second-brain-setup-progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-second-brain-setup-progress-pending---ready-to-build--next",
+    "key": "pending-ready-to-build-next-sessions-",
+    "content": "1. **Strategy document + Mission Control sync** — private vault doc updated by daily conversation, wired to mission-control repo wiki/strategy/ so dump engine reads it. HIGHEST PRIORITY — solves team visibility problem.\n2. **Marketing Department in Mission Control** — /marketing section tracking content stages (Idea → Script → Filmed → Rendered → Approved → Published)\n3. **Content pipeline** — Videos repo (On-The-Ground-SG/Videos) has research/script/Remotion bones; missing: green screen composi",
+    "summary": "Pending — ready to build (next sessions)",
+    "namespace": "second-brain-setup-progress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/second-brain-setup-progress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-user-profile----",
+    "key": "-",
+    "content": "name: User Profile\ndescription: Who Hao Jun is, his business, working style, and context for tailoring responses\ntype: user\n---\n\n**Name:** Hao Jun (Se Hao Jun)\n**Email:** haojun@ontheground.agency\n**Business:** On The Ground SG (OTG) — vibe-coding app builder and AI consultancy, Singapore\n**Role:** Founder, developer, EA to himself, occasional legal/policy consultant\n\n**Active projects (as of 2026-04-08, 21 total):**\nCore: mission-control, OTG-website, claude-code-workshops\nLegal AI: Rulehaus, l",
+    "summary": "---",
+    "namespace": "user-profile",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/user-profile.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-vault-structure----",
+    "key": "-",
+    "content": "name: Vault Structure\ndescription: Current Obsidian vault layout, conventions, and key file locations\ntype: project\n---\n\n**Vault root:** /Users/seehaojun/Documents/Obsidian Vault",
+    "summary": "---",
+    "namespace": "vault-structure",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/vault-structure.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-vault-structure-folder-layout--para---lyt-hybr",
+    "key": "folder-layout-para-lyt-hybrid-created-2026-04-08-",
+    "content": "```\n00-Inbox/           landing zone\n10-Projects/        active project folders + repo stub .md files\n20-Areas/           ongoing responsibilities (EA Prompts, Vibe Coding, OTG Business, Parenting, Health)\n30-Resources/       reference by topic (AI & LLMs, Legal, Policy & Governance, EdTech, Tools & Setup)\n40-Archive/         inactive (contains \"Second Brain 12 Dec 2025\" snapshot)\n50-MOCs/            Maps of Content\n60-Daily/           daily notes (YYYY-MM-DD.md)\n70-Meetings/        meeting note",
+    "summary": "Folder layout (PARA + LYT hybrid, created 2026-04-08)",
+    "namespace": "vault-structure",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/vault-structure.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-vault-structure-conventions",
+    "key": "conventions",
+    "content": "- Frontmatter: type, status, tags, created, updated, links, source (optional), repo (project stubs)\n- Links: [[wikilinks]] not markdown links\n- Filenames: YYYY-MM-DD.md (daily), YYYY-MM-DD Meeting Title.md (meetings), YYYY-MM-DD-slug.md (atomic), Title Case.md (projects/stubs)",
+    "summary": "Conventions",
+    "namespace": "vault-structure",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/vault-structure.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-vault-structure-90-external-symlinks",
+    "key": "90-external-symlinks",
+    "content": "- Desktop → ~/Desktop\n- Downloads → ~/Downloads\n- OTG → ~/Desktop/OTG (main workspace, 309GB, 35+ repos)\n- Claude-Projects → ~/Documents/Claude/Projects\n- Claude-History → ~/.claude/projects\n\n**Why:** Obsidian Sync does not follow symlinks so these don't explode sync storage. Claude Code does follow them, giving Mac-wide reach from the vault root.",
+    "summary": "90-External symlinks",
+    "namespace": "vault-structure",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Documents-Obsidian-Vault/memory/vault-structure.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276855
+  },
+  {
+    "id": "mem-MEMORY-project-overview",
+    "key": "project-overview",
+    "content": "- **Goal**: 500-2,000 document research corpus on Singapore governance (1954-present), \"Minister Mentor level\"\n- **Location**: `/Users/seehaojun/Downloads/SG_governance_corpus/docs/deep-research/singapore-governance/`\n- **Master Prompt**: `SG-GOVERNANCE-CORPUS-MASTER-PROMPT-v3-UNIFIED.md` (~90KB, defines all document codes/titles/levels)\n- **Index**: `INDEX.md` tracks document statuses",
+    "summary": "Project Overview",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-current-state--as-of-2026-03-1",
+    "key": "current-state-as-of-2026-03-14-",
+    "content": "- **426 documents on disk**, ~3.56 million words\n- All blocks A-N complete; all 60 gap documents written (Tiers 1-4)\n- INDEX.md is CURRENT — Version 4.0, dated 2026-03-14, all 426 docs listed as [COMPLETE]",
+    "summary": "Current State (as of 2026-03-14)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-document-architecture",
+    "key": "document-architecture",
+    "content": "- **4 levels**: L1 Anchor (~10K words), L2 Deep Dive (~8K), L3 Profile (~6-8K), L4 Anthology (~10K)\n- **13 sections per doc**: Key Takeaways, Record in Brief, Timeline, Background, Primary Record, Key Figures, Stories & Anecdotes, Arguments & Rhetoric, Contested Record, Outcomes & Evidence, Archive Gaps, Spiral Index, Sources\n- **14 content blocks**: A (Founding), B (Second Act), C (Chronological), D (Policy), E (Economic), F (Foreign Policy), G (Social Policy), H (Biographies), I (Institutions)",
+    "summary": "Document Architecture",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-block-breakdown--426-total-",
+    "key": "block-breakdown-426-total-",
+    "content": "A:18 | B:11 | C:15 | D:29 | E:41 | F:24 | G:40 | H-PM:4 | H-DPM:12 | H-MIN:45 | H-OPP:22 | H-CS:33 | H-BACK:21 | H-PRES:9 | H-INT:15 | I:8 | J:21 | K:33 | L:10 | M:5 | N:2",
+    "summary": "Block Breakdown (426 total)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-gap-document-work---complete",
+    "key": "gap-document-work-complete",
+    "content": "- All 60 gap documents from gap-map.md written (2026-03-14)\n- Tiers 1-4 fully executed in 8 parallel batches of 4-5 documents each\n- 5 structurally incomplete docs (3/12 sections) → fully completed (prior work)\n- 16 docs with minor gaps (missing Sources, Spiral Index, Archive Gaps) → patched (prior work)",
+    "summary": "Gap Document Work — COMPLETE",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-chat-interface-plan",
+    "key": "chat-interface-plan",
+    "content": "- **PDF exported**: `SG-Governance-Chat-Interface-Plan.pdf` in project root\n- Plan saved at: `docs/deep-research/singapore-governance/PLAN-chat-interface.md`\n- Original stack planned: Python FastAPI + Next.js + ChromaDB + Tantivy + Claude API + local embeddings\n- Key insight: section-level chunking exploits the 13-section structure for use-case-specific retrieval",
+    "summary": "Chat Interface Plan",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-chat-interface---complete-and-",
+    "key": "chat-interface-complete-and-live-as-of-2026-03-15-",
+    "content": "- **GitHub**: https://github.com/seehaojun/Singapore-The-Improbable-Nation\n- **Web app**: sg-governance-web (Next.js, deployed on Vercel)\n- **Homepage Chat card**: now active (was \"Coming Soon\"), links to `/chat`\n\n### Live files (in sg-governance-web):\n- `components/ExpandableChat.tsx` — Singapore-themed chat component\n- `app/api/quota/route.ts` — GET quota endpoint, SGT midnight reset\n- `app/api/chat/route.ts` — POST chat endpoint with keyword retrieval + Claude Haiku\n- `lib/redis.ts` — direct ",
+    "summary": "Chat Interface — COMPLETE AND LIVE (as of 2026-03-15)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-book-expansion-progress--as-of",
+    "key": "book-expansion-progress-as-of-2026-03-14-",
+    "content": "- User asked to finish 4 book files previously started\n- Current word counts:\n  - book-part1.md: ~11,827 words (3 chapters: Founding Coalition, Merger/Separation, Architects)\n  - book-part2.md: ~11,759 words (3 chapters: Economy, Housing, Institutions)\n  - book-part3.md: ~16,859 words (3 chapters: Multiracialism, Education, Social Contract)\n  - book-part4-6.md: ~20,664 words (7 chapters + epilogue: Diplomacy, ASEAN, China, Price of Order, Succession, Singapore Model, Epilogue)\n  - **TOTAL: ~61,1",
+    "summary": "Book Expansion Progress (as of 2026-03-14)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-credit-system-design--planned-",
+    "key": "credit-system-design-planned-not-yet-implemented-i",
+    "content": "- **Model**: Credit packs (not subscription), 200% profit margin (3x cost)\n- **Expiry**: All credits expire 6 months from purchase, FIFO consumption, non-refundable\n- **Packs**: Starter 100/$5 | Standard 500/$25 | Professional 2000/$99 | Institutional 10000/$499\n- **Query costs**: Quick (Haiku) = 1 credit | Standard (Sonnet) = 3 credits | Deep = 5 credits\n- **Expiry notice** displayed at every touchpoint (purchase, balance, chat response, warnings at 30/7/1 days)\n- Current live app uses a simple",
+    "summary": "Credit System Design (planned, not yet implemented in live app)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-key-remaining-work--prioritise",
+    "key": "key-remaining-work-prioritised-",
+    "content": "1. **Git commit** — corpus is untracked (~426 docs, 59 untracked files shown in git status)\n2. **Quality verification** — New gap docs and H-block profiles need quality review\n3. **Book files** — ~40K more words needed to reach ~100K target",
+    "summary": "Key Remaining Work (prioritised)",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-user-preferences",
+    "key": "user-preferences",
+    "content": "- Prefers maximum parallelism (up to 10 agents simultaneously)\n- Wants detailed quality checks, not spot checks\n- Autonomous work style — keep going without asking unless blocked\n- User is a speechwriter — evaluates corpus through \"would this help at 10pm before a speech\" lens",
+    "summary": "User Preferences",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-corpus-gap-map---60-documents-",
+    "key": "corpus-gap-map-60-documents-to-write",
+    "content": "Generated 2026-03-09 via comprehensive grep analysis across all 374 files, searching 150+ topics.",
+    "summary": "Corpus Gap Map — 60 Documents to Write",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-how-this-was-built",
+    "key": "how-this-was-built",
+    "content": "- 5 parallel search agents covering: crises/disasters, diplomatic incidents, social/cultural turning points, economic/infrastructure, legal/constitutional\n- Each topic: grep count across files, check for dedicated doc, depth assessment\n- Prioritised by \"if a minister/speechwriter queries this, what do they get?\"\n\n---",
+    "summary": "How This Was Built",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-tier-1---critical-gaps--0-1-me",
+    "key": "tier-1-critical-gaps-0-1-mentions-no-dedicated-doc",
+    "content": "These are the most urgent. Someone queries, gets silence or a single sentence.\n\n| # | Code | Title | Mentions | Block | Level |\n|---|------|-------|----------|-------|-------|\n| 1 | SG-K-25 | National Library Demolition (2004) | Fragments in 6 docs | K | L2 |\n| 2 | SG-C-15 | Nicoll Highway Collapse (2004) | 10 mentions, no doc | C | L2 |\n| 3 | SG-C-16 | Hotel New World Collapse (1986) | 1 mention | C | L2 |\n| 4 | SG-K-26 | Laju Hijacking (1974) | 1 mention (Nathan bio) | K | L2 |\n| 5 | SG-G-31 |",
+    "summary": "Tier 1 — Critical Gaps (0-1 mentions, no dedicated doc)",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-tier-2---fragmentary-coverage-",
+    "key": "tier-2-fragmentary-coverage-2-15-files-no-dedicate",
+    "content": "Mentioned but a speechwriter would be disappointed by the depth.\n\n| # | Code | Title | Mentions | Block | Level |\n|---|------|-------|----------|-------|-------|\n| 16 | SG-J-17 | Catherine Lim Affair (1994) — OB Markers Origin | 7 files | J | L2 |\n| 17 | SG-F-23 | Terrex Vehicles Detention (2016) | 9 files | F | L2 |\n| 18 | SG-K-28 | Michael Fay Caning (1994) | 14 files | K | L2 |\n| 19 | SG-K-29 | Flor Contemplacion Execution (1995) | 1 file | K | L2 |\n| 20 | SG-J-18 | Amos Yee Case (2015) | 6 f",
+    "summary": "Tier 2 — Fragmentary Coverage (2-15 files, no dedicated doc)",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-tier-3---policy-institutional-",
+    "key": "tier-3-policy-institutional-gaps-important-for-dip",
+    "content": "| # | Code | Title | Mentions | Block | Level |\n|---|------|-------|----------|-------|-------|\n| 31 | SG-D-25 | Climate Strategy & Green Plan 2030 | 138 files, only D-18 | D | L1 |\n| 32 | SG-D-26 | Land Reclamation — Spatial Strategy | 25+ files | D | L1 |\n| 33 | SG-G-34 | Migrant Worker Conditions & Dormitory Crisis | 30 files | G | L1 |\n| 34 | SG-D-27 | POFMA — Full Policy History & Outcomes | 50 files, only K-11 | D | L1 |\n| 35 | SG-E-33 | MRT Breakdown Crisis (2011-2017) | 14 files | E | L2",
+    "summary": "Tier 3 — Policy/Institutional Gaps (important for diplomats, policy officers)",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-tier-4---specialist-completene",
+    "key": "tier-4-specialist-completeness-nice-to-have-streng",
+    "content": "| # | Code | Title | Mentions | Block | Level |\n|---|------|-------|----------|-------|-------|\n| 46 | SG-J-23 | Brompton Bicycle Procurement Scandal | 2 files | J | L3 |\n| 47 | SG-G-35 | Hawker Culture — UNESCO & Identity | 2 files | G | L2 |\n| 48 | SG-D-28 | Flooding & Urban Water Management | 49 scattered | D | L2 |\n| 49 | SG-G-36 | Old Ford Factory / Syonan Gallery Controversy | 1 file | G | L3 |\n| 50 | SG-G-37 | Racial Harmony Day & Commemorative Politics | 3 files | G | L3 |\n| 51 | SG-G-38",
+    "summary": "Tier 4 — Specialist Completeness (nice to have, strengthens edge cases)",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-execution-notes",
+    "key": "execution-notes",
+    "content": "- **Write in batches of 5 in parallel** using the standard 13-section format\n- Start with Tier 1 (#1-15), then Tier 2 (#16-30), then Tier 3 (#31-45), then Tier 4 (#46-60)\n- Each doc should cross-reference existing corpus documents where relevant\n- For events with strong existing coverage elsewhere (e.g., National Library in SG-G-19, SG-F-17), the new dedicated doc should be the authoritative source and go deeper than the fragments\n- After writing, update INDEX.md and add related_docs links to ex",
+    "summary": "Execution Notes",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-gap-map-what-s-already-well-covered--n",
+    "key": "what-s-already-well-covered-no-action-needed-",
+    "content": "- COVID-19 (3 dedicated docs, 171 mentions)\n- 1985 recession (2 dedicated docs)\n- Asian Financial Crisis (1 dedicated doc, 97 mentions)\n- Water agreements with Malaysia (SG-K-23, comprehensive)\n- Defamation suits (SG-J-03, comprehensive)\n- Capital punishment (SG-J-06, comprehensive)\n- Press freedom (SG-J-04 + SG-G-27, comprehensive)\n- Elected Presidency (SG-K-07, comprehensive)\n- ISA (SG-G-24, comprehensive)\n- FPDA (SG-F-08, comprehensive)\n- Suzhou Industrial Park (SG-E-24, comprehensive)\n- Iswa",
+    "summary": "What's Already Well-Covered (no action needed)",
+    "namespace": "gap-map",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus/memory/gap-map.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-MEMORY-memory-index",
+    "key": "memory-index",
+    "content": "- [user_profile.md](user_profile.md) — User is the creator/maintainer of the SG Governance Corpus\n- [project_enrichment_workflow.md](project_enrichment_workflow.md) — Regular workflow for enriching corpus docs and deploying",
+    "summary": "Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus-sg-governance-web/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276856
+  },
+  {
+    "id": "mem-project_enrichment_workflow----",
+    "key": "-",
+    "content": "name: Corpus enrichment workflow\ndescription: Regular workflow for enriching SG governance corpus docs, committing, and deploying to website\ntype: project\n---\n\nThe user regularly enriches the SG governance corpus research docs and deploys updates. The workflow is:\n1. Research latest developments (Budget, elections, policy changes, geopolitics, demographics)\n2. Create new docs and enrich existing ones in /content/\n3. Update the Corpus Updates changelog on the homepage (app/page.tsx)\n4. Run ./enri",
+    "summary": "---",
+    "namespace": "project_enrichment_workflow",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus-sg-governance-web/memory/project_enrichment_workflow.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-user_profile----",
+    "key": "-",
+    "content": "name: User profile\ndescription: User is the creator and maintainer of the SG Governance Corpus research project\ntype: user\n---\n\nThe user (Hao Jun) built and maintains the Singapore governance corpus — a 430+ document, 3.6M-word research archive on Singapore governance (1954-present). They run it via a Next.js website deployed on Vercel, with an AI chat interface. They want the corpus kept current with latest developments. Contact: haojun@ontheground.agency",
+    "summary": "---",
+    "namespace": "user_profile",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SG-governance-corpus-sg-governance-web/memory/user_profile.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-MEMORY----rulehaus-project--project-s",
+    "key": "-rulehaus-project-project-sgx-scraping-md-multi-ex",
+    "content": "- [User Profile](user_profile.md) — Regulatory data builder, comfortable with Python/Playwright, prefers parallel automated scraping\n- [Long-running saves](feedback_long_running.md) — Always save data incrementally during long scrapes; lost 95K announcements to a kill",
+    "summary": "- [Rulehaus Project](project_sgx_scraping.md) — Multi-exchange regulatory intelligence platform for lawyers, starting with SGX. GitHub: On-The-Ground-AI/Rulehaus",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-feedback_long_running----",
+    "key": "-",
+    "content": "name: Long-running scrapers need periodic saves\ndescription: Announcements scraper lost 95K records because data was only written on completion — always save incrementally\ntype: feedback\n---\n\nWrite data incrementally during long-running scrapes, not just at the end.\n\n**Why:** The announcements scraper collected 95K+ items over ~2 hours of UI pagination but was killed before it could write the data to disk. All data was lost because it was only held in memory.\n\n**How to apply:** For any scraper t",
+    "summary": "---",
+    "namespace": "feedback_long_running",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/feedback_long_running.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping----",
+    "key": "-",
+    "content": "name: Rulehaus Project\ndescription: Multi-exchange regulatory intelligence platform for lawyers — starting with SGX, expanding to Nasdaq/NYSE/global exchanges\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-vision",
+    "key": "vision",
+    "content": "**Rulehaus** — a multi-exchange regulatory intelligence platform for lawyers. Re-creates exchange websites with AI-powered search/RAG. Target users are lawyers who prepare regulatory documentation.\n\n**Why:** Current exchange search tools (e.g., SGX's announcement filters) are inadequate for tracking transactions over time, cross-referencing rules, and building regulatory timelines.\n\n**How to apply:** All design decisions should favor lawyer workflows — searchable databases, transaction threading",
+    "summary": "Vision",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-repository",
+    "key": "repository",
+    "content": "- **GitHub**: https://github.com/On-The-Ground-AI/Rulehaus\n- **Org**: On-The-Ground-AI\n- **Local**: `/Users/seehaojun/Downloads/SGX/`\n- **Git LFS**: Binary files (PDF, doc, xls, etc.) tracked via LFS — local copies are pointer files only\n- **LFS skip-smudge enabled**: `git lfs pull` to restore actual file content when needed",
+    "summary": "Repository",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-repo-structure",
+    "key": "repo-structure",
+    "content": "```\ndata/sgx/rulebooks/      — 737 PDF/doc files (18 categories, LFS pointers locally)\ndata/sgx/rules_html/     — 4,800 rule pages as structured JSON (8 rulebooks)\ndata/sgx/company/        — Company data JSON files\ndata/sgx/reports/        — Dead links report, file manifest\nscripts/                 — All Python scraping scripts\nconfig/                  — Exchange-specific configs (placeholder)\n```",
+    "summary": "Repo Structure",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-current-state--2026-03-27-",
+    "key": "current-state-2026-03-27-",
+    "content": "### Done — On GitHub\n| Dataset | Items | Source |\n|---------|-------|--------|\n| Rulebook PDFs/docs | 737 files (LFS) | rulebook.sgx.com |\n| HTML rule text | 4,800 pages (8 rulebooks) | rulebook.sgx.com Browse Contents |\n| Corporate Actions | 38,658 | api.sgx.com/corporateactions/v1.0 |\n| Circulars | 24,433 | api.sgx.com/circulars/v1.0 |\n| Security List | 23,547 | api.sgx.com/announcements/v1.1/securitylist |\n| Company List | 4,275 | api.sgx.com/announcements/v1.1/companylist |\n| Market Indices ",
+    "summary": "Current State (2026-03-27)",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-api-discovery",
+    "key": "api-discovery",
+    "content": "### Working APIs (no auth needed)\n- `api.sgx.com/corporateactions/v1.0` — pagestart (0-indexed page number) + pagesize params\n- `api.sgx.com/circulars/v1.0` — same pagination\n- `api.sgx.com/meetingschedules/v1.0` — single page\n- `api.sgx.com/indices/v1.0` — single page\n\n### Working APIs (need visible browser session)\n- `api.sgx.com/announcements/v1.1/` — intercepted via response events, not direct API calls\n- `api.sgx.com/announcements/v1.1/securitylist`\n- `api.sgx.com/announcements/v1.1/company",
+    "summary": "API Discovery",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-project_sgx_scraping-technical-setup",
+    "key": "technical-setup",
+    "content": "- Python venv at `.venv/` (Playwright + Chromium + PyMuPDF)\n- Git LFS for all binary files\n- Parallel async Playwright scraping (10 crawl workers)\n- Pagination: `pagestart` is 0-indexed PAGE NUMBER, not offset",
+    "summary": "Technical Setup",
+    "namespace": "project_sgx_scraping",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/project_sgx_scraping.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-user_profile----",
+    "key": "-",
+    "content": "name: User Profile\ndescription: User working on SGX regulatory data collection, comfortable with Python/Playwright, prefers automated solutions\ntype: user\n---\n\n- Comfortable with Python, Playwright, and browser automation\n- Wants comprehensive scraping — \"download everything\", not just keyword matches\n- Prefers parallel execution for speed\n- Limited local storage — plans to push data to GitHub\n- Interested in regulatory/compliance data (SGX rulebooks, company filings, corporate actions)\n- Likely",
+    "summary": "---",
+    "namespace": "user_profile",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-SGX/memory/user_profile.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276857
+  },
+  {
+    "id": "mem-MEMORY-project-memory-index",
+    "key": "project-memory-index",
+    "content": "This file indexes all memory files saved for the UNFPA LKYSPP project.",
+    "summary": "Project Memory Index",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-MEMORY-memory-files",
+    "key": "memory-files",
+    "content": "| File | Type | Description |\n|------|------|-------------|\n| [user_haojun.md](./user_haojun.md) | user | Who Haojun See is and his role as the technical builder of this app (MPP 2021 alumnus, not a current student) |\n| [project_lkyspp_group.md](./project_lkyspp_group.md) | project | LKYSPP Policy Innovation Lab course context, group members (Rani, Prachi, Abhishek, Preeti), client (UNFPA), and framing guidance |\n\n| [project_resume_ppp_reframe.md](./project_resume_ppp_reframe.md) | project | Mid",
+    "summary": "Memory Files",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-MEMORY-key-facts-at-a-glance",
+    "key": "key-facts-at-a-glance",
+    "content": "- **App builder:** Haojun See (MPP 2021 alumnus, NUS LKYSPP)\n- **Course:** Professor Mancini's Policy Innovation Lab, NUS LKYSPP\n- **Client:** UNFPA\n- **Group members:** Rani Opula Rajan, Prachi Sharma, Abhishek Tiwari, Preeti Patil\n- **Framing:** Always describe as a LKYSPP Policy Innovation Lab student consulting project, not an On The Ground agency project\n- **RESUME TRIGGER:** If user says \"resume\", read `project_resume_ppp_reframe.md` and brief them on the open questions",
+    "summary": "Key Facts at a Glance",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_lkyspp_group----",
+    "key": "-",
+    "content": "name: LKYSPP Policy Innovation Lab — project context\ndescription: Course, group members, client, and purpose of the UNFPA project\ntype: project\n---\n\nThis is a consulting project run through **Professor Mancini's Policy Innovation Lab** course at the Lee Kuan Yew School of Public Policy, NUS. The client is UNFPA.\n\nGroup members:\n- Rani Opula Rajan\n- Prachi Sharma\n- Abhishek Tiwari\n- Preeti Patil\n\nApp built by: Haojun See (MPP 2021 alumnus)\n\n**Why:** The group needs a research and knowledge manage",
+    "summary": "---",
+    "namespace": "project_lkyspp_group",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_lkyspp_group.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe----",
+    "key": "-",
+    "content": "name: Resume: PPP product reframe\ndescription: Mid-conversation pause — the UNFPA knowledge base product framing needs to be corrected; awaiting answers before making UI/prompt changes\ntype: project\n---",
+    "summary": "---",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe-what-was-just-built--commit-53",
+    "key": "what-was-just-built-commit-53a4e21-pushed-to-main-",
+    "content": "The plan aligned the knowledge base and interface to \"UNFPA Challenge B\" (PPPs for climate/humanitarian resilience in Asia). Changes made:\n- System prompt rewritten to orient the AI as a research assistant *for the LKYSPP consulting team*\n- UI text updated: site title, header wordmark, page descriptions, footer attribution changed to \"LKYSPP Policy Innovation Lab · UNFPA Project B\"\n- Four new Block R documents created (full research depth):\n  - UNFPA-R-01: PPP Models for Humanitarian & Developme",
+    "summary": "What was just built (commit 53a4e21, pushed to main)",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe-the-problem-that-surfaced",
+    "key": "the-problem-that-surfaced",
+    "content": "Haojun clarified: this tool is NOT meant to be a research assistant for the LKYSPP team. It is the **consulting deliverable** — a product the team hands over TO UNFPA. UNFPA staff are the end users, not the students.\n\nThe current framing (\"Research tool for the LKYSPP Policy Innovation Lab team\") is wrong. It needs to be reframed as a product for UNFPA.",
+    "summary": "The problem that surfaced",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t",
+    "key": "three-questions-haojun-needs-to-answer-before-the-",
+    "content": "1. **Who specifically at UNFPA will use this?** (Asia-Pacific regional office staff? Partnerships/private sector team? Country office programme staff? Broader mix?)\n2. **What should the AI help them do?** (Explore PPP design options? Brief themselves on climate-SRHR evidence? Prepare for Singapore finance conversations? Combination?)\n3. **How should the LKYSPP team be attributed?** (As creators — \"Built by LKYSPP Policy Innovation Lab\"? Or should the product stand on its own without student attr",
+    "summary": "Three questions Haojun needs to answer before the reframe",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe-how-to-resume",
+    "key": "how-to-resume",
+    "content": "User says \"resume\" → read this file → brief Haojun on where we left off → ask the three questions above → once answered, update:\n- `next-app/app/api/chat/route.ts` — system prompt\n- `next-app/app/layout.tsx` — title, metadata, header, footer\n- `next-app/app/page.tsx` — heading and description\n- `next-app/app/knowledge/page.tsx` — description\nThen commit and push.",
+    "summary": "How to resume",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_resume_ppp_reframe-why--context-on-the-correct-fr",
+    "key": "why-context-on-the-correct-framing",
+    "content": "The LKYSPP group's deliverable to UNFPA is this tool. The R-block documents represent the team's research output. The tool should present as a professional product UNFPA can use internally — not a student project tool.",
+    "summary": "Why: context on the correct framing",
+    "namespace": "project_resume_ppp_reframe",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/project_resume_ppp_reframe.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-user_haojun----",
+    "key": "-",
+    "content": "name: Haojun See — project background\ndescription: Who Haojun is and his role in the UNFPA LKYSPP project\ntype: user\n---\n\nHaojun See is an MPP 2021 graduate of the Lee Kuan Yew School of Public Policy (NUS). He built this app (the UNFPA knowledge base + chat interface) to support the LKYSPP Policy Innovation Lab consulting group working for UNFPA as their client.\n\nHe is NOT a current student — he is an alumnus contributing technical work to support the group.",
+    "summary": "---",
+    "namespace": "user_haojun",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-Downloads-UNFPA/memory/user_haojun.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-MEMORY----cdd-scoring-pipeline--proje",
+    "key": "-cdd-scoring-pipeline-project-cdd-pipeline-md-mast",
+    "content": "- [CDD Pipeline Cleanup — PAUSED](project_cdd_cleanup_inprogress.md) — Active refactor paused 2026-04-07 mid script-reading. Resume by reading remaining scripts then proposing consolidation.",
+    "summary": "- [CDD Scoring Pipeline](project_cdd_pipeline.md) — _master_pipeline/09_cdd_score.py is the single-command entry for scoring/ranking/exporting candidates",
+    "namespace": "core",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/MEMORY.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276858
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress----",
+    "key": "-",
+    "content": "name: CDD Pipeline Cleanup — In Progress (PAUSED)\ndescription: Active refactor to consolidate _master_pipeline scripts into one clean pipeline + add PDF→markdown KB. Paused mid-script-reading on 2026-04-07.\ntype: project\n---\n\n**STATUS: PAUSED 2026-04-07 mid-task. Resume by re-reading remaining scripts, then proposing consolidation plan for user approval BEFORE deleting/merging anything.**",
+    "summary": "---",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-",
+    "key": "user-s-goals-verbatim-intent-",
+    "content": "1. End up with **one clear pipeline** of scripts in `_master_pipeline/`. Duplicates must be merged/squeezed into single scripts. User granted full permission to do this.\n2. **Delete System_Designer_Candidates/ and System_Designer_Candidate_Shortlist.xlsx** — confirmed empty/disposable.\n3. **Keep `_clean_resumes/` (18GB) intact** — that's the source corpus.\n4. **Add a PDF→markdown knowledge base** so resumes don't need to be reparsed from PDF every run, but the original PDFs remain retrievable on",
+    "summary": "User's goals (verbatim intent)",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before",
+    "key": "what-i-had-already-done-before-pause",
+    "content": "- Saved memory: `project_cdd_pipeline.md` (the main pipeline overview)\n- Created TaskList tasks #1, #2, #3 (read scripts → design → execute)\n- Confirmed the obvious junk: `.DS_Store`, `Icon` (0 bytes), `__pycache__/`, `parse_log.txt`, empty `logs/`\n- Started reading scripts in `_master_pipeline/`. Script line counts:\n  - 00_scan_inventory.py (243) ✅ READ\n  - 01_dedup.py (353) ✅ READ\n  - 02_classify.py (334) ✅ READ\n  - 03_build_manifest.py (296) ✅ READ\n  - 04_export_clean.py (187) ✅ READ\n  - 05_p",
+    "summary": "What I had already done before pause",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00",
+    "key": "what-i-learned-from-scripts-00-05",
+    "content": "- **Pipeline uses SQLite** (`manifest.db`) as the spine. Each step reads/writes columns on the `inventory` and `candidates` tables.\n- **00_scan_inventory**: walks BASE_DIR, populates `inventory` table with file metadata. Skips small files <1KB, junk dirs, non-resume extensions.\n- **01_dedup**: MD5-hashes files (parallel ThreadPool), groups by content_hash, then groups by normalized filename + size match. Picks \"primary\" using SOURCE_PRIORITY from config. Marks duplicates.\n- **02_classify**: 4 st",
+    "summary": "What I learned from scripts 00–05",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo",
+    "key": "open-questions-to-resolve-before-consolidation",
+    "content": "1. Is `05_parse_resumes_gemini.py` interchangeable with `05_parse_resumes.py`? If so, pick one (likely Gemini if user prefers cost) or unify behind a `--provider` flag.\n2. Is `sort_resumes.py` an older version of `06_sort_by_seniority.py`? Confirm by reading both.\n3. What does `07_parse_clean_resumes.py` do that's different from `05_parse_resumes.py`? It exists separately so likely operates on the `_clean_resumes/` tree (post-export) instead of source paths. May be obsolete after consolidation.\n",
+    "summary": "Open questions to resolve before consolidation",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session",
+    "key": "resume-protocol-next-session",
+    "content": "1. Read remaining scripts: 05_gemini, 06, 07, 08, 09, sort_resumes, utils, config (in parallel batches of 3-4).\n2. Build a function/responsibility matrix to identify exact overlaps.\n3. Propose a consolidated layout to user. Likely shape:\n   - `01_inventory.py` (scan + dedup, merging 00+01)\n   - `02_classify.py` (filename/folder classify + content-based reclassify, merging 02+08)\n   - `03_export.py` (build manifest + export clean tree, merging 03+04)\n   - `04_parse.py` (PDF/DOCX → parsed JSON, si",
+    "summary": "Resume protocol next session",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel",
+    "key": "markdown-kb-design-notes-preliminary-confirm-with-",
+    "content": "- Goal: parse PDFs once → store markdown → all downstream steps consume markdown for speed.\n- Library options to evaluate: `pymupdf4llm` (fast, simple), `marker-pdf` (high quality, slower), `docling` (IBM, structured). Default likely `pymupdf4llm` for speed unless user wants fidelity.\n- Storage layout proposal: `_master_pipeline/kb/markdown/{candidate_id}_{hash8}.md` + `kb/index.json` mapping candidate_id → markdown path + source PDF path. Add `markdown_path` column to candidates table.\n- Retrie",
+    "summary": "Markdown KB design notes (preliminary — confirm with user)",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf",
+    "key": "files-to-delete-confirmed-safe-",
+    "content": "- `.DS_Store` (root + any nested)\n- `Icon` (0 bytes)\n- `_master_pipeline/__pycache__/`\n- `_master_pipeline/parse_log.txt` (regenerable log)\n- `_master_pipeline/logs/` (empty)\n- `System_Designer_Candidates/` (user confirmed empty/disposable)\n- `System_Designer_Candidate_Shortlist.xlsx` (user confirmed disposable)",
+    "summary": "Files to delete (confirmed safe)",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-files-definitely-keeping",
+    "key": "files-definitely-keeping",
+    "content": "- `_clean_resumes/` (18GB source corpus)\n- `_master_pipeline/manifest.db` (pipeline state)\n- `_master_pipeline/parsed_json/` (1,371 parsed JSONs)\n- `_master_pipeline/cdd_ranked.xlsx` (last good output — could regenerate but no harm keeping)\n- `_master_pipeline/MANIFEST.csv`\n- `rfcdd_updated.skill` (user's skill file)",
+    "summary": "Files definitely keeping",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_cleanup_inprogress-tasklist-state-at-pause",
+    "key": "tasklist-state-at-pause",
+    "content": "- Task #1 \"Read all pipeline scripts\" — IN PROGRESS, about 40% done (6/14 files read)\n- Task #2 \"Design consolidated pipeline + markdown KB\" — PENDING\n- Task #3 \"Execute consolidation + cleanup\" — PENDING",
+    "summary": "TaskList state at pause",
+    "namespace": "project_cdd_cleanup_inprogress",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_cleanup_inprogress.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "mem-project_cdd_pipeline----",
+    "key": "-",
+    "content": "name: CDD Scoring Pipeline\ndescription: RecruitFast bulk candidate scoring pipeline in _master_pipeline/, with 09_cdd_score.py as the single-command entry point\ntype: project\n---\n\nThe working directory `/Users/seehaojun/RecruitFast/Haojun/SynologyDrive/` contains a resume screening pipeline under `_master_pipeline/`. Steps 00–08 handle scan/dedup/classify/parse/sort. Step `09_cdd_score.py` is the single-command CDD scoring workflow — this is the main user-facing entry point.\n\n**Why:** Built to b",
+    "summary": "---",
+    "namespace": "project_cdd_pipeline",
+    "type": "semantic",
+    "metadata": {
+      "sourceFile": "/Users/seehaojun/.claude/projects/-Users-seehaojun-RecruitFast-Haojun-SynologyDrive/memory/project_cdd_pipeline.md",
+      "bootstrapped": true
+    },
+    "createdAt": 1777313276859
+  },
+  {
+    "id": "insight-1777315092581-oi5o",
+    "key": "frequent-edit-unknown",
+    "content": "File unknown was edited 18 times this session — likely a hot path worth monitoring.",
+    "summary": "Frequently edited: unknown (18x)",
+    "namespace": "insights",
+    "type": "procedural",
+    "metadata": {
+      "sourceFile": "unknown",
+      "editCount": 18,
+      "autoGenerated": true
+    },
+    "createdAt": 1777315092581
+  }
+]

@@ -1,0 +1,2581 @@
+{
+  "version": 1,
+  "updatedAt": 1777315093010,
+  "nodeCount": 211,
+  "nodes": {
+    "mem-MEMORY----user-profile--user-role-md-": {
+      "id": "mem-MEMORY----user-profile--user-role-md-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276837
+    },
+    "mem-project_fastjobs_cv----": {
+      "id": "mem-project_fastjobs_cv----",
+      "category": "project_fastjobs_cv",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-project_fastjobs_cv-fastjobs-cv-pipeline": {
+      "id": "mem-project_fastjobs_cv-fastjobs-cv-pipeline",
+      "category": "project_fastjobs_cv",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-project_github_reorg----": {
+      "id": "mem-project_github_reorg----",
+      "category": "project_github_reorg",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-project_github_reorg-github-reorg---2026-03-27": {
+      "id": "mem-project_github_reorg-github-reorg---2026-03-27",
+      "category": "project_github_reorg",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-project_mission_control----": {
+      "id": "mem-project_mission_control----",
+      "category": "project_mission_control",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-project_mission_control-mission-control---operations-h": {
+      "id": "mem-project_mission_control-mission-control---operations-h",
+      "category": "project_mission_control",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-user_role----": {
+      "id": "mem-user_role----",
+      "category": "user_role",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-MEMORY-project-structure": {
+      "id": "mem-MEMORY-project-structure",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-MEMORY-fishcakepotato--connector-app-": {
+      "id": "mem-MEMORY-fishcakepotato--connector-app-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-MEMORY-key-repos--with-remotes-": {
+      "id": "mem-MEMORY-key-repos--with-remotes-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-MEMORY-tech-stacks-observed": {
+      "id": "mem-MEMORY-tech-stacks-observed",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-fishcake-potato-architecture-decision": {
+      "id": "mem-fishcake-potato-architecture-decision",
+      "category": "fishcake-potato",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-fishcake-potato-how-it-works": {
+      "id": "mem-fishcake-potato-how-it-works",
+      "category": "fishcake-potato",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-fishcake-potato-files-created--2026-03-06-": {
+      "id": "mem-fishcake-potato-files-created--2026-03-06-",
+      "category": "fishcake-potato",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-fishcake-potato-outstanding-work": {
+      "id": "mem-fishcake-potato-outstanding-work",
+      "category": "fishcake-potato",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-fishcake-potato-key-design-decisions": {
+      "id": "mem-fishcake-potato-key-design-decisions",
+      "category": "fishcake-potato",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276838
+    },
+    "mem-MEMORY-gmail-mcp-setup--completed-": {
+      "id": "mem-MEMORY-gmail-mcp-setup--completed-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-MEMORY-project-files": {
+      "id": "mem-MEMORY-project-files",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-MEMORY-project-overview": {
+      "id": "mem-MEMORY-project-overview",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-tech-stack": {
+      "id": "mem-MEMORY-tech-stack",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-key-architecture-decisions": {
+      "id": "mem-MEMORY-key-architecture-decisions",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-MEMORY-key-files": {
+      "id": "mem-MEMORY-key-files",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-MEMORY-current-state--feb-2026-": {
+      "id": "mem-MEMORY-current-state--feb-2026-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-MEMORY-next-steps--for-future-session": {
+      "id": "mem-MEMORY-next-steps--for-future-session",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-MEMORY-user-preferences": {
+      "id": "mem-MEMORY-user-preferences",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY----nats-quiz-upgrade--project-": {
+      "id": "mem-MEMORY----nats-quiz-upgrade--project-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-feedback_neon_not_supabase----": {
+      "id": "mem-feedback_neon_not_supabase----",
+      "category": "feedback_neon_not_supabase",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276846
+    },
+    "mem-feedback_sourcing_factcheck----": {
+      "id": "mem-feedback_sourcing_factcheck----",
+      "category": "feedback_sourcing_factcheck",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276839
+    },
+    "mem-project_aperture_strategic_plan----": {
+      "id": "mem-project_aperture_strategic_plan----",
+      "category": "project_aperture_strategic_plan",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-project_natsquiz_upgrade----": {
+      "id": "mem-project_natsquiz_upgrade----",
+      "category": "project_natsquiz_upgrade",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-user_haojun----": {
+      "id": "mem-user_haojun----",
+      "category": "user_haojun",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-MEMORY-identity": {
+      "id": "mem-MEMORY-identity",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-stack": {
+      "id": "mem-MEMORY-stack",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-verticals": {
+      "id": "mem-MEMORY-verticals",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-repo-structure": {
+      "id": "mem-MEMORY-repo-structure",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-features-built": {
+      "id": "mem-MEMORY-features-built",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-phase-1a-corpus-deployment---t": {
+      "id": "mem-MEMORY-phase-1a-corpus-deployment---t",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-full-deployment-checklist--fre": {
+      "id": "mem-MEMORY-full-deployment-checklist--fre",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-coding-conventions": {
+      "id": "mem-MEMORY-coding-conventions",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-roadmap--post-corpus-deploymen": {
+      "id": "mem-MEMORY-roadmap--post-corpus-deploymen",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-project-state--2026-03-09-": {
+      "id": "mem-MEMORY-project-state--2026-03-09-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276840
+    },
+    "mem-MEMORY-project-status": {
+      "id": "mem-MEMORY-project-status",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-key-patterns": {
+      "id": "mem-MEMORY-key-patterns",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-launch-blockers--user-actions-": {
+      "id": "mem-MEMORY-launch-blockers--user-actions-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-memory-index": {
+      "id": "mem-MEMORY-memory-index",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-project_launch_status----": {
+      "id": "mem-project_launch_status----",
+      "category": "project_launch_status",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-project": {
+      "id": "mem-MEMORY-project",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-vercel-build---typescript-pitf": {
+      "id": "mem-MEMORY-vercel-build---typescript-pitf",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-completed-work--post-meeting-c": {
+      "id": "mem-MEMORY-completed-work--post-meeting-c",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-financing-extraction-pipeline": {
+      "id": "mem-MEMORY-financing-extraction-pipeline",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-paper-scoring-pipeline": {
+      "id": "mem-MEMORY-paper-scoring-pipeline",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-MEMORY-key-file-locations": {
+      "id": "mem-MEMORY-key-file-locations",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-project_paper_scoring_pipeline----": {
+      "id": "mem-project_paper_scoring_pipeline----",
+      "category": "project_paper_scoring_pipeline",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-project_paper_scoring_pipeline-paper-scoring-pipeline": {
+      "id": "mem-project_paper_scoring_pipeline-paper-scoring-pipeline",
+      "category": "project_paper_scoring_pipeline",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276841
+    },
+    "mem-feedback_testing----": {
+      "id": "mem-feedback_testing----",
+      "category": "feedback_testing",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-feedback_testing-test-each-sample-file---check-": {
+      "id": "mem-feedback_testing-test-each-sample-file---check-",
+      "category": "feedback_testing",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-project_fincontrol_state----": {
+      "id": "mem-project_fincontrol_state----",
+      "category": "project_fincontrol_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-what-s-been-built": {
+      "id": "mem-MEMORY-what-s-been-built",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-api-at-http---localhost-8000--": {
+      "id": "mem-MEMORY-api-at-http---localhost-8000--",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-what-to-build-next--logical-ne": {
+      "id": "mem-MEMORY-what-to-build-next--logical-ne",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-the-concept": {
+      "id": "mem-MEMORY-the-concept",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-platform-architecture--4-layer": {
+      "id": "mem-MEMORY-platform-architecture--4-layer",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276842
+    },
+    "mem-MEMORY-three-apps-being-built": {
+      "id": "mem-MEMORY-three-apps-being-built",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-key-market-context": {
+      "id": "mem-MEMORY-key-market-context",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-key-partners--not-competitors-": {
+      "id": "mem-MEMORY-key-partners--not-competitors-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-funding-pathways": {
+      "id": "mem-MEMORY-funding-pathways",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-pdf-generation--what-works-": {
+      "id": "mem-MEMORY-pdf-generation--what-works-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-files-in-this-project": {
+      "id": "mem-MEMORY-files-in-this-project",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-github": {
+      "id": "mem-MEMORY-github",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY-show-this-summary-at-the-start": {
+      "id": "mem-MEMORY-show-this-summary-at-the-start",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276843
+    },
+    "mem-MEMORY----rulehaus-vision--project-ru": {
+      "id": "mem-MEMORY----rulehaus-vision--project-ru",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276844
+    },
+    "mem-cleanup_progress_apr18----": {
+      "id": "mem-cleanup_progress_apr18----",
+      "category": "cleanup_progress_apr18",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276844
+    },
+    "mem-cleanup_progress_apr18-current-status--apr-18--2026-": {
+      "id": "mem-cleanup_progress_apr18-current-status--apr-18--2026-",
+      "category": "cleanup_progress_apr18",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276844
+    },
+    "mem-feedback_proposal_tone----": {
+      "id": "mem-feedback_proposal_tone----",
+      "category": "feedback_proposal_tone",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276844
+    },
+    "mem-project_admin_plan----": {
+      "id": "mem-project_admin_plan----",
+      "category": "project_admin_plan",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276844
+    },
+    "mem-project_data_state----": {
+      "id": "mem-project_data_state----",
+      "category": "project_data_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_diligence_feature----": {
+      "id": "mem-project_diligence_feature----",
+      "category": "project_diligence_feature",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_diligence_feature-feature----diligence----due-di": {
+      "id": "mem-project_diligence_feature-feature----diligence----due-di",
+      "category": "project_diligence_feature",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_rulehaus_vision----": {
+      "id": "mem-project_rulehaus_vision----",
+      "category": "project_rulehaus_vision",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_seek_machine----": {
+      "id": "mem-project_seek_machine----",
+      "category": "project_seek_machine",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8----": {
+      "id": "mem-session_progress_apr8----",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca": {
+      "id": "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-phase-2--remote-ingest-py--see": {
+      "id": "mem-session_progress_apr8-phase-2--remote-ingest-py--see",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-company-intelligence-fix--comm": {
+      "id": "mem-session_progress_apr8-company-intelligence-fix--comm",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-daily-update-status": {
+      "id": "mem-session_progress_apr8-daily-update-status",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-next-steps-when-resuming": {
+      "id": "mem-session_progress_apr8-next-steps-when-resuming",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-session_progress_apr8-key-commits-this-session": {
+      "id": "mem-session_progress_apr8-key-commits-this-session",
+      "category": "session_progress_apr8",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_factcheck_audit----": {
+      "id": "mem-project_factcheck_audit----",
+      "category": "project_factcheck_audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276845
+    },
+    "mem-project_think_block----": {
+      "id": "mem-project_think_block----",
+      "category": "project_think_block",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276846
+    },
+    "mem-MEMORY----use-neon--not-supabase--fee": {
+      "id": "mem-MEMORY----use-neon--not-supabase--fee",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276846
+    },
+    "mem-project_production_cutover----": {
+      "id": "mem-project_production_cutover----",
+      "category": "project_production_cutover",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276846
+    },
+    "mem-feedback_persist_progress----": {
+      "id": "mem-feedback_persist_progress----",
+      "category": "feedback_persist_progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276847
+    },
+    "mem-project_command_centre_pivot----": {
+      "id": "mem-project_command_centre_pivot----",
+      "category": "project_command_centre_pivot",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276847
+    },
+    "mem-project_obsidian_connection----": {
+      "id": "mem-project_obsidian_connection----",
+      "category": "project_obsidian_connection",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-project_product_urls----": {
+      "id": "mem-project_product_urls----",
+      "category": "project_product_urls",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-MEMORY-current-state--2026-02-10-": {
+      "id": "mem-MEMORY-current-state--2026-02-10-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-MEMORY-known-issues": {
+      "id": "mem-MEMORY-known-issues",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-MEMORY-api-keys": {
+      "id": "mem-MEMORY-api-keys",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-MEMORY-dev-environment": {
+      "id": "mem-MEMORY-dev-environment",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-MEMORY-architecture-notes": {
+      "id": "mem-MEMORY-architecture-notes",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-feedback_neon_preference----": {
+      "id": "mem-feedback_neon_preference----",
+      "category": "feedback_neon_preference",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276848
+    },
+    "mem-project_trainersg----": {
+      "id": "mem-project_trainersg----",
+      "category": "project_trainersg",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-project-type": {
+      "id": "mem-MEMORY-project-type",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-key-files-created": {
+      "id": "mem-MEMORY-key-files-created",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-technical-notes": {
+      "id": "mem-MEMORY-technical-notes",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-domain-essentials": {
+      "id": "mem-MEMORY-domain-essentials",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-phase-status": {
+      "id": "mem-MEMORY-phase-status",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-what-s-complete": {
+      "id": "mem-MEMORY-what-s-complete",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-what-s-left--task--6-": {
+      "id": "mem-MEMORY-what-s-left--task--6-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-MEMORY-key-technical-notes": {
+      "id": "mem-MEMORY-key-technical-notes",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276849
+    },
+    "mem-feedback_gemma4----": {
+      "id": "mem-feedback_gemma4----",
+      "category": "feedback_gemma4",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276850
+    },
+    "mem-project_legalbox----": {
+      "id": "mem-project_legalbox----",
+      "category": "project_legalbox",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276850
+    },
+    "mem-user_profile----": {
+      "id": "mem-user_profile----",
+      "category": "user_profile",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-MEMORY-project-goal": {
+      "id": "mem-MEMORY-project-goal",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-MEMORY-owner": {
+      "id": "mem-MEMORY-owner",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-MEMORY-status": {
+      "id": "mem-MEMORY-status",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-open-questions---pending-owner": {
+      "id": "mem-open-questions-open-questions---pending-owner",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-domain---brand": {
+      "id": "mem-open-questions-domain---brand",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-living-lab-tours": {
+      "id": "mem-open-questions-living-lab-tours",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-caretraining---workshops": {
+      "id": "mem-open-questions-caretraining---workshops",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-events": {
+      "id": "mem-open-questions-events",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-careconnect-b2b": {
+      "id": "mem-open-questions-careconnect-b2b",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-careresources-membership": {
+      "id": "mem-open-questions-careresources-membership",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-carebell": {
+      "id": "mem-open-questions-carebell",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-tech-preferences": {
+      "id": "mem-open-questions-tech-preferences",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-open-questions-admin---operations": {
+      "id": "mem-open-questions-admin---operations",
+      "category": "open-questions",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-website-audit-1--sgassist-com---main-nonprof": {
+      "id": "mem-website-audit-1--sgassist-com---main-nonprof",
+      "category": "website-audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-website-audit-2--careconnect-sg---b2b---inst": {
+      "id": "mem-website-audit-2--careconnect-sg---b2b---inst",
+      "category": "website-audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-website-audit-3--caregivers-sg---unused---un": {
+      "id": "mem-website-audit-3--caregivers-sg---unused---un",
+      "category": "website-audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-website-audit-summary-of-all-sign-up-mechani": {
+      "id": "mem-website-audit-summary-of-all-sign-up-mechani",
+      "category": "website-audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276852
+    },
+    "mem-website-audit-pain-points-identified": {
+      "id": "mem-website-audit-pain-points-identified",
+      "category": "website-audit",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276853
+    },
+    "mem-MEMORY----pipeline-state--pipeline-st": {
+      "id": "mem-MEMORY----pipeline-state--pipeline-st",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276853
+    },
+    "mem-feedback_scoring_agents----": {
+      "id": "mem-feedback_scoring_agents----",
+      "category": "feedback_scoring_agents",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state----": {
+      "id": "mem-pipeline_state----",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-progress-summary--end-of-sessi": {
+      "id": "mem-pipeline_state-progress-summary--end-of-sessi",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-current-state-files": {
+      "id": "mem-pipeline_state-current-state-files",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-known-issue--scoring-queue-py-": {
+      "id": "mem-pipeline_state-known-issue--scoring-queue-py-",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-critical--agent-prompts-must-u": {
+      "id": "mem-pipeline_state-critical--agent-prompts-must-u",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-rate-limit-pattern": {
+      "id": "mem-pipeline_state-rate-limit-pattern",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-session-handoff-checklist": {
+      "id": "mem-pipeline_state-session-handoff-checklist",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-scoring-rubric--6-dimensions--": {
+      "id": "mem-pipeline_state-scoring-rubric--6-dimensions--",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-screening-rules": {
+      "id": "mem-pipeline_state-screening-rules",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-pipeline_state-why--this-coordination-structu": {
+      "id": "mem-pipeline_state-why--this-coordination-structu",
+      "category": "pipeline_state",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-project_scoring_pipeline----": {
+      "id": "mem-project_scoring_pipeline----",
+      "category": "project_scoring_pipeline",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-MEMORY----electrify-build-progress--p": {
+      "id": "mem-MEMORY----electrify-build-progress--p",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-project_electrify_build_progress----": {
+      "id": "mem-project_electrify_build_progress----",
+      "category": "project_electrify_build_progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-project_electrify_build_progress-completed--100--": {
+      "id": "mem-project_electrify_build_progress-completed--100--",
+      "category": "project_electrify_build_progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-project_electrify_build_progress-fixes-applied--2026-03-30-": {
+      "id": "mem-project_electrify_build_progress-fixes-applied--2026-03-30-",
+      "category": "project_electrify_build_progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-project_electrify_build_progress-next-steps": {
+      "id": "mem-project_electrify_build_progress-next-steps",
+      "category": "project_electrify_build_progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-user_kenneth_project----": {
+      "id": "mem-user_kenneth_project----",
+      "category": "user_kenneth_project",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276854
+    },
+    "mem-MEMORY----second-brain-setup-progress": {
+      "id": "mem-MEMORY----second-brain-setup-progress",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-second-brain-setup-progress----": {
+      "id": "mem-second-brain-setup-progress----",
+      "category": "second-brain-setup-progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-second-brain-setup-progress-completed--2026-04-08-": {
+      "id": "mem-second-brain-setup-progress-completed--2026-04-08-",
+      "category": "second-brain-setup-progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-second-brain-setup-progress-pending---manual--hao-jun-must": {
+      "id": "mem-second-brain-setup-progress-pending---manual--hao-jun-must",
+      "category": "second-brain-setup-progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-second-brain-setup-progress-pending---ready-to-build--next": {
+      "id": "mem-second-brain-setup-progress-pending---ready-to-build--next",
+      "category": "second-brain-setup-progress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-user-profile----": {
+      "id": "mem-user-profile----",
+      "category": "user-profile",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-vault-structure----": {
+      "id": "mem-vault-structure----",
+      "category": "vault-structure",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-vault-structure-folder-layout--para---lyt-hybr": {
+      "id": "mem-vault-structure-folder-layout--para---lyt-hybr",
+      "category": "vault-structure",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-vault-structure-conventions": {
+      "id": "mem-vault-structure-conventions",
+      "category": "vault-structure",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-vault-structure-90-external-symlinks": {
+      "id": "mem-vault-structure-90-external-symlinks",
+      "category": "vault-structure",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276855
+    },
+    "mem-MEMORY-current-state--as-of-2026-03-1": {
+      "id": "mem-MEMORY-current-state--as-of-2026-03-1",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-document-architecture": {
+      "id": "mem-MEMORY-document-architecture",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-block-breakdown--426-total-": {
+      "id": "mem-MEMORY-block-breakdown--426-total-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-gap-document-work---complete": {
+      "id": "mem-MEMORY-gap-document-work---complete",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-chat-interface-plan": {
+      "id": "mem-MEMORY-chat-interface-plan",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-chat-interface---complete-and-": {
+      "id": "mem-MEMORY-chat-interface---complete-and-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-book-expansion-progress--as-of": {
+      "id": "mem-MEMORY-book-expansion-progress--as-of",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-credit-system-design--planned-": {
+      "id": "mem-MEMORY-credit-system-design--planned-",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-MEMORY-key-remaining-work--prioritise": {
+      "id": "mem-MEMORY-key-remaining-work--prioritise",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-corpus-gap-map---60-documents-": {
+      "id": "mem-gap-map-corpus-gap-map---60-documents-",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-how-this-was-built": {
+      "id": "mem-gap-map-how-this-was-built",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-tier-1---critical-gaps--0-1-me": {
+      "id": "mem-gap-map-tier-1---critical-gaps--0-1-me",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-tier-2---fragmentary-coverage-": {
+      "id": "mem-gap-map-tier-2---fragmentary-coverage-",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-tier-3---policy-institutional-": {
+      "id": "mem-gap-map-tier-3---policy-institutional-",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-tier-4---specialist-completene": {
+      "id": "mem-gap-map-tier-4---specialist-completene",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-execution-notes": {
+      "id": "mem-gap-map-execution-notes",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-gap-map-what-s-already-well-covered--n": {
+      "id": "mem-gap-map-what-s-already-well-covered--n",
+      "category": "gap-map",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276856
+    },
+    "mem-project_enrichment_workflow----": {
+      "id": "mem-project_enrichment_workflow----",
+      "category": "project_enrichment_workflow",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-MEMORY----rulehaus-project--project-s": {
+      "id": "mem-MEMORY----rulehaus-project--project-s",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-feedback_long_running----": {
+      "id": "mem-feedback_long_running----",
+      "category": "feedback_long_running",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping----": {
+      "id": "mem-project_sgx_scraping----",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-vision": {
+      "id": "mem-project_sgx_scraping-vision",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-repository": {
+      "id": "mem-project_sgx_scraping-repository",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-repo-structure": {
+      "id": "mem-project_sgx_scraping-repo-structure",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-current-state--2026-03-27-": {
+      "id": "mem-project_sgx_scraping-current-state--2026-03-27-",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-api-discovery": {
+      "id": "mem-project_sgx_scraping-api-discovery",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-project_sgx_scraping-technical-setup": {
+      "id": "mem-project_sgx_scraping-technical-setup",
+      "category": "project_sgx_scraping",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276857
+    },
+    "mem-MEMORY-project-memory-index": {
+      "id": "mem-MEMORY-project-memory-index",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-MEMORY-memory-files": {
+      "id": "mem-MEMORY-memory-files",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-MEMORY-key-facts-at-a-glance": {
+      "id": "mem-MEMORY-key-facts-at-a-glance",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_lkyspp_group----": {
+      "id": "mem-project_lkyspp_group----",
+      "category": "project_lkyspp_group",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe----": {
+      "id": "mem-project_resume_ppp_reframe----",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe-what-was-just-built--commit-53": {
+      "id": "mem-project_resume_ppp_reframe-what-was-just-built--commit-53",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe-the-problem-that-surfaced": {
+      "id": "mem-project_resume_ppp_reframe-the-problem-that-surfaced",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t": {
+      "id": "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe-how-to-resume": {
+      "id": "mem-project_resume_ppp_reframe-how-to-resume",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_resume_ppp_reframe-why--context-on-the-correct-fr": {
+      "id": "mem-project_resume_ppp_reframe-why--context-on-the-correct-fr",
+      "category": "project_resume_ppp_reframe",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-MEMORY----cdd-scoring-pipeline--proje": {
+      "id": "mem-MEMORY----cdd-scoring-pipeline--proje",
+      "category": "core",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276858
+    },
+    "mem-project_cdd_cleanup_inprogress----": {
+      "id": "mem-project_cdd_cleanup_inprogress----",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-": {
+      "id": "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before": {
+      "id": "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00": {
+      "id": "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo": {
+      "id": "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session": {
+      "id": "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel": {
+      "id": "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf": {
+      "id": "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-files-definitely-keeping": {
+      "id": "mem-project_cdd_cleanup_inprogress-files-definitely-keeping",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_cleanup_inprogress-tasklist-state-at-pause": {
+      "id": "mem-project_cdd_cleanup_inprogress-tasklist-state-at-pause",
+      "category": "project_cdd_cleanup_inprogress",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "mem-project_cdd_pipeline----": {
+      "id": "mem-project_cdd_pipeline----",
+      "category": "project_cdd_pipeline",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777313276859
+    },
+    "insight-1777315092581-oi5o": {
+      "id": "insight-1777315092581-oi5o",
+      "category": "insights",
+      "confidence": 0.5,
+      "accessCount": 0,
+      "createdAt": 1777315092581
+    }
+  },
+  "edges": [
+    {
+      "sourceId": "mem-project_fastjobs_cv----",
+      "targetId": "mem-project_fastjobs_cv-fastjobs-cv-pipeline",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_github_reorg----",
+      "targetId": "mem-project_github_reorg-github-reorg---2026-03-27",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_mission_control----",
+      "targetId": "mem-project_mission_control-mission-control---operations-h",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-structure",
+      "targetId": "mem-MEMORY-fishcakepotato--connector-app-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-fishcakepotato--connector-app-",
+      "targetId": "mem-MEMORY-key-repos--with-remotes-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-repos--with-remotes-",
+      "targetId": "mem-MEMORY-tech-stacks-observed",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-fishcake-potato-architecture-decision",
+      "targetId": "mem-fishcake-potato-how-it-works",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-fishcake-potato-how-it-works",
+      "targetId": "mem-fishcake-potato-files-created--2026-03-06-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-fishcake-potato-files-created--2026-03-06-",
+      "targetId": "mem-fishcake-potato-outstanding-work",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-fishcake-potato-outstanding-work",
+      "targetId": "mem-fishcake-potato-key-design-decisions",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-gmail-mcp-setup--completed-",
+      "targetId": "mem-MEMORY-project-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-overview",
+      "targetId": "mem-MEMORY-tech-stack",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-tech-stack",
+      "targetId": "mem-MEMORY-key-architecture-decisions",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-architecture-decisions",
+      "targetId": "mem-MEMORY-key-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-files",
+      "targetId": "mem-MEMORY-current-state--feb-2026-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-current-state--feb-2026-",
+      "targetId": "mem-MEMORY-next-steps--for-future-session",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-next-steps--for-future-session",
+      "targetId": "mem-MEMORY-user-preferences",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-identity",
+      "targetId": "mem-MEMORY-stack",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-stack",
+      "targetId": "mem-MEMORY-verticals",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-verticals",
+      "targetId": "mem-MEMORY-repo-structure",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-repo-structure",
+      "targetId": "mem-MEMORY-key-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-files",
+      "targetId": "mem-MEMORY-features-built",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-features-built",
+      "targetId": "mem-MEMORY-phase-1a-corpus-deployment---t",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-phase-1a-corpus-deployment---t",
+      "targetId": "mem-MEMORY-full-deployment-checklist--fre",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-full-deployment-checklist--fre",
+      "targetId": "mem-MEMORY-coding-conventions",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-coding-conventions",
+      "targetId": "mem-MEMORY-roadmap--post-corpus-deploymen",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-status",
+      "targetId": "mem-MEMORY-tech-stack",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-tech-stack",
+      "targetId": "mem-MEMORY-key-patterns",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-patterns",
+      "targetId": "mem-MEMORY-launch-blockers--user-actions-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project",
+      "targetId": "mem-MEMORY-vercel-build---typescript-pitf",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-vercel-build---typescript-pitf",
+      "targetId": "mem-MEMORY-completed-work--post-meeting-c",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-completed-work--post-meeting-c",
+      "targetId": "mem-MEMORY-financing-extraction-pipeline",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-financing-extraction-pipeline",
+      "targetId": "mem-MEMORY-paper-scoring-pipeline",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-paper-scoring-pipeline",
+      "targetId": "mem-MEMORY-key-file-locations",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_paper_scoring_pipeline----",
+      "targetId": "mem-project_paper_scoring_pipeline-paper-scoring-pipeline",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-feedback_testing----",
+      "targetId": "mem-feedback_testing-test-each-sample-file---check-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-status",
+      "targetId": "mem-MEMORY-what-s-been-built",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-what-s-been-built",
+      "targetId": "mem-MEMORY-api-at-http---localhost-8000--",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-api-at-http---localhost-8000--",
+      "targetId": "mem-MEMORY-what-to-build-next--logical-ne",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-what-to-build-next--logical-ne",
+      "targetId": "mem-MEMORY-the-concept",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-the-concept",
+      "targetId": "mem-MEMORY-platform-architecture--4-layer",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-platform-architecture--4-layer",
+      "targetId": "mem-MEMORY-three-apps-being-built",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-three-apps-being-built",
+      "targetId": "mem-MEMORY-key-market-context",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-market-context",
+      "targetId": "mem-MEMORY-key-partners--not-competitors-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-partners--not-competitors-",
+      "targetId": "mem-MEMORY-funding-pathways",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-funding-pathways",
+      "targetId": "mem-MEMORY-user-preferences",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-user-preferences",
+      "targetId": "mem-MEMORY-pdf-generation--what-works-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-pdf-generation--what-works-",
+      "targetId": "mem-MEMORY-files-in-this-project",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-files-in-this-project",
+      "targetId": "mem-MEMORY-github",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-cleanup_progress_apr18----",
+      "targetId": "mem-cleanup_progress_apr18-current-status--apr-18--2026-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_diligence_feature----",
+      "targetId": "mem-project_diligence_feature-feature----diligence----due-di",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8----",
+      "targetId": "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca",
+      "targetId": "mem-session_progress_apr8-phase-2--remote-ingest-py--see",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8-phase-2--remote-ingest-py--see",
+      "targetId": "mem-session_progress_apr8-company-intelligence-fix--comm",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8-company-intelligence-fix--comm",
+      "targetId": "mem-session_progress_apr8-daily-update-status",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8-daily-update-status",
+      "targetId": "mem-session_progress_apr8-next-steps-when-resuming",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-session_progress_apr8-next-steps-when-resuming",
+      "targetId": "mem-session_progress_apr8-key-commits-this-session",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-current-state--2026-02-10-",
+      "targetId": "mem-MEMORY-known-issues",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-known-issues",
+      "targetId": "mem-MEMORY-api-keys",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-api-keys",
+      "targetId": "mem-MEMORY-dev-environment",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-dev-environment",
+      "targetId": "mem-MEMORY-architecture-notes",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-type",
+      "targetId": "mem-MEMORY-key-files-created",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-files-created",
+      "targetId": "mem-MEMORY-technical-notes",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-technical-notes",
+      "targetId": "mem-MEMORY-domain-essentials",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-domain-essentials",
+      "targetId": "mem-MEMORY-phase-status",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-status",
+      "targetId": "mem-MEMORY-what-s-complete",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-what-s-complete",
+      "targetId": "mem-MEMORY-what-s-left--task--6-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-what-s-left--task--6-",
+      "targetId": "mem-MEMORY-key-technical-notes",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-goal",
+      "targetId": "mem-MEMORY-owner",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-owner",
+      "targetId": "mem-MEMORY-key-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-files",
+      "targetId": "mem-MEMORY-status",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-open-questions---pending-owner",
+      "targetId": "mem-open-questions-domain---brand",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-domain---brand",
+      "targetId": "mem-open-questions-living-lab-tours",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-living-lab-tours",
+      "targetId": "mem-open-questions-caretraining---workshops",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-caretraining---workshops",
+      "targetId": "mem-open-questions-events",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-events",
+      "targetId": "mem-open-questions-careconnect-b2b",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-careconnect-b2b",
+      "targetId": "mem-open-questions-careresources-membership",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-careresources-membership",
+      "targetId": "mem-open-questions-carebell",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-carebell",
+      "targetId": "mem-open-questions-tech-preferences",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-open-questions-tech-preferences",
+      "targetId": "mem-open-questions-admin---operations",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-website-audit-1--sgassist-com---main-nonprof",
+      "targetId": "mem-website-audit-2--careconnect-sg---b2b---inst",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-website-audit-2--careconnect-sg---b2b---inst",
+      "targetId": "mem-website-audit-3--caregivers-sg---unused---un",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-website-audit-3--caregivers-sg---unused---un",
+      "targetId": "mem-website-audit-summary-of-all-sign-up-mechani",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-website-audit-summary-of-all-sign-up-mechani",
+      "targetId": "mem-website-audit-pain-points-identified",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state----",
+      "targetId": "mem-pipeline_state-progress-summary--end-of-sessi",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-progress-summary--end-of-sessi",
+      "targetId": "mem-pipeline_state-current-state-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-current-state-files",
+      "targetId": "mem-pipeline_state-known-issue--scoring-queue-py-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-known-issue--scoring-queue-py-",
+      "targetId": "mem-pipeline_state-critical--agent-prompts-must-u",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-critical--agent-prompts-must-u",
+      "targetId": "mem-pipeline_state-rate-limit-pattern",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-rate-limit-pattern",
+      "targetId": "mem-pipeline_state-session-handoff-checklist",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-session-handoff-checklist",
+      "targetId": "mem-pipeline_state-scoring-rubric--6-dimensions--",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-scoring-rubric--6-dimensions--",
+      "targetId": "mem-pipeline_state-screening-rules",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-pipeline_state-screening-rules",
+      "targetId": "mem-pipeline_state-why--this-coordination-structu",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_electrify_build_progress----",
+      "targetId": "mem-project_electrify_build_progress-completed--100--",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_electrify_build_progress-completed--100--",
+      "targetId": "mem-project_electrify_build_progress-fixes-applied--2026-03-30-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_electrify_build_progress-fixes-applied--2026-03-30-",
+      "targetId": "mem-project_electrify_build_progress-next-steps",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-second-brain-setup-progress----",
+      "targetId": "mem-second-brain-setup-progress-completed--2026-04-08-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-second-brain-setup-progress-completed--2026-04-08-",
+      "targetId": "mem-second-brain-setup-progress-pending---manual--hao-jun-must",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-second-brain-setup-progress-pending---manual--hao-jun-must",
+      "targetId": "mem-second-brain-setup-progress-pending---ready-to-build--next",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-vault-structure----",
+      "targetId": "mem-vault-structure-folder-layout--para---lyt-hybr",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-vault-structure-folder-layout--para---lyt-hybr",
+      "targetId": "mem-vault-structure-conventions",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-vault-structure-conventions",
+      "targetId": "mem-vault-structure-90-external-symlinks",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-overview",
+      "targetId": "mem-MEMORY-current-state--as-of-2026-03-1",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-current-state--as-of-2026-03-1",
+      "targetId": "mem-MEMORY-document-architecture",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-document-architecture",
+      "targetId": "mem-MEMORY-block-breakdown--426-total-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-block-breakdown--426-total-",
+      "targetId": "mem-MEMORY-gap-document-work---complete",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-gap-document-work---complete",
+      "targetId": "mem-MEMORY-chat-interface-plan",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-chat-interface-plan",
+      "targetId": "mem-MEMORY-chat-interface---complete-and-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-chat-interface---complete-and-",
+      "targetId": "mem-MEMORY-book-expansion-progress--as-of",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-book-expansion-progress--as-of",
+      "targetId": "mem-MEMORY-credit-system-design--planned-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-credit-system-design--planned-",
+      "targetId": "mem-MEMORY-key-remaining-work--prioritise",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-key-remaining-work--prioritise",
+      "targetId": "mem-MEMORY-user-preferences",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-corpus-gap-map---60-documents-",
+      "targetId": "mem-gap-map-how-this-was-built",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-how-this-was-built",
+      "targetId": "mem-gap-map-tier-1---critical-gaps--0-1-me",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-tier-1---critical-gaps--0-1-me",
+      "targetId": "mem-gap-map-tier-2---fragmentary-coverage-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-tier-2---fragmentary-coverage-",
+      "targetId": "mem-gap-map-tier-3---policy-institutional-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-tier-3---policy-institutional-",
+      "targetId": "mem-gap-map-tier-4---specialist-completene",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-tier-4---specialist-completene",
+      "targetId": "mem-gap-map-execution-notes",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-gap-map-execution-notes",
+      "targetId": "mem-gap-map-what-s-already-well-covered--n",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping----",
+      "targetId": "mem-project_sgx_scraping-vision",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-vision",
+      "targetId": "mem-project_sgx_scraping-repository",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-repository",
+      "targetId": "mem-project_sgx_scraping-repo-structure",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-repo-structure",
+      "targetId": "mem-project_sgx_scraping-current-state--2026-03-27-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-current-state--2026-03-27-",
+      "targetId": "mem-project_sgx_scraping-api-discovery",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-api-discovery",
+      "targetId": "mem-project_sgx_scraping-technical-setup",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-memory-index",
+      "targetId": "mem-MEMORY-memory-files",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-memory-files",
+      "targetId": "mem-MEMORY-key-facts-at-a-glance",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_resume_ppp_reframe----",
+      "targetId": "mem-project_resume_ppp_reframe-what-was-just-built--commit-53",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_resume_ppp_reframe-what-was-just-built--commit-53",
+      "targetId": "mem-project_resume_ppp_reframe-the-problem-that-surfaced",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_resume_ppp_reframe-the-problem-that-surfaced",
+      "targetId": "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t",
+      "targetId": "mem-project_resume_ppp_reframe-how-to-resume",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_resume_ppp_reframe-how-to-resume",
+      "targetId": "mem-project_resume_ppp_reframe-why--context-on-the-correct-fr",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress----",
+      "targetId": "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-",
+      "targetId": "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before",
+      "targetId": "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00",
+      "targetId": "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo",
+      "targetId": "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session",
+      "targetId": "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel",
+      "targetId": "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf",
+      "targetId": "mem-project_cdd_cleanup_inprogress-files-definitely-keeping",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-files-definitely-keeping",
+      "targetId": "mem-project_cdd_cleanup_inprogress-tasklist-state-at-pause",
+      "type": "temporal",
+      "weight": 0.5
+    },
+    {
+      "sourceId": "mem-MEMORY-project-structure",
+      "targetId": "mem-MEMORY-project-status",
+      "type": "similar",
+      "weight": 0.3028169014084507
+    },
+    {
+      "sourceId": "mem-MEMORY-project-structure",
+      "targetId": "mem-MEMORY-show-this-summary-at-the-start",
+      "type": "similar",
+      "weight": 0.391304347826087
+    },
+    {
+      "sourceId": "mem-MEMORY-memory-files",
+      "targetId": "mem-MEMORY-key-facts-at-a-glance",
+      "type": "similar",
+      "weight": 0.517948717948718
+    },
+    {
+      "sourceId": "mem-project_fastjobs_cv----",
+      "targetId": "mem-project_fastjobs_cv-fastjobs-cv-pipeline",
+      "type": "similar",
+      "weight": 0.345679012345679
+    },
+    {
+      "sourceId": "mem-project_sgx_scraping-current-state--2026-03-27-",
+      "targetId": "mem-project_sgx_scraping-api-discovery",
+      "type": "similar",
+      "weight": 0.3282828282828283
+    },
+    {
+      "sourceId": "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-",
+      "targetId": "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf",
+      "type": "similar",
+      "weight": 0.30303030303030304
+    }
+  ],
+  "pageRanks": {
+    "mem-MEMORY----user-profile--user-role-md-": 0.0018500200262706714,
+    "mem-project_fastjobs_cv----": 0.0018500200262706714,
+    "mem-project_fastjobs_cv-fastjobs-cv-pipeline": 0.0034225371115830547,
+    "mem-project_github_reorg----": 0.0018500200262706714,
+    "mem-project_github_reorg-github-reorg---2026-03-27": 0.0034225371115830547,
+    "mem-project_mission_control----": 0.0018500200262706714,
+    "mem-project_mission_control-mission-control---operations-h": 0.0034225371115830547,
+    "mem-user_role----": 0.0018500200262706714,
+    "mem-MEMORY-project-structure": 0.0018500200262706714,
+    "mem-MEMORY-fishcakepotato--connector-app-": 0.002374192388041466,
+    "mem-MEMORY-key-repos--with-remotes-": 0.003868083606253544,
+    "mem-MEMORY-tech-stacks-observed": 0.005137891541176926,
+    "mem-fishcake-potato-architecture-decision": 0.0018500200262706714,
+    "mem-fishcake-potato-how-it-works": 0.0034225371115830547,
+    "mem-fishcake-potato-files-created--2026-03-06-": 0.004759176595594523,
+    "mem-fishcake-potato-outstanding-work": 0.005895321432341731,
+    "mem-fishcake-potato-key-design-decisions": 0.0068610454358765515,
+    "mem-MEMORY-gmail-mcp-setup--completed-": 0.0018500200262706714,
+    "mem-MEMORY-project-files": 0.0034225371115830547,
+    "mem-MEMORY-project-overview": 0.0018500200262706714,
+    "mem-MEMORY-tech-stack": 0.003308966428921154,
+    "mem-MEMORY-key-architecture-decisions": 0.003256330844862042,
+    "mem-MEMORY-key-files": 0.012538083848026235,
+    "mem-MEMORY-current-state--feb-2026-": 0.005402477701765893,
+    "mem-MEMORY-next-steps--for-future-session": 0.006442126090907773,
+    "mem-MEMORY-user-preferences": 0.023774271354274974,
+    "mem-MEMORY----nats-quiz-upgrade--project-": 0.0018500200262706714,
+    "mem-feedback_neon_not_supabase----": 0.0018500200262706714,
+    "mem-feedback_sourcing_factcheck----": 0.0018500200262706714,
+    "mem-project_aperture_strategic_plan----": 0.0018500200262706714,
+    "mem-project_natsquiz_upgrade----": 0.0018500200262706714,
+    "mem-user_haojun----": 0.0018500200262706714,
+    "mem-MEMORY-identity": 0.0018500200262706714,
+    "mem-MEMORY-stack": 0.0034225371115830547,
+    "mem-MEMORY-verticals": 0.004759176595594523,
+    "mem-MEMORY-repo-structure": 0.005895321432341731,
+    "mem-MEMORY-features-built": 0.005402477701765893,
+    "mem-MEMORY-phase-1a-corpus-deployment---t": 0.006442126090907773,
+    "mem-MEMORY-full-deployment-checklist--fre": 0.007325824759527523,
+    "mem-MEMORY-coding-conventions": 0.008076965821447556,
+    "mem-MEMORY-roadmap--post-corpus-deploymen": 0.0087154340848333,
+    "mem-MEMORY-project-state--2026-03-09-": 0.0018500200262706714,
+    "mem-MEMORY-project-status": 0.002374192388041466,
+    "mem-MEMORY-key-patterns": 0.003256330844862042,
+    "mem-MEMORY-launch-blockers--user-actions-": 0.004617901869096505,
+    "mem-MEMORY-memory-index": 0.0018500200262706714,
+    "mem-project_launch_status----": 0.0018500200262706714,
+    "mem-MEMORY-project": 0.0018500200262706714,
+    "mem-MEMORY-vercel-build---typescript-pitf": 0.0034225371115830547,
+    "mem-MEMORY-completed-work--post-meeting-c": 0.004759176595594523,
+    "mem-MEMORY-financing-extraction-pipeline": 0.005895321432341731,
+    "mem-MEMORY-paper-scoring-pipeline": 0.0068610454358765515,
+    "mem-MEMORY-key-file-locations": 0.007681908333810105,
+    "mem-project_paper_scoring_pipeline----": 0.0018500200262706714,
+    "mem-project_paper_scoring_pipeline-paper-scoring-pipeline": 0.0034225371115830547,
+    "mem-feedback_testing----": 0.0018500200262706714,
+    "mem-feedback_testing-test-each-sample-file---check-": 0.0034225371115830547,
+    "mem-project_fincontrol_state----": 0.0018500200262706714,
+    "mem-MEMORY-what-s-been-built": 0.0025227078862649624,
+    "mem-MEMORY-api-at-http---localhost-8000--": 0.003994321921447679,
+    "mem-MEMORY-what-to-build-next--logical-ne": 0.005245194208236351,
+    "mem-MEMORY-the-concept": 0.006308436422179289,
+    "mem-MEMORY-platform-architecture--4-layer": 0.007212192068115259,
+    "mem-MEMORY-three-apps-being-built": 0.007980381980465046,
+    "mem-MEMORY-key-market-context": 0.00863334092837914,
+    "mem-MEMORY-key-partners--not-competitors-": 0.009188353270775626,
+    "mem-MEMORY-funding-pathways": 0.009660107828616834,
+    "mem-MEMORY-pdf-generation--what-works-": 0.022058092910446494,
+    "mem-MEMORY-files-in-this-project": 0.02059938131945454,
+    "mem-MEMORY-github": 0.019359592268397122,
+    "mem-MEMORY-show-this-summary-at-the-start": 0.002374192388041466,
+    "mem-MEMORY----rulehaus-vision--project-ru": 0.0018500200262706714,
+    "mem-cleanup_progress_apr18----": 0.0018500200262706714,
+    "mem-cleanup_progress_apr18-current-status--apr-18--2026-": 0.0034225371115830547,
+    "mem-feedback_proposal_tone----": 0.0018500200262706714,
+    "mem-project_admin_plan----": 0.0018500200262706714,
+    "mem-project_data_state----": 0.0018500200262706714,
+    "mem-project_diligence_feature----": 0.0018500200262706714,
+    "mem-project_diligence_feature-feature----diligence----due-di": 0.0034225371115830547,
+    "mem-project_rulehaus_vision----": 0.0018500200262706714,
+    "mem-project_seek_machine----": 0.0018500200262706714,
+    "mem-session_progress_apr8----": 0.0018500200262706714,
+    "mem-session_progress_apr8-phase-1--cleanup-disk-py--loca": 0.0034225371115830547,
+    "mem-session_progress_apr8-phase-2--remote-ingest-py--see": 0.004759176595594523,
+    "mem-session_progress_apr8-company-intelligence-fix--comm": 0.005895321432341731,
+    "mem-session_progress_apr8-daily-update-status": 0.0068610454358765515,
+    "mem-session_progress_apr8-next-steps-when-resuming": 0.007681908333810105,
+    "mem-session_progress_apr8-key-commits-this-session": 0.00837963933015782,
+    "mem-project_factcheck_audit----": 0.0018500200262706714,
+    "mem-project_think_block----": 0.0018500200262706714,
+    "mem-MEMORY----use-neon--not-supabase--fee": 0.0018500200262706714,
+    "mem-project_production_cutover----": 0.0018500200262706714,
+    "mem-feedback_persist_progress----": 0.0018500200262706714,
+    "mem-project_command_centre_pivot----": 0.0018500200262706714,
+    "mem-project_obsidian_connection----": 0.0018500200262706714,
+    "mem-project_product_urls----": 0.0018500200262706714,
+    "mem-MEMORY-current-state--2026-02-10-": 0.0018500200262706714,
+    "mem-MEMORY-known-issues": 0.0034225371115830547,
+    "mem-MEMORY-api-keys": 0.004759176595594523,
+    "mem-MEMORY-dev-environment": 0.005895321432341731,
+    "mem-MEMORY-architecture-notes": 0.0068610454358765515,
+    "mem-feedback_neon_preference----": 0.0018500200262706714,
+    "mem-project_trainersg----": 0.0018500200262706714,
+    "mem-MEMORY-project-type": 0.0018500200262706714,
+    "mem-MEMORY-key-files-created": 0.0034225371115830547,
+    "mem-MEMORY-technical-notes": 0.004759176595594523,
+    "mem-MEMORY-domain-essentials": 0.005895321432341731,
+    "mem-MEMORY-phase-status": 0.0068610454358765515,
+    "mem-MEMORY-what-s-complete": 0.0025227078862649624,
+    "mem-MEMORY-what-s-left--task--6-": 0.003994321921447679,
+    "mem-MEMORY-key-technical-notes": 0.005245194208236351,
+    "mem-feedback_gemma4----": 0.0018500200262706714,
+    "mem-project_legalbox----": 0.0018500200262706714,
+    "mem-user_profile----": 0.0018500200262706714,
+    "mem-MEMORY-project-goal": 0.0018500200262706714,
+    "mem-MEMORY-owner": 0.0034225371115830547,
+    "mem-MEMORY-status": 0.005402477701765893,
+    "mem-open-questions-open-questions---pending-owner": 0.0018500200262706714,
+    "mem-open-questions-domain---brand": 0.0034225371115830547,
+    "mem-open-questions-living-lab-tours": 0.004759176595594523,
+    "mem-open-questions-caretraining---workshops": 0.005895321432341731,
+    "mem-open-questions-events": 0.0068610454358765515,
+    "mem-open-questions-careconnect-b2b": 0.007681908333810105,
+    "mem-open-questions-careresources-membership": 0.00837963933015782,
+    "mem-open-questions-carebell": 0.008972709161009153,
+    "mem-open-questions-tech-preferences": 0.009476814052447031,
+    "mem-open-questions-admin---operations": 0.009905296366031664,
+    "mem-website-audit-1--sgassist-com---main-nonprof": 0.0018500200262706714,
+    "mem-website-audit-2--careconnect-sg---b2b---inst": 0.0034225371115830547,
+    "mem-website-audit-3--caregivers-sg---unused---un": 0.004759176595594523,
+    "mem-website-audit-summary-of-all-sign-up-mechani": 0.005895321432341731,
+    "mem-website-audit-pain-points-identified": 0.0068610454358765515,
+    "mem-MEMORY----pipeline-state--pipeline-st": 0.0018500200262706714,
+    "mem-feedback_scoring_agents----": 0.0018500200262706714,
+    "mem-pipeline_state----": 0.0018500200262706714,
+    "mem-pipeline_state-progress-summary--end-of-sessi": 0.0034225371115830547,
+    "mem-pipeline_state-current-state-files": 0.004759176595594523,
+    "mem-pipeline_state-known-issue--scoring-queue-py-": 0.005895321432341731,
+    "mem-pipeline_state-critical--agent-prompts-must-u": 0.0068610454358765515,
+    "mem-pipeline_state-rate-limit-pattern": 0.007681908333810105,
+    "mem-pipeline_state-session-handoff-checklist": 0.00837963933015782,
+    "mem-pipeline_state-scoring-rubric--6-dimensions--": 0.008972709161009153,
+    "mem-pipeline_state-screening-rules": 0.009476814052447031,
+    "mem-pipeline_state-why--this-coordination-structu": 0.009905296366031664,
+    "mem-project_scoring_pipeline----": 0.0018500200262706714,
+    "mem-MEMORY----electrify-build-progress--p": 0.0018500200262706714,
+    "mem-project_electrify_build_progress----": 0.0018500200262706714,
+    "mem-project_electrify_build_progress-completed--100--": 0.0034225371115830547,
+    "mem-project_electrify_build_progress-fixes-applied--2026-03-30-": 0.004759176595594523,
+    "mem-project_electrify_build_progress-next-steps": 0.005895321432341731,
+    "mem-user_kenneth_project----": 0.0018500200262706714,
+    "mem-MEMORY----second-brain-setup-progress": 0.0018500200262706714,
+    "mem-second-brain-setup-progress----": 0.0018500200262706714,
+    "mem-second-brain-setup-progress-completed--2026-04-08-": 0.0034225371115830547,
+    "mem-second-brain-setup-progress-pending---manual--hao-jun-must": 0.004759176595594523,
+    "mem-second-brain-setup-progress-pending---ready-to-build--next": 0.005895321432341731,
+    "mem-user-profile----": 0.0018500200262706714,
+    "mem-vault-structure----": 0.0018500200262706714,
+    "mem-vault-structure-folder-layout--para---lyt-hybr": 0.0034225371115830547,
+    "mem-vault-structure-conventions": 0.004759176595594523,
+    "mem-vault-structure-90-external-symlinks": 0.005895321432341731,
+    "mem-MEMORY-current-state--as-of-2026-03-1": 0.0026362785689268632,
+    "mem-MEMORY-document-architecture": 0.0040908568535887885,
+    "mem-MEMORY-block-breakdown--426-total-": 0.005327249013968127,
+    "mem-MEMORY-gap-document-work---complete": 0.006378183434109141,
+    "mem-MEMORY-chat-interface-plan": 0.007271476884843328,
+    "mem-MEMORY-chat-interface---complete-and-": 0.008030773831983964,
+    "mem-MEMORY-book-expansion-progress--as-of": 0.008676174245583486,
+    "mem-MEMORY-credit-system-design--planned-": 0.009224761606728093,
+    "mem-MEMORY-key-remaining-work--prioritise": 0.009691055209239349,
+    "mem-gap-map-corpus-gap-map---60-documents-": 0.0018500200262706714,
+    "mem-gap-map-how-this-was-built": 0.0034225371115830547,
+    "mem-gap-map-tier-1---critical-gaps--0-1-me": 0.004759176595594523,
+    "mem-gap-map-tier-2---fragmentary-coverage-": 0.005895321432341731,
+    "mem-gap-map-tier-3---policy-institutional-": 0.0068610454358765515,
+    "mem-gap-map-tier-4---specialist-completene": 0.007681908333810105,
+    "mem-gap-map-execution-notes": 0.00837963933015782,
+    "mem-gap-map-what-s-already-well-covered--n": 0.008972709161009153,
+    "mem-project_enrichment_workflow----": 0.0018500200262706714,
+    "mem-MEMORY----rulehaus-project--project-s": 0.0018500200262706714,
+    "mem-feedback_long_running----": 0.0018500200262706714,
+    "mem-project_sgx_scraping----": 0.0018500200262706714,
+    "mem-project_sgx_scraping-vision": 0.0034225371115830547,
+    "mem-project_sgx_scraping-repository": 0.004759176595594523,
+    "mem-project_sgx_scraping-repo-structure": 0.005895321432341731,
+    "mem-project_sgx_scraping-current-state--2026-03-27-": 0.0068610454358765515,
+    "mem-project_sgx_scraping-api-discovery": 0.007681908333810105,
+    "mem-project_sgx_scraping-technical-setup": 0.00837963933015782,
+    "mem-MEMORY-project-memory-index": 0.0018500200262706714,
+    "mem-MEMORY-memory-files": 0.0034225371115830547,
+    "mem-MEMORY-key-facts-at-a-glance": 0.004759176595594523,
+    "mem-project_lkyspp_group----": 0.0018500200262706714,
+    "mem-project_resume_ppp_reframe----": 0.0018500200262706714,
+    "mem-project_resume_ppp_reframe-what-was-just-built--commit-53": 0.0034225371115830547,
+    "mem-project_resume_ppp_reframe-the-problem-that-surfaced": 0.004759176595594523,
+    "mem-project_resume_ppp_reframe-three-questions-haojun-needs-t": 0.005895321432341731,
+    "mem-project_resume_ppp_reframe-how-to-resume": 0.0068610454358765515,
+    "mem-project_resume_ppp_reframe-why--context-on-the-correct-fr": 0.007681908333810105,
+    "mem-MEMORY----cdd-scoring-pipeline--proje": 0.0018500200262706714,
+    "mem-project_cdd_cleanup_inprogress----": 0.0018500200262706714,
+    "mem-project_cdd_cleanup_inprogress-user-s-goals--verbatim-intent-": 0.0034225371115830547,
+    "mem-project_cdd_cleanup_inprogress-what-i-had-already-done-before": 0.0033045983109325967,
+    "mem-project_cdd_cleanup_inprogress-what-i-learned-from-scripts-00": 0.004658929271962393,
+    "mem-project_cdd_cleanup_inprogress-open-questions-to-resolve-befo": 0.005810111015735537,
+    "mem-project_cdd_cleanup_inprogress-resume-protocol-next-session": 0.006788614883075919,
+    "mem-project_cdd_cleanup_inprogress-markdown-kb-design-notes--prel": 0.007620342383017186,
+    "mem-project_cdd_cleanup_inprogress-files-to-delete--confirmed-saf": 0.009781887032071555,
+    "mem-project_cdd_cleanup_inprogress-files-definitely-keeping": 0.010164618851681764,
+    "mem-project_cdd_cleanup_inprogress-tasklist-state-at-pause": 0.010489937183661422,
+    "mem-project_cdd_pipeline----": 0.0018500200262706714,
+    "insight-1777315092581-oi5o": 0.0018500200262706714
+  }
+}
