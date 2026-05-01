@@ -215,14 +215,14 @@ function buildScorecard(
 
 export const MINISTERIAL_SCORECARDS: MinisterialScorecard[] = [
   buildScorecard('mof', 'Ministry of Finance', 'MOF', [6, 7, 9, 10, 23, 34, 41, 52, 53], 78),
-  buildScorecard('tdra', 'GovTech Singapore', 'GovTech', [1, 2, 3, 4, 5, 17, 59, 67, 69, 70], 82),
-  buildScorecard('moca', 'Public Service Division', 'PSD', [8, 14, 15, 18, 29, 30, 45, 54, 57, 64], 71),
-  buildScorecard('moiat', 'Ministry of Trade and Industry', 'MTI', [13, 33, 35, 49], 65),
+  buildScorecard('govtech', 'GovTech Singapore', 'GovTech', [1, 2, 3, 4, 5, 17, 59, 67, 69, 70], 82),
+  buildScorecard('psd', 'Public Service Division', 'PSD', [8, 14, 15, 18, 29, 30, 45, 54, 57, 64], 71),
+  buildScorecard('mti', 'Ministry of Trade and Industry', 'MTI', [13, 33, 35, 49], 65),
   buildScorecard('moe', 'Ministry of Education', 'MOE', [20], 58),
-  buildScorecard('mohp', 'Ministry of Health', 'MOH', [19], 42),
-  buildScorecard('moei', 'Ministry of National Development', 'MND', [22, 25, 27, 44, 51], 61),
-  buildScorecard('mohre', 'Ministry of Manpower', 'MOM', [42, 43, 50], 55),
-  buildScorecard('mocd', 'Ministry of Social and Family Development', 'MSF', [12, 28, 55, 63, 66], 48),
+  buildScorecard('moh', 'Ministry of Health', 'MOH', [19], 42),
+  buildScorecard('mnd', 'Ministry of National Development', 'MND', [22, 25, 27, 44, 51], 61),
+  buildScorecard('mom', 'Ministry of Manpower', 'MOM', [42, 43, 50], 55),
+  buildScorecard('msf', 'Ministry of Social and Family Development', 'MSF', [12, 28, 55, 63, 66], 48),
   buildScorecard('gcmo', 'Government Communications & Media Office', 'GCMO', [56, 58, 60, 61, 62, 65], 63),
 ];
 
@@ -363,7 +363,7 @@ export const NEXT_BEST_ACTIONS: NextBestAction[] = [
   },
   {
     ministry: 'GovTech Singapore',
-    ministryId: 'tdra',
+    ministryId: 'govtech',
     functionId: 4,
     functionName: 'Digital Identity Verification',
     currentTier: 'CAUTION',
@@ -373,7 +373,7 @@ export const NEXT_BEST_ACTIONS: NextBestAction[] = [
   },
   {
     ministry: 'Public Service Division',
-    ministryId: 'moca',
+    ministryId: 'psd',
     functionId: 29,
     functionName: 'Policy Implementation Monitoring',
     currentTier: 'MEDIUM',
@@ -383,7 +383,7 @@ export const NEXT_BEST_ACTIONS: NextBestAction[] = [
   },
   {
     ministry: 'Ministry of Trade and Industry',
-    ministryId: 'moiat',
+    ministryId: 'mti',
     functionId: 33,
     functionName: 'Inspection Scheduling',
     currentTier: 'HIGH',
@@ -393,7 +393,7 @@ export const NEXT_BEST_ACTIONS: NextBestAction[] = [
   },
   {
     ministry: 'Ministry of Manpower',
-    ministryId: 'mohre',
+    ministryId: 'mom',
     functionId: 50,
     functionName: 'Workforce Planning',
     currentTier: 'EMERGING',
@@ -490,13 +490,13 @@ export const DEPLOYMENT_WAVES: DeploymentWave[] = [
 // Reflects realistic ministry-level capability evolution; not everything trends up.
 export const MINISTERIAL_TRENDS: Record<string, number[]> = {
   mof:   [73, 76, 78, 75, 77, 78],   // plateaued at high
-  tdra:  [72, 76, 79, 80, 81, 82],   // steady climb (digital infra well-funded)
-  moca:  [68, 70, 71, 69, 70, 71],   // basically flat
-  moiat: [62, 64, 67, 65, 66, 65],   // wobbled
+  govtech:  [72, 76, 79, 80, 81, 82],   // steady climb (digital infra well-funded)
+  psd:  [68, 70, 71, 69, 70, 71],   // basically flat
+  mti: [62, 64, 67, 65, 66, 65],   // wobbled
   moe:   [54, 55, 53, 56, 58, 58],   // dipped then recovered
-  mohp:  [52, 50, 48, 46, 44, 42],   // declining (data-quality issues)
-  moei:  [55, 58, 60, 61, 60, 61],   // climb then flat
-  mohre: [48, 51, 54, 53, 54, 55],   // slow climb
-  mocd:  [38, 41, 45, 47, 48, 48],   // consistent climb, plateau
+  moh:  [52, 50, 48, 46, 44, 42],   // declining (data-quality issues)
+  mnd:  [55, 58, 60, 61, 60, 61],   // climb then flat
+  mom: [48, 51, 54, 53, 54, 55],   // slow climb
+  msf:  [38, 41, 45, 47, 48, 48],   // consistent climb, plateau
   gcmo:  [70, 66, 60, 58, 61, 63],   // sharp dip mid-cycle, recovering
 };

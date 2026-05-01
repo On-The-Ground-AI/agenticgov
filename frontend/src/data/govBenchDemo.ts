@@ -346,7 +346,7 @@ export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
   },
   {
     title: 'Future Foresight Foundation',
-    ministry: 'Mohammed Bin Rashid Centre for Government Innovation',
+    ministry: 'Public Service Division (PSD)',
     description: 'Systematic government foresight capability that scans global trends, models scenarios, and stress-tests policies against potential futures. Produces annual Global Foresight Report distributed to 50+ governments.',
     year: 2016,
     impact: 'Identified 3 major disruptions 2+ years before impact (autonomous vehicles policy, space economy, generative AI governance). Informed pre-emptive legislation in all three areas.',

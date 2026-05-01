@@ -410,16 +410,16 @@ export const NETWORK_NODES: NetworkNode[] = [
 
   { id: 'moe-strategy', label: 'MOE Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
   { id: 'mof-fiscal', label: 'MOF Fiscal Monitor', tier: 'ministry', type: 'agent', activeFlows: 5 },
-  { id: 'moiat-ai', label: 'MTI AI Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
-  { id: 'moei-green', label: 'MND Sustainability Framework Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
-  { id: 'tdra-digital', label: 'GovTech Digital Gov Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
+  { id: 'mti-ai', label: 'MTI AI Strategy Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
+  { id: 'mnd-green', label: 'MND Sustainability Framework Agent', tier: 'ministry', type: 'agent', activeFlows: 2 },
+  { id: 'govtech-digital', label: 'GovTech Digital Gov Agent', tier: 'ministry', type: 'agent', activeFlows: 3 },
 
   { id: 'fiscal-anomaly', label: 'FiscalAI Anomaly Detector', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'tender-compliance', label: 'TenderAI Compliance Scanner', tier: 'division', type: 'agent', activeFlows: 3 },
   { id: 'transparency-deadline', label: 'TransparencyAI Deadline Monitor', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'readiness-score', label: 'ReadinessMap Score Agent', tier: 'division', type: 'agent', activeFlows: 1 },
   { id: 'govbench-ranking', label: 'GovBench Ranking Monitor', tier: 'division', type: 'agent', activeFlows: 1 },
-  { id: 'moe-ecce', label: 'MOE KidSTART Division Agent', tier: 'division', type: 'agent', activeFlows: 2 },
+  { id: 'moe-eced', label: 'MOE KidSTART Division Agent', tier: 'division', type: 'agent', activeFlows: 2 },
   { id: 'policy-impact', label: 'PolicyAI Impact Agent', tier: 'division', type: 'agent', activeFlows: 2 },
 ];
 
@@ -519,26 +519,26 @@ export interface NationalKPI {
 }
 
 export const MOE_DIVISIONS: Division[] = [
-  { id: 'moe-ecce', name: 'Early Childhood Education', ministryId: 'moe', head: 'Dr. Fatima Al Shamsi', headCount: 340, workStreams: ['ws-ecce-pilot', 'ws-ecce-standards'], aiHealthScore: 82, lastReportGenerated: 'Today 6:30 AM' },
-  { id: 'moe-k12', name: 'K-12 Schools', ministryId: 'moe', head: 'Ahmed Al Dhaheri', headCount: 1200, workStreams: ['ws-madrasa', 'ws-stem-academy'], aiHealthScore: 91, lastReportGenerated: 'Today 6:30 AM' },
-  { id: 'moe-higher', name: 'Higher Education', ministryId: 'moe', head: 'Dr. Mariam Al Ketbi', headCount: 280, workStreams: ['ws-scholarship', 'ws-uni-reform'], aiHealthScore: 78, lastReportGenerated: 'Today 6:30 AM' },
-  { id: 'moe-teacher', name: 'Teacher Development', ministryId: 'moe', head: 'Khalid Al Mansouri', headCount: 180, workStreams: ['ws-teacher-train', 'ws-teacher-eval'], aiHealthScore: 88, lastReportGenerated: 'Today 6:30 AM' },
-  { id: 'moe-digital', name: 'Digital Education', ministryId: 'moe', head: 'Sara Al Marzouqi', headCount: 95, workStreams: ['ws-edtech', 'ws-ai-curriculum'], aiHealthScore: 95, lastReportGenerated: 'Today 6:30 AM' },
+  { id: 'moe-eced', name: 'Early Childhood Education', ministryId: 'moe', head: 'Dr. Tan Lay Lay', headCount: 340, workStreams: ['ws-kidstart-pilot', 'ws-kidstart-standards'], aiHealthScore: 82, lastReportGenerated: 'Today 6:30 AM' },
+  { id: 'moe-k12', name: 'K-12 Schools', ministryId: 'moe', head: 'Lim Wei Sheng', headCount: 1200, workStreams: ['ws-sls', 'ws-stem-academy'], aiHealthScore: 91, lastReportGenerated: 'Today 6:30 AM' },
+  { id: 'moe-higher', name: 'Higher Education', ministryId: 'moe', head: 'Dr. Priya Sundaram', headCount: 280, workStreams: ['ws-scholarship', 'ws-uni-reform'], aiHealthScore: 78, lastReportGenerated: 'Today 6:30 AM' },
+  { id: 'moe-teacher', name: 'Teacher Development', ministryId: 'moe', head: 'Rajesh Menon', headCount: 180, workStreams: ['ws-teacher-train', 'ws-teacher-eval'], aiHealthScore: 88, lastReportGenerated: 'Today 6:30 AM' },
+  { id: 'moe-digital', name: 'Digital Education', ministryId: 'moe', head: 'Chua Hui Ling', headCount: 95, workStreams: ['ws-edtech', 'ws-ai-curriculum'], aiHealthScore: 95, lastReportGenerated: 'Today 6:30 AM' },
 ];
 
 export const WORK_STREAMS: WorkStream[] = [
   {
-    id: 'ws-ecce-pilot', name: 'KidSTART Pilot Programme', division: 'moe-ecce', ministry: 'MOE',
+    id: 'ws-kidstart-pilot', name: 'KidSTART Pilot Programme', division: 'moe-eced', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 45, budgetAEDM: 380, spentAEDM: 168,
     kpis: [
       { name: 'Centers Operational', target: 50, actual: 23, unit: 'centers', trend: 'improving' },
       { name: 'Children Enrolled', target: 42000, actual: 18500, unit: 'children', trend: 'improving' },
       { name: 'Teacher Certification Rate', target: 100, actual: 87, unit: '%', trend: 'stable' },
     ],
-    lastUpdate: '2 hours ago', aiSummary: 'Enrollment ahead of projections by 8%. Construction delays in Al Ain cluster may impact Q3 target. Recommend contractor acceleration or scope adjustment.',
+    lastUpdate: '2 hours ago', aiSummary: 'Enrollment ahead of projections by 8%. Construction delays in Jurong cluster may impact Q3 target. Recommend contractor acceleration or scope adjustment.',
   },
   {
-    id: 'ws-ecce-standards', name: 'KidSTART Quality Standards Framework', division: 'moe-ecce', ministry: 'MOE',
+    id: 'ws-kidstart-standards', name: 'KidSTART Quality Standards Framework', division: 'moe-eced', ministry: 'MOE',
     type: 'reform', status: 'at-risk', progress: 35, budgetAEDM: 12, spentAEDM: 7,
     kpis: [
       { name: 'Standards Drafted', target: 45, actual: 28, unit: 'standards', trend: 'stable' },
@@ -548,7 +548,7 @@ export const WORK_STREAMS: WorkStream[] = [
     riskFlag: 'Consultation pace 60% below plan — may delay standards approval by 2 months',
   },
   {
-    id: 'ws-madrasa', name: 'Madrasa E-Learning Platform', division: 'moe-k12', ministry: 'MOE',
+    id: 'ws-sls', name: 'Student Learning Space (SLS)', division: 'moe-k12', ministry: 'MOE',
     type: 'program', status: 'on-track', progress: 78, budgetAEDM: 220, spentAEDM: 175,
     kpis: [
       { name: 'Active Students', target: 500000, actual: 462000, unit: 'students', trend: 'improving' },
@@ -632,8 +632,8 @@ export const WORK_STREAMS: WorkStream[] = [
 ];
 
 export const MOE_INTEL: MinistryIntel = {
-  id: 'moe', name: 'Ministry of Education', shortName: 'MOE', minister: 'H.E. Ahmad Al Falasi',
-  divisions: ['moe-ecce', 'moe-k12', 'moe-higher', 'moe-teacher', 'moe-digital'],
+  id: 'moe', name: 'Ministry of Education', shortName: 'MOE', minister: 'Mr. Chan Chun Sing',
+  divisions: ['moe-eced', 'moe-k12', 'moe-higher', 'moe-teacher', 'moe-digital'],
   overallProgress: 56,
   totalBudgetAEDM: 2192,
   totalSpentAEDM: 1263,

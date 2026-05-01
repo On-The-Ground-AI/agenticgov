@@ -154,14 +154,14 @@ export const DATA_FLOWS: { from: AppId; to: AppId; label: string }[] = [
 export const GENERIC_MINISTRIES: Ministry[] = [
   { id: 'moe', name: 'Ministry of Education', shortName: 'MOE', mandate: 'Education policy, schools, universities, KidSTART', functionsOwned: [15, 29, 35] },
   { id: 'moh', name: 'Ministry of Health', shortName: 'MOH', mandate: 'Healthcare policy, hospitals, public health', functionsOwned: [29, 35, 49] },
-  { id: 'moei', name: 'Ministry of National Development', shortName: 'MND', mandate: 'Energy policy, infrastructure, sustainability', functionsOwned: [44, 53] },
+  { id: 'mnd', name: 'Ministry of National Development', shortName: 'MND', mandate: 'Energy policy, infrastructure, sustainability', functionsOwned: [44, 53] },
   { id: 'moiai', name: 'Ministry of Trade and Industry', shortName: 'MTI', mandate: 'Industrial policy, AI strategy, technology adoption', functionsOwned: [3, 17, 49] },
   { id: 'mof', name: 'Ministry of Finance', shortName: 'MOF', mandate: 'National budget, procurement, fiscal policy', functionsOwned: [6, 7, 9, 53] },
-  { id: 'moca', name: 'Public Service Division', shortName: 'PSD', mandate: 'Government coordination, strategic planning, KPIs', functionsOwned: [8, 15, 20] },
-  { id: 'mohre', name: 'Ministry of Manpower', shortName: 'MOM', mandate: 'Labour market, National Workforce, workforce', functionsOwned: [22, 23, 24] },
-  { id: 'mocd', name: 'Ministry of Social and Family Development', shortName: 'MSF', mandate: 'Social welfare, family support, disability', functionsOwned: [29, 55] },
-  { id: 'mofaic', name: 'Ministry of Foreign Affairs', shortName: 'MFA', mandate: 'Diplomacy, international cooperation', functionsOwned: [20, 47] },
-  { id: 'tdra', name: 'GovTech Singapore', shortName: 'GovTech', mandate: 'Digital infrastructure, e-government, cybersecurity', functionsOwned: [1, 3, 4, 5] },
+  { id: 'psd', name: 'Public Service Division', shortName: 'PSD', mandate: 'Government coordination, strategic planning, KPIs', functionsOwned: [8, 15, 20] },
+  { id: 'mom', name: 'Ministry of Manpower', shortName: 'MOM', mandate: 'Labour market, National Workforce, workforce', functionsOwned: [22, 23, 24] },
+  { id: 'msf', name: 'Ministry of Social and Family Development', shortName: 'MSF', mandate: 'Social welfare, family support, disability', functionsOwned: [29, 55] },
+  { id: 'mfa', name: 'Ministry of Foreign Affairs', shortName: 'MFA', mandate: 'Diplomacy, international cooperation', functionsOwned: [20, 47] },
+  { id: 'govtech', name: 'GovTech Singapore', shortName: 'GovTech', mandate: 'Digital infrastructure, e-government, cybersecurity', functionsOwned: [1, 3, 4, 5] },
 ];
 
 export const SECTORS: Sector[] = ['Education', 'Healthcare', 'Energy', 'Technology', 'Economy', 'Defense'];

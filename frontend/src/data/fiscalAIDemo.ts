@@ -50,10 +50,10 @@ export interface FiscalForecast {
 export const MINISTRY_PROGRAMS: FiscalProgram[] = [
   // Ministry of Education — 5 programs
   {
-    id: 'moe-madrasa',
+    id: 'moe-sls',
     ministry: 'Ministry of Education',
     ministryShort: 'Education',
-    program: 'Madrasa Digital Platform',
+    program: 'Student Learning Space (SLS)',
     allocatedBudgetM: 420,
     spentToDateM: 315,
     spentPct: 75,
@@ -101,7 +101,7 @@ export const MINISTRY_PROGRAMS: FiscalProgram[] = [
     insight: 'Budget 95% spent with only 78% of target certifications. Unit cost $44,350 vs planned $36,250.',
   },
   {
-    id: 'moe-ecce',
+    id: 'moe-eced',
     ministry: 'Ministry of Education',
     ministryShort: 'Education',
     program: 'Early Childhood Centres of Excellence',
@@ -403,10 +403,10 @@ export const CONFIDENCE_ACTIONS: ConfidenceAction[] = [
 // ---------------------------------------------------------------------------
 
 export const SPENDING_TRENDS: Record<string, 'accelerating' | 'decelerating' | 'steady'> = {
-  'moe-madrasa': 'steady',
+  'moe-sls': 'steady',
   'moe-stem': 'steady',
   'moe-teacher': 'accelerating',
-  'moe-ecce': 'decelerating',
+  'moe-eced': 'decelerating',
   'moe-scholarship': 'steady',
   'moh-telehealth': 'accelerating',
   'moh-genomics': 'steady',

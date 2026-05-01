@@ -18,7 +18,7 @@ export interface ProgramDisclosure {
 
 export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
   {
-    id: 'madrasa',
+    id: 'sls',
     name: 'Student Learning Space (SLS)',
     ministry: 'Ministry of Education',
     overallCompleteness: 91,
@@ -95,7 +95,7 @@ export const PROGRAMS_DISCLOSURE: ProgramDisclosure[] = [
     ],
   },
   {
-    id: 'nafis',
+    id: 'skillsfuture',
     name: 'SkillsFuture National Workforce Programme',
     ministry: 'Ministry of Manpower',
     overallCompleteness: 72,
@@ -251,7 +251,7 @@ export const DEADLINE_TRACKER: DeadlineItem[] = [
     daysRemaining: 22,
     completionPct: 38,
     status: 'at-risk',
-    agentAction: 'Awaiting employment outcome data from MOHRE statistical unit. Reminder sent.',
+    agentAction: 'Awaiting employment outcome data from MOM statistical unit. Reminder sent.',
   },
   {
     ministry: 'Ministry of Economy',

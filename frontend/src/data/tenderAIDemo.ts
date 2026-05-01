@@ -154,7 +154,7 @@ export const TENDERS: TenderDemo[] = [
   // ---- Energy ----
   {
     id: 'en-works-01',
-    title: 'Solar Farm Installation — Al Dhafra Phase 3',
+    title: 'Solar Farm Installation — Tengeh Phase 3',
     type: 'works',
     ministry: 'Ministry of National Development',
     sector: 'Energy',
@@ -173,7 +173,7 @@ export const TENDERS: TenderDemo[] = [
       { item: 'Land acquisition & right-of-way permits secured', passed: false },
     ],
     similarTenders: [
-      { title: 'Al Dhafra Solar Phase 2 (2GW)', budgetAED: 980_000_000, actualAED: 1_020_000_000, overrunPct: 4.1 },
+      { title: 'Tengeh Solar Farm Phase 2 (2GW)', budgetAED: 980_000_000, actualAED: 1_020_000_000, overrunPct: 4.1 },
       { title: 'Tengeh Solar Farm Phase 5', budgetAED: 1_500_000_000, actualAED: 1_580_000_000, overrunPct: 5.3 },
       { title: 'Noor Singapore Solar Plant', budgetAED: 870_000_000, actualAED: 895_000_000, overrunPct: 2.9 },
       { title: 'Tengeh Solar Tower Tower', budgetAED: 550_000_000, actualAED: 610_000_000, overrunPct: 10.9 },
