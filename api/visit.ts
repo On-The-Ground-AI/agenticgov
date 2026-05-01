@@ -1,5 +1,4 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { setCorsHeaders } from "./_lib/cors";
 
 /**
  * Public visitor counter for the AgenticGov landing page.
@@ -7,18 +6,34 @@ import { setCorsHeaders } from "./_lib/cors";
  * GET  /api/visit  → returns { count }
  * POST /api/visit  → increments counter, returns { count }
  *
- * Backed by a tiny Neon table (auto-created on first call):
- *   create table if not exists site_visits (
- *     id integer primary key default 1,
- *     count bigint not null default 0,
- *     updated_at timestamptz not null default now(),
- *     check (id = 1)
- *   );
- *
- * If NEON_DATABASE_URL is not configured, returns { count: 0 } silently.
+ * Backed by a tiny Neon table (auto-created on first call). If
+ * NEON_DATABASE_URL is not configured, returns { count: 0 } silently.
  */
+
+function setCors(req: VercelRequest, res: VercelResponse) {
+  const allowed = process.env.ALLOWED_ORIGIN;
+  const origin = req.headers.origin as string | undefined;
+
+  let allow: string | null = null;
+  if (allowed) {
+    if (origin === allowed) allow = allowed;
+  } else if (origin && (origin.startsWith("http://localhost:") || origin.startsWith("https://localhost:"))) {
+    allow = origin;
+  } else if (origin && origin.endsWith(".vercel.app")) {
+    allow = origin;
+  }
+
+  if (allow) {
+    res.setHeader("Access-Control-Allow-Origin", allow);
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Vary", "Origin");
+  }
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  setCorsHeaders(res, req.headers.origin);
+  setCors(req, res);
 
   if (req.method === "OPTIONS") {
     return res.status(204).end();
