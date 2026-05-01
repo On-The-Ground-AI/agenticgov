@@ -304,7 +304,7 @@ export interface NationalInnovation {
 export const NATIONAL_INNOVATIONS: NationalInnovation[] = [
   {
     title: 'Smart Government Initiative',
-    ministry: 'Infocomm Media Development Authority (GovTech)',
+    ministry: 'Infocomm Media Development Authority (IMDA)',
     description: 'Full transition of government services to mobile-first digital platforms, enabling citizens to complete 100% of federal transactions via smartphone. Includes PASS national digital identity.',
     year: 2013,
     impact: 'Over 7,000 government services digitised. Average transaction time reduced from 20 days to under 5 minutes. Saved $3B+ annually in operational costs.',
