@@ -333,7 +333,7 @@ export interface DailyScanSummary {
 }
 
 export const DAILY_SCAN: DailyScanSummary = {
-  scanTime: '7:00 AM GST',
+  scanTime: '7:00 AM local',
   ministriesScanned: 10,
   programsReviewed: 47,
   onTrack: 38,

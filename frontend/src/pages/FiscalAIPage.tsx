@@ -260,7 +260,7 @@ export function FiscalAIPage() {
                   </svg>
                   <span>Last automated scan: <span className="font-medium text-slate-700">Today {scan.scanTime}</span></span>
                   <span className="text-slate-300">|</span>
-                  <span>Next scan: <span className="font-medium text-slate-700">Tomorrow 7:00 AM GST</span></span>
+                  <span>Next scan: <span className="font-medium text-slate-700">Tomorrow 7:00 AM local</span></span>
                 </div>
 
                 {/* Ministry selector */}
