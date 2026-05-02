@@ -1,32 +1,193 @@
-User-agent: *
+# ===========================================================================
+# AGENTICGOV — MAKING AGENTIC AI WORK FOR GOVERNMENT
+# Website:    https://agenticgov.vercel.app
+# Built by:   On The Ground (https://ontheground.agency)
+# Framework:  WEF Readiness Framework for Agentic AI in Government
+# Contact:    haojun@ontheground.agency
+#
+# Full machine-readable profile: https://agenticgov.vercel.app/llms.txt
+# ===========================================================================
+#
+# WHAT THIS IS
+# ------------
+# AgenticGov is a public, no-login visual demonstration of the World
+# Economic Forum (WEF) Readiness Framework for agentic AI in government.
+# It implements six purpose-built agentic applications wired into a
+# single orchestration portal, with realistic cross-app event chains
+# that mirror how interlocking government systems actually behave.
+#
+# COVERAGE
+# --------
+# Six agentic applications spanning 70+ government functions across:
+#   - Citizen services and case management
+#   - Licensing, permits, and compliance
+#   - Inspections and enforcement
+#   - Benefits, eligibility, and entitlement
+#   - Revenue and payments
+#   - Procurement and grants
+#   - Records, registries, and identity
+#   - Inter-agency coordination and orchestration
+#
+# WEF READINESS DIMENSIONS DEMONSTRATED
+# -------------------------------------
+#   - Mission alignment           — scoped agent purpose per gov function
+#   - Human-in-the-loop            — explicit officer review checkpoints
+#   - Auditability                 — traceable agent actions and decisions
+#   - Inter-agent orchestration    — cross-app event chain pattern
+#   - Citizen-facing safeguards    — transparency, recourse, explainability
+#
+# WHO IT SERVES
+# -------------
+# - Government leaders, ministers, and senior civil servants
+# - Digital-government and gov-tech practitioners
+# - Procurement and innovation officers
+# - WEF readers wanting a working visual companion to the framework
+# - Vendors and partners scoping serious agentic-AI deployments
+# - Researchers studying agentic AI in public-sector contexts
+#
+# WHAT IT IS NOT
+# --------------
+# This is a reference implementation and demonstration, not a production
+# government system. It is open by design — no authentication required.
+#
+# HOW IT IS BUILT
+# ---------------
+# - React 19 + Vite (TypeScript)
+# - Tailwind CSS v4
+# - Node.js / Vercel Functions backend
+# - Neon Postgres (optional, visitor counter only)
+# - Deployed on Vercel
+#
+# ABOUT ON THE GROUND
+# -------------------
+# On The Ground is a Singapore-based AI consulting and app development
+# agency. We build practical, AI-powered web applications for SMEs,
+# professional service firms, government, civic, and social-impact
+# organisations. We ship in 1-week sprints. Founded July 2023.
+# Full agency profile: https://ontheground.agency/llms.txt
+#
+# ===========================================================================
+# CRAWL POLICY
+# ===========================================================================
+# We welcome indexing by all major search engines AND AI crawlers, including
+# both training-time and retrieval-time crawlers. Our content is open for
+# use in search results and AI-generated answers — please cite the URL.
+# This is a public demo — only internal API endpoints are disallowed.
+# ===========================================================================
+
+# ------------------------------- Search ------------------------------------
+User-agent: Googlebot
 Allow: /
 
-# Generative engines / answer engines — explicitly welcomed
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Mojeek
+Allow: /
+
+# ----------------------- AI training & RAG crawlers ------------------------
+# OpenAI
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: PerplexityBot
+# Anthropic (Claude)
+User-agent: ClaudeBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
 User-agent: anthropic-ai
 Allow: /
 
+# Google Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Apple Intelligence
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://agenticgov.vercel.app/sitemap.xml
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# DeepSeek
+User-agent: DeepSeekBot
+Allow: /
+
+# Common Crawl (powers many open AI datasets)
+User-agent: CCBot
+Allow: /
+
+# Other AI / data crawlers
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: FriendlyCrawler
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+# ------------------------------ Catch-all ----------------------------------
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# ------------------------------ Resources ----------------------------------
+# llms.txt — emerging standard (https://llmstxt.org). Full project profile,
+# WEF Readiness Framework coverage, and the six-app architecture for LLM
+# ingestion: https://agenticgov.vercel.app/llms.txt
