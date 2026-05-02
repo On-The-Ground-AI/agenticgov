@@ -15,7 +15,7 @@ interface HoverInsightProps {
   /** Optional "How this maps to your jurisdiction" hints (SG / IN / AE / PK). */
   jurisdiction?: { label: string; value: string }[];
   children: ReactNode;
-  /** Delay before the hover popup appears (ms). Default 200ms — fast. */
+  /** Delay before the hover popup appears (ms). Default 1000ms. */
   delayMs?: number;
   maxWidth?: number;
 }
@@ -158,7 +158,7 @@ export function HoverInsight({
   wefRef,
   jurisdiction,
   children,
-  delayMs = 200,
+  delayMs = 1000,
   maxWidth = 340,
 }: HoverInsightProps) {
   const [visible, setVisible] = useState(false);
